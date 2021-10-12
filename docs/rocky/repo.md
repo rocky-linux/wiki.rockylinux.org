@@ -10,7 +10,7 @@ Please read `man 5 dnf.conf`, in particular the section of `enabled` under the `
 
 ## Base Repositories
 
-Each major release has a set of repositories that come default with the distribution. Below is a list of common repositories for each major release.
+Each major release has a set of repositories that come default with the distribution. Below is a list of common repositories for each major release. As of October 12, 2021, "Rocky 9" is projected information based on CentOS Stream 9.
 
 | Repository       | Rocky 8 | Rocky 9 | Enabled |
 |------------------|---------|---------|---------|
