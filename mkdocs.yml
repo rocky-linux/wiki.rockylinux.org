@@ -1,0 +1,27 @@
+---
+site_name: Rocky Wiki
+site_url: https://rocky.shootthej.net
+theme:
+  name: windmill
+  highlightjs: true
+  hljs_languages:
+    - bash
+    - python
+    - yaml
+    - perl
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.suggest
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - toc:
+      permalink: true
+  - footnotes
+  - def_list
+  - meta
+copyright: Copyright &copy; 2021 Rocky Enterprise Software Foundation
+...
