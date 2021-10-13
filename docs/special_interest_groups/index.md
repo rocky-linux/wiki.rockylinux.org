@@ -43,7 +43,7 @@ We expect SIGs to satisfy some basic requirements, such as:
   
   * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC channel can also be assigned.
 
-* Code produced within the SIG must be compatible with a FOSS license presently used by Rocky - If a new license is wanted, consult with Release Engineering/Core.
+* Code produced within the SIG must be compatible with a FOSS license presently used by Rocky - If a new license is wanted, consult with Release Engineering/Core or the `~Legal` channel in mattermost.
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
 
