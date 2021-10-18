@@ -6,11 +6,7 @@ title: Welcome
 
 ## About
 
-Rocky Linux is a community enterprise Operating System designed to be 100% bug-for-bug compatible with Enterprise Linux, now that CentOS has shifted direction.
-
-## Frequently Asked Questions
-
-This isn't a place for FAQ's. It's a wiki. Let's have it on another page.
+Rocky Linux is a community enterprise Operating System designed to be 100% bug-for-bug compatible with Enterprise Linux.
 
 ## Contact
 
