@@ -10,9 +10,8 @@ The Rocky Linux teams manage and maintain the mattermost channels and the variou
 | | |
 | - | - |
 | **IRC/Mattermost Contacts** | `bc` `@brian` |
-| **IRC/Mattermost Contacts** | `hbjy` `@hbjy` |
 | **IRC/Mattermost Contacts** | `jorp` `@jorp` |
-| **IRC/Mattermost Contacts** | `Sokel/label` `@label` `@nazunalika` |
+| **IRC/Mattermost Contacts** | `Sokel/label/Sombra` `@label` `@nazunalika` |
 | **IRC/Mattermost Contacts** | `mustafa` `@mustafa` |
 | **IRC/Mattermost Contacts** | `neil` `@neil` |
 | **IRC/Mattermost Contacts** | `pj` `@pj` |
@@ -49,20 +48,26 @@ Here is a general rule of thumb:
 There are cases where it may do more harm than good to deny or to not provide assistance to a user who is using something that others may consider unsupported as a whole. While this is on a case by case basis and we are unable to list all exceptions, these are some of the more obvious exceptions:
 
 * If the question is related to software in EPEL
+
   * If a problem is reproducible or its an issue out of our control, it is recommended to go `#epel`
+
 * If the question is related to drivers from elrepo
+
   * It is common for users to be using hardware that is either not supported in a current Rocky release or needs a better driver (eg nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Other issues should go to `#elrepo` or where topical.
 
 ### What is not supported?
 
 * **[Kernel Rebuilds](#kernel-rebuilds)**
 * **Other Derivatives/Forks**
+
   * This includes, but is not limited to RHEL, OEL, Alma, Springdale, SL
+
 * **[Broken "V" Servers](#broken-v-servers)**
 * **Old minor/point releases of Rocky Linux**
 * **Politics or Profanity**
 * **Distro X is better/worse than Rocky**
 * **Personal drama from other channels, namespaces, or other users**
+
   * Repeat offenders will be quieted or banned from the `#rockylinux*` namespace
 
 ## Etiquette
@@ -75,8 +80,10 @@ When coming into the IRC or Mattermost channels, it's important to be able to fi
 
 * **Don't ask to ask** - Just ask your question
 * **Don't paste large quantities of text into the channel**
+
   * This can be disruptive to users on both sides of the IRC/MM bridge
   * If at all possible, use a paste bin such as https://rpa.st
+
 * **Be patient** - You may not get an instant answer. We are all volunteers, so it may take minutes or hours to receive an answer to your question.
 * **Read the Topic** - The topic may contain useful information you may want to know about.
 
@@ -86,12 +93,15 @@ As `#rockylinux` is the general Rocky Linux support and discussion channel on Li
 
 * **The channel is filled with supporters of Rocky, end users, volunteers with wide ranges of skillsets and knowledge who use the distribution on a professional or personal level**
 * **Polite and on-topic people get answers to their queries**
+
   * Insulting, rude, or off topic users are generally ignored or warned for their behavior
   * Consider the human, be civil - Treat people how you would want to be treated
   * Those who are consistently disruptive (or "trolls") will be removed from the channel by a quiet or ban
+
 * **The channel can be busy with several threads running in parallel**
 * **We support what we ship**
 * **Do not be surprised if you are asked to provide some information about your system**
+
   * `rpaste -s`
   * `uname -a`
   * `rpm -V packageName`
@@ -140,7 +150,7 @@ Kernel rebuilds are not recommended nor supported for Rocky Linux. Before buildi
 * Is the functionality you need available by installing a kernel module from [elrepo](https://elrepo.org)?
 * Is the functionality you need available as a separate module from the kernel itself?
 * Are you willing to maintain your own security posture?
-* **Are you sure**? Rocky Linux (and most other EL derivatives) were designed to function as a complete environment. Replacing critical components can affect how the system acts.
+* **Are you sure**? Rocky Linux and most other EL derivatives were designed to function as a complete environment. Replacing critical components can affect how the system acts.
 * **Are you ABSOLUTELY sure**? 99.9% of the users no longer need to build their own kernel. You may simple need a kernel module/driver, in which case, you can use [elrepo](https://elrepo.org) or build your own kernel module (kmod/dkms)
 * **Are you sure you don't just want a newer kernel version**? Newer kernels can be found at [elrepo](https://elrepo.org)
 
