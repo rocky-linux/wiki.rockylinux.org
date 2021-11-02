@@ -15,7 +15,7 @@ Rocky Linux is a community enterprise Operating System designed to be 100% bug-f
 | Community                     | community@rockylinux.org       | |
 | Design                        | design@rockylinux.org          | |
 | Development                   | development@rockylinux.org     | [~development](https://chat.rockylinux.org/rocky-linux/channels/development) |
-| Documentation                 | [~documentation](https://chat.rockylinux.org/rocky-linux/channels/documentation)   |
+| Documentation                 |  | [~documentation](https://chat.rockylinux.org/rocky-linux/channels/documentation)   |
 | Infrastructure                | infrastructure@rockylinux.org  | [~infrastructure](https://chat.rockylinux.org/rocky-linux/channels/infrastructure) |
 | Security                      | security@rockylinux.org        | [~Security](https://chat.rockylinux.org/rocky-linux/channels/security) |
 | Web                           | web@rockylinux.org             | |

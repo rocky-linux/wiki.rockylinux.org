@@ -10,7 +10,6 @@ The Rocky Linux teams manage and maintain the mattermost channels and the variou
 | | |
 | - | - |
 | **IRC/Mattermost Contacts** | `bc` `@brian` |
-| **IRC/Mattermost Contacts** | `jorp` `@jorp` |
 | **IRC/Mattermost Contacts** | `Sokel/label/Sombra` `@label` `@nazunalika` |
 | **IRC/Mattermost Contacts** | `mustafa` `@mustafa` |
 | **IRC/Mattermost Contacts** | `neil` `@neil` |
@@ -28,6 +27,7 @@ Mappings below:
 | #rockylinux-infra           | [~infrastructure](https://chat.rockylinux.org/rocky-linux/channels/infrastructure) |
 | #rockylinux-legal           | [~legal](https://chat.rockylinux.org/rocky-linux/channels/legal)          |
 | #rockylinux-security        | [~security](https://chat.rockylinux.org/rocky-linux/channels/security)       |
+| #rockylinux-sig-altarch     | [~altarch](https://chat.rockylinux.org/rocky-linux/channels/altarch) |
 | #rockylinux-social          | [~off-topic](https://chat.rockylinux.org/rocky-linux/channels/off-topic)         |
 | #rockylinux-testing         | [~testing](https://chat.rockylinux.org/rocky-linux/channels/testing)        |
 | #rockylinux-www             | [~web](https://chat.rockylinux.org/rocky-linux/channels/web)            |
