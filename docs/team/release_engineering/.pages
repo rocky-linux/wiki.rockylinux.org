@@ -3,3 +3,4 @@ nav:
   - ... | index.md
   - legacy: legacy
   - debranding: debranding
+  - rpm: rpm
