@@ -10,7 +10,8 @@ including the final formatting of the module yaml description that will have to
 be imported into the repo via `modifyrepo_c`.
 
 Note that the below is based on how `lazybuilder` performs module builds, which
-is close to MBS+Koji. This is mostly used as a reference.
+was made to be close to MBS+Koji and is not perfect. This is mostly used as a
+reference.
 
 ## Contact Information
 | | |
@@ -23,18 +24,35 @@ is close to MBS+Koji. This is mostly used as a reference.
 
 ## Building Local Modules
 
+This section explains what it's like to build local modules, what you can do,
+and what you can expect.
+
 ### Module Source, "transmodrification", pulling sources
 
 ### Configuring Macros and Contexts
 
-Traditionally within an MBS and Koji system, they work together to create a
-unique `%dist` tag based on several factors. To summarize, several pieces
-are brought together, a sha1 hash is made of the data, shortened to eight (8)
-characters, and then used for the module context or the dist tag. And then the
-module version tends to be in a format of M0m0YYYYMMDDhhmmss, which would be
-the major version, 0, minor version, 0, and then a timestamp. Fedora tends to
-be simpler in that it's version and then a timestamp. This version is laid out
-in the YAML file.
+Traditionally within an MBS and Koji system, there are several macros that
+are created and are usually unique per module stream. There are certain
+components that work together to create a unique `%dist` tag based on several
+factors. To summarize, here's what generally happens:
+
+* **A module version is formed as** `M0m0YYYYMMDDhhmmss`**, which would be the major version, 0, minor version, 0, and then a timestamp.**
+* **Select components are brought together and a sha1 hash is made, shortened to 8 characters for the context**
+
+  * The runtime context is typically the "dependencies" section of the module source, calculated to sha1
+  * The build context is the `xmd['mbs']['buildrequires']` data that koji generates and is output into `module.txt`, calculated to sha1
+  * The runtime and build contexts are combined `BUILD:RUNTIME`, a sha1 is calculated, and then shortened to 8
+  * This context is typically the one that changes less often
+
+* **Select components are brought together and a sha1 hash is made, shortened to 8 characters for the dist tag**
+
+  * The module name, stream, version, and context are all brought together as `name.stream.version.context`, calculated to sha1
+
+* **The `%dist` tag is given a format of** `.module_elX.Y.Z+000+00000000`
+
+  * X is the major version, Y is the minor version, Z is typically 0.
+  * The second number is the iteration, aka the module number. If you've done 500 module builds, the next one would be 501, regardless of module.
+  * The last set is a context hash generated earlier in the step above
 
 #### Built Module Example
 
