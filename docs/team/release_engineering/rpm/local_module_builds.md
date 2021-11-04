@@ -57,7 +57,7 @@ factors. To summarize, here's what generally happens:
 #### Built Module Example
 
 Let's break down an example of `389-ds` - It's a simple module. Let's start
-with the source data. Notice how it has `xmd` data. That is an integral part
+with `modulemd.txt`. Notice how it has `xmd` data. That is an integral part
 of making the context, though it's mostly information for koji and MBS and
 is generated on the fly. In the context of lazybuilder, it creates fake data
 to essentially fill the gap of not having MBS+Koji in the first place. The
@@ -67,7 +67,8 @@ Below is a version meant to be imported into a repo. This is after the build's
 completion. You'll notice that some fields are either empty or missing from
 above or even from the git repo's source that we pulled from initially.
 
-The final "repo" of modules is eventually made with a designation like:
+The final "repo" of modules (per arch) is eventually made with a designation
+like:
 
 ```
 module-NAME-STREAM-VERSION-CONTEXT
@@ -76,12 +77,62 @@ module-NAME-STREAM-VERSION-CONTEXT
 This is what pungi and other utilities bring in and then combine into a single
 repo, generally, taking care of the module.yaml.
 
-#### Hash Sequence
+#### Default Modules
 
-So we know what is brought in to make the contexts. So what made it? Below
-is the sequence of events that lead us to what we need.
+Most modules will have a set default that would be expected if a dnf install
+was called. For example, in EL8 if you said `dnf install postgresql-server`,
+the package that gets installed is version 10. If a module doesn't have a
+default set, a `dnf install` will traditionally not work. To ensure a module
+package will install without having to enable them and to use the default,
+you need default information. Here's the postgresql example.
 
+```
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: postgresql
+  stream: 10
+  profiles:
+    9.6: [server]
+    10: [server]
+    12: [server]
+    13: [server]
 ...
+```
+
+Even if a module only has one stream, default module information is still
+needed to ensure that a package can be installed without enabling the module
+explicitly. Here's an example.
+
+```
+---
+document: modulemd-defaults
+version: 1
+data:
+  module: httpd
+  stream: 2.4
+  profiles:
+    2.4: [common]
+...
+```
+
+This type of information is expected by pungi as a default modules repo that
+can be configured. These YAML's are not with the modules themselves. They are
+brought in when the repos are being created in the first place.
+
+In the context of lazybuilder, it checks for defaults if enabled and then the
+final repo that's made of the results will immediately have the information
+at the top. See the references below for the jinja template that lazybuilder
+uses to generate this information.
+
+As a final note, let's say an update comes in for postgresql and you want to
+ensure that the old version of postgresql 10 and the updated version of 10
+can stay together. This is when the final module data is combined together
+and then it's added into the repo using `modifyrepo_c`. Note though, you do
+*not* have to have the modulemd-defaults provided again. You can have it once
+such as the first time you made the repo in the first place, and it will still
+work.
 
 ### Building the packages
 
@@ -136,3 +187,132 @@ It's probably wise to have a template to make the module repo data off of. Havin
 a template will simplify a lot of things and will make it easier to convert the
 data from git and then the final build artifacts and data that makes the module
 data. The lazybuilder template is a good starting point, though it is a bit ugly.
+
+Regardless, you should have it templated or scripted somehow. See the references
+below.
+
+## Reference
+
+Below is a reference for what's in a module's data. Some keys are optional.
+There'll also be an example from lazybuilder, which uses jinja to template out
+the final data that is used in a repo.
+
+### Module Template and Known Keys
+
+### Module Template and Keys using jinja
+
+```
+{% if module_default_data is defined %}
+---
+document: modulemd-defaults
+version: {{ module_default_data.version }}
+data:
+  module: {{ module_default_data.data.module }}
+  stream: {{ module_default_data.data.stream }}
+  profiles:
+{% for k in module_default_data.data.profiles %}
+    {{ k }}: [{{ module_default_data.data.profiles[k]|join(', ') }}]
+{% endfor %}
+...
+{% endif %}
+---
+document: {{ module_data.document }}
+version: {{ module_data.version }}
+data:
+  name: {{ source_name | default("source") }}
+  stream: "{{ module_data.data.stream }}"
+  version: {{ module_version | default(8040) }}
+  context: {{ module_context | default('01010110') }}
+  arch: {{ mock_arch | default(ansible_architecture) }}
+  summary: {{ module_data.data.summary | wordwrap(width=79) | indent(width=4) }}
+  description: {{ module_data.data.description | wordwrap(width=79) | indent(width=4) }}
+  license:
+{% for (key, value) in module_data.data.license.items() %}
+    {{ key }}:
+    - {{ value | join('\n    - ') }}
+{% endfor %}
+  xmd: {}
+{% if module_data.data.dependencies is defined %}
+  dependencies:
+{% for l in module_data.data.dependencies %}
+{% for r in l.keys() %}
+{% if loop.index == 1 %}
+  - {{ r }}:
+{% else %}
+    {{ r }}:
+{% endif %}
+{% for (m, n) in l[r].items() %}
+      {{ m }}: [{{ n | join(', ') }}]
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if module_data.data.filter is defined %}
+  filter:
+{% for (key, value) in module_data.data.filter.items() %}
+    {{ key }}:
+    - {{ value | join('\n    - ') }}
+{% endfor %}
+{% endif %}
+{% if module_data.data.profiles is defined %}
+  profiles:
+{% for (key, value) in module_data.data.profiles.items() %}
+    {{ key }}:
+{% for (key, value) in value.items() %}
+{% if value is iterable and (value is not string and value is not mapping) %}
+      {{ key | indent(width=6) }}:
+      - {{ value | join('\n      - ') }}
+{% else %}
+      {{ key | indent(width=6) }}: {{ value }}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if module_data.data.api is defined %}
+  api:
+{% for (key, value) in module_data.data.api.items() %}
+    {{ key }}:
+    - {{ value | join('\n    - ') }}
+{% endfor %}
+{% endif %}
+{% if module_data.data.buildopts is defined %}
+  buildopts:
+{% for (key, value) in module_data.data.buildopts.items() %}
+    {{ key }}:
+{% for (key, value) in value.items() %}
+      {{ key }}: |
+        {{ value | indent(width=8) }}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if module_data.data.references is defined %}
+  references:
+{% for (key, value) in module_data.data.references.items() %}
+    {{ key }}: {{ value }}
+{% endfor %}
+{% endif %}
+{% if module_data.data.components is defined %}
+  components:
+{% for (key, value) in module_data.data.components.items() %}
+    {{ key }}:
+{% for (key, value) in value.items() %}
+      {{ key }}:
+{% for (key, value) in value.items() %}
+{% if value is iterable and (value is not string and value is not mapping) %}
+        {{ key | indent(width=8) }}: [{{ value | join(', ') }}]
+{% else %}
+        {{ key | indent(width=8) }}: {{ value }}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if artifacts is defined %}
+  artifacts:
+{% for (key, value) in artifacts.items() %}
+    {{ key }}:
+    - {{ value | join('\n    - ') }}
+{% endfor %}
+{% endif %}
+...
+```
