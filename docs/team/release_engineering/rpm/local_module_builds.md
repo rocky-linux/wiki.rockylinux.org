@@ -200,7 +200,8 @@ rpmbuild# cat /etc/rpm/macros.zz-modules
 #### Built Module Example
 
 Let's break down an example of `389-ds` - It's a simple module. Let's start
-with `modulemd.txt`. Notice how it has `xmd` data. That is an integral part
+with `modulemd.txt`, generated during a module build and before packages are
+built. Notice how it has `xmd` data. That is an integral part
 of making the context, though it's mostly information for koji and MBS and
 is generated on the fly and used throughout the build process for each
 arch. In the context of lazybuilder, it creates fake data to essentially
