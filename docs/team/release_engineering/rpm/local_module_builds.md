@@ -465,6 +465,173 @@ python or even golang.
 Regardless, you should have it templated or scripted somehow. See the references
 in the next section.
 
+### A note about virtual modules
+
+Virtual modules are weird. They do not have a module dist tag, and they are just
+built like... any other RPM. The difference here is that a virtual module while
+it will should have an api['rpms'] list, it will **not** have an artifacts section.
+
+A huge example of this is perl:5.26 in EL8. perl 5.26 is the default version. If
+you install perl-interpreter, you'll get `perl-interpreter-5.26.3-419.el8_4.1.x86_64`.
+Notice how it doesn't have a module tag? That's because it wasn't built directly
+in MBS. There are not many virtual modules, but this is important to keep in mind
+that these do in fact exist. The module yaml itself will *not* have a list of
+packages to build, aka a "components" section. Here's the current EL8 perl 5.26 example.
+
+```
+document: modulemd
+version: 2
+data:
+    summary: Practical Extraction and Report Language
+    description: >
+        Perl is a high-level programming language with roots in C, sed, awk
+        and shell scripting. Perl is good at handling processes and files, and
+        is especially good at handling text. Perl's hallmarks are practicality
+        and efficiency. While it is used to do a lot of different things,
+        Perl's most common applications are system administration utilities
+        and web programming.
+    license:
+        module: [ MIT ]
+    dependencies:
+        - buildrequires:
+              platform: [el8]
+          requires:
+              platform: [el8]
+    references:
+        community: https://docs.pagure.org/modularity/
+    profiles:
+        common:
+            description: Interpreter and all Perl modules bundled within upstream Perl.
+            rpms:
+                - perl
+        minimal:
+            description: Only the interpreter as a standalone executable.
+            rpms:
+                - perl-interpreter
+    api:
+        rpms:
+            - perl
+            - perl-Archive-Tar
+            - perl-Attribute-Handlers
+            - perl-autodie
+            - perl-B-Debug
+            - perl-bignum
+            - perl-Carp
+            - perl-Compress-Raw-Bzip2
+            - perl-Compress-Raw-Zlib
+            - perl-Config-Perl-V
+            - perl-constant
+            - perl-CPAN
+            - perl-CPAN-Meta
+            - perl-CPAN-Meta-Requirements
+            - perl-CPAN-Meta-YAML
+            - perl-Data-Dumper
+            - perl-DB_File
+            - perl-devel
+            - perl-Devel-Peek
+            - perl-Devel-PPPort
+            - perl-Devel-SelfStubber
+            - perl-Digest
+            - perl-Digest-MD5
+            - perl-Digest-SHA
+            - perl-Encode
+            - perl-Encode-devel
+            - perl-encoding
+            - perl-Env
+            - perl-Errno
+            - perl-experimental
+            - perl-Exporter
+            - perl-ExtUtils-CBuilder
+            - perl-ExtUtils-Command
+            - perl-ExtUtils-Embed
+            - perl-ExtUtils-Install
+            - perl-ExtUtils-MakeMaker
+            - perl-ExtUtils-Manifest
+            - perl-ExtUtils-Miniperl
+            - perl-ExtUtils-MM-Utils
+            - perl-ExtUtils-ParseXS
+            - perl-File-Fetch
+            - perl-File-Path
+            - perl-File-Temp
+            - perl-Filter
+            - perl-Filter-Simple
+            - perl-generators
+            - perl-Getopt-Long
+            - perl-HTTP-Tiny
+            - perl-interpreter
+            - perl-IO
+            - perl-IO-Compress
+            - perl-IO-Socket-IP
+            - perl-IO-Zlib
+            - perl-IPC-Cmd
+            - perl-IPC-SysV
+            - perl-JSON-PP
+            - perl-libnet
+            - perl-libnetcfg
+            - perl-libs
+            - perl-Locale-Codes
+            - perl-Locale-Maketext
+            - perl-Locale-Maketext-Simple
+            - perl-macros
+            - perl-Math-BigInt
+            - perl-Math-BigInt-FastCalc
+            - perl-Math-BigRat
+            - perl-Math-Complex
+            - perl-Memoize
+            - perl-MIME-Base64
+            - perl-Module-CoreList
+            - perl-Module-CoreList-tools
+            - perl-Module-Load
+            - perl-Module-Load-Conditional
+            - perl-Module-Loaded
+            - perl-Module-Metadata
+            - perl-Net-Ping
+            - perl-open
+            - perl-Params-Check
+            - perl-parent
+            - perl-PathTools
+            - perl-Perl-OSType
+            - perl-perlfaq
+            - perl-PerlIO-via-QuotedPrint
+            - perl-Pod-Checker
+            - perl-Pod-Escapes
+            - perl-Pod-Html
+            - perl-Pod-Parser
+            - perl-Pod-Perldoc
+            - perl-Pod-Simple
+            - perl-Pod-Usage
+            - perl-podlators
+            - perl-Scalar-List-Utils
+            - perl-SelfLoader
+            - perl-Socket
+            - perl-Storable
+            - perl-Sys-Syslog
+            - perl-Term-ANSIColor
+            - perl-Term-Cap
+            - perl-Test
+            - perl-Test-Harness
+            - perl-Test-Simple
+            - perl-tests
+            - perl-Text-Balanced
+            - perl-Text-ParseWords
+            - perl-Text-Tabs+Wrap
+            - perl-Thread-Queue
+            - perl-threads
+            - perl-threads-shared
+            - perl-Time-HiRes
+            - perl-Time-Local
+            - perl-Time-Piece
+            - perl-Unicode-Collate
+            - perl-Unicode-Normalize
+            - perl-utils
+            - perl-version
+    # We do not build any packages because they are already available
+    # in BaseOS or AppStream repository. We cannnot replace BaseOS
+    # packages.
+    #components:
+    #    rpms:
+```
+
 ## Reference
 
 Below is a reference for what's in a module's data. Some keys are optional.
