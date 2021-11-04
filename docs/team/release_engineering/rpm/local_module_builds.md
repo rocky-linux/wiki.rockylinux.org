@@ -106,8 +106,10 @@ data:
         - x86_64
 ```
 
-See the reference now? It's not a commit hash that refers directly to 389-ds-base
-on branch `r8-stream-1.4`, being the last commit/tag.
+See the reference now? It's now a commit hash that refers directly to 389-ds-base
+on branch `r8-stream-1.4`, being the last commit/tag. See the glossary at the
+end of this page for more information, as it can be a commit hash, branch, or
+tag name.
 
 ### Configuring Macros and Contexts
 
