@@ -82,7 +82,7 @@ When coming into the IRC or Mattermost channels, it's important to be able to fi
 * **Don't paste large quantities of text into the channel**
 
   * This can be disruptive to users on both sides of the IRC/MM bridge
-  * If at all possible, use a paste bin such as https://rpa.st
+  * If at all possible, use a paste bin such as [rpaste](https://rpa.st)
 
 * **Be patient** - You may not get an instant answer. We are all volunteers, so it may take minutes or hours to receive an answer to your question.
 * **Read the Topic** - The topic may contain useful information you may want to know about.
