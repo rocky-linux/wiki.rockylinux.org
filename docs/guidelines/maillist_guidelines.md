@@ -17,20 +17,13 @@ Keep in mind that while there may be many users on the lists, your post may go u
 
 ### Be Courteous
 
-Be courteous and polite to fellow members in the list. Never swear or be rude to anyone. When you interact with people on any of the RESF mailing lists, you are expected to follow the RESF Code of Conduct.
+Be courteous and polite to fellow members in the list. Never swear or be rude to anyone. When you interact with people on any of the RESF mailing lists (or indeed on any communication platform), you are expected to act in accordance with our [Community Charter](https://rockylinux.org/community-charter/) and its values.
 
 ### Keep it Short
 
 Most RESF Lists maintain a maximum message length of 40 kilobytes. Remember that your message will be copied potentially thousands of times when being delivered into people's mailboxes. It is wise to keep your messages as short as possible.
 
 Avoid including log output (select only the most relevant lines, or place the log on a website or in a [pastebin](https://rpa.st) instead) or excessively quoting previous messages in the thread (trim the quoted text down to the most recent/relevant messages only).
-
-### No HTML Mail, Please
-Set your mailer to send only plain text messages to the list ([How?](http://web.archive.org/web/20050515082128/http://www.expita.com:80/nomime.html)). Why? HTML is designed for web pages, not emails, and uses a lot more bandwidth. Many list members actually block HTML because it is used for malicious code.
-
-Not only does HTML mail be used to run malicious scripts, but when using handheld devices the time taken for the page to appear is also much higher.
-
-(see ["7 reasons why HTML e-mail is EVIL!"](http://www.georgedillon.com/web/html_email_is_evil.shtml))
 
 ### No attachments
 
