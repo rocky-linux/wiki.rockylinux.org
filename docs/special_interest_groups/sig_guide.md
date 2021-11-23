@@ -6,38 +6,38 @@ Special Interest Groups are a core piece of the Rocky Linux community, in which
 various members of these groups can extend the Enterprise Linux experience, by
 way of packages, images, or other community engagement.
 
-## Purpose
+# Purpose
 
 This page will serve as a guide for establishing SIGs and operational expectations.
 
-## Resources
+# Resources
 
-### Account Services
+## Account Services
 
 **URL**: https://accounts.rockylinux.org
 **Purpose**: Account Services maintains the accounts for almost all components of the Rocky ecosystem
 **Technology**: Noggin used by Fedora Infrastructure
 **Contact**: `~Infrastructure` in Mattermost and `#rockylinux-infra` in Libera IRC
 
-### Git
+## Git
 
 **URL**: https://git.rockylinux.org
 **Purpose**: Packages and code for the Rocky Linux ecosystem
 **Technology**: GitLab
 **Contact**: `~Infrastructure`, `~Development` in Mattermost and `#rockylinux-infra`, `#rockylinux-devel` in Libera IRC
 
-### Mirrors
+## Mirrors
 
 **URL**: https://mirrors.rockylinux.org
 **Purpose**: Users can apply to be a mirror to host Rocky content (SIG or the base operating system)
 **Technology**: MirrorManager 2
 **Contact**: `~Infrastructure` in Mattermost and `#rockylinux-infra` in Libera IRC
 
-## SIG Process
+# SIG Process
 
 Anyone in the community can propose or participate in a Special Interest Group. Here are some guidelines related to the working of a SIG.
 
-### Proposal
+## Proposal
 
 Creating a new Special Interest Group requires participation from a member of the Rocky teams or a member of the board. A SIG must meet these requirements:
 
@@ -52,7 +52,7 @@ Creating a new Special Interest Group requires participation from a member of th
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
 * A member of the SIG should also come from the Core/RelEng team, in the case that the SIG produces packages for use on a Rocky system.
 
-### Proposal Process
+## Proposal Process
 
 It is up to the requestor to:
 
@@ -69,19 +69,19 @@ Upon approval, a Core/RelEng member will request/create initial resources as nee
   * mail list
   * channel in mattermost + IRC channel as a bridge if requested
 
-### Acceptance 
+## Acceptance 
 
 TBD
 
-## Managing Content
+# Managing Content
 
 This section goes over how to manage content in git and the community build system.
 
-### Importing to Git
+## Importing to Git
 
 Each Special Interest Group will have a subgroup under `SIG` in git. This subgroup will have additional subgroups, `src`, `rpms`, `modules`. This is the default layout. Additional subgroups can be made at the root of the SIG group.
 
-#### rpms
+### rpms
 
 This area is specifically used for rpm sources (spec file, patches, light text files). The expected format is:
 
@@ -101,7 +101,7 @@ The left column is generally a hashed sum of the archive. This *is* the name of 
 b7b91082908db35e4acbcd0221b8df4044913dc1 SOURCES/freeipa-4.9.6.tar.gz
 ```
 
-##### Branch Names
+#### **Branch Names**
 
 This is **important**. **main is NOT an acceptable branch name under any cirumstances.**
 
@@ -129,7 +129,7 @@ The top one says this is for Rocky Linux 8, storage sig, gluster packages, versi
 
 The bottom one says this is for Rocky Linux 8, the `mc` sig, and the package(s) are for ejabberd, with no specific version listed as it will be continuously updated.
 
-#### modules
+### modules
 
 This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms, especially when there are multiple versions. See the `branch` section above.
 
@@ -142,29 +142,29 @@ The format expected:
 
 As of this writing, the `name.yaml` file generated in the root may be done by the Rocky Automation account.
 
-#### src
+### src
 
 This area is specifically used for having the source of the rpm. This means that instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group, by using dist-git/src-git. This is an optional group and does not have to be used.
 
-### Importing to S3
+## Importing to S3
 
 TBD
 
-### CBS (community build system)
+## CBS (community build system)
 
-#### Building in the CBS
+### Building in the CBS
 
-#### dist tags
+### dist tags
 
 It is expected that your SIG will have a "shorthand" name assigned to you (either by core or yourself). Because of this, it is a requirement that the group project's packages all have it set for the entire scope of the group. For example, if the SIG's name is "Messaging and Communication", the shorthand would be "mc", and the package would be named:
 
 `erlang-22.0.7-1.el8.mc.x86_64.rpm`
 
-### Automated testing
+## Automated testing
 
-### Release
+## Release
 
-#### rocky-release packages
+### rocky-release packages
 
 It is expected with Special Interest Groups that are delivering packages to have associated release packages that provide:
 
