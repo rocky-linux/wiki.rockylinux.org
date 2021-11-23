@@ -103,7 +103,9 @@ b7b91082908db35e4acbcd0221b8df4044913dc1 SOURCES/freeipa-4.9.6.tar.gz
 
 ##### Branch Names
 
-This is **important**. You **must** follow the correct branch name format for your package to be used in the CBS. You must use this format:
+This is **important**. **main is NOT an acceptable branch name under any cirumstances.**
+
+You **must** follow the correct branch name format for your package to be used in the CBS. You must use this format:
 
 ```
 rX-SIG-PKG_QUALIFIER[-OPTIONAL_VERSION]
@@ -129,7 +131,9 @@ The bottom one says this is for Rocky Linux 8, the `mc` sig, and the package(s) 
 
 #### modules
 
-This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms, especially when there are multiple versions. The name of the module does not necessarily have to match the actual package or package names. For example, the idm module. There is no package named `idm`, but each package as part of the module have the correct branch names as referenced in the source yaml for the module.
+This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms, especially when there are multiple versions. See the `branch` section above.
+
+The name of the module does not necessarily have to match the actual package or package names. For example, the idm module. There is no package named `idm`, but each package as part of the module have the correct branch names as referenced in the source yaml for the module.
 
 The format expected:
 
