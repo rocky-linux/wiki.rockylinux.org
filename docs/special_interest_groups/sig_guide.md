@@ -101,37 +101,9 @@ The left column is generally a hashed sum of the archive. This *is* the name of 
 b7b91082908db35e4acbcd0221b8df4044913dc1 SOURCES/freeipa-4.9.6.tar.gz
 ```
 
-#### **Branch Names**
-
-This is **important**. **main is NOT an acceptable branch name under any cirumstances.**
-
-You **must** follow the correct branch name format for your package to be used in the CBS. You must use this format:
-
-```
-rX-SIG-PKG_QUALIFIER[-OPTIONAL_VERSION]
-```
-
-Let's break it down:
-
-* X will the rocky major version. For example, `r8`
-* SIG will be your SIG name - For example, if it's one word, `storage` could be used. If it's a multi-word, abbreviate it. For example, `Messaging and Communication` could just be `mc`.
-* PKG_QUALIFIER is the name of or the group of packages that you plan on building. For example, `gluster`. Gluster is more than one package, so each rpm repo would have this in the branch name.
-* OPTIONAL_VERSION is straight forward. If you have multiple versions, you can put a version here.
-
-Here's full examples using this format:
-
-```
-r8-storage-gluster-9
-r8-mc-ejabberd
-```
-
-The top one says this is for Rocky Linux 8, storage sig, gluster packages, version 9. It implies there may be a version 10 at some point or there may be a version 8 that is/was there. It also implies there will be different repos per version, so a user could use the gluster 9 repo even though there may be a 10 version.
-
-The bottom one says this is for Rocky Linux 8, the `mc` sig, and the package(s) are for ejabberd, with no specific version listed as it will be continuously updated.
-
 ### modules
 
-This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms, especially when there are multiple versions. See the `branch` section above.
+This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms, especially when there are multiple versions. See the `branch` section in this document for more information.
 
 The name of the module does not necessarily have to match the actual package or package names. For example, the idm module. There is no package named `idm`, but each package as part of the module have the correct branch names as referenced in the source yaml for the module.
 
@@ -144,7 +116,35 @@ As of this writing, the `name.yaml` file generated in the root may be done by th
 
 ### src
 
-This area is specifically used for having the source of the rpm. This means that instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group, by using dist-git/src-git. This is an optional group and does not have to be used.
+This area is specifically used for having the source of the rpm. This means that instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group, by using dist-git/src-git. This is an optional group and does not have to be used. These are subject to the correct branch names template.
+
+### **Branch Names**
+
+This is **important**. **main is NOT an acceptable branch name under any cirumstances.**
+
+You **must** follow the correct branch name format for your package to be used in the CBS. You must use this format:
+
+```
+rX-SIG-PKG_QUALIFIER[-OPTIONAL_VERSION]
+```
+
+Let's break it down:
+
+* `X` will the rocky major version. For example, `r8`
+* `SIG` will be your SIG name - For example, if it's one word, `storage` could be used. If it's a multi-word, abbreviate it. For example, `Messaging and Communication` could just be `mc`.
+* `PKG_QUALIFIER` is the name of or the group of packages that you plan on building. For example, `gluster`. Gluster is more than one package, so each rpm repo would have this in the branch name.
+* `OPTIONAL_VERSION` is straight forward. If you have multiple versions, you can put a version here.
+
+Here's full examples using this format:
+
+```
+r8-storage-gluster-9
+r8-mc-ejabberd
+```
+
+The top one says this is for Rocky Linux 8, storage sig, gluster packages, version 9. It implies there may be a version 10 at some point or there may be a version 8 that is/was there. It also implies there will be different repos per version, so a user could use the gluster 9 repo even though there may be a 10 version.
+
+The bottom one says this is for Rocky Linux 8, the `mc` sig, and the package(s) are for ejabberd, with no specific version listed as it will be continuously updated.
 
 ## Importing to S3
 

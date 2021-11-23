@@ -13,8 +13,9 @@ The Rocky Linux teams manage and maintain the mattermost channels and the variou
 | **IRC/Mattermost Contacts** | `Sokel/label/Sombra` `@label` `@nazunalika` |
 | **IRC/Mattermost Contacts** | `mustafa` `@mustafa` |
 | **IRC/Mattermost Contacts** | `neil` `@neil` |
-| **IRC/Mattermost Contacts** | `pj` `@pj` |
 | **IRC/Mattermost Contacts** | `tg` `@tgo` |
+| **IRC/Mattermost Contacts** | `pgreco` `@pgreco` |
+| **IRC/Mattermost Contacts** | `pj` `@pj` |
 
 ## Bridge Information
 
