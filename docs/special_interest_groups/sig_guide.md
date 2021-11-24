@@ -118,7 +118,7 @@ As of this writing, the `name.yaml` file generated in the root may be done by th
 
 This area is specifically used for having the source of the rpm. This means that instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group, by using dist-git/src-git. This is an optional group and does not have to be used. These are subject to the correct branch names template.
 
-### **Branch Names**
+### Branch Names
 
 This is **important**. **main is NOT an acceptable branch name under any cirumstances.**
 
@@ -159,6 +159,8 @@ TBD
 It is expected that your SIG will have a "shorthand" name assigned to you (either by core or yourself). Because of this, it is a requirement that the group project's packages all have it set for the entire scope of the group. For example, if the SIG's name is "Messaging and Communication", the shorthand would be "mc", and the package would be named:
 
 `erlang-22.0.7-1.el8.mc.x86_64.rpm`
+
+Some single word SIGs can be abbreviated too. Like `hyperscale` can become `hs`.
 
 ## Automated testing
 
