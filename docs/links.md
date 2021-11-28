@@ -7,6 +7,7 @@ title: Link Directory
 * [Forums](https://forums.rockylinux.org/)
 * [Wiki](https://wiki.rockylinux.org/)
 * [Rocky Linux Account Services](https://accounts.rockylinux.org)
+* [Mail List](https://lists.resf.org)
 
 ## Cloud Offerings
 * [Amazon Web Services](https://aws.amazon.com/marketplace/seller-profile?id=01538adc-2664-49d5-b926-3381dffce12d)

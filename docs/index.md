@@ -22,6 +22,8 @@ Rocky Linux is a community enterprise Operating System designed to be 100% bug-f
 
 For all other questions: hello@rockylinux.org
 
+Alternatively, you can use our [mail lists](https://lists.resf.org)
+
 
 ## Contributing
 
