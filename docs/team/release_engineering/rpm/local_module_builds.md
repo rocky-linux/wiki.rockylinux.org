@@ -118,7 +118,7 @@ are created and are usually unique per module stream. There are certain
 components that work together to create a unique `%dist` tag based on several
 factors. To summarize, here's what generally happens:
 
-* **A module version is formed as** `M0m0YYYYMMDDhhmmss`**, which would be the major version, 0, minor version, 0, and then a timestamp.**
+* **A module version is formed as** `M0m00YYYYMMDDhhmmss`**, which would be the major version, 0, minor version, 0, and then a timestamp.**
 * **Select components are brought together and a sha1 hash is made, shortened to 8 characters for the context**
 
   * The runtime context is typically the "dependencies" section of the module source, calculated to sha1
