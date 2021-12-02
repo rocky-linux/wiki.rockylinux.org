@@ -47,7 +47,7 @@ Creating a new Special Interest Group requires participation from a member of th
 
   * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC channel can also be assigned.
 
-* Code produced within the SIG must be compatible with a FOSS license presently used by Rocky - If a new license is wanted, consult with Release Engineering/Core.
+* Code produced within the SIG must be compatible with a FOSS license presently used by Rocky and [upstream](https://fedoraproject.org/wiki/Licensing:Main?rd=Licensing#SoftwareLicenses) - If a new license is wanted, consult with Release Engineering/Core.
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
 * A member of the SIG should also come from the Core/RelEng team, in the case that the SIG produces packages for use on a Rocky system.
