@@ -37,7 +37,7 @@ well as information on proposing a SIG.
 
 We expect SIGs to satisfy some basic requirements, such as:
 
-* The group must be related to Rocky or a use-case for Rocky
+* The group must be related to Rocky, a use-case for Rocky, or related to Enterprise Linux as a whole
 * There must be feedback and control into the Rocky community
 * All communication as to the work of the SIG should be public - Some matters may have to be private, and as such should be out of band
   
@@ -55,6 +55,7 @@ The following rules apply for SIG membership:
 * SIG members are appointed/approved by SIG sponsors/leaders - The sponsors/leaders typically have write permissions to relevant wikis and git repos
 * SIG sponsors/leaders may be asked to be a mailing list moderator
 * SIG channels will be public under a name such as `SIG/name` with an optional IRC channel to be bridged.
+* Optionally: define if work with CentOS Stream will be applicable for the SIG
 
 ## SIG Reporting
 
