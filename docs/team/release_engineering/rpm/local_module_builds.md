@@ -130,7 +130,7 @@ factors. To summarize, here's what generally happens:
 
   * The module name, stream, version, and context are all brought together as `name.stream.version.context`, calculated to sha1
 
-* **The `%dist` tag is given a format of** `.module+elX.Y.Z+000+00000000` (fedora uses `.module_fcXX+000+00000000`)
+* **The `%dist` tag is given a format of** `.module+elX.Y.Z+000+00000000` (note: fedora and el9+ use `.module_elX.Y.Z+000+00000000`)
 
   * X is the major version, Y is the minor version, Z is typically 0.
   * The second number is the iteration, aka the module number. If you've done 500 module builds, the next one would be 501, regardless of module.
