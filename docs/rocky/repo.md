@@ -8,6 +8,10 @@ There are several repositories that are provided by Rocky Linux and may differ b
 
 Please read `man 5 dnf.conf`, in particular the section of `enabled` under the `REPO` section. A line containing `enabled=0` or `enabled=1` will disable or enable a repository. This can also be modified using `dnf config-manager --set-enabled` or `--set-disabled`. When this is done, it is recommended to run `dnf clean all`.
 
+## Version Policy
+
+During a minor release lifecycle as a package receives updates, the previous version will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates). Upon new minor release, all previous updates/versions that are *not* the latest are not carried over.
+
 ## Base Repositories
 
 Each major release has a set of repositories that come default with the distribution. Below is a list of common repositories for each major release. As of October 12, 2021, "Rocky 9" is projected information based on CentOS Stream 9.
