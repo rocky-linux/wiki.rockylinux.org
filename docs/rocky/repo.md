@@ -20,7 +20,8 @@ Each major release has a set of repositories that come default with the distribu
 |------------------|---------|---------|---------|
 | BaseOS           | Yes     | Yes     | Yes     |
 | AppStream        | Yes     | Yes     | Yes     |
-| PowerTools / CRB | Yes     | Yes     | No      |
+| PowerTools       | Yes     | No      | No      |
+| CRB              | No      | Yes     | No      |
 | HighAvailability | Yes     | Yes     | No      |
 | ResilientStorage | Yes     | Yes     | No      |
 
@@ -36,7 +37,7 @@ There are extra repositories offered by Rocky Linux.
 | Plus             | Yes     | Yes     | No      |
 | RT (real time)   | Yes     | Yes     | No      |
 | NFV              | Yes     | Yes     | No      |
-| SAP / SAP HANA   | No      | Yes     | No      |
+| SAP / SAP HANA   | No      | TBD     | No      |
 | Devel            | Yes     | Yes     | No      |
 | rockyrpi         | Yes     | Yes     | No      |
 
