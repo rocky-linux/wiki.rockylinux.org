@@ -155,7 +155,7 @@ Main backgrounds should follow these guidelines:
 
 * Discouraged:
     * Avoid using the Rocky logo, unless it fits with an abstract/minimalist idea for the background
-        * Plain backgrounds with the rocky logo are *not* permitted
+      * Plain backgrounds with the rocky logo are *not* permitted
 
 ### Extras Package
 
