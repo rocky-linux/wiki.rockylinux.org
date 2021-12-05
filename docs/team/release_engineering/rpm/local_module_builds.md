@@ -121,20 +121,20 @@ factors. To summarize, here's what generally happens:
 * **A module version is formed as** `M0m00YYYYMMDDhhmmss`**, which would be the major version, 0, minor version, 0, and then a timestamp.**
 * **Select components are brought together and a sha1 hash is made, shortened to 8 characters for the context**
 
-  * The runtime context is typically the "dependencies" section of the module source, calculated to sha1
-  * The build context is the `xmd['mbs']['buildrequires']` data that koji generates and is output into `module.txt`, calculated to sha1
-  * The runtime and build contexts are combined `BUILD:RUNTIME`, a sha1 is calculated, and then shortened to 8
-  * This context is typically the one that changes less often
+    * The runtime context is typically the "dependencies" section of the module source, calculated to sha1
+    * The build context is the `xmd['mbs']['buildrequires']` data that koji generates and is output into `module.txt`, calculated to sha1
+    * The runtime and build contexts are combined `BUILD:RUNTIME`, a sha1 is calculated, and then shortened to 8
+    * This context is typically the one that changes less often
 
 * **Select components are brought together and a sha1 hash is made, shortened to 8 characters for the dist tag**
 
-  * The module name, stream, version, and context are all brought together as `name.stream.version.context`, calculated to sha1
+    * The module name, stream, version, and context are all brought together as `name.stream.version.context`, calculated to sha1
 
 * **The `%dist` tag is given a format of** `.module+elX.Y.Z+000+00000000` (note: fedora uses `.module_fcXX+000+00000000`)
 
-  * X is the major version, Y is the minor version, Z is typically 0.
-  * The second number is the iteration, aka the module number. If you've done 500 module builds, the next one would be 501, regardless of module.
-  * The last set is a context hash generated earlier in the step above
+    * X is the major version, Y is the minor version, Z is typically 0.
+    * The second number is the iteration, aka the module number. If you've done 500 module builds, the next one would be 501, regardless of module.
+    * The last set is a context hash generated earlier in the step above
 
 #### Configuring the Macros
 

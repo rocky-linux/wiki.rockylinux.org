@@ -19,7 +19,7 @@ All anaconda image assets will be in `PNG` form. Backgrounds should be transpare
 
 ### Backgrounds
 
-See next major section.
+See [Backgrounds Section](#Backgrounds/Wallpapers)
 
 ### fedora
 
@@ -100,11 +100,11 @@ A defaults file looks at every other `XML` that is a default background provided
         <license>CC-BY-SA 4.0</license>
     </wallpaper> 
 </wallpapers>
-`````
+```
 
 The wallpaper itself will list every applicable variant of that background.
 
-`````
+```
 <background>
   <starttime>
     <year>2021</year>
@@ -129,29 +129,29 @@ The wallpaper itself will list every applicable variant of that background.
 </file>
 </static>
 </background>
-`````
+```
 
 ### Guidelines
 Main backgrounds should follow these guidelines:
 
 * **General Theme**: Each Rocky release has a codename. As such, that is the general theme.
-  * Rocky 8: ```Green Obsidian`
-  * Rocky 9: `Blue Onyx` - This should be generally a blue theme/color scheme
-* Initial submission should be a high resolution and/or required resolutions
+    * Rocky 8: ```Green Obsidian`
+    * Rocky 9: `Blue Onyx` - This should be generally a blue theme/color scheme
 * **Resolutions**
-  * Minimum Required Resolutions: 16:9 (1920x1080), 16:10 (1920x1200), 5:4 (2048x1536), 4:3 (1280x1024)
-  * Additional (encouraged) allowed resolutions: 3440x1440, 2560x1600, 2560x1440, 2560x1080, 1800x1440
-  * Portrait mode versions of the above are optional
+    * Minimum Required Resolutions: 16:9 (1920x1080), 16:10 (1920x1200), 5:4 (2048x1536), 4:3 (1280x1024)
+    * Additional (encouraged) allowed resolutions: 3440x1440, 2560x1600, 2560x1440, 2560x1080, 1800x1440
+    * Portrait mode versions of the above are optional
+    * Initial submission should be a high resolution and/or required resolutions
 
 * Allowed:
-  * Anything related to nature, mountains, rocks, and the like (generally fitting into the "rocky" idea)
-  * Anything related to the codename (Blue Onyx)
-  * Anything minimalist is allowed
-  * Abstract ideas are allowed
-  * References to the release number (like 9, and so on) are allowed
-  * Complementary colors are allowed in the image within reason
-  * Contrasting colors are allowed in the image within reason
-  * **Highly Encouraged**: [Day](https://i.imgur.com/L2EvweR.png) and [Night](https://i.imgur.com/j0l5PWA.png) versions of wallpapers
+    * Anything related to nature, mountains, rocks, and the like (generally fitting into the "rocky" idea)
+    * Anything related to the codename (Blue Onyx)
+    * Anything minimalist is allowed
+    * Abstract ideas are allowed
+    * References to the release number (like 9, and so on) are allowed
+    * Complementary colors are allowed in the image within reason
+    * Contrasting colors are allowed in the image within reason
+    * **Highly Encouraged**: [Day](https://i.imgur.com/L2EvweR.png) and [Night](https://i.imgur.com/j0l5PWA.png) versions of wallpapers
 
 * Discouraged:
     * Avoid using the Rocky logo, unless it fits with an abstract/minimalist idea for the background
