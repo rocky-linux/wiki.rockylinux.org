@@ -135,7 +135,7 @@ The wallpaper itself will list every applicable variant of that background.
 Main backgrounds should follow these guidelines:
 
 * **General Theme**: Each Rocky release has a codename. As such, that is the general theme.
-    * Rocky 8: ```Green Obsidian`
+    * Rocky 8: `Green Obsidian`
     * Rocky 9: `Blue Onyx` - This should be generally a blue theme/color scheme
 * **Resolutions**
     * Minimum Required Resolutions: 16:9 (1920x1080), 16:10 (1920x1200), 5:4 (2048x1536), 4:3 (1280x1024)
