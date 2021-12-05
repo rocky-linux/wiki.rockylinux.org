@@ -154,8 +154,8 @@ Main backgrounds should follow these guidelines:
   * **Highly Encouraged**: [Day](https://i.imgur.com/L2EvweR.png) and [Night](https://i.imgur.com/j0l5PWA.png) versions of wallpapers
 
 * Discouraged:
-  * Avoid using the Rocky logo, unless it fits with an abstract/minimalist idea for the background
-    * Plain backgrounds with the rocky logo are *not* permitted
+    * Avoid using the Rocky logo, unless it fits with an abstract/minimalist idea for the background
+        * Plain backgrounds with the rocky logo are *not* permitted
 
 ### Extras Package
 
