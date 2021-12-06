@@ -151,7 +151,7 @@ Main backgrounds should follow these guidelines:
     * References to the release number (like 9, and so on) are allowed
     * Complementary colors are allowed in the image within reason
     * Contrasting colors are allowed in the image within reason
-    * **Highly Encouraged**: [Day](https://i.imgur.com/L2EvweR.png) and [Night](https://i.imgur.com/j0l5PWA.png) versions of wallpapers
+    * **Highly Encouraged**: [Day](https://github.com/fedoradesign/backgrounds/raw/f34-backgrounds/default/f34-01-day.png) and [Night](https://github.com/fedoradesign/backgrounds/raw/f34-backgrounds/default/f34-02-night.png) versions of wallpapers
 
 * Discouraged:
     * Avoid using the Rocky logo, unless it fits with an abstract/minimalist idea for the background
