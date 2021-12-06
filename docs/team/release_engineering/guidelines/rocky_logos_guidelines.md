@@ -134,7 +134,7 @@ The wallpaper itself will list every applicable variant of that background.
 ### Guidelines
 Main backgrounds should follow these guidelines:
 
-* **General Theme**: Each Rocky release has a codename. As such, that is the general theme.
+* **General Theme**: Each Rocky release has a codename. As such, that is the general theme. Examples:
     * Rocky 8: `Green Obsidian`
     * Rocky 9: `Blue Onyx` - This should be generally a blue theme/color scheme
 * **Resolutions**
@@ -159,4 +159,4 @@ Main backgrounds should follow these guidelines:
 
 ### Extras Package
 
-If a wallpaper does not make it to the main package (whether it doesn't meet guidelines or is simply just Rocky inspired), they can be submitted to be added into the `rocky-backgrounds-extras` package.
+If a wallpaper does not make it to the main package (whether it doesn't meet guidelines or is simply just Rocky inspired), they should be able to be submitted for addition into the `rocky-backgrounds-extras` package.
