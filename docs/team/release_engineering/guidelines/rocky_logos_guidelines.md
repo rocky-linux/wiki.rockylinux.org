@@ -4,6 +4,8 @@ title: Rocky Logos Package Guidelines
 
 This page goes over the basic guidelines for the rocky-logos package, which produces assets for anaconda, wallpapers, and other assets for the distribution.
 
+**Release Engineering has the final "go/no-go" decision on submissios/assets/images in the package.**
+
 ## Rocky Logo Assets
 
 In various parts of the package, the Rocky logo will need to exist in multiple forms:
@@ -102,7 +104,7 @@ A defaults file looks at every other `XML` that is a default background provided
 </wallpapers>
 ```
 
-The wallpaper itself will list every applicable variant of that background.
+The wallpaper itself will list every applicable variant of that background if applicable.
 
 ```
 <background>
@@ -131,31 +133,93 @@ The wallpaper itself will list every applicable variant of that background.
 </background>
 ```
 
+Day/Night Wallpapers have a similar configuration.
+
+```
+<background>
+  <starttime>
+    <year>2022</year>
+    <month>01</month>
+    <day>01</day>
+    <hour>8</hour>
+    <minute>00</minute>
+    <second>00</second>
+  </starttime>
+<!-- This animation will start at 8 AM. -->
+
+<!-- We start with day at 8 AM. It will remain up for 10 hours. -->
+<static>
+<duration>36000.0</duration>
+<file>/usr/share/backgrounds/rocky-default-1-mesh-day.png</file>
+</static>
+
+<!-- Day ended and starts to transition to night at 6 PM. The transition lasts for 2 hours, ending at 8 PM. -->
+<transition type="overlay">
+<duration>7200.0</duration>
+<from>/usr/share/backgrounds/rocky-default-1-mesh-day.png</from>
+<to>/usr/share/backgrounds/rocky-default-1-mesh-night.png</to>
+</transition>
+
+<!-- It's 8 PM, we're showing the night till 6 AM. -->
+<static>
+<duration>36000.0</duration>
+<file>/usr/share/backgrounds/rocky-default-1-mesh-night.png</file>
+</static>
+
+<!-- It's 6 AM, and we're starting to transition to day. Transition completes at 8 AM. -->
+<transition type="overlay">
+<duration>7200.0</duration>
+<from>/usr/share/backgrounds/rocky-default-1-mesh-night.png</from>
+<to>/usr/share/backgrounds/rocky-default-1-mesh-day.png</to>
+</transition>
+
+</background>
+```
+
 ### Guidelines
-Main backgrounds should follow these guidelines:
 
-* **General Theme**: Each Rocky release has a codename. As such, that is the general theme. Examples:
-    * Rocky 8: `Green Obsidian`
+This section goes over the general guidelines for the main backgrounds included in the distribution.
+
+**Note**: It is **highly recommended and encouraged** that a submission should be the highest resolution as noted below. See the [note](#minimum-resolutions) on minimum resolutions.
+
+* **General Theme**: Each Rocky release has a codename, and thus is the general theme. Examples.
+    * Rocky 8: `Green Obsidian` - Submissions only to extras
     * Rocky 9: `Blue Onyx` - This should be generally a blue theme/color scheme
-* **Resolutions**
-    * Minimum Required Resolutions: 16:9 (1920x1080), 16:10 (1920x1200), 5:4 (2048x1536), 4:3 (1280x1024)
-    * Additional (encouraged) allowed resolutions: 3440x1440, 2560x1600, 2560x1440, 2560x1080, 1800x1440
-    * Portrait mode versions of the above are optional
-    * Initial submission should be a high resolution and/or required resolutions
+* **Required Resolution(s) for Normal Submissions**: 
+    * Resolution must **not** exceed nor fall below: 4092x3072
 
-* Allowed:
+* **Allowed**:
     * Anything related to nature, mountains, rocks, and the like (generally fitting into the "rocky" idea)
-    * Anything related to the codename (Blue Onyx)
-    * Anything minimalist is allowed
-    * Abstract ideas are allowed
+    * Anything related to the codename (eg. Blue Onyx)
+    * Anything minimalist/abstract is allowed
     * References to the release number (like 9, and so on) are allowed
-    * Complementary colors are allowed in the image within reason
-    * Contrasting colors are allowed in the image within reason
+    * Complementary colors should be allowed in the image within reason
+    * Contrasting colors should be allowed in the image within reason
+    * Photography + Manipulation should be allowed within reasonG
     * **Highly Encouraged**: [Day](https://github.com/fedoradesign/backgrounds/raw/f34-backgrounds/default/f34-01-day.png) and [Night](https://github.com/fedoradesign/backgrounds/raw/f34-backgrounds/default/f34-02-night.png) versions of wallpapers
 
-* Discouraged:
+* **Discouraged**:
     * Avoid using the Rocky logo, unless it fits with an abstract/minimalist idea for the background
-        * Plain backgrounds with the rocky logo are *not* permitted
+        * Plain backdrops with the rocky logo are *not* permitted
+
+#### Minimum Resolutions
+
+For general submissions, we require the highest resolution to make things simpler, that way the user should be able to use a wallpaper without having to choose "the right one" for their monitor size. However, for the case case of extra backgrounds, this requirement is more relaxed. If a submitter wishes not to use the highest resolution but opts to make multiple resolutions instead, they should follow the below list:
+
+* **Minimum Required Resolutions**:
+    * 16:9 (1920x1080)
+    * 16:10 (1920x1200)
+    * 5:4 (2048x1536)
+    * 4:3 (1280x1024)
+* **Additional (encouraged) allowed resolutions**:
+    * 3440x1440
+    * 2560x1600
+    * 2560x1440
+    * 2560x1080
+    * 1800x1440
+    * Portrait mode versions of the above are optional
+
+The placeholders in [this commit](https://github.com/rocky-linux/rocky-logos/tree/962a836f70a131faa541a4f8f73a4a3fddfc3dbf/backgrounds) shows an example of using the minimum resolutions.
 
 ### Extras Package
 
