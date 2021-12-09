@@ -34,7 +34,7 @@ Services and software in use by the Rocky Linux project
 |----------------------|--------------------------------------------------|------------|--------------|----------------------------------------|
 | **reCAPTCHA**        | Anti-abuse                                       | In use     |<sup>[1]</sup>| https://www.google.com/recaptcha/about |
 | **Slack**            | Communications, chat                             | Deprecated    |<sup>[2]</sup>| https://www.slack.com                  |
-| **Freenode**         | IRC, chat                                        | In use     |<sup>[3]</sup>| https://www.freenode.net               |
+| **Libera**         | IRC, chat                                        | In use     |<sup>[3]</sup>| https://www.libera.chat               |
 | **Matrix**           | Chat                                             | In use     |<sup>[4]</sup>| https://matrix.org                     |
 | **GitHub**           | Source control, collaboration, registry, actions | In use     |<sup>[5]</sup>| https://www.github.com                 |
 | **Figma**            | Design collaboration                             | In use     |<sup>[6]</sup>| https://figma.com                      |
@@ -56,7 +56,7 @@ Services and software in use by the Rocky Linux project
 | **Item**      | **Use**                | **Status** | **License**      | **Link**                  |
 |---------------|------------------------|------------|------------------|---------------------------|
 | **Terraform** | Infrastructure as code | In use     | MPL-2.0          | https://www.terraform.io  |
-| **CentOS 8**  | Operating system       | In use     | GPL, various OSI | https://www.centos.org    |
+| **Rocky 8**   | Operating system       | In use     | BSD-3, various OSI | https://www.rockylinux.org    |
 | **KVM**       | Virtualization         | In use     | GPL-2.0 or LGPL  | https://www.linux-kvm.org |
 | **AWX**       | Automation System | Planned | Apache License 2.0 | https://github.com/ansible/awx
 
