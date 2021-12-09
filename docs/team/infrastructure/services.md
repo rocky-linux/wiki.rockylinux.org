@@ -25,6 +25,8 @@ Services and software in use by the Rocky Linux project
 | **Postgresql**  | Database Engine  >v11    | Deployed   |  ?          | https://www.postgresql.org/                          |
 | **Bugzilla** | Bug Tracking and Ticket System | Deployed | MPL | https://bugzilla.org |
 | **MantisBT** | Bug Tracking and Ticket System | Removed | GPL-2.0 | https://mantisbt.org |
+| **mailman3** | mailing list system            | Deployed | GPL-3.0 | https://www.list.org/ |
+| **hyperkitty** | mailing list system achiver  | Deployed | GPL-3.0 | https://www.list.org/ |
 
 ## Third-Party Services
 
@@ -37,7 +39,7 @@ Services and software in use by the Rocky Linux project
 | **GitHub**           | Source control, collaboration, registry, actions | In use     |<sup>[5]</sup>| https://www.github.com                 |
 | **Figma**            | Design collaboration                             | In use     |<sup>[6]</sup>| https://figma.com                      |
 | **Discourse**        | Community forums                                 | In use     |<sup>[7]</sup>| https://www.discourse.org              |
-| **Google Workspace** | Foundation email, mailing lists                  | In use     |<sup>[8]</sup>| https://workspace.google.com           |
+| **Google Workspace** | Foundation email                                 | In use     |<sup>[8]</sup>| https://workspace.google.com           |
 
 <sup>[1]</sup> - Google [legal terms](https://developers.google.com/terms), [privacy policy](https://policies.google.com/privacy)
 <sup>[2]</sup> - Slack [legal terms](https://slack.com/intl/en-us/legal)
