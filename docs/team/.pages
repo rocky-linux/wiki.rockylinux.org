@@ -4,3 +4,4 @@ nav:
   - Infrastructure: infrastructure
   - Release Engineering: release_engineering
   - Testing: testing
+  - Design: design
