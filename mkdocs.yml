@@ -3,6 +3,10 @@ site_name: Rocky Wiki
 site_url: https://rocky.shootthej.net
 theme:
   name: material
+  palette:
+    scheme: slate
+    primary: blue grey
+    accent: teal
   highlightjs: true
   hljs_languages:
     - bash
