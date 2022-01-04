@@ -2,7 +2,7 @@
 site_name: Rocky Wiki
 site_url: https://rocky.shootthej.net
 theme:
-  name: windmill
+  name: material
   highlightjs: true
   hljs_languages:
     - bash
