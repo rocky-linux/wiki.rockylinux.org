@@ -14,10 +14,11 @@ theme:
     - yaml
     - perl
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.top
+    - toc.integrate
     - search.suggest
+    - navigation.top
+      #- navigation.tabs
+      #- navigation.tabs.sticky
 markdown_extensions:
   - abbr
   - attr_list
