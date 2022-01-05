@@ -19,6 +19,9 @@ theme:
     - navigation.top
       #- navigation.tabs
       #- navigation.tabs.sticky
+  extras:
+    homepage: https://rockylinux.org
+  logo: assets/icon-white.svg
 markdown_extensions:
   - abbr
   - attr_list
