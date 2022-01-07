@@ -1,1 +1,4 @@
-Rocky Linux wiki, testing to convert into a mkdocs site
+Rocky Linux wiki
+================
+
+This is the Rocky Linux wiki, built using mkdocs.

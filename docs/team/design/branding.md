@@ -61,23 +61,25 @@ For examples of incorrect uses of a logo of RESF, please refer to Section 1.3 (L
 
 Certain marks of RESF have been created to enable you to communicate compatibility or interoperability of software or products. In addition to the requirement that any use of a mark to make an assertion of compatibility must, of course, be accurate, the use of these marks must avoid confusion regarding RESF's association with the product. The use of the mark cannot imply that RESF or its projects are sponsoring or endorsing the product. The following are examples of proper and improper usage of these trademarks of RESF:
 
-`Correct: <your product name> for <RESF mark>`
-`Correct: <your product/company name> plug-in for <RESF mark>`
-`Correct: <your product name> compatible with <RESF mark>`
-`Correct: <your product name> for use with <RESF mark>`
-`Correct: Quick Start for <RESF mark> by <your company name>`
-`Correct: <non-trademarked industry term> Day featuring <RESF mark>`
-`Correct: <non-trademarked industry term> Day with <RESF mark>`
-`Correct: <non-trademarked industry term> Day including <RESF mark>`
+```
+Correct: <your product name> for <RESF mark>
+Correct: <your product/company name> plug-in for <RESF mark>
+Correct: <your product name> compatible with <RESF mark>
+Correct: <your product name> for use with <RESF mark>
+Correct: Quick Start for <RESF mark> by <your company name>
+Correct: <non-trademarked industry term> Day featuring <RESF mark>
+Correct: <non-trademarked industry term> Day with <RESF mark>
+Correct: <non-trademarked industry term> Day including <RESF mark>
 
-`Incorrect: <RESF mark> <your product name>`
-`Incorrect: <RESF mark> by <your company name>`
-`Incorrect: <RESF mark> - <your product name>`
-`Incorrect: <your product/company name> - <RESF mark>`
-`Incorrect: <RESF mark> Quick Start by <your company name>`
-`Incorrect: <RESF mark> Day`
-`Incorrect: <RESF mark> Day by <your company name>`
-`Incorrect: <non-trademarked industry term> Day brought to you by <RESF mark>`
+Incorrect: <RESF mark> <your product name>
+Incorrect: <RESF mark> by <your company name>
+Incorrect: <RESF mark> - <your product name>
+Incorrect: <your product/company name> - <RESF mark>
+Incorrect: <RESF mark> Quick Start by <your company name>
+Incorrect: <RESF mark> Day
+Incorrect: <RESF mark> Day by <your company name>
+Incorrect: <non-trademarked industry term> Day brought to you by <RESF mark>
+```
 
 ### Questions, Comments, Concerns
 We look to our community to help us retain the value of RESF's trade and service marks. If you have questions with respect to these guidelines or to report concerns regarding the use or misuse of a trademark of RESF, or to obtain written permission for a proposed use of RESF trademarks, contact: design@rockylinux.org.
