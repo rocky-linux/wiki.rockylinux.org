@@ -6,6 +6,20 @@ on:
     branches: [ main ]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: check urls
+        uses: urlstechie/urlchecker-action@0.0.25
+        with:
+          subfolder: docs
+          file_types: .md 
+          print_all: false
+          retries: 3   
+          exclude_files: docs/archive
+          force_pass: true # Don't block deployment
+
   build:
     runs-on: ubuntu-latest
     strategy:
