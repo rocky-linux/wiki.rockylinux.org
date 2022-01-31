@@ -1,11 +1,11 @@
-name: mkdocs
+
+name: mkdocs build
 on:
-  push:
-    branches: [ main ]
-  pull_request:
+  workflow_run:
+    workflows: [ test ]
     branches: [ main ]
 
-jobs:
+jobs: 
   build:
     runs-on: ubuntu-latest
     strategy:
