@@ -89,7 +89,7 @@ This area is specifically used for rpm sources (spec file, patches, light text f
 * `SPECS/name.spec` -- Your spec file comes here - note it should only be one spec file
 * `.name.metadata` -- Required, lists your source archives or otherwise that will be in lookaside. Empty if there are no sources to pull from lookaside.
 
-The metadata file format is expected to me:
+The metadata file format is expected to be:
 
 ```
 SHA256SUM_STRING SOURCES/some_name
