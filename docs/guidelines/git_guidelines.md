@@ -36,11 +36,13 @@ Most of this information is covered in our `Git Contributor Agreement`. However,
 Below are a list of do's and do not's as part of our Git, whether some are duplicated information above or below this subsection. They are placed here for further emphasis.
 
 DO:
+
 * Fork repositories and create pull requests where needed
 * Ensure software/source code brought into the Git services are of a valid open source license (see related links above)
 * Upload a valid GPG key and sign your commits
 
 DON'T:
+
 * Treat any Git service as a Rocky Linux issue tracker
 * Create personal projects under your namespace (see exceptions)
 * Perform your work or changes on a system that is owned by your employer
