@@ -92,8 +92,8 @@ and agree to the terms in how you are expected to use Rocky-related services.
 
 You will find 100% of the time, you will be required to sign at least one of
 the agreements, and that's the `Rocky Open Source Contributor Agreement`. If
-you plan on utilizing git.rockylinux.org (as most contributors will), signing
-of the `Rocky Linux GitLab Contributor Agreement` is a requirement.
+you plan on utilizing git.rockylinux.org or git.resf.org (as most contributors
+will), signing of the `Rocky Git Contributor Agreement` is a requirement.
 
 Before a sponsor or a team leader will add you to a group, they will have the
 ability to check your profile to verify that you have signed the appropriate

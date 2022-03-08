@@ -14,7 +14,7 @@ This document covers how the Rocky Enterprise Software Foundation (RESF) and Roc
 
 ## General Information
 
-Git is a core component of the Rocky Linux build ecosystem and thus a mode of the development process for the distribution and available software. **GitLab** is the software used for storing mostly RPM SPEC files, patches, configurations for debranding/modification to packages, and some scripts/utilities. It may contain some source code depending on the use case.
+Git is a core component of the Rocky Linux build ecosystem, RESF projects, and thus a mode of the development process for the distribution and available software. **GitLab** is the software used for storing mostly RPM SPEC files, patches, configurations for debranding/modification to packages, and some scripts/utilities. It may contain some source code depending on the use case. **Gitea** is used for RESF, its projects, its code, and potentially other components that are not applicable for use in our GitLab instance.
 
 ## Expectations
 
@@ -24,7 +24,7 @@ This section goes over the expectations of using the Git service.
 
 Most of this information is covered in our `Git Contributor Agreement`. However, we are duplicating the information here for all readers.
 
-* Moderation is enforced - As is done in the Rocky Linux Mattermost chat, it is important to mind your language and word choice whether in GitLab issues or the Bug Tracker.
+* Moderation is enforced - As is done in the Rocky Linux Mattermost chat, it is important to mind your language and word choice whether in Git issues or the Bug Tracker.
 * A valid GPG key must be uploaded and used to sign your commits - Signed commits, as a general rule are recommended. Expect that most projects will have unsigned commits disabled.
 * Do not treat git as an issue tracker - All issues for Rocky Linux should be tracked at our Bug Tracker. As of this writing, automatic issues are opened for build issues.
 * Do not perform your work or changes on a system that is owned by your employer.
@@ -36,14 +36,18 @@ Most of this information is covered in our `Git Contributor Agreement`. However,
 Below are a list of do's and do not's as part of our Git, whether some are duplicated information above or below this subsection. They are placed here for further emphasis.
 
 DO:
-* Fork repositories and create merge requests where needed
-* Ensure software/source code brought into the GitLab are of a valid open source license (see related links above)
+* Fork repositories and create pull requests where needed
+* Ensure software/source code brought into the Git services are of a valid open source license (see related links above)
 * Upload a valid GPG key and sign your commits
 
 DON'T:
-* Treat GitLab as a Rocky Linux issue tracker
-* Create personal projects under your namespace
+* Treat any Git service as a Rocky Linux issue tracker
+* Create personal projects under your namespace (see exceptions)
 * Perform your work or changes on a system that is owned by your employer
+
+### Exceptions
+
+Exceptions to personal projects under your namespace would be for code that will be utilized in some way for the Rocky ecosystem, whether directly, indirectly (eg for people.rocky).
 
 ## Source Code (for SIGs or other software)
 
