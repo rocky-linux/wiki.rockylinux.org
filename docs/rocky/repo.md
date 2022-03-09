@@ -41,6 +41,18 @@ There are extra repositories offered by Rocky Linux.
 | Devel            | Yes     | Yes     | No      |
 | rockyrpi         | Yes     | Yes     | No      |
 
+### Notes on: Extras
+
+This repository contains packages that provide some additional functionality to Rocky without breaking upstream compatibility. For example, `rpaste` used for sending logs, configuration, or system information to our paste bin.
+
+These are not tested by upstream nor available in the upstream product.
+
+### Notes on: Plus
+
+This repository contains packages that either A) replace a core component via patched functionality, B) build a component that was originally exclusive for one architecture (eg open-vm-tools built for x86_64 but not aarch64 in Rocky 8) or C) providing packages that were built but not traditionally provided by upstream.
+
+Packages that fall under A and B will have a `.plus` added to their version tag. These are not tested nor available in the upstream product.
+
 ## Community Approved Repositories
 
 As with Enterprise Linux and Fedora, there are additional community approved repositories for Rocky Linux. Below are repositories that are approved by Rocky Linux as well as the community.

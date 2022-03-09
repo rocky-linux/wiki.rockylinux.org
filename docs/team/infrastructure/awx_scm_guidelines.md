@@ -45,7 +45,7 @@ The general structure will always start from this:
 
 This structure follows the basic expected structure for ansible (this means ignoring AWX/Tower). If you are familiar with ansible already, you may already know how these files and directories work at an operational level. The gist of it is:
 
-* All playbooks should be in the root and import tasks from `./tasks` ief needed
+* All playbooks should be in the root and import tasks from `./tasks` if needed
 * Vars should be clearly defined where needed in vars, defaults, and/or playbooks
 * Files and templates should be created with a purpose
 * Handlers should be clearly defined and used
@@ -103,7 +103,7 @@ Each playbook should have comments or a name descriptor that explains what the p
 
 #### Tags
 
-Ensure that you are using relevant tags where necessary for your tasks. This will allow you or the deployers to have deeper control fo what is ran or called in AWX.
+Ensure that you are using relevant tags where necessary for your tasks. This will allow you or the deployers to have deeper control of what is ran or called in AWX.
 
 #### Playbook Naming System
 
