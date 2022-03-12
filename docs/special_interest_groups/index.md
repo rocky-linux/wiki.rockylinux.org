@@ -7,13 +7,15 @@ various members of these groups can extend the Enterprise Linux experience, by
 way of packages, images, or other community engagement.
 
 For the case of the wiki, Special Interest Groups are recommended not to have
-direct wiki pages, but instead maintain their own set of GitLab pages in the form
-of a wiki.
+direct wiki pages, but instead maintain their own set of Git generated pages
+in the form of a wiki.
 
 This page will serve as informational only on current and proposed SIG's, as
 well as information on proposing a SIG.
 
 ## Current SIGs
+
+This section goes over the current SIGs that may have sponsors and are active or has community interest.
 
 ### Some that may be established with sponsors/members
 
@@ -31,6 +33,7 @@ well as information on proposing a SIG.
 | SIG | Purpose |
 |-----|---------|
 | Cloud | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well |
+| Kernel | Kernels, mainline or otherwise |
 | Leapp | Focuses on the leapp framework to facilitate upgrades between major versions of Rocky |
 
 ## SIG Requirements

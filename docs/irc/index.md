@@ -19,16 +19,18 @@ The Rocky Linux teams manage and maintain the mattermost channels and the variou
 
 ## Bridge Information
 
-Mappings below:
+Current mappings below:
 
 | IRC                         | Mattermost      |
 |-----------------------------|-----------------|
 | #rockylinux                 | [~general](https://chat.rockylinux.org/rocky-linux/channels/town-square)        |
 | #rockylinux-devel           | [~development](https://chat.rockylinux.org/rocky-linux/channels/development)    |
+| #rockylinux-docs            | [~documentation](https://chat.rockylinux.org/rocky-linux/channels/documentation)    |
 | #rockylinux-infra           | [~infrastructure](https://chat.rockylinux.org/rocky-linux/channels/infrastructure) |
 | #rockylinux-legal           | [~legal](https://chat.rockylinux.org/rocky-linux/channels/legal)          |
 | #rockylinux-security        | [~security](https://chat.rockylinux.org/rocky-linux/channels/security)       |
 | #rockylinux-sig-altarch     | [~altarch](https://chat.rockylinux.org/rocky-linux/channels/altarch) |
+| #rockylinux-sig-kernel      | [~sig-kernel](https://chat.rockylinux.org/rocky-linux/channels/sig-kernel) |
 | #rockylinux-social          | [~off-topic](https://chat.rockylinux.org/rocky-linux/channels/off-topic)         |
 | #rockylinux-testing         | [~testing](https://chat.rockylinux.org/rocky-linux/channels/testing)        |
 | #rockylinux-www             | [~web](https://chat.rockylinux.org/rocky-linux/channels/web)            |
