@@ -146,3 +146,9 @@ Generally local inventory files are not recommended. If you are running anything
 When committing, pre-commit must run to verify your changes. They must be passing to be pushed up. This is an absolute requirement, even for roles.
 
 When the linter passes, the push will complete and you will be able to open a PR for the main branch or use as necessary in AWX.
+
+#### Tests
+
+A template generally comes with a `tests` directory. While not strictly required, it is recommended to create a suite of tests to ensure most, if not all of your playbooks are in working order. This is similar to providing tests to ansible collections, in that they should test at least basic functionality.
+
+Complex situations can be tested for as well and is encouraged.
