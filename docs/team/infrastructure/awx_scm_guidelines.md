@@ -137,6 +137,10 @@ There will likely be multiple dynamic inventory sources used for hosts managed b
 
 For single hosts, it's better to use either a single group that contains that one (1) host or selecting an inventory with that one host and using the group name again (if applicable or able) or `hosts: all`. The latter should be used in extreme edge cases.
 
+##### Local Inventory Files
+
+Generally local inventory files are not recommended. If you are running anything locally outside of AWX, an inventory is allowed but should not be committed to the repository.
+
 #### Pre-commits / linting
 
 When committing, pre-commit must run to verify your changes. They must be passing to be pushed up. This is an absolute requirement, even for roles.
