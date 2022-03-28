@@ -72,12 +72,12 @@ In majority of cases, you will need to have pre-flight and post-flight tasks. Th
 ```
   pre_tasks:
     - name: Check if ansible cannot be run here
-      stat:
+      ansible.builtin.stat:
         path: /etc/no-ansible
       register: no_ansible
  
     - name: Verify if we can run ansible
-      assert:
+      ansible.builtin.assert:
         that:
           - "not no_ansible.stat.exists"
         success_msg: "We are able to run on this node"
@@ -89,7 +89,7 @@ In majority of cases, you will need to have pre-flight and post-flight tasks. Th
  
   post_tasks:
     - name: Touching run file that ansible has ran here
-      file:
+      ansible.builtin.file:
         path: /var/log/ansible.run
         state: touch
         mode: '0644'
