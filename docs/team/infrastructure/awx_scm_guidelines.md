@@ -97,6 +97,10 @@ In majority of cases, you will need to have pre-flight and post-flight tasks. Th
         group: root
 ```
 
+#### Tasks General Information
+
+Ensure that your tasks are using FQCN. This means, even for the simple modules such as `file`, you should be using `ansible.builtin.file` to be compliant with ansible-lint 6+ and ansible 2.12+.
+
 ### Comments
 
 Each playbook should have comments or a name descriptor that explains what the playbook does or how it is used. If not available, `README-...` can be used in place, especially in the case of adhoc playbooks that take or require input. Documentation for each playbook/role does not have to be on a wiki. Comments or README's should be perfectly sufficient.
