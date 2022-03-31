@@ -47,7 +47,7 @@ Creating a new Special Interest Group requires participation from a member of th
 
   * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC channel can also be assigned.
 
-* Code produced within the SIG must be compatible with a FOSS license presently used by Rocky and [upstream](https://fedoraproject.org/wiki/Licensing:Main?rd=Licensing#SoftwareLicenses) - If a new license is wanted, consult with Release Engineering/Core or `~Legal` in Mattermost.
+* Code produced within the SIG must be compatible with a FOSS license presently used by Rocky and [upstream](https://fedoraproject.org/wiki/Licensing:Main?rd=Licensing#SoftwareLicenses) - If a new license is wanted and is not available in the upstream list, consult with Release Engineering/Core or `~Legal` in Mattermost.
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
 * A member of the SIG should also come from the Core/RelEng team, in the case that the SIG produces packages for use on a Rocky system.
@@ -160,9 +160,11 @@ It is expected that your SIG will have a "shorthand" name assigned to you (eithe
 
 `erlang-22.0.7-1.el8.mc.x86_64.rpm`
 
-Some single word SIGs can be abbreviated too. Like `hyperscale` can become `hs`.
+Some single word SIGs can be abbreviated too. Like `hyperscale` can become `hs`. There may be cases where this isn't possible and exceptions can be granted.
 
 ## Automated testing
+
+TBD
 
 ## Release
 
@@ -173,6 +175,6 @@ It is expected with Special Interest Groups that are delivering packages to have
 * Repo file(s) for dnf
 * GPG key assosciated with the signing of your packages
 
-During the initial request process, a GPG key is assigned to you in the build system to be used to sign your packages. A release package must be requested to be built and submitted to the extras repository. A request can be opened at git.rockylinux.org/rocky/rocky-linux.
+During the initial request process, a GPG key is assigned to you in the build system to be used to sign your packages. A release package must be requested to be built and submitted to the extras repository. A request can be opened at git.rockylinux.org/rocky/rocky-linux or git.resf.org/sig-core/meta
 
 Note:  The Special Interest Group cannot submit a key nor can they have access to the private key.
