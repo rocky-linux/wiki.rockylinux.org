@@ -15,3 +15,4 @@ This section is primarily for documentation for the Testing Team. The testing te
 | Testing Team   | Al              |                         | @raktajino         |          |
 | Testing Team   | Lukas Magauer   |                         | @lumarel           |          |
 
+{% include 'content_bottom.md' %}

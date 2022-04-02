@@ -20,6 +20,8 @@ theme:
       #- navigation.tabs
       #- navigation.tabs.sticky
   logo: assets/icon-white.svg
+  - macros:       # this enables includes and macros
+      include_dir: docs/include
 markdown_extensions:
   - abbr
   - attr_list
