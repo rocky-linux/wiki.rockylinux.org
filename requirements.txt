@@ -2,3 +2,4 @@ mkdocs
 mkdocs-windmill
 mkdocs-material
 mkdocs-macros-plugin
+mkdocs-awesome-pages-plugin

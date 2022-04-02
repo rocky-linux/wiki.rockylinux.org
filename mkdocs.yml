@@ -20,6 +20,9 @@ theme:
       #- navigation.tabs
       #- navigation.tabs.sticky
   logo: assets/icon-white.svg
+plugins:
+  - awesome-pages # this allows hiding of directories from the NAV with build
+                  # additionally hides the QA/Testcase_* from the n/p keypress navigation
   - macros:       # this enables includes and macros
       include_dir: docs/include
 markdown_extensions:
