@@ -37,9 +37,22 @@ There may cases where a requirement cannot be met but only in particular configu
 #### Release-blocking images must boot
 
 Release-blocking installer images must boot when written to optical media of an appropriate size (if applicable) and when written to a USB flash drive with a supported method (rufus is not supported). It is not the testing team’s responsibility to test optical media, but they can and report back. If a bug is found, it is considered a blocker.
+
+**_NOTE: The following examples are copied from Fedora Requirments and must be removed._**
+
+??? tldr "Supported media types"
+    Release-blocking live and dedicated installer images must boot when written to optical media of an appropriate size (if applicable) and when written to a USB stick with any of the officially supported methods.
+
+??? tldr "Difference from Beta"
+    This criterion differs from the similar Beta criterion only in that it requires all supported images to work when written also to optical media, not just USB sticks.
+
+??? tldr "QA Testing responsibilities"
+    According to FESCO decision ([1]), QA team is not responsible for physical optical media testing. However, if any bug is found, it'll be considered to be a blocker.
+
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase_TBD](QA/Testcase_Template.md)
+        - [QA:Testcase_Boot_Methods_Boot_Iso](QA/Testcase_Boot_Methods_Boot_Iso.md)
+        - [QA:Testcase_Boot_Methods_Dvd](QA/Testcase_Boot_Methods_Dvd.md)
 
 #### Basic Graphics Mode behaviors
 The generic video driver option (“basic graphics mode”) on all release-blocking installers must function as intended. This means launching the installer or desktop and attempting to use a generic driver. There must be no bugs that prevent the installer from being reached in this configuration on all systems and classes of hardware supported by the enterprise linux kernel.
