@@ -35,5 +35,8 @@ markdown_extensions:
   - def_list
   - meta
   - pymdownx.details # this allows collapsible attributions
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 copyright: Copyright &copy; 2021 Rocky Enterprise Software Foundation
 ...
