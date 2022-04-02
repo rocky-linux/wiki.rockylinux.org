@@ -1,5 +1,6 @@
 ---
 title: Local Module Builds
+ignore_macros: true # prevent mkdocs-macros from barfing on the jinja in this page
 ---
 
 Within the Fedora and Red Hat ecosystem, modularity is unfortunately a piece
