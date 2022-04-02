@@ -31,5 +31,6 @@ markdown_extensions:
   - footnotes
   - def_list
   - meta
+  - pymdownx.details # this allows collapsible attributions
 copyright: Copyright &copy; 2021 Rocky Enterprise Software Foundation
 ...
