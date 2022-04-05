@@ -1,7 +1,7 @@
 ---
 title: Rocky Linux 8 Release Criteria
 author: Trevor Cooper
-revision_date: 2021-04-01
+revision_date: 2022-04-01
 rc:
   prod: Rocky Linux
   ver: 8
