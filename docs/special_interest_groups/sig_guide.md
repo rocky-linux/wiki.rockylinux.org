@@ -178,3 +178,59 @@ It is expected with Special Interest Groups that are delivering packages to have
 During the initial request process, a GPG key is assigned to you in the build system to be used to sign your packages. A release package must be requested to be built and submitted to the extras repository. A request can be opened at git.rockylinux.org/rocky/rocky-linux or git.resf.org/sig-core/meta
 
 Note:  The Special Interest Group cannot submit a key nor can they have access to the private key.
+
+### Directory Format for Repositories
+
+This is more informational more than anything, but it is important for a SIG to know where their exported repositories will live.
+
+Repositories will be formatted as such:
+
+`/pub/rocky/sig/MAJOR/NAME/ARCH/PKG_OR_REPO`
+
+This basically means that the sig directory will live along side the major version directories at the root of any mirror. At `/pub/rocky` you'll see `8`, `9`, and so on, and then you'll also see `sig`. Let's break down what each means.
+
+* `NAME` can be the name of the SIG or the abbreviation code (eg, cloud, kernel, mcs)
+* `MAJOR` is the major version that's being targetted (8, 9, so on)
+* `ARCH` is for the architecture
+* `PKG_OR_REPO` could be for the specific set of packages of just any repository. (For example, you could have a "common" directory alongside the others)
+
+Let's say for the sake of the example we need some repositories for mcs and we build for x86_64 and aarch64. It could look like this. This assumes the messaging and communication SIG has not only an ejabberd repository, but also a "common" repository that is perhaps shared with ejabberd and potentially another set of packages in the future.
+
+```
+.
+├── 8
+├── 9
+└── sig
+    ├── 8
+    │   └── mcs
+    │       ├── aarch64
+    │       │   ├── ejabberd
+    │       │   │   ├── Packages
+    │       │   │   └── repodata
+    │       │   └── mcs-common
+    │       │       ├── Packages
+    │       │       └── repodata
+    │       └── x86_64
+    │           ├── ejabberd
+    │           │   ├── Packages
+    │           │   └── repodata
+    │           └── mcs-common
+    │               ├── Packages
+    │               └── repodata
+    └── 9
+        └── mcs
+            ├── aarch64
+            │   ├── ejabberd
+            │   │   ├── Packages
+            │   │   └── repodata
+            │   └── mcs-common
+            │       ├── Packages
+            │       └── repodata
+            └── x86_64
+                ├── ejabberd
+                │   ├── Packages
+                │   └── repodata
+                └── mcs-common
+                    ├── Packages
+                    └── repodata
+```
