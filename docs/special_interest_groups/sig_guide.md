@@ -237,4 +237,4 @@ Let's say for the sake of the example we need some repositories for mcs and we b
 
 ### Mirror List Queries
 
-Queries to a mirror list for SIG repositories will be like the standard calls, but repo names will have a format of `sig-NAME-MAJOR`.
+Queries to a mirror list for SIG repositories will be like the standard calls, but repo names will have a format of `sig-NAME-MAJOR`. `NAME` can be a simple SIG name or abbreviate or a combination, for example, `sig-mcs-common` or `sig-cloud`. 
