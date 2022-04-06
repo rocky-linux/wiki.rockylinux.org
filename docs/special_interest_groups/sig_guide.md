@@ -234,3 +234,7 @@ Let's say for the sake of the example we need some repositories for mcs and we b
                     ├── Packages
                     └── repodata
 ```
+
+### Mirror List Queries
+
+Queries to a mirror list for SIG repositories will be like the standard calls, but repo names will have a format of `sig-NAME-MAJOR`.
