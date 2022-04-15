@@ -25,6 +25,7 @@ plugins:
                   # additionally hides the QA/Testcase_* from the n/p keypress navigation
   - macros:       # this enables includes and macros
       include_dir: docs/include
+  - autolinks
 markdown_extensions:
   - abbr
   - attr_list
