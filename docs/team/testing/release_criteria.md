@@ -36,18 +36,14 @@ There may cases where a requirement cannot be met but only in particular configu
 
 #### Release-blocking images must boot
 
-Release-blocking installer images must boot when written to optical media of an appropriate size (if applicable) and when written to a USB flash drive with a supported method (rufus is not supported). It is not the testing team’s responsibility to test optical media, but they can and report back. If a bug is found, it is considered a blocker.
+Release-blocking installer images must boot when written to optical media or USB flash drive of appropriate sizes (if applicable) via supported methods. It is not the testing team’s responsibility to test optical media, but they can and report back. If a bug is found, it is considered a blocker.
 
-**_NOTE: The following examples are copied from Fedora Requirments and must be removed._**
+??? tldr "Optical Media Requirements"
+    Release-blocking images must boot when written to optical media of an appropriate size. Current size requirements are: boot.iso = 789M, minimal.iso = 2.0G and dvd.iso = 10G.
 
-??? tldr "Supported media types"
-    Release-blocking live and dedicated installer images must boot when written to optical media of an appropriate size (if applicable) and when written to a USB stick with any of the officially supported methods.
-
-??? tldr "Difference from Beta"
-    This criterion differs from the similar Beta criterion only in that it requires all supported images to work when written also to optical media, not just USB sticks.
-
-??? tldr "QA Testing responsibilities"
-    According to FESCO decision ([1]), QA team is not responsible for physical optical media testing. However, if any bug is found, it'll be considered to be a blocker.
+??? tldr "Officially supported USB flash drive writing methods"
+    The following methods of writing USB flash drives are officially support: dd<br>
+    The following methods of writing USB flash drives are _**not**_ supported: rufus
 
 ??? tldr "References"
     - Test cases:
