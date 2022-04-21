@@ -54,25 +54,25 @@ Release-blocking installer images must boot when written to optical media or USB
 The generic video driver option (“basic graphics mode”) on all release-blocking installers must function as intended. This means launching the installer or desktop and attempting to use a generic driver. There must be no bugs that prevent the installer from being reached in this configuration on all systems and classes of hardware supported by the enterprise linux kernel.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Basic Graphics Mode](Testcase_Basic_Graphics_Mode.md)
 
 #### No Broken Packages
 Critical errors, such as undeclared conflicts, unresolved dependencies, or modules relying on packages from another stream will be considered an automatic blocker. There are potential exceptions to this (eg, freeradius cannot be installed on an older perl stream, this is a known issue upstream).
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase rpminspect](Testcase_rpminspect.md)
 
 #### Repositories Must Match Upstream
 Repositories and the packages within them should match upstream as close as possible. Notable exceptions would be kmods, kpatch, or what is deemed as “spyware” like insights. Packages that are available from upstream should not have hard requirements on RHSM and packages that have it default built in should be patched out.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase repocompare](Testcase_repocompare.md)
 
 #### Debranding
 Assets and functionality that are Red Hat specific should not be included. If they are not patched out, it will be considered an automatic blocker.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Debranding](Testcase_Debranding.md)
 
 ### Installer Requirements
 
