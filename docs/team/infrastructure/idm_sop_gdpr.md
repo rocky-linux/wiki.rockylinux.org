@@ -19,13 +19,13 @@ This section covers how a system administrator will use our `adhoc-ipauser-disab
 
 If a request has been received via email, perform the following steps:
 
-0. If request was received by email: Open a ticket at the [bugzilla](https://bugs.rockylinux.org) under the `Account Services` product (Click "New" and select Account Services)
-  a. Set component to `Personal Data Request`
+0. If request was received by email: Open a ticket at the [bug tracker](https://bugs.rockylinux.org) under the `Account Services` product (Click the drop down in the top right corner, click "Account Services", select "Report Issue")
+  a. Set category to `Account Requests - Personal Data Request`
   b. Assign to yourself if possible
   c. Summary should be set: `PDR - Email Delete Request for <USER/EMAIL>`
-  d. Description should be set to the template `PDR - Delete Form` or copied directly from the email if the template was followed.
+  d. Description should be set to the snippet `PDR Request - Remove Personal Information` or copied directly from the email if the template was followed.
   e. Use the ID for the ansible playbook
-1. On the ansible host, run the necessary ansible playbook: `ansible-playbook -i inventories/production/hosts.ini playbooks/adhoc-ipauser-disable-pdr.yml --extra-vars='ipa_user=<USER> ticket_id=BZ<TICKET>'`
+1. On the ansible host, run the necessary ansible playbook: `ansible-playbook -i inventories/production/hosts.ini playbooks/adhoc-ipauser-disable-pdr.yml --extra-vars='ipa_user=<USER> ticket_id=BT<TICKET>'`
 2. Leave a comment on the issue that the disable request was performed.
 3. Email the affected user:
 

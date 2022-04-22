@@ -146,6 +146,17 @@ The top one says this is for Rocky Linux 8, storage sig, gluster packages, versi
 
 The bottom one says this is for Rocky Linux 8, the `mc` sig, and the package(s) are for ejabberd, with no specific version listed as it will be continuously updated.
 
+### Tagging
+
+In the case of an rpm or a module, there should be tags associated, otherwise the build system will *not* pick up your builds. The general format for a tags are as follows:
+
+* RPM: `imports/rX/NEVR` (for example, `imports/r8/bash-4.4.20-2.el8` is acceptable)
+  * Note: You cannot choose a tag/branch destined for one rocky release and build on another. Ensure your tags and branches are in alignment.
+
+* Module: `imports/rX-stream-STREAM_NAME_OR_VERSION/MODULE_NAME-STREAM_NAME_OR_VERSION-X0Y00YYYYMMDDHHMMSS.ZZZZZZZZ`
+  * Note: X is the major version, Y is the minor version. MODULE_NAME and STREAM_NAME_OR_VERSION are required. Ensure you fill out the timestamp as appropriate. You may fill in the final Z's with a portion of the commit hash that you are using for the tag.
+  * Example: `imports/r8-stream-1.4/389-ds-1.4-8060020220204145416.ce3e8c9c`
+
 ## Importing to S3
 
 TBD
@@ -160,7 +171,7 @@ It is expected that your SIG will have a "shorthand" name assigned to you (eithe
 
 `erlang-22.0.7-1.el8.mc.x86_64.rpm`
 
-Some single word SIGs can be abbreviated too. Like `hyperscale` can become `hs`. There may be cases where this isn't possible and exceptions can be granted.
+Some single word SIGs can be abbreviated too. Like `hyperscale` can become `hs`. There may be cases where this isn't possible and exceptions can be granted. `cloud` is an example of this.
 
 ## Automated testing
 
