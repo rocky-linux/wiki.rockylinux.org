@@ -65,10 +65,12 @@ Critical errors, such as undeclared conflicts, unresolved dependencies, or modul
         - [QA:Testcase Media File Conflicts](Testcase_Media_File_Conflicts.md)
 
 #### Repositories Must Match Upstream
-Repositories and the packages within them should match upstream as close as possible. Notable exceptions would be kmods, kpatch, or what is deemed as “spyware” like insights. Packages that are available from upstream should not have hard requirements on RHSM and packages that have it default built in should be patched out.
+Repositories and the packages within them should match upstream as closely as possible. Notable exceptions would be kmods, kpatch, or what is deemed as “spyware” like insights. Packages that are available from upstream should not have hard requirements on RHSM and packages that have it default built in should be patched out.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase repocompare](Testcase_repocompare.md)
+        - [QA:Testcase Repo Compare](Testcase_Repo_Compare.md)
+        - [QA:Testcase Packages No Insights](Testcase_Packages_No_Insights.md)
+        - [QA:Testcase Packages No RHSM](Testcase_Packages_No_RHSM.md)
 
 #### Debranding
 Assets and functionality that are Red Hat specific should not be included. If they are not patched out, it will be considered an automatic blocker.
