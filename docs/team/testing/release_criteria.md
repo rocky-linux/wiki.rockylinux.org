@@ -36,7 +36,7 @@ There may cases where a requirement cannot be met but only in particular configu
 
 #### Release-blocking images must boot
 
-Release-blocking installer images must boot when written to optical media or USB flash drive of appropriate sizes (if applicable) via supported methods. It is not the testing team’s responsibility to test optical media, but they can and report back. If a bug is found, it is considered a blocker.
+Release-blocking installer images must boot when written to optical media or USB flash drive of appropriate sizes (if applicable) via officially supported methods. It is not the testing team’s responsibility to test optical media, but they can and report back. If a bug is found, it is considered a blocker.
 
 ??? tldr "Optical Media Requirements"
     Release-blocking images must boot when written to optical media of an appropriate size. Current size requirements are: boot.iso = 789M, minimal.iso = 2.0G and dvd.iso = 10G.
@@ -49,6 +49,7 @@ Release-blocking installer images must boot when written to optical media or USB
     - Test cases:
         - [QA:Testcase Boot Methods Boot ISO](Testcase_Boot_Methods_Boot_Iso.md)
         - [QA:Testcase Boot Methods DVD](Testcase_Boot_Methods_Dvd.md)
+        - [QA:Testcase Media USB dd](Testcase_Media_USB_dd.md)
 
 #### Basic Graphics Mode behaviors
 The generic video driver option (“basic graphics mode”) on all release-blocking installers must function as intended. This means launching the installer or desktop and attempting to use a generic driver. There must be no bugs that prevent the installer from being reached in this configuration on all systems and classes of hardware supported by the enterprise linux kernel.
