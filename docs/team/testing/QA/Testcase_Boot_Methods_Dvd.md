@@ -1,14 +1,12 @@
 ---
 title: QA:Testcase Boot Methods DVD
 author: Trevor Cooper
-revision_date: 2022-04-01
+revision_date: 2021-04-21
 rc:
   prod: Rocky Linux
   ver: 8
   level: Final
 ---
-
-{% include 'testing/qa_content_example_only.md' %}
 
 !!! info "Associated release criterion"
     This test case is associated with the [Release_Criteria#initialization-requirements](../release_criteria.md#initialization-requirements) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
@@ -17,10 +15,10 @@ rc:
 This is to verify that the Anaconda installer starts correctly when booting from DVD.iso.
 
 ## Setup
-1. Burn the DVD.iso image to an optical disk.
+1. Prepare your system for booting the DVD.iso image. This may involve writing the image to a USB key or burning it to an optical disk of sufficient capacity. Additionally, attaching the DVD.iso to a virtual machine instance as a Virtual Optical Disk or mounting the DVD.iso to server via baseboard management controller virtual media attach should be possible but is not expressly required.
 
 ## How to test
-1. Boot the system from the prepared optical media.
+1. Boot the system from the prepared optical, USB media or virtual device attachment.
 2. In the boot menu select the appropriate option to boot the installer.
 
 ## Expected Results
