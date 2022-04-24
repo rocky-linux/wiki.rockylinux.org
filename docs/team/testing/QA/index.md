@@ -12,8 +12,8 @@ This page lists all test cases in work and who is working on them...
 | [Release-blocking images must boot](release_criteria.md#release-blocking-images-must-boot) | [QA:Testcase Boot Methods Boot ISO](Testcase_Boot_Methods_Boot_Iso.md) | @tcooper | template exists, openQA covered (ref) |
 | [Release-blocking images must boot](release_criteria.md#release-blocking-images-must-boot) | [QA:Testcase Boot Methods DVD](Testcase_Boot_Methods_Dvd.md) | @tcooper | template exists, openQA covered (ref) |
 | [Basic Graphics Mode behaviors](release_criteria.md#basic-graphics-mode-behaviors) | [QA:Testcase Basic Graphics Mode](Testcase_Basic_Graphics_Mode.md) | @tcooper | manual and/or new openQA TestCase |
-| [No Broken Packages](release_criteria.md#no-broken-packages) | [QA:Testcase rpminspect](Testcase_rpminspect.md) | @tcooper | manual using rpminspect |
 | [Repositories Must Match Upstream](release_criteria.md#repositories-must-match-upstream) | [QA:Testcase repocompare](Testcase_repocompare.md) | @tcooper | manual using Skip's repocompare |
+| [No Broken Packages](release_criteria.md#no-broken-packages) | [QA:Testcase Media Repoclosure](Testcase_Media_Repoclosure.md)<br>[QA:Testcase Media File Conflicts](Testcase_Media_File_Conflicts.md) | @tcooper | manual using scripts or automated in CI |
 | [Debranding](release_criteria.md#debranding) | [QA:Testcase Debranding Analysis](Testcase_Debranding.md) | @tcooper | process TBD |
 
 

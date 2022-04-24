@@ -61,7 +61,8 @@ The generic video driver option (“basic graphics mode”) on all release-block
 Critical errors, such as undeclared conflicts, unresolved dependencies, or modules relying on packages from another stream will be considered an automatic blocker. There are potential exceptions to this (eg, freeradius cannot be installed on an older perl stream, this is a known issue upstream).
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase rpminspect](Testcase_rpminspect.md)
+        - [QA:Testcase Media Repoclosure](Testcase_Media_Repoclosure.md)
+        - [QA:Testcase Media File Conflicts](Testcase_Media_File_Conflicts.md)
 
 #### Repositories Must Match Upstream
 Repositories and the packages within them should match upstream as close as possible. Notable exceptions would be kmods, kpatch, or what is deemed as “spyware” like insights. Packages that are available from upstream should not have hard requirements on RHSM and packages that have it default built in should be patched out.
