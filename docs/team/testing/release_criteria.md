@@ -10,8 +10,6 @@ rc:
 
 # {{ rc.level }} Release Objectives
 
-{% include 'testing/rc_content_example_only.md' %}
-
 The objective of a release (major or minor) is to provide a solid Enterprise Linux release that is suitable to:
 
 - Meet the needs of end users
