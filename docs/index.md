@@ -37,14 +37,4 @@ If you are interested in donating or sponsoring the project, please email sponso
 
 ## Special Thanks
 
-We would like to thank the following groups for their support thus far on the project:
-
-* [Ctrl IQ, Inc.](https://www.ctrliq.com)
-
-* [The OSU Open Source Lab](https://osuosl.org/)
-
-* [Clouvider](https://www.clouvider.co.uk/)
-
-* [SpryServers](https://www.spryservers.net/)
-
-* [FMI Groupe](https://www.fmi.fr/)
+We would like to thank the following groups for their support thus far on the project. Our sponsors can be found [here](https://rockylinux.org/sponsors).
