@@ -20,6 +20,12 @@ theme:
       #- navigation.tabs
       #- navigation.tabs.sticky
   logo: assets/icon-white.svg
+plugins:
+  - awesome-pages # this allows hiding of directories from the NAV with build
+                  # additionally hides the QA/Testcase_* from the n/p keypress navigation
+  - macros:       # this enables includes and macros
+      include_dir: docs/include
+  - autolinks
 markdown_extensions:
   - abbr
   - attr_list
@@ -29,5 +35,9 @@ markdown_extensions:
   - footnotes
   - def_list
   - meta
+  - pymdownx.details # this allows collapsible attributions
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 copyright: Copyright &copy; 2021 Rocky Enterprise Software Foundation
 ...
