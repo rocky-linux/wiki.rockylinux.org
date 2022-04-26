@@ -1,9 +1,9 @@
 
 name: mkdocs build
 on:
-  workflow_run:
-    workflows: [ test ]
-    branches: [ main ]
+  push:
+    branches:
+      - main
 
 jobs: 
   build:
