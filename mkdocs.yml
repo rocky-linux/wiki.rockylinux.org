@@ -16,9 +16,11 @@ theme:
   features:
     - toc.integrate
     - search.suggest
+    - search.higlight
     - navigation.top
       #- navigation.tabs
       #- navigation.tabs.sticky
+
   logo: assets/icon-white.svg
 plugins:
   - awesome-pages # this allows hiding of directories from the NAV with build
@@ -26,6 +28,7 @@ plugins:
   - macros:       # this enables includes and macros
       include_dir: docs/include
   - autolinks
+  - search
 markdown_extensions:
   - abbr
   - attr_list
