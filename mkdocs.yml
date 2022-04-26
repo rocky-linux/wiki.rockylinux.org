@@ -16,7 +16,7 @@ theme:
   features:
     - toc.integrate
     - search.suggest
-    - search.higlight
+    - search.highlight
     - navigation.top
       #- navigation.tabs
       #- navigation.tabs.sticky
