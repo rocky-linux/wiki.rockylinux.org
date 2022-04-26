@@ -2,6 +2,8 @@
 site_name: Rocky Wiki
 site_url: https://wiki.rockylinux.org
 repo_url: https://github.com/rocky-linux/wiki.rockylinux.org
+repo_name: rocky-linux/wiki.rockylinux.org
+edit_uri: edit/main/docs/
 theme:
   name: material
   palette:
