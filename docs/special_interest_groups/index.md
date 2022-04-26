@@ -8,10 +8,11 @@ way of packages, images, or other community engagement.
 
 For the case of the wiki, Special Interest Groups are recommended not to have
 direct wiki pages, but instead maintain their own set of Git generated pages
-in the form of a wiki.
+in the form of a wiki (such as with mkdocs).
 
-This page will serve as informational only on current and proposed SIG's, as
-well as information on proposing a SIG.
+This page will serve as an overview. See the [SIG Guide](sig_guide/index.md)
+section for specific information such as proposing a SIG, content management,
+and so on.
 
 ## Current SIGs
 

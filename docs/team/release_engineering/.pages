@@ -1,7 +1,9 @@
 ---
 nav:
   - ... | index.md
-  - legacy: legacy
-  - debranding: debranding
+  - Package Kit: packagekit.md
+  - Debranding and Patching: debranding
   - rpm: rpm
   - guidelines: guidelines
+  - legacy: legacy
+  - SOP Compose: sop_compose.md

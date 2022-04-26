@@ -21,8 +21,8 @@ theme:
     - search.suggest
     - search.highlight
     - navigation.top
-      #- navigation.tabs
-      #- navigation.tabs.sticky
+    - navigation.tabs
+    - navigation.expand
 
   logo: assets/icon-white.svg
 plugins:
