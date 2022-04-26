@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  wiki:
+    volumes:
+      - type: bind
+        source: .
+        target: /wiki
+    build:
+      context: .
+    ports:
+      - 8000:8000
