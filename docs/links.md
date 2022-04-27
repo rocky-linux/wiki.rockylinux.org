@@ -6,6 +6,7 @@ title: Link Directory
 * [System Status](https://status.rockylinux.org)
 * [Forums](https://forums.rockylinux.org/)
 * [Wiki](https://wiki.rockylinux.org/)
+* [Documentation](https://docs.rockylinux.org/)
 * [Rocky Linux Account Services](https://accounts.rockylinux.org)
 * [Mail List](https://lists.resf.org)
 
