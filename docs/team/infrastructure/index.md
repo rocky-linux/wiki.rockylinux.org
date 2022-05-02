@@ -1,5 +1,5 @@
 ---
-title: Infrastructure
+title: Infrastructure Team
 ---
 
 This section is primarily for documentation for the Infrastructure Team.
