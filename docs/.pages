@@ -2,7 +2,7 @@
 nav:
   - ... | index.md
   - ... | links.md
-  - IRC: irc
+  - ... | irc.md
   - Guidelines: guidelines
   - Special Interest Groups: special_interest_groups
   - Teams: team

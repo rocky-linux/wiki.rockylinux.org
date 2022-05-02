@@ -7,18 +7,18 @@ who wishes to participate or would like to contribute in any way. This could
 be through a Special Interest Group, or it could just be to the core Rocky
 Linux distribution.
 
-# Purpose
+## Purpose
 
 This page goes over the basic steps to signing up for an account with our
 Rocky Account Services and other basics with interacting with the Rocky
 ecosystem.
 
-# Start Guide
+## Start Guide
 
 This section will go over the very basics of signing up for an account
 and filling in basic information in Rocky Account Services.
 
-## Creating an Account
+### Creating an Account
 
 Creating and managing your Rocky account starts at Rocky Account Services.
 
@@ -27,7 +27,7 @@ Creating and managing your Rocky account starts at Rocky Account Services.
 * You will receive an activation email. Activate your account.
 * Login to your account on the [Rocky Account Services](https://accounts.rockylinux.org) page
 
-## Profile Information
+### Profile Information
 
 When you login, you will be on your profile. Click "Edit Profile" below your
 email address to make changes to your profile.
@@ -49,7 +49,7 @@ keys should sync to our [git](https://git.rockylinux.org).
 
 It is highly recommended that you add an OTP to your account.
 
-## Signing Agreements
+### Signing Agreements
 
 While editting your profile, there is an "Agreements" tab with all of the current
 agreements for Rocky. It is highly recommended that the following is reviewed
@@ -60,7 +60,7 @@ and signed:
 
 See the [details](#details) section for more information.
 
-## Requesting Access to Groups/SIGs
+### Requesting Access to Groups/SIGs
 
 In general, the baseline steps to requesting access comes down to this:
 
@@ -83,13 +83,13 @@ contacted in the [mattermost](https://chat.rockylinux.org).
 Some sponsors may have additional documents they'll send you from the main wiki
 or the SIG wiki that will detail the procedure they expect you to follow.
 
-# Details
+## Details
 
 This section will go over a more detailed overview of various aspects of the
 Rocky Account Services as well as pieces of infrastructure you may interact
 with.
 
-## Agreements
+### Agreements
 
 Agreements in Rocky Account Services are there to show that you understand
 and agree to the terms in how you are expected to use Rocky-related services.

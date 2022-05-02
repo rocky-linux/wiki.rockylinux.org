@@ -14,11 +14,11 @@ This page will serve as an overview. See the [SIG Guide](sig_guide/index.md)
 section for specific information such as proposing a SIG, content management,
 and so on.
 
-# Current SIGs
+## Current SIGs
 
 This section goes over the current SIGs that may have sponsors and are active or has community interest.
 
-## Some that may be established with sponsors/members
+### Some that may be established with sponsors/members
 
 | SIG | Purpose |
 |-----|---------|
@@ -29,7 +29,7 @@ This section goes over the current SIGs that may have sponsors and are active or
 | HPC    | Maintains High Performance Computing support for Rocky Linux |
 | Hyperscale | Hyperscale Computing |
 
-## Some that have community interest, but no direct sponsors yet
+### Some that have community interest, but no direct sponsors yet
 
 | SIG | Purpose |
 |-----|---------|
@@ -37,7 +37,7 @@ This section goes over the current SIGs that may have sponsors and are active or
 | Kernel | Kernels, mainline or otherwise |
 | Leapp | Focuses on the leapp framework to facilitate upgrades between major versions of Rocky |
 
-# SIG Requirements
+## SIG Requirements
 
 We expect SIGs to satisfy some basic requirements, such as:
 
@@ -50,7 +50,7 @@ We expect SIGs to satisfy some basic requirements, such as:
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
 
-# SIG Wiki
+## SIG Wiki
 
 Each SIG should have a wiki that will have documentation for their particular group as well as information on how the group operates. Required information should be as follows:
 
@@ -60,7 +60,7 @@ Each SIG should have a wiki that will have documentation for their particular gr
 * Meeting Information (time, location, other information that they feel is important)
 * Policies and Resources, if applicable
 
-# SIG Membership
+## SIG Membership
 
 The following rules apply for SIG membership:
 
@@ -70,7 +70,7 @@ The following rules apply for SIG membership:
 * SIG channels will be public under a name such as `SIG/name` with an optional IRC channel to be bridged.
 * Optionally: define if work with CentOS Stream will be applicable for the SIG
 
-# SIG Reporting
+## SIG Reporting
 
 SIGs are expected to report at least quarterly, with a brief summary of what they've accomplished. A suggested outline:
 
