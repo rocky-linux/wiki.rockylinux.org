@@ -6,7 +6,7 @@ IRC is a common communication tool used in the open source community. Several ch
 
 The Rocky Linux teams manage and maintain the mattermost channels and the various Libera IRC channels such as `#rockylinux` and `#rockylinux-social`. A list of our channels can be found in `IRC Mattermost Bridge Info` on the left hand side of this wiki page.
 
-## Contact Information
+# Contact Information
 | | |
 | - | - |
 | **IRC/Mattermost Contacts** | `bc` `@brian` |
@@ -17,7 +17,7 @@ The Rocky Linux teams manage and maintain the mattermost channels and the variou
 | **IRC/Mattermost Contacts** | `pgreco` `@pgreco` |
 | **IRC/Mattermost Contacts** | `pj` `@pj` |
 
-## Bridge Information
+# Bridge Information
 
 Current mappings below:
 
@@ -35,7 +35,7 @@ Current mappings below:
 | #rockylinux-testing         | [~testing](https://chat.rockylinux.org/rocky-linux/channels/testing)        |
 | #rockylinux-www             | [~web](https://chat.rockylinux.org/rocky-linux/channels/web)            |
 
-## General
+# General
 
 It is likely that there will be a lot of boxes running Rocky Linux and thus there will be many folks who will occasionally look for help in the main Rocky IRC channel `#rockylinux` or `~General` on mattermost, typically on what the distribution ships. It is important to maintain focus on a Rocky Linux specific matter as the channel does not have the ability nor bandwidth to support non-Rocky Linux topics.
 
@@ -46,7 +46,7 @@ Here is a general rule of thumb:
 * **Polling for general usage/preferences or other opinion matter is considered off-topic**
 * **Requesting support or discussing the usage of other distributions is considered off-topic** (more info [here](#what-is-not-supported))
 
-### Exceptions
+## Exceptions
 
 There are cases where it may do more harm than good to deny or to not provide assistance to a user who is using something that others may consider unsupported as a whole. While this is on a case by case basis and we are unable to list all exceptions, these are some of the more obvious exceptions:
 
@@ -58,7 +58,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 
   * It is common for users to be using hardware that is either not supported in a current Rocky release or needs a better driver (eg nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Other issues should go to `#elrepo` or where topical.
 
-### What is not supported?
+## What is not supported?
 
 * **[Kernel Rebuilds](#kernel-rebuilds)**
 * **Other Derivatives/Forks**
@@ -73,11 +73,11 @@ There are cases where it may do more harm than good to deny or to not provide as
 
   * Repeat offenders will be quieted or banned from the `#rockylinux*` namespace
 
-## Etiquette
+# Etiquette
 
 This section goes over general etiquette expected of all users of IRC or Mattermost on the bridge.
 
-### How to ask questions
+## How to ask questions
 
 When coming into the IRC or Mattermost channels, it's important to be able to field your question in a manner in which the other users will be able to understand the question and provide assistance. Here's some general ideas:
 
@@ -90,7 +90,7 @@ When coming into the IRC or Mattermost channels, it's important to be able to fi
 * **Be patient** - You may not get an instant answer. We are all volunteers, so it may take minutes or hours to receive an answer to your question.
 * **Read the Topic** - The topic may contain useful information you may want to know about.
 
-### Expectations
+## Expectations
 
 As `#rockylinux` is the general Rocky Linux support and discussion channel on Libera, it is not a primary support area for learning Linux or general chatting and off topic matter. Off topic matter should go to `#rockylinux-social`. With that being said, below is a list of things you should probably be aware of:
 
@@ -118,7 +118,7 @@ A recommendation would be to join the channel and observe for a while to get an 
 
 Persistent abusers and those who act out in bad faith in a consistent manner will receive a ban or quiet, if they have been repeatedly warned. If you find you have been banned and do not know why, you may want to ask in `#rockylinux-ops` and an available channel operator will try to assist you.
 
-## IRC For Beginners
+# IRC For Beginners
 
 It is possible that you may have not used IRC before. Hopefully this guide will get you started.
 
@@ -138,15 +138,15 @@ Once you have registered and you are identified with `NickServ`, you can type `/
 
 Note that subsequent logins will require you to identify. `/msg nickserv identify password` will help you to ensure you don't get locked out of the `#rockylinux*` channels.
 
-### Matrix
+## Matrix
 
 If you are a user of Matrix, most of the above still applies to you. You will need to login through the bridge on matrix to login with NickServ on libera. After that, you will be able to communicate in the `#rockylinux*` channels through your matrix client.
 
-## Context
+# Context
 
 This section provides context to some things mentioned throughout this document that would've likely crowded the section entirely. These sections may end up on different pages entirely but they are here for now.
 
-### Kernel Rebuilds
+## Kernel Rebuilds
 
 Kernel rebuilds are not recommended nor supported for Rocky Linux. Before building a custom kernel or even considering it, ask yourself the following questions:
 
@@ -159,13 +159,13 @@ Kernel rebuilds are not recommended nor supported for Rocky Linux. Before buildi
 
 As a final warning, you if you break the kernel, you are on the hook for your system. Rocky Linux volunteers or developers are unable to assist you with these issues.
 
-### Broken V Servers
+## Broken V Servers
 
 Our distribution, like others, use a variant of `yum`/`dnf`. All Rocky Linux releases are shipped with `dnf` and a certain set of matching configuration files (like `.repo` files). This allows your system to work with the mirror system provided by Rocky. Some downstream forks break these configurations and make their system incompatible with what we provide off the shelf.
 
 Regulars (developers/volunteers) will decline to help in this type of scenario. Below are examples of "broken V servers" where `dnf` is either missing, misconfigured, or outright crippled.
 
-#### VPS
+### VPS
 
 So you have a VPS and you've discovered `dnf` is not working as it should. This means you are not using Rocky Linux. If you are using an installation "based on" Rocky Linux but `dnf` is missing, you don't have a real Rocky Linux installation. Common examples of providers who do this:
 
@@ -185,7 +185,7 @@ Why these provides do this is unclear. Regardless of their reasons, this approac
 
 Before you try anything, please **STOP** and ask your provider **why** they removed `dnf` and how are you supposed to keep your system up to date/secure without it. 
 
-#### Wait, you're saying I was lied to?
+### Wait, you're saying I was lied to?
 
 In essence, yes. A true Rocky Linux installation has a Rocky kernel and the `rocky-release` packages, as well as `dnf`, without modifications to the contents in `/etc/yum.repos.d` (other than possibly a local mirror or staged repositories). All dependencies will be satisified and with the exception of configuration files, they will be kept up to date and maintained.
 
@@ -210,6 +210,6 @@ If you were lied to, we ask that you request your provider to mend their ways. Y
 * Stop misrepresenting what they offer as Rocky Linux
 * Deliver to you what they promised or receive a refund
 
-#### Is it possible to get dnf back?
+### Is it possible to get dnf back?
 
 Yes it is possible. However, it may come at a cost of breaking your system. Thus, we cannot provide such advice here.
