@@ -11,7 +11,7 @@ Previously this page contained a link to a form that anyone could fill
 out to contribute. However, we feel that this section of the wiki can
 help more easily in that regard.
 
-## Quick Start
+# Quick Start
 
 As with most online and/or open source communities, getting started
 usually begins at the "joining" phase and just participating in topics that
