@@ -7,8 +7,7 @@ we do not require contributors or bug reports to sign this as an agreement in
 account services nothing is stopping you from doing so to show confirmation that
 you have.
 
-Preface
-=======
+## Preface
 
 Bugzilla is a core part of the Rocky Linux distribution and Rocky Enterprise
 Software Foundation as a whole. Whether you're a bug reporter, a contributor,
@@ -16,8 +15,7 @@ or perhaps on the Release Engineering team, the Bug Tracker is a utility for
 everyone to be able to read and engage with others to find solutions to issues
 affecting the software that is shipped and available in Rocky Linux.
 
-General Guidelines
-==================
+## General Guidelines
 
 As a reporter, there are guidelines in which you (the user) and others must
 follow when reporting issues or bugs on the Bug Tracker. Below are some things
@@ -33,8 +31,7 @@ to be aware of:
   system or software will be closed. You are encouraged to go to our subreddit,
   Freenode IRC channel (#rockylinux), mattermost, or our forums.
 
-Expectations
-============
+## Expectations
 
 As a reporter, there are expectations in which you (the user) and others should
 adhere to in order to keep the queues clean and consistent, as well as the
@@ -60,8 +57,7 @@ proper manner.
   You are recommended to go to our reddit, Freenode channel (#rockylinux), or
   our forum.
 
-Types of Tickets
-================
+## Types of Tickets
 
 While reporting bugs and issues are common with bug trackers, the tracker also
 accepts other reports. Such as:
