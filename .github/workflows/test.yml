@@ -15,6 +15,6 @@ jobs:
           subfolder: docs
           file_types: .md 
           print_all: false
-          retries: 3   
+          retry_count: 3   
           exclude_files: docs/archive
           force_pass: true # Don't block deployment

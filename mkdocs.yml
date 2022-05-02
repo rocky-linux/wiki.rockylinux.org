@@ -22,7 +22,8 @@ theme:
     - search.highlight
     - navigation.top
     - navigation.tabs
-    - navigation.expand
+    - navigation.indexes
+      #- navigation.expand
   logo: assets/icon-white.svg
 plugins:
   - autolinks

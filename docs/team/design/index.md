@@ -1,5 +1,5 @@
 ---
-title: Design
+title: Design Team
 ---
 
 This section is primarily for documentation for the Design Team.

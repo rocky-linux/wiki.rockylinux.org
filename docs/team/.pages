@@ -1,7 +1,7 @@
 ---
 nav:
   - ... | index.md
-  - Infrastructure: infrastructure
-  - Release Engineering: release_engineering
-  - Testing: testing
-  - Design: design
+  - Infrastructure Team: infrastructure
+  - Release Engineering Team: release_engineering
+  - Testing Team: testing
+  - Design Team: design
