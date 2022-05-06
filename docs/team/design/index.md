@@ -17,7 +17,7 @@ This team is lead by Michael Kinder.
 [design@rockylinux.org](mailto:design@rockylinux.org)
 
 #### Mattermost
-[Design](https://web.archive.org/web/20211106111844mp_/https://chat.rockylinux.org/rocky-linux/channels/design)
+[Design](https://chat.rockylinux.org/rocky-linux/channels/design)
 
 ## Members
 
