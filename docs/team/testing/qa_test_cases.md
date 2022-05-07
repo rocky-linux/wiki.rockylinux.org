@@ -1,6 +1,6 @@
 ---
 title: QA:Test Cases
-revision_date: 2022-04-20
+revision_date: 2022-05-06
 ---
 
 This page lists all test cases in work and who is working on them...
@@ -22,18 +22,18 @@ This page lists all test cases in work and who is working on them...
 | Requirement                                         | Test Case                                                                | Assignee                | Status                                  |
 | --------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------- | --------------------------------------- |
 | Media Consistency Verification                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Packages and Installer Sources                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
+| Packages and Installer Sources                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
 | NAS (Network Attached Storage)                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Installation Interfaces                             | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Minimal Installation                                | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Kickstart Installation                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Disk Layouts                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
+| Installation Interfaces                             | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
+| Minimal Installation                                | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
+| Kickstart Installation                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
+| Disk Layouts                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
 | Firmware RAID                                       | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
 | Bootloader Disk Selection                           | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Storage Volume Resize                               | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Update Image                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Installer Help                                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Installer Translations                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
+| Storage Volume Resize                               | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
+| Update Image                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
+| Installer Help                                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
+| Installer Translations                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
 
 
 ## Cloud Image Requirements
@@ -45,17 +45,17 @@ This page lists all test cases in work and who is working on them...
 
 ## Post-Installation Requirements
 
-| Requirement                                         | Test Case                                                                | Assignee                | Status                                  |
-| --------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------- | --------------------------------------- |
-| System Services                                     | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Keyboard Layout                                     | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| SELinux Errors (Server)                             | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| SELinux and Crash Notifications (Desktop Only)      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Default Application Functionality (Desktop Only)    | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Default Panel Functionality (Desktop Only)          | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Dual Monitor Setup (Desktop Only)                   | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Artwork and Assets (Server and Desktop)             | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Packages and Module Installation                    | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
+| Requirement                                         | Test Case                                                                                                         | Assignee                | Status                                  |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------- | --------------------------------------- |
+| System Services                                     | [QA:Testcase System Services](Testcase_Template.md)                                                               | @lumarel                | testcase filename reserved              |
+| Keyboard Layout                                     | [QA:Testcase Keyboard Layout](Testcase_Template.md)                                                               | @lumarel                | testcase filename reserved              |
+| SELinux Errors (Server)                             | [QA:Testcase SELinux Errors on Server installations](Testcase_Template.md)                                        | @lumarel, @raktajino    | testcase filename reserved              |
+| SELinux and Crash Notifications (Desktop Only)      | [QA:Testcase SELinux Errors on Desktop clients](Testcase_Template.md)                                             | @lumarel, @raktajino    | testcase filename reserved              |
+| Default Application Functionality (Desktop Only)    | [QA:Testcase Application Functionality](Testcase_Template.md)                                                     | @lumarel                | testcase filename reserved              |
+| Default Panel Functionality (Desktop Only)          | [QA:Testcase GNOME UI Functionality](Testcase_Template.md)                                                        | @lumarel                | testcase filename reserved              |
+| Dual Monitor Setup (Desktop Only)                   | [QA:Testcase Multimonitor Setup](Testcase_Template.md)                                                            | @lumarel                | testcase filename reserved              |
+| Artwork and Assets (Server and Desktop)             | [QA:Testcase Artwork and Assets](Testcase_Template.md)                                                            | @lumarel                | testcase filename reserved              |
+| Packages and Module Installation                    | [QA:Testcase Basic Package installs](Testcase_Template.md)<br>[QA:Testcase Module Streams](Testcase_Template.md)  | @lumarel                |                                         |
 
 
 {% include 'content_bottom.md' %}
