@@ -69,8 +69,8 @@ In general, the baseline steps to requesting access comes down to this:
 * Sign the appropriate agreements
 * Find the group or groups you wish to join and find the sponsors
 
-  * Check out the [Special Interest Group](../special_interest_group/index.md) page
   * Check out the [IRC and Chat Page](../irc/index.md) page
+  * Check out the [Special Interest Group](../special_interest_groups/index.md) page
 
 * Contact the sponsor directly or send a message to appropriate channel for the group
 
