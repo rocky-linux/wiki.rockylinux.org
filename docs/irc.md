@@ -1,5 +1,5 @@
 ---
-title: IRC General Information
+title: IRC and General Chat
 ---
 
 IRC is a common communication tool used in the open source community. Several channels of Mattermost and Libera IRC channels are bridged together to ensure the community can communicate effectively and not be splintered.
