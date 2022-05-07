@@ -1,5 +1,5 @@
 ---
-title: QA: Test Cases
+title: QA:Test Cases
 revision_date: 2022-04-20
 ---
 
