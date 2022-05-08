@@ -4,7 +4,7 @@
 /docs/team/design/ @rocky-linux/design
 /docs/team/documentation/ @rocky-linux/documentation
 /docs/team/infrastructure/ @rocky-linux/infrastructure
-/docs/team/release/ @rocky-linux/release-engineering
+/docs/team/release_engineering/ @rocky-linux/release-engineering
 /docs/team/security/ @rocky-linux/security
 /docs/team/testing/ @rocky-linux/testing
 /docs/team/web/ @rocky-linux/web
