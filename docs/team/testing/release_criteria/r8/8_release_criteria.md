@@ -84,79 +84,79 @@ Assets and functionality that are Red Hat specific should not be included. If th
 This means that the installer’s mechanism for verifying the install medium is intact and must complete successfully, with the assumption that the medium was correctly written. It should return a failure message if this not the case.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Media Consistency Verification](Testcase_Media_Consistency_Verification.md)
 
 #### Packages and Installer Sources
 The installer must be able to use all supported local/remote packages and installer sources.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Packages and Installer Sources](Testcase_Packages_Installer_Sources.md)
 
 #### NAS (Network Attached Storage)"
 The installer must be able to detect and install to supported NAS devices (if possible and supported by the kernel).
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Network Attached Storage](Testcase_Network_Attached_Storage.md)
 
 #### Installation Interfaces
 The installer must be able to complete an installation using all supported spokes.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Installation Interfaces](Testcase_Installation_Interfaces.md)
 
 #### Minimal Installation
 A minimal installation (via network) must be able to install the minimal package set.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Minimal Installation](Testcase_Minimal_Installation.md)
 
 #### Kickstart Installation
 A kickstart installation should succeed, whether from optical/USB media or via the network.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Kickstart Installation](Testcase_Kickstart Installation.md)
 
 #### Disk Layouts
 The installer must be able to create and install to any workable partition layout using any file system or format combination offered or supported by the installer. File systems that are not supported by the EL kernel is not tested here (this means btrfs, zfs, both of wish are not supported).
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Disk Layouts](Testcase_Disk_Layouts.md)
 
 #### Firmware RAID
 The installer must be able to detect and install to firmware RAID devices. Note that system-specific bugs do not count as blockers. It is likely that some hardware support might be broken or not available at all. DUDs (driver update disks) are not considered for this criteria.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Firmware RAID](Testcase_Firmware_RAID.md)
 
 #### Bootloader Disk Selection
 The installer must allow the user to choose which disk the bootloader will be installed to or, if the user so chooses, not to install a bootloader.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Bootloader Disk Selection](Testcase_Bootloader_Disk_Selection.md)
 
 #### Storage Volume Resize
 Any installer mechanism for resizing storage volumes must correctly attempt the requested operation. This means that if the installer offers a way to resize storage volumes, then it must use the correct resizing tool with the correct parameters. However, it does not require the installer to disallow resizing of unformatted or volumes with an unknown filesystem type.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Storage Volume Resize](Testcase_Storage_Volume_Resize.md)
 
 #### Update Image
 The installer must be able to use an installer update image retrieved from removable media or a remote package source. This includes DUDs (driver update disks).
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Update Image](Testcase_Update_Image.md)
 
 #### Installer Help
 Any element in the installer which contains a “help” text must display the appropriate help documentation when selected.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Installer Help](Testcase_Installer_Help.md)
 
 #### Installer Translations
 The installer must correctly display all complete translations that are available for use.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Installer Translations](Testcase_Installer_Translations.md)
 
 ### Cloud Image Requirements
 #### Images Published to Cloud Providers
