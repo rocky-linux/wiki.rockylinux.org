@@ -8,7 +8,7 @@ This is a simple document that explains going from RHEL sources to freshly (re)-
 
 
 ## The Steps: Going from RHEL 8 Source to Rocky 8 Binary Package
-1:  Obtain the RHEL sources via SRPM or CentOS Git 
+1:  Obtain the RHEL sources via SRPM or CentOS Git
 
 2-3: Import RHEL source into Rocky Linux Git, replace any protected trademarks / branding from the source
 
@@ -31,7 +31,7 @@ This is fairly straightforward.  If you want to re-build RHEL 8, you need the so
 
 * Download source RPM files on a RHEL machine via yum/dnf
 * Copy them from https://git.centos.org (which are identical to RHEL and have tagged versions)
- 
+
 The packaging team has decided to go with option #2: copying from CentOS Git.  This minimizes potential legal questions with RHEL subscription terms, and is a simple operation to perform.  SRPM extraction can be used in the future in case of any issues with the CentOS Git site.
 
 Tools are now being developed to perform this step in an automated fashion.  CentOS (and Fedora) use an MQ messaging solution to indicate when new commits are made to a repository.  We intend to consume those published messages as well to get alerted when we should build a new package.
@@ -69,14 +69,14 @@ It is legally questionable to host raw RHEL material due to trademark issues.  T
 Packages are distributed as specfiles, patches, and the upstream/original source as a tarball (.tar.gz, tar.bz2, etc.).  Text files are easy enough in git, but there are different strategies for storing these upstream tar files.
 
 **Answer:** The agreed-upon strategy is to use a lookaside caching mechanism, just like Fedora and CentOS proper.  The one used is called dist-git, and involves a separate script that downloads a tarfile that matches to a checked out git branch.
-  
+
 If this doesn't work out, git-lfs is also a popular option for binary storage.
 
 
 
 #### Files/Folders, Tags/Branches layout in Git:
-Should we stick to the folders/tags/branches layout in git.centos.org?  Or something quite different?  Should we place debranding metadata with the project, or somewhere else?  How about automated/scripted test cases?  There is a lot to consider here.  
-  
+Should we stick to the folders/tags/branches layout in git.centos.org?  Or something quite different?  Should we place debranding metadata with the project, or somewhere else?  How about automated/scripted test cases?  There is a lot to consider here.
+
 **Tentative Answer:** Our Git layout will likely mirror certain branches of packages in git.centos.org, but with different names.  Debranding metadata will be kept separate, as well as metadata related to modular package builds.
 
 <br />
@@ -95,7 +95,7 @@ Particulars of the build config will depend on the answers to steps 2-3 above:  
 <br />
 
 ### Step 5: Produce a Rocky Linux Binary RPM
-This is pretty straightforward.  Once we have a valid source RPM, we use our build system to extract, compile, and produce a valid binary RPM.  
+This is pretty straightforward.  Once we have a valid source RPM, we use our build system to extract, compile, and produce a valid binary RPM.
 
 Again, special consideration is needed for modular/stream packages, and dependencies.
 

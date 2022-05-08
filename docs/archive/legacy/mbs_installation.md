@@ -306,7 +306,7 @@ touch /tmp/module_build_service.log
 chown mbs:fedmsg /tmp/module_build_service.log
 chmod 664 /tmp/module_build_service.log
 ```
-* Restart services : 
+* Restart services :
 ```
 systemctl restart fedmsg-hub
 systemctl restart fedmsg-relay

@@ -80,4 +80,4 @@ For sake of complete information, here is a list of packages that are in RHEL 8,
 - redhat-access-gui
 - redhat-bookmarks
 - subscription-manager-migration
-- subscription-manager-migration-data 
+- subscription-manager-migration-data

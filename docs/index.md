@@ -31,7 +31,7 @@ Thank you for your interest in contributing to the project.
 
 If you are a developer, architect, engineer, or otherwise looking to contribute your time and expertise, please consider joining our [Mattermost server](https://chat.rockylinux.org) and jumping into the most relevant channel to your interests.
 
-If you are interested in donating or sponsoring the project, please email sponsor@rockylinux.org. 
+If you are interested in donating or sponsoring the project, please email sponsor@rockylinux.org.
 
 **NOTE**: We **do not** currently have any official crowdsourcing established.
 

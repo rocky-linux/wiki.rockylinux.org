@@ -13,8 +13,8 @@ jobs:
         uses: urlstechie/urlchecker-action@0.0.25
         with:
           subfolder: docs
-          file_types: .md 
+          file_types: .md
           print_all: false
-          retry_count: 3   
+          retry_count: 3
           exclude_files: docs/archive
           force_pass: true # Don't block deployment

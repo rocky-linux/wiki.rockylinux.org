@@ -93,7 +93,7 @@ Each group has three subgroups:
 
 * **rpms** group is used as the final output/import of the RPM spec file and patches after it has been patched (if applicable) and is then used/picked up to build the SRPM and send to koji for build.
 
-Note that SIGs or projects that plan on using the build system should be following this methodology. 
+Note that SIGs or projects that plan on using the build system should be following this methodology.
 
 ### RPM Patching Structure
 
@@ -210,5 +210,5 @@ The below are current groups and their current purpose. These groups are general
 * rocky -> This group is for Rocky scripts, tools, and metadata
 * Release Engineering -> This group is specifically for the release engineering team
   * Public -> Data and code that is deemed for public view
-* Infrastructure -> This group is specifically for the infrastructure team. 
+* Infrastructure -> This group is specifically for the infrastructure team.
   * Public -> Data and code that is deemed for public view

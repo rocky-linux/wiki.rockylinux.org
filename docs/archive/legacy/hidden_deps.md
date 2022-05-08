@@ -34,7 +34,7 @@ These lists are numbered, and are in order of dependency.  You need to build it 
 | Package Name | CentOS git Branch |
 |:------------|-------------------------|
 | buildsys-macros | c8 |
-| centpkg-minimal | c8 | 
+| centpkg-minimal | c8 |
 
 
 **External Build List #93**:
@@ -233,7 +233,7 @@ These lists are numbered, and are in order of dependency.  You need to build it 
 | maven-verifier-plugin | c8 |
 | mdds (1.3) | c8 |
 | mdds (1.4) | c8s (-b imports/c8s/mdds-1.4.3-1.el8) |
-| mingw-w64-tools | c8 | 
+| mingw-w64-tools | c8 |
 | mingw-libxml2 | c8 |
 | mingw-pdcurses | c8 |
 | mockito (2) | c8-stream-201902 |
@@ -277,7 +277,7 @@ These lists are numbered, and are in order of dependency.  You need to build it 
 | perl-Test-RequiresInternet | c8 |
 | perl-Test-Without-Module | c8 |
 | perl-Test2-Plugin-NoWarnings | c8 |
-| perl-XML-XPathEngine | c8 | 
+| perl-XML-XPathEngine | c8 |
 | prometheus-simpleclient-java | c8 |
 | properties-maven-plugin | c8 |
 | python-bottle | c8 |

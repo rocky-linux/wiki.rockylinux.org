@@ -33,7 +33,7 @@ Below will likely be the base repositories for Rocky Linux
 | isos | ISO | No | |
 | RockyTools | | No | Possibly mix into Devel |
 
-Repositories that are likely SIG's that may be implemented. 
+Repositories that are likely SIG's that may be implemented.
 
 | Repo Name |
 | -- |

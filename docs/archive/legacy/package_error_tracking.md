@@ -4,7 +4,7 @@ title: Package Build Issues Tracking
 
 This page is for tracking packages that are failing in the Rocky Linux Koji build system (dev/staging): https://kojidev.rockylinux.org .
 
-There are 2 tables.  The upper one is for packages currently under investigation.  The lower table is for packages that have been "solved".  
+There are 2 tables.  The upper one is for packages currently under investigation.  The lower table is for packages that have been "solved".
 
 **A package must be successfully built in Koji before it can be moved to the "solved" table.**  This is to prevent confusion about potential fixes.  Koji is the ultimate arbiter of whether a package has been fixed or not.
 
@@ -13,7 +13,7 @@ Note: the old package error tracking page centered around Skip G.'s CentOS "prac
 <br />
 
 ## Methodology
-The builds being done on kojidev are quite literally real-time progress as the Rocky Linux project races towards a **beta release**. 
+The builds being done on kojidev are quite literally real-time progress as the Rocky Linux project races towards a **beta release**.
 
 To get there, we need to ensure that all of our packages build successfully.  Koji has a list of builds that have failed here:  https://kojidev.rockylinux.org/koji/builds?state=3&order=-build_id  (You can also go to Koji, click on builds, and select "State: Failed" from the drop-down menu)
 
@@ -29,13 +29,13 @@ It goes without saying that the more you know about using the Mock build tool, a
 ## Communication
 Most coordination of these efforts is done over the Mattermost packaging chat channel. (https://chat.rockylinux.org/rocky-linux/channels/dev-packaging , or if you prefer IRC: #rockylinux-devel-packaging on Freenode)
 
-If you're looking at a failing package, please tell everyone there!  That way we can avoid duplication of effort.  When you have a fix, or have discovered information that will help, someone with Wiki access will be happy to take your findings and publish them here.  
+If you're looking at a failing package, please tell everyone there!  That way we can avoid duplication of effort.  When you have a fix, or have discovered information that will help, someone with Wiki access will be happy to take your findings and publish them here.
 
 <br />
 <br />
 
 ## Packages Being Investigated:
-This is a list of failing builds from **kojidev.rockylinux.org** that have been looked at, and notes added. 
+This is a list of failing builds from **kojidev.rockylinux.org** that have been looked at, and notes added.
 
 This list is not grouped according to repo.
 

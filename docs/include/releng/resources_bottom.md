@@ -40,4 +40,3 @@
     **Technology**: Mailman 3 + Hyper Kitty
 
     **Contact**: `~Infrastructure` in Mattermost and `#rockylinux-infra` in Libera IRC
-

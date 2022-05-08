@@ -28,8 +28,8 @@ That is an open question.  We know, at a minimum, there are **40 packages** refe
 
 However, we also know this list is incomplete.  For example, package **nginx** (a popular web server) has not been rebranded by CentOS, but should be.  We cannot include this package as-is, it must be debranded before it's imported to Rocky Linux's Git.
 
-### Open Call for Help: 
-Like nginx, there are undoubtedly more packages that are not on the default CentOS list, but must be debranded.  We are trying to build a complete list, but **we need YOUR help!**  
+### Open Call for Help:
+Like nginx, there are undoubtedly more packages that are not on the default CentOS list, but must be debranded.  We are trying to build a complete list, but **we need YOUR help!**
 
 The Rocky Linux community includes a metric ton of CentOS/RHEL administrators who collectively are familiar with the ENTIRE package base.  If you notice a package that has upstream branding, but is not on our tracking list, PLEASE let us know!  We prefer you drop by channel **#Dev/Packaging** on chat.rockylinux.org , but any way you can get the message to us is acceptable!
 

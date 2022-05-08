@@ -15,13 +15,13 @@ This SOP covers how the Rocky Linux Release Engineering Team handles composes an
 
 ## Related Git Repositories
 
-There are several git repositories used in the overall composition of a repository or a set of repositories. 
+There are several git repositories used in the overall composition of a repository or a set of repositories.
 
 [Pungi](https://git.rockylinux.org/rocky/pungi-rocky) - This repository contains all the necessary pungi configuration files for composes that come from koji. Pungi interacts with koji to build the composes.
 
 [Comps](https://git.rockylinux.org/rocky/comps) - This repository contains all the necessary comps (which are groups and other data) for a given major version. Pungi uses this information to properly build the repositories.
 
-[Toolkit](https://git.rockylinux.org/release-engineering/public/toolkit) - This repository contains various scripts and utilities used by Release Engineering, such as syncing composes, functionality testing, and mirror maintenance. 
+[Toolkit](https://git.rockylinux.org/release-engineering/public/toolkit) - This repository contains various scripts and utilities used by Release Engineering, such as syncing composes, functionality testing, and mirror maintenance.
 
 ## Composing Repositories
 

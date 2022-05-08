@@ -22,7 +22,7 @@ or other item developed managed or maintained by a Project (collectively, such
 software and other items, "Work").  The term "submitted" means any act of
 sent to a Project or its representatives, including communication on electronic
 mailing lists, source code control systems, and issue tracking systems that are
-managed by or on behalf of a Project.  uploading, submitting or distribution 
+managed by or on behalf of a Project.  uploading, submitting or distribution
 
 2. IP License. You hereby grant to the Rocky Enterprise Software Foundation
 (RESF) and those who receive or contribute software or other materials

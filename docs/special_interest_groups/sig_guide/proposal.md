@@ -37,7 +37,7 @@ Upon approval, a Core/RelEng member will request/create initial resources as nee
   * mail list
   * channel in mattermost + IRC channel as a bridge if requested
 
-## Acceptance 
+## Acceptance
 
 TBD
 

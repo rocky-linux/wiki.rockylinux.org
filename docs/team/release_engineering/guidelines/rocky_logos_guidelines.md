@@ -92,7 +92,7 @@ A defaults file looks at every other `XML` that is a default background provided
         <author>Louis Abel</author>
         <email>label@rockylinux.org</email>
         <license>CC-BY-SA 4.0</license>
-    </wallpaper> 
+    </wallpaper>
     <wallpaper deleted="false">
         <name>Rocky Linux 9 Default Background - Placeholder Target</name>
         <filename>/usr/share/backgrounds/rocky-default-1-target.xml</filename>
@@ -100,7 +100,7 @@ A defaults file looks at every other `XML` that is a default background provided
         <author>Louis Abel</author>
         <email>label@rockylinux.org</email>
         <license>CC-BY-SA 4.0</license>
-    </wallpaper> 
+    </wallpaper>
 </wallpapers>
 ```
 
@@ -185,7 +185,7 @@ This section goes over the general guidelines for the main backgrounds included 
 * **General Theme**: Each Rocky release has a codename, and thus is the general theme. Examples.
     * Rocky 8: `Green Obsidian` - Submissions only to extras
     * Rocky 9: `Blue Onyx` - This should be generally a blue theme/color scheme
-* **Required Resolution(s) for Normal Submissions**: 
+* **Required Resolution(s) for Normal Submissions**:
     * Resolution must **not** exceed nor fall below: 4092x3072
 
 * **Allowed**:

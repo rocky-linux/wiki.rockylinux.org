@@ -13,7 +13,7 @@ The package you are searching for is not available in Rocky Linux. There are a f
 * Perhaps someone has not packaged it yet to be included in a SIG.
 
 ## Missing Codecs
-The codecs you are searching for is not available in Rocky Linux. A codec is a program that allows the user to encode or decode a data stream in a specific format (think MP3/MOV/WMV). Upstream, and thus Rocky Linux, generally do not have such codecs. 
+The codecs you are searching for is not available in Rocky Linux. A codec is a program that allows the user to encode or decode a data stream in a specific format (think MP3/MOV/WMV). Upstream, and thus Rocky Linux, generally do not have such codecs.
 
 The question we generally receive is "Why can't you provide it in a SIG or an extras?" It's because of the following reasons:
 
