@@ -24,19 +24,19 @@ This page lists all test cases in work and who is working on them...
 
 | Requirement                                         | Test Case                                                                | Assignee                | Status                                  |
 | --------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------- | --------------------------------------- |
-| Media Consistency Verification                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Packages and Installer Sources                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| NAS (Network Attached Storage)                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Installation Interfaces                             | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Minimal Installation                                | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Kickstart Installation                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Disk Layouts                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Firmware RAID                                       | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Bootloader Disk Selection                           | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Storage Volume Resize                               | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Update Image                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Installer Help                                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Installer Translations                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
+| Media Consistency Verification                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              |                                         |
+| Packages and Installer Sources                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
+| NAS (Network Attached Storage)                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              |                                         |
+| Installation Interfaces                             | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
+| Minimal Installation                                | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
+| Kickstart Installation                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
+| Disk Layouts                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
+| Firmware RAID                                       | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              |                                         |
+| Bootloader Disk Selection                           | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              |                                         |
+| Storage Volume Resize                               | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
+| Update Image                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
+| Installer Help                                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
+| Installer Translations                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @raktajino              | Implemented in openQA, document         |
 
 
 ## Cloud Image Requirements
