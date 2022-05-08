@@ -1,7 +1,9 @@
 ---
 title: Create live devbox for wiki.rockylinux.org
-author: Lukas Magauer
-revision_date: 2022-04-28
+author:
+    - Lukas Magauer
+    - Al Bowles
+revision_date: 2022-05-07
 ---
 
 # How to create a live system to work on the documentation
@@ -34,6 +36,10 @@ And finally run `mkdocs serve 2>&1 | tee ./mkdocs.serve.log` in the terminal of 
 
 ## Docker
 
-TODO
+From the root of this repository on a machine with Docker installed, run
+
+    docker-compose up
+
+When the container finishes starting up, you can access the documentation in your web browser at [http://localhost:8000](http://localhost:8000).
 
 {% include 'testing/rc_content_bottom.md' %}
