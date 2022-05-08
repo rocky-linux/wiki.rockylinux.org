@@ -1,2 +1,10 @@
 * @nazunalika @NeilHanlon
-/docs/team/testing/ @tcooper @akatch @StackKorora @lumarel
+
+/docs/team/community/ @rocky-linux/community
+/docs/team/design/ @rocky-linux/design
+/docs/team/documentation/ @rocky-linux/documentation
+/docs/team/infrastructure/ @rocky-linux/infrastructure
+/docs/team/release_engineering/ @rocky-linux/release-engineering
+/docs/team/security/ @rocky-linux/security
+/docs/team/testing/ @rocky-linux/testing
+/docs/team/web/ @rocky-linux/web

@@ -42,4 +42,3 @@ title: Link Directory
     - [on other channels](https://www.youtube.com/playlist?list=PLMYofMfEpWQP34PxQv6-GASrF5Zc5soAF)
 * Other
   * [DistroWatch](https://distrowatch.com/table.php?distribution=rocky)
-

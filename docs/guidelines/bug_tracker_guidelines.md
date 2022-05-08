@@ -67,6 +67,6 @@ accepts other reports. Such as:
 
 * GitLab Request - There may be patch repos missing or something else may be
   requested that involves a group or even a SIG.
-  
+
 * Rocky Services - This could be the bug tracker itself, the wiki, or other
   pieces of infrastructure.

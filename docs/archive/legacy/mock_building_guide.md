@@ -6,7 +6,7 @@ If you're interested in helping with Rocky Linux packaging effort, we could use 
 
 
 ## What Needs to be Done?
-Many source packages in RHEL/CentOS will not build properly by themselves.  Often, you need some RPMs produced from other packages built first, and available as dependencies.  
+Many source packages in RHEL/CentOS will not build properly by themselves.  Often, you need some RPMs produced from other packages built first, and available as dependencies.
 
 **Our Mission:** is to help the release engineering team by identifying these chains of dependencies, and figuring out which order we need to build things in.  Additionally, we need to identify any **external dependencies** that the package builds require.  All of this information must be documented so we can build the initial version of Rocky Linux (Based on RHEL/CentOS 8.3).
 
@@ -46,7 +46,7 @@ This guarantees that only the packages that are actually required for the build 
 ### Using and Installing Mock
 Mock is a simple tool written in Python, and is widely available.  It's in the EPEL repo under CentOS/RHEL 8, and is even available in some Debian based distros.  We are using **Mock version 2.6** (default in EPEL 8) for our research builds here.
 
-Mock is easy to use:  
+Mock is easy to use:
 ```mock -r /etc/mock/myconfig.cfg  --nocheck   --resultdir=/path/to/results    curl-7.61.1-14.el8.1.src.rpm ```
 
 The mock configuration lets you specify what gets put in your minimal chroot, and what repositories DNF will use when setting up the build.  Fortunately, we have a standardized mock config you can download and use yourself (linked below), so you don't have to go through and set everything up yourself.
@@ -56,7 +56,7 @@ Log files will be written to your results path during the build.  If the build w
 <br />
 
 ### Reading Mock Output
-Mock produces log files with standard/consistent names during each build.  The most important ones that we care about are: **root.log** and **build.log**.  
+Mock produces log files with standard/consistent names during each build.  The most important ones that we care about are: **root.log** and **build.log**.
 
 Root.log details the process that was used to set up the chroot environment.  It shows what commands were issued, and especially what packages were installed.  A missing dependency will usually show up here, when mock will attempt to *dnf install* a dependency and not find it.
 
@@ -74,7 +74,7 @@ A **build pass** is very simple:
 2. Record which packages passed, and which ones failed to build.  As well as what RPM files were produced from doing the build pass. (this is what is in those wiki pages)
 3. Take the produced RPMs and add them to repositories, so the next build pass can use them as dependencies.
 4. DO IT AGAIN! (and again, and again...)
-5. Once we've built everything, we will use these pages as a reference.  We now know what order we need to feed these 
+5. Once we've built everything, we will use these pages as a reference.  We now know what order we need to feed these
 
 Fortunately, Skip Grube has a server and is executing these build passes.  We need help troubleshooting individual packages.  Read on...
 
@@ -93,12 +93,12 @@ We must answer questions like: Is the package failing because it needs a depende
 <br />
 
 **Step 1:**
-The latest build pass (as of this document) is #10.  So here are the build failures: **https://wiki.rockylinux.org/en/team/development/Build_Order/Build_Pass_10_Failure**  
+The latest build pass (as of this document) is #10.  So here are the build failures: **https://wiki.rockylinux.org/en/team/development/Build_Order/Build_Pass_10_Failure**
 
 Pick one to investigate, and make sure it's NOT on this list of packages we have already solved: **https://wiki.rockylinux.org/en/team/development/Package_Error_Tracking**
 <br />
 
-**Step 2:** You can view the Mock build logs for that failed package under here:  **https://rocky.lowend.ninja/RockyDevel/MOCK_RAW/** (sorted by repo and package name).  
+**Step 2:** You can view the Mock build logs for that failed package under here:  **https://rocky.lowend.ninja/RockyDevel/MOCK_RAW/** (sorted by repo and package name).
 <br />
 
 **Step 3:** Once you've investigated the log(s), try to build the package yourself, in your own mock.  Our exact Mock configurations are available here: **https://rocky.lowend.ninja/RockyDevel/mock_configs/** (sorted by build pass number), and SRPMs are available from CentOS here: **https://vault.centos.org/8.3.2011/** (sorted by repo)

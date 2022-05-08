@@ -48,19 +48,19 @@ From koji build log for 1.11 (https://koji.mbox.centos.org/pkgs/packages/apache-
 	"Provides: apache-commons-codec = 1.11-3.module_el8.0.0+39+6a9b6e22 mvn(commons-codec:commons-codec) = 1.11 mvn(commons-codec:commons-codec:pom:) = 1.11 osgi(org.apache.commons.codec) = 1.11.0"
 
 	Notice that it says it provides osgi(org.apache.commons.codec)
-	
+
 From koji bild log for 1.13 (https://koji.mbox.centos.org/pkgs/packages/apache-commons-codec/1.13/3.module_el8.3.0+568+0c23fd64/data/logs/noarch/build.log)
 
 	"Provides: apache-commons-codec = 1.13-3.module_el8.3.0+568+0c23fd64 mvn(commons-codec:commons-codec) = 1.13 mvn(commons-codec:commons-codec:pom:) = 1.13 osgi(org.apache.commons.commons-codec) = 1.13.0"
-	
+
 	Notice that it says it provides osgi(org.apache.commons.commons-codec)
-	
+
 The change from 'org.apache.commons.codec' to 'org.apache.commons.commons-codec' breaks the build of tycho
 
 Patching the files in the source file org.eclipse.tycho-tycho-1.4.0.tar.xz to refer to "org.apache.commons.commons-codec" resolved the build.
 	Files touched inside source file: org.eclipse.tycho-tycho-1.4.0/tycho-bundles/tycho-bundles-external/tycho-bundles-external.product
 					  org.eclipse.tycho-tycho-1.4.0/tycho-bundles/tycho-standalone-p2-director/p2 Director.product
-					  
+
 Patched tycho-bootstrap.sh as well
 
 
@@ -118,7 +118,7 @@ maven - c8-stream-3.6
 ## (need to investigate these, and when found, add their packages to the list above)
 ## Listed as dependency first, then possible package that it comes from after:
 
-eclipse-pde  ->  eclipse ??  
+eclipse-pde  ->  eclipse ??
 
 hibernate-jpa-2.0-api ??
 hsqldb -> hsqldb-lib ??

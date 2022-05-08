@@ -112,7 +112,7 @@ As `#rockylinux` is the general Rocky Linux support and discussion channel on Li
 
 It is normal for a channel to not be all business all the time. Passing snarkiness or even random off topic matter can occur. However, it can be a problem if it takes over the channel, where a user is unable to get their question in or the discussion turns into animosity, insults, or rude behavior (see the above points).
 
-A recommendation would be to join the channel and observe for a while to get an idea of how the channel operates; try to avoid dropping in, asking a question, and disappearing. 
+A recommendation would be to join the channel and observe for a while to get an idea of how the channel operates; try to avoid dropping in, asking a question, and disappearing.
 
 **Note**: The channels are logged and routinely checked. What is seen in IRC is also seen in Mattermost and vice versa. It is also likely we are not the only ones who monitor the channel. This means that your conversations are considered public.
 
@@ -132,7 +132,7 @@ You will need an IRC client. There are many out there. Here are examples:
 
 Once you have your IRC client setup/configured, you'll need to go to [irc://irc.libera.chat/](irc://irc.libera.chat). To set your nickname, type `/nick nickname` in the box and press enter.
 
-Note that our channels require users to be registered on Libera in order to participate. Libera chat provides instructions for you to do so [here](https://libera.chat/guides/registration). If you require assistance, you can type `/join #libera` and request help. 
+Note that our channels require users to be registered on Libera in order to participate. Libera chat provides instructions for you to do so [here](https://libera.chat/guides/registration). If you require assistance, you can type `/join #libera` and request help.
 
 Once you have registered and you are identified with `NickServ`, you can type `/join #rockylinux` or another related channel.
 
@@ -183,7 +183,7 @@ The above tend to only install parts of Rocky Linux on their virtual servers and
 
 Why these provides do this is unclear. Regardless of their reasons, this approach is seen negatively as `dnf` has mechanisms to protect specific packages from change.
 
-Before you try anything, please **STOP** and ask your provider **why** they removed `dnf` and how are you supposed to keep your system up to date/secure without it. 
+Before you try anything, please **STOP** and ask your provider **why** they removed `dnf` and how are you supposed to keep your system up to date/secure without it.
 
 #### Wait, you're saying I was lied to?
 

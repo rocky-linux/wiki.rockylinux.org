@@ -15,7 +15,7 @@ This SOP covers how the Rocky Enterprise Software Foundation (RESF) and Rocky Li
 
 ## Responding to a Deletion Request
 
-This section covers how a system administrator will use our `adhoc-ipauser-disable-pdr.yml` playbook to respond to a delete request. 
+This section covers how a system administrator will use our `adhoc-ipauser-disable-pdr.yml` playbook to respond to a delete request.
 
 If a request has been received via email, perform the following steps:
 

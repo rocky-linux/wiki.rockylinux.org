@@ -1,5 +1,5 @@
 ---
-title: CentOS MQTT message bus 
+title: CentOS MQTT message bus
 ---
 CentOS provides a message bus which can be used for subscribing to certain messages on their git repository.
 
@@ -9,7 +9,7 @@ More information, and setup on subscribing to their message bus can be found at 
 ## Example message
 
 ```
-git.centos.org/git.receive 
+git.centos.org/git.receive
 {
   "forced": false,
   "agent": "pgreco",

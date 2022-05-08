@@ -109,7 +109,7 @@ replace {
 
 **4: Test the import:** Now, when the upstream is imported, we can check the main Rocky **nginx**  repository and ensure our updates were successful:  **https://git.rockylinux.org/staging/rpms/nginx/** (again, staging/ group is used only for now)
 
-**5: You're Done!**  Great!  Now do the next one...  ;-) 
+**5: You're Done!**  Great!  Now do the next one...  ;-)
 
 ## More Debrand Config Language
 

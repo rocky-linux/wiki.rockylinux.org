@@ -1,5 +1,5 @@
 ---
-title: Services and Software	
+title: Services and Software
 ---
 
 Services and software in use by the Rocky Linux project

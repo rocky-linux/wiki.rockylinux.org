@@ -25,7 +25,7 @@ This section covers the basics for your AWX project. It is absolutely important 
 
 The general structure will always start from this:
 
-``` 
+```
 .
 ├── somePlaybook.yml
 ├── defaults
@@ -37,7 +37,7 @@ The general structure will always start from this:
 │   └── main.yml
 ├── templates
 ├── tests
-│   ├── inventory 
+│   ├── inventory
 │   └── test.yml
 └── vars
     └── main.yml
@@ -75,18 +75,18 @@ In majority of cases, you will need to have pre-flight and post-flight tasks. Th
       ansible.builtin.stat:
         path: /etc/no-ansible
       register: no_ansible
- 
+
     - name: Verify if we can run ansible
       ansible.builtin.assert:
         that:
           - "not no_ansible.stat.exists"
         success_msg: "We are able to run on this node"
         fail_msg: "/etc/no-ansible exists - skipping run on this node"
- 
+
     # Assertions and other checks here
- 
+
   # Import roles/tasks here
- 
+
   post_tasks:
     - name: Touching run file that ansible has ran here
       ansible.builtin.file:

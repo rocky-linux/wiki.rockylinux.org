@@ -370,7 +370,7 @@ koji add-external-repo -m bare -t dist-rocky8-build centos-8-extras-external htt
 koji add-external-repo -m bare -t dist-rocky8-build centos-8-fasttrack-external http://mirror.centos.org/centos-8/8.3.2011/fasttrack/\$arch/os
 koji add-external-repo -m bare -t dist-rocky8-build centos-8-debuginfo-external http://debuginfo.centos.org/8/\$arch/
 ```
-* I also created a small package for centospkg-minimal and srpmproc and create local repo, so adding that too: 
+* I also created a small package for centospkg-minimal and srpmproc and create local repo, so adding that too:
 ```
 koji add-external-repo -m bare -t dist-rocky8-build centos-8-local-repo-external https://koji.gnulab.org/localrepo/\$arch/
 ```

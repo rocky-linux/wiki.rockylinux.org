@@ -23,7 +23,7 @@
     <link href="{{ 'css/base.min.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/cinder.min.css'|url }}" rel="stylesheet">
 
-    {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %} 
+    {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %}
 
     {% else %}
         {% if config.theme.colorscheme %}
@@ -105,7 +105,7 @@
     <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
 
     {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %}  <!-- default is to include highlightjs -->
-    
+
     {% else %}
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
         {% if config.theme.hljs_languages %}

@@ -59,7 +59,7 @@ assumeyes=1
 syslog_ident=mock
 syslog_device=
 
-exclude=*.x86_64 
+exclude=*.x86_64
 
 # We are using Fedora 28 or 29 as our bases. 28 is what we use mainly. There are
 # a few cases where I needed 29 instead, but they were far and few between.

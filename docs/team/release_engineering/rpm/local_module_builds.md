@@ -244,8 +244,8 @@ data:
           koji_tag: module-rocky-8.4.0-build
           ref: virtual
           stream: el8.4.0
-          stream_collision_modules: 
-          ursine_rpms: 
+          stream_collision_modules:
+          ursine_rpms:
           version: 2
       commit: 53f7648dd6e54fb156b16302eb56bacf67a9024d
       mse: TRUE

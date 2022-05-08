@@ -29,8 +29,8 @@ This page tracks build failures from these sources:
 
 
 ## Methodology and Links
-Right now, build passes are done from CentOS 8.3 SRPMs and Skip's build server: ( https://rocky.lowend.ninja/RockyDevel/ )  
-  
+Right now, build passes are done from CentOS 8.3 SRPMs and Skip's build server: ( https://rocky.lowend.ninja/RockyDevel/ )
+
 Official Koji/MBS infrastructure is nearly complete and will of course be the official location for Rocky builds.  This unofficial work is being done to gather information that will help the official build go smoothly.
 
 All build "passes" are done via Mock, and their results are added to a repository on the build server.  These repositories are available to subsequent builds, so more packages get their dependencies and successfully build.
@@ -46,8 +46,8 @@ All build "passes" are done via Mock, and their results are added to a repositor
 <br />
 
 ## A Note on Modularity
-The current method for package testing is very simplistic, and doesn't take into account modular-stream packages (new feature in RHEL 8).  While we don't produce modular metadata with this method to create proper modules, it's still possible to compile modular packages and use modular dependencies.  
-  
+The current method for package testing is very simplistic, and doesn't take into account modular-stream packages (new feature in RHEL 8).  While we don't produce modular metadata with this method to create proper modules, it's still possible to compile modular packages and use modular dependencies.
+
 Our Mock config uses the option ```module_hotfixes=1``` in the DNF repo config files, which causes DNF to consider all packages for build dependencies in Mock, even ones from modules that are not enabled.
 
 
@@ -104,7 +104,7 @@ The following is a list of the packages we have investigated.  Notes are kept ab
 | Package  |  Notes  |
 |:--------|--------------|
 | ~~abattis-cantarell-fonts-0.0.25-4.el8~~ | ~~Patched fontforge to fix segfault issue.  Builds fine using the patched fontforge in its BuildRequires~~ |
-| ~~apache-commons-logging-1.2-13.module_el8.0.0+39+6a9b6e22~~ | ~~Needs to be built `--without avalon`~~ | 
+| ~~apache-commons-logging-1.2-13.module_el8.0.0+39+6a9b6e22~~ | ~~Needs to be built `--without avalon`~~ |
 | ~~brltty-5.6-28.el8~~	| ~~Needs patch to change location of asoundlib.h in newer version of alsa. https://github.com/sjpp/centos8-brltty/commit/388ddcf6493d50ce34542c8badb1a54a9f811950 (see https://bugzilla.redhat.com/show_bug.cgi?id=1716389, https://src.fedoraproject.org/rpms/brltty/c/897ad85a69cd7fb53cabcbac2fbc7c0ca1719da7?branch=master)~~ |
 | ~~ceph-12.2.7-9.el8~~ | ~~Need to define %__python. Build with `--define '__python %__python3'` (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~ |
 | ~~cobbler-2.0.7.1-6.module_el8.1.0+210+a3d63f21~~ | ~~Need to define %__python. Build with `--define '__python %__python3'` (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~ |
@@ -146,13 +146,13 @@ The following is a list of the packages we have investigated.  Notes are kept ab
 | ~~mod_wsgi~~ | ~~Need to `--define 'python3_pkgversion 38'` macro (as specified in python38 module)~~ |
 | ~~mutter-3.32.2~~ | Needed `pkgconfig(wayland-eglstream)` .  Appears to work after that is satisfied. |
 | ~~numpy-1.14.2-*~~ | ~~These are part of the python27 module, and must be built `--with python2` and `--without python3` .  Should be fine when the module is built by MBS.~~ |
-| perl-File-HomeDir-1.00-14.module_el8.1.0+229+cd132df8 | Missing `BuildRequires: perl(Module::Install)` (maybe ok when built as a module?) | 
+| perl-File-HomeDir-1.00-14.module_el8.1.0+229+cd132df8 | Missing `BuildRequires: perl(Module::Install)` (maybe ok when built as a module?) |
 | perl-JSON-2.97.001-2.el8 | ~~Missing `BuildRequires: perl-tests`~~ No longer able to reproduce error. |
 | ~~perl-Module-Build-0.42.29-4.module_el8.3.0+406+78614513~~ | ~~Needs `--define 'perl_bootstrap 1'` to build without the need for dependencies that have been removed from RHEL8~~ |
 | ~~perl-URI-1.7~~ | ~~Needs `--define 'perl_bootstrap 1'` to build without the need for dependencies that have been removed from RHEL8~~ |
 | ~~pesign~~ | ~~https://github.com/elguero/centos8 pesign/commit/8e0b2ac48129cfe51dd1d53531e77dbc34317dc7~~ |
 | plexus-containers | Built now that javapackages-tool from c8-stream-201902 is present. ~~`[ERROR] COMPILATION ERROR : [INFO] ------------------------------------------------------------- [ERROR] /builddir/build/BUILD/plexus-containers-plexus-containers-2.1.0/plexus-component-metadata/src/main/java/org/codehaus/plexus/metadata/ann/AnnReader.java:[38,18] cannot find symbol  symbol:   variable ASM7 location: interface org.objectweb.asm.Opcodes`~~ |
-| ~~plexus-build-api-0.0.7-20.module_el8.0.0+30+832da3a1~~ |  ~~Newer version in Git should build properly~~ | 
+| ~~plexus-build-api-0.0.7-20.module_el8.0.0+30+832da3a1~~ |  ~~Newer version in Git should build properly~~ |
 | ~~plexus-interpolation-1.26-3.module_el8.~~ | ~~Needs `JAVA_HOME` set. `config_opts['files']['/etc/profile.d/mystuff.sh'] = """ export JAVA_HOME=/ """`~~ |
 | postgresql-jdbc-42.2.3-* | Built fine localy ?? Maybe next build will pass. |
 | ~~prometheus-jmx-exporter-0.12.0-5.el8~~ | ~~Hidden dependencies: `prometheus-simpleclient-java` and `snakeyaml` (added to list 101). `snakeyaml` depends on `base64coder` (added to list 100).  Build is successful~~ |
@@ -201,10 +201,10 @@ The following is a list of the packages we have investigated.  Notes are kept ab
 | ~~mingw-sqlite~~ | ~~Hidden dependency: `mingw-pdcurses`~~ |
 | pandoc | Need to bootstrap Haskell compiler + dependencies (worked on...) |
 | ~~perl-B-Hooks-EndOfScope~~ | ~~Hidden dependency: `perl-Devel-Hide`~~ |
-| ~~perl-DateTime-Format-Builder~~ | ~~Hidden dependency: `perl-DateTime-Format-IBeat`~~ | 
+| ~~perl-DateTime-Format-Builder~~ | ~~Hidden dependency: `perl-DateTime-Format-IBeat`~~ |
 | ~~perl-DateTime-Locale~~ | ~~Hidden dependency: `perl-File-ShareDir-Install`, `perl-Test-File-ShareDir`~~ |
 | ~~perl-Devel-CheckLib~~ | ~~Hidden dependency: `perl-IO-CaptureOutput`~~ |
-| ~~perl-JSON-XS~~ | ~~Worked for me with above deps (gmk)~~ | 
+| ~~perl-JSON-XS~~ | ~~Worked for me with above deps (gmk)~~ |
 | ~~perl-MIME-Charset~~ | ~~Worked for me with above deps (gmk)~~ |
 | ~~perl-Module-Install-ReadmeFromPod~~ | ~~Hidden dependency: `perl-Module-Install`, `perl-Module-Install-AuthorRequires`, `perl-Module-Install-AutoLicense`, `perl-Test-InDistDir`~~ |
 | ~~perl-Params-ValidationCompiler~~ | ~~Hidden dependency: `perl-Test2-Plugin-NoWarnings`, `perl-Test-Without-Module`~~ |
@@ -231,7 +231,7 @@ The following is a list of the packages we have investigated.  Notes are kept ab
 |:--------|--------------|
 | dom4j | Wacky package.  It must be built using a `jaxen` package that is built with dom4j support, which is not present in CentOS.  We had to bootstrap the dom4j build using `jaxen` from Fedora 29, which is compiled with dom4j support.  |
 | perl-* | Be SURE to build against Perl-5.26 (default stream), NOT Perl-5.30 (latest version available).  Required disabling module_hotfixes=1 option to force default Perl.  Maybe fixed by MBS...? |
-| maven-* | Requires presence of an /etc/maven.conf , fails if not found.  Added a blank one in mock: ```config_opts['files']['/etc/java/maven.conf'] = " "``` as a workaround | 
+| maven-* | Requires presence of an /etc/maven.conf , fails if not found.  Added a blank one in mock: ```config_opts['files']['/etc/java/maven.conf'] = " "``` as a workaround |
 
 <br />
 

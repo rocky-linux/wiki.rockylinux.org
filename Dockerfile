@@ -1,7 +1,7 @@
 FROM rockylinux:8
 
 RUN dnf update -y &&\
-    dnf install -y python3 &&\
+    dnf install -y git python3 &&\
     dnf clean all
 
 # bind volume $CWD > /wiki exists in docker-compose.yml

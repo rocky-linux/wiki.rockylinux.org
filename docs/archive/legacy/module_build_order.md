@@ -107,9 +107,9 @@ virt-devel : 10+ (1 pkg failing)
 ```
 389-directory-server : N/A (investigate?)
 avocado : N/A (?)
-cobbler : N/A 
+cobbler : N/A
 dwm
-libselinux-python.txt 
+libselinux-python.txt
 libuv
 mariadb-devel (?)
 nextcloud

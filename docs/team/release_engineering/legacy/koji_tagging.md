@@ -24,7 +24,7 @@ Koji comprises of multiple components:
 
 * `koji-hub`, which is the center of all Koji operations. It runs XML-RPC and relies on other components to call it for actions. This piece will also talk to the database and is one component that has write access to the filesystem.
 * `kojid`, which is the daemon that runs on the builder nodes. It's responsibility is to talk to the hub for actions in which it can or has to perform, for example, building an RPM or install images. But that is not all that it can do.
-* `koji-web` is a set of scripts that provides the web interface that anyone can see at our [koji](https://kojidev.rockylinux.org). 
+* `koji-web` is a set of scripts that provides the web interface that anyone can see at our [koji](https://kojidev.rockylinux.org).
 * `koji` is the command line utility that is commonly used - It is a wrapper of the various API commands that can be called. In our environment, it requires a login via kerberos.
 * `kojira` is a component that ensures repodata is updated among the build tags.
 
@@ -34,7 +34,7 @@ Tags are the most important part of the koji ecosystem. With tags, you can have 
 
 Using tags, you can setup what is called "inheritance". So for example. You can have a tag named `dist-rocky8-build` but it happens to inherit `dist-rocky8-updates-build`, which will likely have a newer set of packages than the former. Inheritance, in a way, can be considered setting "dnf priorities" if you've done that before. Another way to look at it is "ordering" and "what comes first".
 
-Targets call tags to send packages to build in, generally. 
+Targets call tags to send packages to build in, generally.
 
 ## Tag Strategy
 
@@ -56,8 +56,8 @@ dist-rocky8-updates-build
     dist-rocky8-updates
         dist-rocky8
     dist-rocky8-build
-        build-modules 
-        
+        build-modules
+
 ```
 
 This one is a bit different. Notice that it inherits el8 first, and then dist-rocky8-updates, which inherits dist-rocky8. And then it also pulls in dist-rocky8-build, the previous tag we were talking about. This tag is where updates for a minor release are sent to.
@@ -69,7 +69,7 @@ dist-rocky8_4-updates-build
         dist-rocky8
     dist-rocky8-build
         el8
-        build-modules 
+        build-modules
 ```
 
 Here's a more interesting one. Notice something? It's pretty similar to the last one, but see how it's named el8_4 instead? This is where updates during 8.4 are basically sent to and that's how they get tagged as `.el8_4` on the RPM's. The `el8_4` tag contains a build macros package that instructs the `%dist` tag to be set that way. When 8.5 comes out, we'll basically have the same setup.
@@ -82,4 +82,4 @@ Modules are a bit tricky. We generally don't touch how MBS does its tags or what
 
 ### How do we determine what is part of a compose?
 
-There are special tags that have a `-compose` suffix. These tags are used as a way to pull down packages for repository building during the pungi process. 
+There are special tags that have a `-compose` suffix. These tags are used as a way to pull down packages for repository building during the pungi process.
