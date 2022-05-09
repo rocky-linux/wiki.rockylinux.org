@@ -1,5 +1,5 @@
 ---
-title: Rocky Patching How-To
+title: Rocky Patching Guide
 ---
 
 This explains how to debrand/patch a package for the Rocky Linux distribution.
