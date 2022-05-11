@@ -1,30 +1,55 @@
 ---
+# Project information
 site_name: Rocky Wiki
 site_url: https://wiki.rockylinux.org
+site_description: >-
+  The wiki for the Rocky Linux project
+
+# Repository
 repo_url: https://github.com/rocky-linux/wiki.rockylinux.org
 repo_name: rocky-linux/wiki.rockylinux.org
 edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2022 Rocky Enterprise Software Foundation
+
+# Configuration
 theme:
   name: material
   palette:
-    scheme: slate
-    primary: teal
-    accent: teal
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   highlightjs: true
   hljs_languages:
     - bash
+    - perl
     - python
     - yaml
-    - perl
   features:
-    - toc.integrate
-    - search.suggest
-    - search.highlight
-    - navigation.top
-    - navigation.tabs
+    - navigation.expand
     - navigation.indexes
-      #- navigation.expand
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - toc.integrate
   logo: assets/icon-white.svg
+
+# Plugins
 plugins:
   - autolinks
   - awesome-pages
@@ -32,6 +57,8 @@ plugins:
   - macros:
       include_dir: docs/include
   - search
+
+# Extensions
 markdown_extensions:
   - abbr
   - admonition
@@ -40,10 +67,11 @@ markdown_extensions:
   - footnotes
   - meta
   - pymdownx.details # this allows collapsible attributions
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - toc:
       permalink: true
-copyright: Copyright &copy; 2022 Rocky Enterprise Software Foundation
-...
