@@ -11,6 +11,9 @@ Use the navigation bar to the left or the links below to find team specific
 documentation.
 
 [Infrastructure Team](infrastructure/index.md)
+
 [Release Engineering Team](release_engineering/index.md)
+
 [Testing Team](testing/index.md)
+
 [Design Team](design/index.md)
