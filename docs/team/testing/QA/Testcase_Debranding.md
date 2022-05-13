@@ -12,7 +12,7 @@ rc:
     This test case is associated with the [Release_Criteria - Debranding](../release_criteria.md#debranding) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
-The Rocky Linux [Release Engineering Team](/team/release_engineering/) builds and maintains tools to manage the debranding of packages received from the upstream vendor, have published a comprehensive [debranding guide](/team/release_engineering/debranding/) and maintain a [list of packages](https://git.rockylinux.org/rocky/metadata/-/blob/main/patch.yml) requiring debranding patches.
+The Rocky Linux [Release Engineering Team](/team/release_engineering/) builds and maintains tools to manage the debranding of packages received from the upstream vendor. They have published a comprehensive [debranding guide](/team/release_engineering/debranding/) and maintain a [list of packages](https://git.rockylinux.org/rocky/metadata/-/blob/main/patch.yml) requiring debranding patches.
 
 This testcase will verify that all packages available on released media that Rocky Linux Release Engineering has identified as requiring debranding are debranded successfully per their specification.
 
