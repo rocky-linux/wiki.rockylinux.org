@@ -1,5 +1,5 @@
 ---
 nav:
   - Team Members: index.md
-  - Release Criteria: release_criteria.md
   - QA:Test Cases: qa_test_cases.md
+  - Release Criteria & Status: release_criteria
