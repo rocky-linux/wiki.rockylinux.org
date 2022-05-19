@@ -9,7 +9,7 @@ rc:
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#TBD](release_criteria.md#TBD) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#TBD](9_release_criteria.md#TBD) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 Add a short description here for this Testcase.

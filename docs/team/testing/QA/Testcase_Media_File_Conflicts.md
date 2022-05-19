@@ -9,7 +9,7 @@ rc:
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#no-broken-packages](release_criteria.md#no-broken-packages) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#no-broken-packages](9_release_criteria.md#no-broken-packages) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 This testcase will verify that the offline repository included on release blocking images will not contain any file conflicts between packages without explicit `Conflicts:` tag in the package metadata.
