@@ -1,12 +1,11 @@
 ---
-title: Testing
+title: QA Testing Team
 revision_date: 2022-04-01
+rc:
+  prod: Rocky Linux
 ---
 
-This section is primarily for documentation for the Testing Team. The testing team handles testing and QA for Rocky Linux.
-
-## Members
-
+## Team Members
 
 | Role           | Name            | Email                   | Mattermost Name    | IRC Name  |
 | -------------- | --------------- | ----------------------- | ------------------ | --------- |
@@ -15,5 +14,9 @@ This section is primarily for documentation for the Testing Team. The testing te
 | Testing Team   | Al Bowles       |                         | @raktajino         | raktajino |
 | Testing Team   | Lukas Magauer   | lukas@magauer.eu        | @lumarel           |           |
 | Testing Team   | Alan Marshall   |                         | @alangm            | alangm    |
+
+## Responsibilities
+
+The Testing Team handles testing and QA for Rocky Linux.
 
 {% include 'content_bottom.md' %}
