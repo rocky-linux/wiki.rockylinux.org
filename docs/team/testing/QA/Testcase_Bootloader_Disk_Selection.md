@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Bootloader Disk Selection
 author: Al Bowles
-revision_date: 2022-05-07
+revision_date: 2022-05-18
 rc:
   prod: Rocky Linux
   ver: 8
@@ -12,17 +12,23 @@ rc:
     This test case is associated with the [Release_Criteria#Bootloader Disk Selection](../release_criteria.md#bootloader-disk-selection) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
-Add a short description here for this Testcase.
+This test case verifies that the user is able to select an alternative disk on which to install the bootloader. It also verifies that, if the user is so inclined, they may choose not to install a bootloader at all.
+
+{% include 'testing/qa_data_loss_warning.md' %}
 
 ## Setup
-1. Add steps for setup for this Testcase.
+{% include 'testing/qa_setup_boot_to_media.md' %}
 
 ## How to test
-1. Do this first...
-2. Then do this...
+1. In the Installation Destination spoke, select the disk(s) to install to, then click the "Full disk summary and bootl loader..." button at the bottom of the screen
+   <!-- TODO include screenshot -->
+   ![Full disk summary and bootloader...]()
+1. Click the checkbox next to the disk on which the bootloader is desired
+1. Alternatively, uncheck the boot checkbox next to all disks to skip bootloader installation
+1. Proceed with installation on the test system.
 
 ## Expected Results
-1. This is what you should see/verify.
-2. You should also see/verify this.
+1. Installation should complete successfully.
+1. Note that if no bootloader is installed, the system may not boot after installation is complete. This is expected.
 
 {% include 'testing/qa_testcase_bottom.md' %}
