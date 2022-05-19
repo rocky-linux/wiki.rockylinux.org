@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Packages No Insights
 author: Trevor Cooper
-revision_date: 2022-04-24
+revision_date: 2022-05-18
 rc:
   prod: Rocky Linux
   ver: 8
@@ -9,7 +9,7 @@ rc:
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#repositories-must-match-upstream](../release_criteria.md#repositories-must-match-upstream) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#repositories-must-match-upstream](release_criteria.md#repositories-must-match-upstream) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 This test will verify that `insights-client` package is not declared be installed as part of a package group.
