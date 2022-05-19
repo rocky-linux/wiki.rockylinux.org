@@ -84,7 +84,9 @@ Assets and functionality that are Red Hat specific should not be included. If th
 This means that the installer’s mechanism for verifying the install medium is intact and must complete successfully, with the assumption that the medium was correctly written. It should return a failure message if this not the case.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase Media Consistency Verification](Testcase_Media_Consistency_Verification.md)
+        - [QA:Testcase Media USB dd](Testcase_Media_USB_dd.md)
+        - [QA:Testcase Boot Methods Boot ISO](Testcase_Boot_Methods_Boot_Iso.md)
+        - [QA:Testcase Boot Methods DVD](Testcase_Boot_Methods_Dvd.md)
 
 #### Packages and Installer Sources
 The installer must be able to use all supported local/remote packages and installer sources.
@@ -114,7 +116,7 @@ A minimal installation (via network) must be able to install the minimal package
 A kickstart installation should succeed, whether from optical/USB media or via the network.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase Kickstart Installation](Testcase_Kickstart Installation.md)
+        - [QA:Testcase Kickstart Installation](Testcase_Kickstart_Installation.md)
 
 #### Disk Layouts
 The installer must be able to create and install to any workable partition layout using any file system or format combination offered or supported by the installer. File systems that are not supported by the EL kernel is not tested here (this means btrfs, zfs, both of wish are not supported).
