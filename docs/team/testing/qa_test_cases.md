@@ -1,6 +1,8 @@
 ---
 title: QA:Test Cases
-revision_date: 2022-05-06
+revision_date: 2022-05-19
+rc:
+  prod: Rocky Linux
 ---
 
 This page lists all test cases in work and who is working on them...
@@ -9,12 +11,12 @@ This page lists all test cases in work and who is working on them...
 
 | Requirement                                         | Test Case                                                                | Assignee                | Status                                  |
 | --------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------- | --------------------------------------- |
-| [Release-blocking images must boot](9_release_criteria.md#release-blocking-images-must-boot) | [QA:Testcase Boot Methods Boot ISO](Testcase_Boot_Methods_Boot_Iso.md) | @tcooper | template exists, openQA covered (ref) |
-| [Release-blocking images must boot](9_release_criteria.md#release-blocking-images-must-boot) | [QA:Testcase Boot Methods DVD](Testcase_Boot_Methods_Dvd.md) | @tcooper | template exists, openQA covered (ref) |
-| [Basic Graphics Mode behaviors](9_release_criteria.md#basic-graphics-mode-behaviors) | [QA:Testcase Basic Graphics Mode](Testcase_Basic_Graphics_Mode.md) | @tcooper | manual and/or new openQA TestCase |
-| [No Broken Packages](9_release_criteria.md#no-broken-packages) | [QA:Testcase Media Repoclosure](Testcase_Media_Repoclosure.md)<br>[QA:Testcase Media File Conflicts](Testcase_Media_File_Conflicts.md) | @tcooper | manual using scripts or automated in CI |
-| [Repositories Must Match Upstream](9_release_criteria.md#repositories-must-match-upstream) | [QA:Testcase repocompare](Testcase_Repo_Compare.md) | @tcooper | manual using Skip's repocompare |
-| [Debranding](9_release_criteria.md#debranding) | [QA:Testcase Debranding Analysis](Testcase_Debranding.md) | @tcooper | process TBD |
+| Release-blocking images must boot<br>[{{ rc.prod }} 8](8_release_criteria.md#release-blocking-images-must-boot) [{{ rc.prod }} 9](9_release_criteria.md#release-blocking-images-must-boot) | [QA:Testcase Boot Methods Boot ISO](Testcase_Boot_Methods_Boot_Iso.md) | @tcooper | template exists, openQA covered (ref) |
+| Release-blocking images must boot<br>[{{ rc.prod }} 8](8_release_criteria.md#release-blocking-images-must-boot) [{{ rc.prod }} 9](9_release_criteria.md#release-blocking-images-must-boot) | [QA:Testcase Boot Methods DVD](Testcase_Boot_Methods_Dvd.md) | @tcooper | template exists, openQA covered (ref) |
+| Basic Graphics Mode behaviors<br>[{{ rc.prod }} 8](8_release_criteria.md#basic-graphics-mode-behaviors) [{{ rc.prod }} 9](9_release_criteria.md#basic-graphics-mode-behaviors) | [QA:Testcase Basic Graphics Mode](Testcase_Basic_Graphics_Mode.md) | @tcooper | manual and/or new openQA TestCase |
+| No Broken Packages<br>[{{ rc.prod }} 8](8_release_criteria.md#no-broken-packages) [{{ rc.prod }} 9](9_release_criteria.md#no-broken-packages) | [QA:Testcase Media Repoclosure](Testcase_Media_Repoclosure.md)<br>[QA:Testcase Media File Conflicts](Testcase_Media_File_Conflicts.md) | @tcooper | manual using scripts or automated in CI |
+| Repositories Must Match Upstream<br>[{{ rc.prod }} 8](8_release_criteria.md#repositories-must-match-upstream) [{{ rc.prod }} 9 ](9_release_criteria.md#repositories-must-match-upstream) | [QA:Testcase repocompare](Testcase_Repo_Compare.md) | @tcooper | manual using Skip's repocompare |
+| Debranding<br>[{{ rc.prod }} 8](8_release_criteria.md#debranding) [{{ rc.prod }} 9](9_release_criteria.md#debranding) | [QA:Testcase Debranding Analysis](Testcase_Debranding.md) | @tcooper | process TBD |
 
 
 ## Installer Requirements
