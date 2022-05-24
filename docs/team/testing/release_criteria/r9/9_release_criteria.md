@@ -1,21 +1,21 @@
 ---
-title: Rocky Linux 8 Release Criteria
+title: Rocky Linux 9 Release Criteria
 author: Trevor Cooper
 revision_date: 2022-04-01
 rc:
   prod: Rocky Linux
-  ver: 8
+  ver: 9
   level: Final
 ---
 
-# {{ rc.level }} Release Objectives
+# {{ rc.prod }} {{ rc.ver }} {{ rc.level }} Release Objectives
 
 The objective of a release (major or minor) is to provide a solid Enterprise Linux release that is suitable to:
 
 - Meet the needs of end users
 - Meet the needs of enterprises big or small
 
-## {{ rc.level }} Release Requirements
+## {{ rc.prod }} {{ rc.ver }} {{ rc.level }} Release Requirements
 
 In order for {{ rc.prod }} to be released to the general public, a compose must be able to meet all the following criteria as provided in this document. This is allows the decision process to be straightforward and as clear as possible. This document only contains “hard requirement” items. Optional/nice to have items are not to be included in this list.
 
