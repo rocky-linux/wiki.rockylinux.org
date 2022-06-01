@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Kickstart Installation
 author: Al Bowles
-revision_date: 2022-05-07
+revision_date: 2022-05-31
 rc:
   prod: Rocky Linux
   ver: 8
@@ -12,17 +12,27 @@ rc:
     This test case is associated with the [Release_Criteria#Kickstart Installation](../release_criteria.md#kickstart-installation) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
-Add a short description here for this Testcase.
+This test case verifies that installations via both local and remote Kickstart configuration files are successful.
+
+{% include 'testing/qa_data_loss_warning.md' %}
 
 ## Setup
-1. Add steps for setup for this Testcase.
+1. Copy a valid Kickstart file to a USB stick
+1. Connect the USB stick to the test system
+{% include 'testing/qa_setup_boot_to_media.md' %}
+1. Hit 'e' to edit the boot command
+1. Provide a local Kickstart file by supplying the GRUB boot option `inst.ks=file:/path/to/local.ks` or a remote Kickstart file by supplying the GRUB boot option `inst.ks=https://dl.rockylinux.org/remote.ks`.
 
 ## How to test
-1. Do this first...
-2. Then do this...
+1. Continue booting the installer as normal.
 
 ## Expected Results
-1. This is what you should see/verify.
-2. You should also see/verify this.
+1. The installation should complete and boot successfully, automatically populating the options specified in the Kickstart file.
+
+## Testing in openQA
+The following openQA test suites satisfy this release criteria:
+- `install_kickstart_nfs`
+- `server_realmd_join_kickstart`
+<!-- TODO provide a test suite that does not require PARALLEL_WITH= -->
 
 {% include 'testing/qa_testcase_bottom.md' %}

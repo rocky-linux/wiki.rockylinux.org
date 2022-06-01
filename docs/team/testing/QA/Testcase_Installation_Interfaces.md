@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Installation Interfaces
 author: Al Bowles
-revision_date: 2022-05-07
+revision_date: 2022-05-31
 rc:
   prod: Rocky Linux
   ver: 8
@@ -12,17 +12,41 @@ rc:
     This test case is associated with the [Release_Criteria#Installation Interfaces](../release_criteria.md#installation-interfaces) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
-Add a short description here for this Testcase.
+This test case verifies that the installer can complete an installation using all Anaconda spokes.
+
+{% include 'testing/qa_data_loss_warning.md' %}
 
 ## Setup
-1. Add steps for setup for this Testcase.
+{% include 'testing/qa_setup_boot_to_media.md' %}
 
 ## How to test
-1. Do this first...
-2. Then do this...
+<!-- localization -->
+1. Select a keyboard layout in the Keyboard Layout spoke
+1. Set language support in the Language spoke
+1. Set the system time and date in the Time and Date spoke
+<!-- user settings -->
+1. Set a root password in the Root Password spoke
+1. Create a user in the user creation spoke
+<!-- software -->
+1. Select an installation source from the Installation Source spoke
+1. Select a set of packages to install from the Package Selection spoke
+<!-- system -->
+1. Set a disk to which the operating system should install in the Installation Destination spoke
+1. Set the kdump state from the Kdump spoke
+1. Configure the system's network and hostname from the Network and Hostname spoke
+1. Select a security policy from the Security Policy spoke
 
 ## Expected Results
-1. This is what you should see/verify.
-2. You should also see/verify this.
+1. The installation should complete and boot successfully.
+
+## Testing in openQA
+The following openQA test suites satisfy this release criteria:
+- `install_arabic_language` OR `install_asian_language`
+<!--
+TODO
+- something with kdump
+- set hostname
+- set security policy
+-->
 
 {% include 'testing/qa_testcase_bottom.md' %}
