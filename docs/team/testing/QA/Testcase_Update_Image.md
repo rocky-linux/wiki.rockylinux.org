@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Update Image
 author: Al Bowles
-revision_date: 2022-05-07
+revision_date: 2022-06-06
 rc:
   prod: Rocky Linux
   ver: 8
@@ -16,11 +16,8 @@ rc:
 This test case verifies that an [update image]() can be loaded into Anaconda and applied during the install process.
 
 ## Setup
-1. Obtain access to supported system and hardware class to be installed.
-1. Prepare appropriate media for the selected ISO to be tested.
-    - Example: [QA:Testcase Media USB dd](Testcase_Media_USB_dd.md)
-1. Boot the system from the prepared optical, USB media or virtual device attachment. For this test, you will need to [...] <!-- TODO how to open GRUB boot commandline -->
-    - Examples: [QA:Testcase Boot Methods Boot ISO](Testcase_Boot_Methods_Boot_Iso.md), [QA:Testcase Boot Methods DVD](Testcase_Boot_Methods_Dvd.md)
+{% include 'testing/qa_setup_boot_to_media.md' %}
+1. Hit the Tab key to edit the boot command
 
 ## How to test
 <!-- TODO host this internally -->
@@ -30,8 +27,12 @@ This test case verifies that an [update image]() can be loaded into Anaconda and
 
 ## Expected Results
 1. Within the Installation Destination spoke, the selected install disk should have a pink background
-   <!-- TODO supply screenshots -->
-   ![No update provided - **FAIL**]() ![Update provided - **PASS**]()
+=== "FAIL"
+    ![No update provided - **FAIL**](images/no_updates.png){ loading=lazy }
+
+=== "PASS"
+    ![Update provided - **PASS**](images/updates.png){ loading=lazy }
+
 1. If you cannot verify visually, check for the existence of `/tmp/updates`, which should contain updated source files if the update was successfully applied. Note that if the update image doesn't actually contain any source files, this directory will not be created.
 <!-- TODO does /tmp/updates appear without completing installation? -->
 
