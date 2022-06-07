@@ -28,10 +28,10 @@ This test case verifies that an [update image]() can be loaded into Anaconda and
 ## Expected Results
 1. Within the Installation Destination spoke, the selected install disk should have a pink background
 === "FAIL"
-    ![No update provided - **FAIL**](images/no_updates.png){ loading=lazy }
+    ![No update provided - **FAIL**](/assets/images/no_updates.png){ loading=lazy }
 
 === "PASS"
-    ![Update provided - **PASS**](images/updates.png){ loading=lazy }
+    ![Update provided - **PASS**](/assets/images/updates.png){ loading=lazy }
 
 1. If you cannot verify visually, check for the existence of `/tmp/updates`, which should contain updated source files if the update was successfully applied. Note that if the update image doesn't actually contain any source files, this directory will not be created.
 <!-- TODO does /tmp/updates appear without completing installation? -->
