@@ -15,6 +15,8 @@ rc:
 <!-- TODO provide documentation on the topic of updates.img -->
 This test case verifies that an [update image]() can be loaded into Anaconda and applied during the install process.
 
+{% include 'testing/qa_data_loss_warning.md' %}
+
 ## Setup
 {% include 'testing/qa_setup_boot_to_media.md' %}
 1. Hit the Tab key to edit the boot command

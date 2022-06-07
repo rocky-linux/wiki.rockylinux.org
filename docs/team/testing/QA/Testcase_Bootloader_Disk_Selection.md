@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Bootloader Disk Selection
 author: Al Bowles
-revision_date: 2022-05-18
+revision_date: 2022-06-06
 rc:
   prod: Rocky Linux
   ver: 8
@@ -20,9 +20,7 @@ This test case verifies that the user is able to select an alternative disk on w
 {% include 'testing/qa_setup_boot_to_media.md' %}
 
 ## How to test
-1. In the Installation Destination spoke, select the disk(s) to install to, then click the "Full disk summary and bootl loader..." button at the bottom of the screen
-   <!-- TODO include screenshot -->
-   ![Full disk summary and bootloader...]()
+1. In the Installation Destination spoke, select the disk(s) to install to, then click the "Full disk summary and bootl loader..." button at the bottom of the screen: ![Full disk summary and bootloader...](/assets/images/bootloader.png){ loading=lazy }
 1. Click the checkbox next to the disk on which the bootloader is desired
 1. Alternatively, uncheck the boot checkbox next to all disks to skip bootloader installation
 1. Proceed with installation on the test system.
