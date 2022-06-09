@@ -25,7 +25,13 @@ Each major release has a set of repositories that come default with the distribu
 | HighAvailability | Yes     | Yes     | No      |
 | ResilientStorage | Yes     | Yes     | No      |
 
-Note: CRB is "Code Ready Builder" - PowerTools was a carryover from CentOS. Based on information from CentOS Stream 9 (as of October 12, 2021), it may or may not be named CRB in Rocky 9, so it is listed as such for now.
+### Notes on: CRB
+
+CRB is "Code Ready Builder" - PowerTools was a carryover from CentOS. Based on information from CentOS Stream 9, we will be listing it as CRB going forward in Rocky 9.
+
+### Notes on: Lack of "updates" repo
+
+In older major versions, it was normal to have an "updates" repo. Fedora for example still follows this. However, in EL8, EL9, and likely so on, there is no "updates" repository. This means all updates happen as is in the same repository. So if `bash` receives an update, it will land in `baseos` as there is no updates repository.
 
 ## Extra Repositories
 
