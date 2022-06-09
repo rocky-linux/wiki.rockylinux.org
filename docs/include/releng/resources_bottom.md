@@ -3,7 +3,7 @@
 
 === "Account Services"
 
-    **URL**: https://accounts.rockylinux.org
+    **URL**: [https://accounts.rockylinux.org](https://accounts.rockylinux.org)
 
     **Purpose**: Account Services maintains the accounts for almost all components of the Rocky ecosystem
 
@@ -13,7 +13,7 @@
 
 === "Git (RESF Git Service)"
 
-    **URL**: https://git.resf.org
+    **URL**: [https://git.resf.org](https://git.resf.org)
 
     **Purpose**: General projects, code, and so on for the Rocky Enterprise Software Foundation.
 
@@ -23,9 +23,9 @@
 
 === "Git (Rocky Linux GitLab)"
 
-    **URL**: https://git.rockylinux.org
+    **URL**: [https://git.rockylinux.org](https://git.rockylinux.org)
 
-    **Purpose**: Packages and code for the Rocky Linux ecosystem
+    **Purpose**: Packages and light code for the Rocky Linux distribution
 
     **Technology**: [GitLab](https://gitlab.com)
 
@@ -33,7 +33,7 @@
 
 === "Mirrors"
 
-    **URL**: https://mirrors.rockylinux.org
+    **URL**: [https://mirrors.rockylinux.org](https://mirrors.rockylinux.org)
 
     **Purpose**: Users can apply to be a mirror to host Rocky content (SIG or the base operating system)
 
@@ -43,7 +43,7 @@
 
 === "Mail Lists"
 
-    **URL**: https://lists.resf.org
+    **URL**: [https://lists.resf.org](https://lists.resf.org)
 
     **Purpose**: Users can subscribe and interact with various mail lists for the Rocky ecosystem
 
