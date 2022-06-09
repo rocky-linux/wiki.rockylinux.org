@@ -11,13 +11,23 @@
 
     **Contact**: `~Infrastructure` in Mattermost and `#rockylinux-infra` in Libera IRC
 
-=== "Git (GitLab)"
+=== "Git (RESF Git Service)"
+
+    **URL**: https://git.resf.org
+
+    **Purpose**: General projects, code, and so on for the Rocky Enterprise Software Foundation.
+
+    **Technology**: [Gitea](https://gitea.io/en-us/)
+
+    **Contact**: `~Infrastructure`, `~Development` in Mattermost and `#rockylinux-infra`, `#rockylinux-devel` in Libera IRC
+
+=== "Git (Rocky Linux GitLab)"
 
     **URL**: https://git.rockylinux.org
 
     **Purpose**: Packages and code for the Rocky Linux ecosystem
 
-    **Technology**: GitLab
+    **Technology**: [GitLab](https://gitlab.com)
 
     **Contact**: `~Infrastructure`, `~Development` in Mattermost and `#rockylinux-infra`, `#rockylinux-devel` in Libera IRC
 

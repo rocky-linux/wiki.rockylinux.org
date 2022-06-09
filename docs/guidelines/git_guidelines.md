@@ -222,3 +222,4 @@ If there is a package failing because of a failing current patch, or a new patch
 
 An appropriate bug tracking ticket should be opened, if not opened already (or automatically) to ensure there is documentation for this change.
 
+{% include "releng/resources_bottom.md" %}
