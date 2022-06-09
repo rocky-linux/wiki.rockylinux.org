@@ -9,7 +9,7 @@ Anyone can propose or participate in a Special Interest Group.
 
 Creating a new Special Interest Group requires participation from a member of the Rocky teams or a member of the board. A SIG must meet these requirements:
 
-* The group must be related to Rocky or a use-case for Rocky
+* The group must be related to Rocky or a use-case for Rocky or Enterprise Linux as a whole
 * There must be feedback and control into the Rocky community
 * All communication as to the work of the SIG should be public - Some matters may have to be private, and as such should be out of band
 
@@ -31,8 +31,8 @@ It is up to the requestor to:
 
 Upon approval, a Core/RelEng member will request/create initial resources as needed:
 
-  * git.rockylinux.org groups
-  * An initial git site
+  * RESF Git Service organization is created (git.resf.org)
+  * Rocky Linux GitLab groups are created (git.rockylinux.org) if applicable
   * groups in Rocky Account Services
   * mail list
   * channel in mattermost + IRC channel as a bridge if requested

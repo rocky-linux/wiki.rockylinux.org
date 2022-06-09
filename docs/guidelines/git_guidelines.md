@@ -2,27 +2,33 @@
 title: Git Guidelines
 ---
 
-This document covers how the Rocky Enterprise Software Foundation (RESF) handles the use of Git in the ecosystem for Rocky Linux. It contains information about how various teams and the community interact and work with Git, as well as expectations and requirements.
+This document covers how the Rocky Enterprise Software Foundation (RESF) handles the use of Git in the ecosystem for the RESF and its projects such as Rocky Linux. It contains information about how various teams and the community interact and work with Git, as well as expectations and requirements.
 
 ## Contact Information
 | | |
 | - | - |
-| **Owner** | Release Engineering Team |
+| **Owner** | SIG Core / Release Engineering |
 | **Mattermost Contacts** | `@label` `@mustafa` `@skip77` `@sherif` `@pgreco` `@neil` `@tgo` |
 | **Mattermost Channels** | `~Dev/Packaging` `~Dev/General` |
 | **IRC Contacts** | `Sokel` `neil` `tg` |
 
 ## General Information
 
-Git is a core component of the Rocky Linux build ecosystem, RESF projects, and thus a mode of the development process for the distribution and available software. **GitLab** is the software used for storing mostly RPM SPEC files, patches, configurations for debranding/modification to packages, and some scripts/utilities. It may contain some source code depending on the use case. **Gitea** is used for RESF, its projects, its code, and potentially other components that are not applicable or makes sense to maintain in our GitLab instance.
+Git is a core component of the Rocky Linux build ecosystem, RESF projects, and thus a mode of the development process for the distribution and available software.
+
+**Gitea** is used for the RESF, its projects, its code, mirrored repositories, and potentially other components.
+
+**GitLab** is the software currently used to storing mostly RPM spec files, patches, configurations for debranding/modification to packages, as well as some scripts/utilities. Generally source code does not live here with the exception of src-git scenarios.
+
+**GitHub** is used for the RESF and Rocky Linux project organizations, which may contain branding, scripts/tools/utilities, or a handful of other useful code (such as ansible). There may also be forks of upstream projects (such as mock) to handle upstreaming changes to the Fedora Project (like EPEL).
 
 ## Expectations
 
-This section goes over the expectations of using the Git service.
+This section goes over the expectations of using a Git service.
 
 ### General Expectations
 
-Most of this information is covered in our `Git Contributor Agreement`. However, we are duplicating the information here for all readers.
+Most of this information is covered in our `Git Contributor Agreement`, which generally covers the RESF Git Service and Rocky Linux GitLab. However, we are duplicating the information here for all readers.
 
 * Moderation is enforced - As is done in the Rocky Linux Mattermost chat, it is important to mind your language and word choice whether in Git issues or the Bug Tracker.
 * A valid GPG key must be uploaded and used to sign your commits - Signed commits, as a general rule are recommended. Expect that most projects will have unsigned commits disabled.
@@ -38,7 +44,7 @@ Below are a list of do's and do not's as part of our Git, whether some are dupli
 DO:
 
 * Fork repositories and create pull requests where needed
-* Ensure software/source code brought into the Git services are of a valid open source license (see related links above)
+* Ensure software/source code brought into the Git services are of a [valid open source license](https://fedoraproject.org/wiki/Licensing:Main?rd=Licensing#SoftwareLicenses)
 * Upload a valid GPG key and sign your commits
 
 DON'T:
@@ -49,7 +55,7 @@ DON'T:
 
 ### Exceptions
 
-Exceptions to personal projects under your namespace would be for code that will be utilized in some way for the Rocky ecosystem, whether directly, indirectly (eg for people.rocky).
+Exceptions to personal projects under your namespace would be for code that will be utilized in some way for the Rocky ecosystem, whether directly, indirectly (eg for people.rocky). This can also be the case of using Peridot as a COPR-like service.
 
 ## Source Code (for SIGs or other software)
 
@@ -63,9 +69,11 @@ This section covers SIG groups and projects that exist within the Rocky Linux gi
 
 A SIG is a **S**pecial **I**nterest **G**roup(s). SIGs are smaller groups within the Rocky community that focus on a small set of issues or exist solely for the awareness or focus on topics. This section does not cover the requirements of a SIG's existence.
 
-It is expected that a SIG may end up having repositories with packages that can add-on to a Rocky Linux system. However, some SIGs do not function in this manner. In the case that they do function in this manner, they will typically have a section in the git service under the SIG group.
+It is typical that a SIG may end up having repositories with packages that can add-on to a Rocky Linux system. However, some SIGs do not function in this manner. In the case that they do function in this manner, they will typically have a section in Rocky Linux GitLab under the SIG group.
 
-### Structure
+A SIG will always have an organization at the RESF Git Service.
+
+### Structure (Packaging)
 
 Using the [RPM Structure](#current-rpm-structure) as a guide, the general idea is the same. A `patch` group may not be needed, but could be useful. An example of how a SIG could set up their group could be like this:
 

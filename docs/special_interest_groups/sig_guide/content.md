@@ -4,9 +4,15 @@ title: Managing Content
 
 This section goes over how to manage content in git and the community build system.
 
-## Importing to Git
+## Importing to the RESF Git Service
 
-Each Special Interest Group will have a subgroup under `SIG` in git. This subgroup will have additional subgroups, `src`, `rpms`, `modules`.
+All Special Interset Groups get an organization created in the RESF Git Service. Each organization will have a `meta` repository that can track issues or requests for the SIG as a whole. This is not a requirement and each SIG can dictate how issues or requests are handled.
+
+There is no strict requirement on what repositories should and should not exist. It is up to the discretion of the SIG.
+
+## Importing to the Rocky Linux GitLab
+
+Special Interest Groups that build and release packages will have a subgroup under `SIG`. This subgroup will have additional subgroups, `src`, `rpms`, `modules`.
 
 !!! info "Additional Subgroups"
     While this is the default layout, additional subgroups can be made at the root of the SIG group. It is expected that some SIG's may not have plans to build packages as they could have an entirely separate focus.
