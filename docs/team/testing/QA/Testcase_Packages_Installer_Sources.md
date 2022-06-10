@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Packages and Installer Sources
 author: Al Bowles
-revision_date: 2022-05-22
+revision_date: 2022-06-06
 rc:
   prod: Rocky Linux
   ver: 8
@@ -22,6 +22,8 @@ The following package sets are only available from remote sources and require a 
 - workstation
 - graphical-server
 - virtualization-host
+
+{% include 'testing/qa_data_loss_warning.md' %}
 
 ## Setup
 {% include 'testing/qa_setup_boot_to_media.md' %}
