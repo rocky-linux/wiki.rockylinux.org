@@ -35,7 +35,7 @@ The following tasks apply in general to all of the following appliactions:
 
 ## Setup
 
-1. Obtain access to a suitable system with either a Workstation or a Graphical Server installation
+Obtain access to a suitable system with either a Workstation or a Graphical Server installation.
 
 ## How to test
 

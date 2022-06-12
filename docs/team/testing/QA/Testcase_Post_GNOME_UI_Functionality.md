@@ -20,7 +20,7 @@ This test collection takes care of the correct functionality of the GNOME UI.
 
 ## Setup
 
-1. Obtain access to a suitable system with either a Workstation or a Graphical Server installation
+Obtain access to a suitable system with either a Workstation or a Graphical Server installation.
 
 ## How to test
 

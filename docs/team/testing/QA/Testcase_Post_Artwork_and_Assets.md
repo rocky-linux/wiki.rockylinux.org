@@ -34,6 +34,6 @@ There are several brand artworks and assets throughout the whole OS, this testca
 
 ## Expected Results
 
-The tests during the process could be successfully finished
+The tests during the process could be successfully finished.
 
 {% include 'testing/qa_testcase_bottom.md' %}

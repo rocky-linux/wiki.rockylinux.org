@@ -50,6 +50,6 @@ Check that the chosen keyboard layout works correctly on text mode.
 
 ## Expected Results
 
-The tests during the process could be successfully finished
+The tests during the process could be successfully finished.
 
 {% include 'testing/qa_testcase_bottom.md' %}
