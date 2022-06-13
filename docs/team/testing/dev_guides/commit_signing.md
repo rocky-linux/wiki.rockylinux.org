@@ -43,25 +43,21 @@ Export the *primary keypair* (put these somewhere very safe along with revocatio
     gpg --export --armor my@email.addr > my_email_addr.public.gpg-key
 
 # Remove the *primary keypair* from your keyring
-Export all subkeys from the new keypair to a file - use ramfs instead of tmpfs/ or /dev/shm/ because ramfs doesn't write to swap
+1. Export all subkeys from the new keypair to a file
 
-    mkdir /tmp/gpg
-    sudo mount -t ramfs -o size=1M ramfs /tmp/gpg
-    sudo chown $(logname):$(logname) /tmp/gpg
-    gpg --export-secret-subkeys my@email.addr > /tmp/gpg/subkeys
+        gpg --export-secret-subkeys my@email.addr > $HOME/.gnupg/subkeys
 
-Delete original signing subkey from keypair in our keyring
+1. Delete primary key from keyring - *BE SURE TO BACK UP YOUR PRIMARY KEYPAIR FIRST!*
 
-    gpg --delete-secret-key my@email.addr
+        gpg --delete-secret-key my@email.addr
 
-Re-import the previously exported keys
+1. Re-import the previously exported keys
 
-    gpg --import /tmp/gpg/subkeys
-    sudo umount /tmp/gpg
-    rmdir /tmp/gpg
+        gpg --import $HOME/.gnupg/subkeys
 
-Look for `sec#` instead of `sec` in the output - pound sign means signing subkey is *not* in the keypair located in the keyring
-    gpg --list-secret-keys $HOME/.gnupg/secring.gpg
+1. Look for `sec#` instead of `sec` in the output - pound sign means signing subkey is *not* in the keypair located in the keyring
+
+        gpg --list-secret-keys $HOME/.gnupg/secring.gpg
 
 # Revoking a *signing keypair*
 Find the *primary keypair* and import it (preferably into an ephemeral system like a liveUSB)
