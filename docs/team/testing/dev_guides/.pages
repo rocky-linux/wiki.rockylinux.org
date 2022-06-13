@@ -1,0 +1,4 @@
+---
+nav:
+  - Development Box Setup: development_boxes.md
+  - Git Commit Signing: commit_signing.md
