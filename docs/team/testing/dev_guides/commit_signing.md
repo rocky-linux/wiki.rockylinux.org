@@ -34,13 +34,13 @@ rc:
 
 # Create revocation certificate
 
-    gpg --output \<my@email.addr\>.gpg-revocation-certificate --gen-revoke my@email.addr
+    gpg --output my_email_addr.gpg-revocation-certificate --gen-revoke my@email.addr
 
 # Back up your keypair
 Export the *primary keypair* (put these somewhere very safe along with revocation certificate)
 
-    gpg --export-secret-keys --armor my@email.addr > \<my@email.addr\>.private.gpg-key
-    gpg --export --armor my@email.addr > \<my@email.addr\>.public.gpg-key
+    gpg --export-secret-keys --armor my@email.addr > my_email_addr.private.gpg-key
+    gpg --export --armor my@email.addr > my_email_addr.public.gpg-key
 
 # Remove the *primary keypair* from your keyring
 Export all subkeys from the new keypair to a file - use ramfs instead of tmpfs/ or /dev/shm/ because ramfs doesn't write to swap
@@ -66,7 +66,7 @@ Look for `sec#` instead of `sec` in the output - pound sign means signing subkey
 # Revoking a *signing keypair*
 Find the *primary keypair* and import it (preferably into an ephemeral system like a liveUSB)
 
-    gpg --import /path/to/\<my@email.addr\>.public.gpg-key /path/to/\<my@email.addr\>.private.gpg-key
+    gpg --import /path/to/my_email_addr.public.gpg-key /path/to/my_email_addr.private.gpg-key
     gpg --edit-key my@email.addr
     gpg> revkey
     [ passphrase twice ]
