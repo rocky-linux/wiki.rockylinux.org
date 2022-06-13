@@ -15,7 +15,7 @@ Initiate the keypair generation wizard
 Select option `(9) ECC and ECC` for the key type
 Select option `(1) Curve 25519` for the elliptic curve
 Set a validity period of your choice, ideally less than 1 year
-Specify real name and email address to associate with this keypair
+Specify real name and email address to associate with this keypair. The email address must match your verified Github email address or be set to `your-github-username@users.noreply.github.com`.
 Type a passphrase (twice)
 
 # Create a signing keypair
