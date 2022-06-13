@@ -8,13 +8,15 @@ rc:
   level: Final
 ---
 # Creating your primary keypair
-Create a new gpg keypair, ideally set to expire in <= 1y
+Initiate the keypair generation wizard
 
     gpg --full-generate-key --expert
 
-Select eddsa [ECC] and set a validity period
+Select option `(9) ECC and ECC` for the key type
+Select option `(1) Curve 25519` for the elliptic curve
+Set a validity period of your choice, ideally less than 1 year
 Specify real name and email address to associate with this keypair
-Type a passphrase
+Type a passphrase (twice)
 
 # Create a signing keypair
 Add a signing subkey
