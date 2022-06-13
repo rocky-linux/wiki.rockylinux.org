@@ -8,15 +8,15 @@ rc:
   level: Final
 ---
 # Creating your primary keypair
-Initiate the keypair generation wizard
+1. Initiate the keypair generation wizard
 
-    gpg --full-generate-key --expert
+        gpg --full-generate-key --expert
 
-Select option `(9) ECC and ECC` for the key type
-Select option `(1) Curve 25519` for the elliptic curve
-Set a validity period of your choice, ideally less than 1 year
-Specify real name and email address to associate with this keypair. The email address must match your verified Github email address or be set to `your-github-username@users.noreply.github.com`.
-Type a passphrase (twice)
+1. Select option `(9) ECC and ECC` for the key type
+1. Select option `(1) Curve 25519` for the elliptic curve
+1. Set a validity period of your choice, ideally less than 1 year
+1. Specify real name and email address to associate with this keypair. The email address must match your verified Github email address or be set to `your-github-username@users.noreply.github.com`.
+1. Type a passphrase (twice)
 
 # Create a signing keypair
 Add a signing subkey
