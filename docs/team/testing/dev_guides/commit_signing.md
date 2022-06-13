@@ -19,17 +19,20 @@ rc:
 1. Type a passphrase (twice)
 
 # Create a signing keypair
-Add a signing subkey
+1. Add a signing subkey
 
-    gpg --edit-key my@email.addr
-    gpg> addkey
-    [ passphrase ]
+        gpg --expert --edit-key my@email.addr
+        gpg> addkey
 
-Select [ECC] (sign / authenticate / encrypt?) for kind of key, 4096 bits, valid for 180d
+1. Select option `(10) ECC (sign only)` for the key type
+1. Select option `(1) Curve 25519` for the elliptic curve
+1. Set a validity period of your choice, ideally less than 1 year
+1. Accept the prompts and type a passphrase (twice)
+1. Save and exit
 
-    gpg> save
+        gpg> save
 
-Create revocation certificate
+# Create revocation certificate
 
     gpg --output \<my@email.addr\>.gpg-revocation-certificate --gen-revoke my@email.addr
 
