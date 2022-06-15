@@ -44,7 +44,7 @@ There are extra repositories offered by Rocky Linux.
 | RT (real time)   | Yes     | Yes     | No      |
 | NFV              | Yes     | TBD     | No      |
 | SAP / SAP HANA   | No      | TBD     | No      |
-| Devel            | Yes     | Yes     | No      |
+| Devel / devel    | Yes     | Yes     | No      |
 | rockyrpi         | Yes     | Yes     | No      |
 
 ### Notes on: Extras
