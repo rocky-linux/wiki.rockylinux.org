@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Basic Graphics Mode
 author: Trevor Cooper
-revision_date: 2022-05-18
+revision_date: 2022-06-23
 rc:
   prod: Rocky Linux
   ver: 8
@@ -9,10 +9,10 @@ rc:
 ---
 
 !!! error "REFERENCED RELEASE CRITERIA IS OVERLY GENERAL AND UNTESTABLE"
-    The associated release criteria, [Release_Criteria#basic-graphics-mode-behaviors](9_release_criteria.md#basic-graphics-mode-behaviors), for this test case is overly general and **must** be modified to specific enough to be testable.
+    The associated release criteria, [Release_Criteria#basic-graphics-mode-behaviors](8_release_criteria.md#basic-graphics-mode-behaviors), for this test case is overly general and **must** be modified to specific enough to be testable.
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#basic-graphics-mode-behaviors](9_release_criteria.md#basic-graphics-mode-behaviors) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#basic-graphics-mode-behaviors](8_release_criteria.md#basic-graphics-mode-behaviors) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 This test case will verify that release-blocking installers function as intended using the generic video driver option (“basic graphics mode”) on supported systems and classes of hardware.
