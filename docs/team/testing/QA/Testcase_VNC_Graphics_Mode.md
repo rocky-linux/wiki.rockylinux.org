@@ -20,13 +20,18 @@ This test case will verify that release-blocking installers function as intended
 1. Obtain access to supported system and hardware class to be installed.
 2. Prepare appropriate media for the selected ISO to be tested.
     - Example: [QA:Testcase Media USB dd](Testcase_Media_USB_dd.md)
-3. Obtain access to remote system with TigerVNC installed to use for VNC connection.
+3. Obtain access to remote system with a VNC client installed to use for VNC connection.
+
+
+!!! info "Suggested VNC Clients"
+    Both [`tigervnc`](https://tigervnc.org) and [`vinagre`](https://wiki.gnome.org/Apps/Vinagre) are VNC clients provided in Rocky Linux but any VNC client may be used.
 
 ## How to test
 1. Boot the system from the prepared optical, USB media or virtual device attachment.
     - Examples: [QA:Testcase Custom Boot Methods Boot ISO](Testcase_Custom_Boot_Methods_Boot_Iso.md)
 2. Interrupt the kernel boot and specify the appropriate VNC installation option on the boot command line.
 3. Proceed with installation on the test system.<br>**Depending on installer choices this MAY destroy all the data on the test system.**
+4. Depending on the choice or `direct` or `connect` mode connect inbound to the system under test or wait for it to connect to your listening VNC client.
 
 !!! error "DATA LOSS"
     If you choose to complete the installation of the test system any/all data on the system may be lost. Please do not install on a system whose contents you need to keep.
