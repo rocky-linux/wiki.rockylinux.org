@@ -104,4 +104,8 @@ ability to check your profile to verify that you have signed the appropriate
 agreements before proceeding. In the event your profile is set to private, this
 information may be requested from Core/RelEng. If you do not or cannot agree to
 the terms, you will not be able to contribute to Rocky within its own ecosystem.
-(Note that this does not stop you from contributing to github repositories.)
+Even so, this this does not stop you from contributing to github repositories at
+both the Rocky Linux github organization repositories of the RESF github
+organization repositories.
+
+{% include "releng/resources_bottom.md" %}
