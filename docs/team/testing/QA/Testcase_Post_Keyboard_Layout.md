@@ -18,7 +18,7 @@ As there are a lot of different keyboard layouts available, it is necessary to t
 ## Setup
 
 - Obtain access to a few different system configurations, especially with and without UI, and not to forget with disk encryption.
-- Aquire access to either a baremetal machine or a VM host, to install a new machine
+- Acquire access to either a baremetal machine or a VM host, to install a new machine
     - Prepare appropriate media for the selected ISO to be tested.
     - Example: [QA:Testcase Media USB dd](Testcase_Media_USB_dd.md)
 
