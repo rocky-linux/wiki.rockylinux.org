@@ -17,7 +17,7 @@ There are several brand artworks and assets throughout the whole OS, this testca
 
 ## Setup
 
-1. Aquire access to either a baremetal machine or a VM host, to install a new machine
+1. Acquire access to either a baremetal machine or a VM host, to install a new machine
 2. Prepare appropriate media for the selected ISO to be tested.
     - Example: [QA:Testcase Media USB dd](Testcase_Media_USB_dd.md)
 
