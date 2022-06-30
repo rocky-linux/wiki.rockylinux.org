@@ -1,6 +1,8 @@
 ---
 title: Rocky Linux 9 Release Criteria
-author: Trevor Cooper
+author:
+  - Trevor Cooper
+  - Lukas Magauer
 revision_date: 2022-04-01
 rc:
   prod: Rocky Linux
