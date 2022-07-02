@@ -49,11 +49,11 @@ Release-blocking installer images must boot when written to optical media or USB
         - [QA:Testcase Boot Methods DVD](Testcase_Boot_Methods_Dvd.md)
         - [QA:Testcase Media USB dd](Testcase_Media_USB_dd.md)
 
-#### Basic Graphics Mode behaviors
-The generic video driver option (“basic graphics mode”) on all release-blocking installers must function as intended. This means launching the installer or desktop and attempting to use a generic driver. There must be no bugs that prevent the installer from being reached in this configuration on all systems and classes of hardware supported by the enterprise linux kernel.
+#### VNC Graphics Mode behaviors
+The VNC installation option on all release-blocking installers must function as intended. This means launching the installer or desktop and connecting with VNC to complete the installation. There must be no bugs that prevent the installer from being reached in this configuration on all systems and classes of hardware supported by the enterprise linux kernel.
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase Basic Graphics Mode](Testcase_Basic_Graphics_Mode.md)
+        - [QA:Testcase VNC Graphics Mode](Testcase_VNC_Graphics_Mode.md)
 
 #### No Broken Packages
 Critical errors, such as undeclared conflicts, unresolved dependencies, or modules relying on packages from another stream will be considered an automatic blocker. There are potential exceptions to this (eg, freeradius cannot be installed on an older perl stream, this is a known issue upstream).
