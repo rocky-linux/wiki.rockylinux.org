@@ -12,6 +12,8 @@ Please read `man 5 dnf.conf`, in particular the section of `enabled` under the `
 
 During a minor release lifecycle as a package receives updates, the previous version will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates). Upon new minor release, all previous updates/versions that are *not* the latest are not carried over.
 
+Rocky Linux 9 does not currently support this policy.
+
 ## Base Repositories
 
 Each major release has a set of repositories that come default with the distribution. Below is a list of common repositories for each major release. As of October 12, 2021, "Rocky 9" is projected information based on CentOS Stream 9.
@@ -58,6 +60,12 @@ These are not tested by upstream nor available in the upstream product.
 This repository contains packages that either A) replace a core component via patched functionality, B) build a component that was originally exclusive for one architecture (eg open-vm-tools built for x86_64 but not aarch64 in Rocky 8) or C) providing packages that were built but not traditionally provided by upstream.
 
 Packages that fall under A and B will have a `.plus` added to their version tag. These are not tested nor available in the upstream product.
+
+## Vault
+
+Previous releases, including ISOs and other images, are typically moved into a vault area of our tier 0 mirror once a new minor release version is available for at least a week. The vault can be found [here](https://dl.rockylinux.org/vault/rocky).
+
+Note that these versions are not supported and not recommended for general use.
 
 ## Community Approved Repositories
 
