@@ -4,21 +4,26 @@ author: Lukas Magauer
 revision_date: 2022-05-31
 rc:
   prod: Rocky Linux
-  ver: 8
+  ver:
+    - 8
+    - 9
   level: Final
 ---
 
-!!! error "REFERENCED RELEASE CRITERIA IS OVERLY GENERAL AND UNTESTABLE"
-    The associated release criteria, [Release_Criteria#default-application-functionality-desktop-only](9_release_criteria.md#default-application-functionality-desktop-only), for this test case is overly general and **must** be modified to specific enough to be testable.
+!!! info "Release relevance"
+    This Testcase applies the following versions of {{ rc.prod }}: {% for version in rc.ver %}{{ version }}{% if not loop.last %}, {% endif %}{% endfor %}
 
 !!! info "Associated release criterion"
     This test case is associated with the [Release_Criteria#default-application-functionality-desktop-only](9_release_criteria.md#default-application-functionality-desktop-only) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+
+!!! error "REFERENCED RELEASE CRITERIA IS OVERLY GENERAL AND UNTESTABLE"
+    The associated release criteria, [Release_Criteria#default-application-functionality-desktop-only](9_release_criteria.md#default-application-functionality-desktop-only), for this test case is overly general and **must** be modified to specific enough to be testable.
 
 ## Description
 
 This testcase handles all applications, considered as core applications of the desktop environment GNOME or user facing commandline applications.
 
-The following tasks apply in general to all of the following appliactions:
+The following tasks apply in general to all of the following applications:
 
 - Firefox
 - Files (Nautilus)

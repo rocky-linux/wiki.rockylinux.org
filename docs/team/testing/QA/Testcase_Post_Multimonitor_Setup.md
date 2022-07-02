@@ -4,9 +4,14 @@ author: Lukas Magauer
 revision_date: 2022-05-31
 rc:
   prod: Rocky Linux
-  ver: 8
+  ver:
+    - 8
+    - 9
   level: Final
 ---
+
+!!! info "Release relevance"
+    This Testcase applies the following versions of {{ rc.prod }}: {% for version in rc.ver %}{{ version }}{% if not loop.last %}, {% endif %}{% endfor %}
 
 !!! info "Associated release criterion"
     This test case is associated with the [Release_Criteria#dual-monitor-setup-desktop-only](9_release_criteria.md#dual-monitor-setup-desktop-only) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.

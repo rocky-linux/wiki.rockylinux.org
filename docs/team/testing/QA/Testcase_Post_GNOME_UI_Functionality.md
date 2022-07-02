@@ -4,9 +4,14 @@ author: Lukas Magauer
 revision_date: 2022-05-31
 rc:
   prod: Rocky Linux
-  ver: 8
+  ver:
+    - 8
+    - 9
   level: Final
 ---
+
+!!! info "Release relevance"
+    This Testcase applies the following versions of {{ rc.prod }}: {% for version in rc.ver %}{{ version }}{% if not loop.last %}, {% endif %}{% endfor %}
 
 !!! error "REFERENCED RELEASE CRITERIA IS OVERLY GENERAL AND UNTESTABLE"
     The associated release criteria, [Release_Criteria#default-panel-functionality-desktop-only](9_release_criteria.md#default-panel-functionality-desktop-only), for this test case is overly general and **must** be modified to specific enough to be testable.
