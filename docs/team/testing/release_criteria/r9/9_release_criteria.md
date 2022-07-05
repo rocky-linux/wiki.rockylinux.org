@@ -1,6 +1,8 @@
 ---
 title: Rocky Linux 9 Release Criteria
-author: Trevor Cooper
+author:
+  - Trevor Cooper
+  - Lukas Magauer
 revision_date: 2022-04-01
 rc:
   prod: Rocky Linux
@@ -164,82 +166,102 @@ Release-blocking cloud disk images must be published to appropriate cloud provid
         - [QA:Testcase TBD](Testcase_Template.md)
 
 ### Post-Installation Requirements
+
 #### System Services
+
 All system services present after installation must start properly, with the exception of services that require hardware which is not present. Examples of such services would be:
-    - sshd
-    - firewalld
-    - auditd
-    - chronyd
+
+- sshd
+- firewalld
+- auditd
+- chronyd
+
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase System Services](Testcase_Post_System_Services.md)
 
 #### Keyboard Layout
+
 If a particular keyboard layout has been configured for the system, that layout must be used:
-    - When unlocking storage volumes (encrypted by LUKS)
-    - When logging in at a TTY console
-    - When logging in via GDM
-    - After logging into a GNOME desktop system, if the user does not have their own layout configuration set.
+
+- When unlocking storage volumes (encrypted by LUKS)
+- When logging in at a TTY console
+- When logging in via GDM
+- After logging into a GNOME desktop system, if the user does not have their own layout configuration set.
 
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Keyboard Layout](Testcase_Post_Keyboard_Layout.md)
 
 #### SELinux Errors (Server)
+
 There must be no SELinux denial logs in /var/log/audit/audit.log
 
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase SELinux Errors on Server installations](Testcase_Post_SELinux_Errors_Server.md)
 
 #### SELinux and Crash Notifications (Desktop Only)
+
 There must be no SELinux denial notifications or crash notifications on boot, during installation, or during first login.
 
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase SELinux Errors on Desktop clients](Testcase_Post_SELinux_Errors_Desktop.md)
 
 #### Default Application Functionality (Desktop Only)
+
 Applications that can be launched within GNOME or on the command line must start successfully and withstand basic functionality tests. This includes:
-    - Web browser
-    - File manager
-    - Package manager
-    - Image/Document Viewers
-    - Text editors (gedit, vim)
-    - Archive manager
-    - Terminal Emulator (gnome terminal)
-    - Problem Reporter
-    - Help Viewer
-    - System Settings
+
+- Web browser
+- File manager
+- Package manager
+- Image/Document Viewers
+- Text editors (gedit, vim)
+- Archive manager
+- Terminal Emulator (GNOME Terminal)
+- Problem Reporter
+- Help Viewer
+- System Settings
 
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Application Functionality](Testcase_Post_Application_Functionality.md)
 
 #### Default Panel Functionality (Desktop Only)
+
 All elements of GNOME should function properly in regular use.
+
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase GNOME UI Functionality](Testcase_Post_GNOME_UI_Functionality.md)
 
 #### Dual Monitor Setup (Desktop Only)
+
 Computers using two monitors, the graphical output is correctly shown on both monitors.
+
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Multimonitor Setup](Testcase_Post_Multimonitor_Setup.md)
 
 #### Artwork and Assets (Server and Desktop)
+
 Proposed final artwork (such as wallpapers and other assets) must be included. A wallpaper from this package should show up as a default for GDM and GNOME.
+
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Artwork and Assets](Testcase_Post_Artwork_and_Assets.md)
 
 #### Packages and Module Installation
+
 Packages (non-module) should be able to be installed without conflicts or dependent on repositories outside of {{ rc.prod }}.
-    - Default modules (as listed in dnf module list) should be installed without requiring them to be enabled.
-    - Module streams should be able to be switched and those packages should be able to be installed without errors or unresolved dependencies.
+
+- Default modules (as listed in dnf module list) should be installed without requiring them to be enabled.
+- Module streams should be able to be switched and those packages should be able to be installed without errors or unresolved dependencies.
+
 ??? tldr "References"
     - Test cases:
-        - [QA:Testcase TBD](Testcase_Template.md)
+        - [QA:Testcase Basic Package installs](Testcase_Post_Package_installs.md)
+        - [QA:Testcase Module Streams](Testcase_Post_Module_Streams.md)
 
 {% include 'testing/rc_content_bottom.md' %}
