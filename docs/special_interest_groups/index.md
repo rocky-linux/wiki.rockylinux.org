@@ -20,33 +20,33 @@ This section goes over the current SIGs that may have sponsors and are active or
 
 ### Some that may be established with sponsors/members
 
-| SIG | Purpose |
-|-----|---------|
-| Core | Rocky Linux maintainers, packagers, and developers. It is primarily a mix of Release Engineering and Infrastructure |
-| AltArch | Maintains alternative architectures that is not directly supported by Rocky Linux |
-| Desktop | Supports and maintains the desktop experience for Rocky Linux |
-| Legacy | Supports and maintains legacy hardware support for Rocky Linux |
-| HPC    | Maintains High Performance Computing support for Rocky Linux |
+| SIG        | Purpose |
+|------------|---------|
+| Core       | Rocky Linux maintainers, packagers, and developers. It is primarily a mix of Release Engineering and Infrastructure |
+| AltArch    | Maintains alternative architectures that is not directly supported by Rocky Linux or maintains devices of primary architectures such as the raspberry pi |
+| Desktop    | Supports and maintains the desktop experience for Rocky Linux |
+| Legacy     | Supports and maintains legacy hardware support for Rocky Linux |
+| HPC        | Maintains High Performance Computing support for Rocky Linux |
 | Hyperscale | Hyperscale Computing |
 
 ### Some that have community interest, but no direct sponsors yet
 
-| SIG | Purpose |
-|-----|---------|
-| Cloud | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well |
+| SIG    | Purpose |
+|--------|---------|
+| Cloud  | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well |
 | Kernel | Kernels, mainline or otherwise |
-| Leapp | Focuses on the leapp framework to facilitate upgrades between major versions of Rocky |
+| Leapp  | Focuses on the leapp framework to facilitate upgrades between major versions of Rocky |
 
 ## SIG Requirements
 
 We expect SIGs to satisfy some basic requirements, such as:
 
-* The group must be related to Rocky, a use-case for Rocky, or related to Enterprise Linux as a whole
+* The group must be related to Rocky, a use-case for Rocky or Enterprise Linux, or related to Enterprise Linux as a whole
 * There must be feedback and control into the Rocky community
 * All communication as to the work of the SIG should be public - Some matters may have to be private, and as such should be out of band
-    * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC channel can also be assigned.
+    * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC or Matrix channel can also be assigned.
 * Code produced within the SIG must be compatible with a FOSS license presently used by Rocky - If a new license is wanted, consult with Release Engineering/Core or the `~Legal` channel in mattermost.
-* All documentation and information of the SIG should be on a wiki produced in [git](https://git.rockylinux.org).
+* All documentation and information of the SIG should be on a wiki produced in the [RESF Git Service](https://git.resf.org).
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
 
@@ -67,7 +67,7 @@ The following rules apply for SIG membership:
 * Mailing lists of SIGs are open and can be joined freely
 * SIG members are appointed/approved by SIG sponsors/leaders - The sponsors/leaders typically have write permissions to relevant wikis and git repos
 * SIG sponsors/leaders may be asked to be a mailing list moderator
-* SIG channels will be public under a name such as `SIG/name` with an optional IRC channel to be bridged.
+* SIG channels will be public under a name such as `SIG/name` with an optional IRC and Matrix channel to be bridged.
 * Optionally: define if work with CentOS Stream will be applicable for the SIG
 
 ## SIG Reporting
@@ -78,3 +78,5 @@ SIGs are expected to report at least quarterly, with a brief summary of what the
 * Releases in the current quarter (or previous quarter if no releases)
 * General activity or health report
 * Issues to address within the SIG
+
+{% include "releng/resources_bottom.md" %}
