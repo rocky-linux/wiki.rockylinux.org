@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Installer Translations
 author: Al Bowles
-revision_date: 2022-05-07
+revision_date: 2022-07-04
 rc:
   prod: Rocky Linux
   ver: 8
@@ -12,10 +12,10 @@ rc:
     This test case is associated with the [Release_Criteria#Installer Translations](../release_criteria.md#installer-translations) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
-Add a short description here for this Testcase.
+The installer must correctly display all complete translations that are available for use.
 
 ## Setup
-1. Add steps for setup for this Testcase.
+{% include 'testing/qa_setup_boot_to_media.md' %}
 
 ## How to test
 1. Do this first...
@@ -24,5 +24,12 @@ Add a short description here for this Testcase.
 ## Expected Results
 1. This is what you should see/verify.
 2. You should also see/verify this.
+
+## Testing in openQA
+The following openQA test suites satisfy this release criteria:
+- `install_asian_language`
+- `install_arabic_language`
+- `install_cyrillic_language`
+- `install_european_language`
 
 {% include 'testing/qa_testcase_bottom.md' %}

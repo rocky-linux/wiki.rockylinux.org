@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Network Attached Storage
 author: Al Bowles
-revision_date: 2022-05-07
+revision_date: 2022-07-04
 rc:
   prod: Rocky Linux
   ver: 8
@@ -12,7 +12,7 @@ rc:
     This test case is associated with the [Release_Criteria#Network Attached Storage](../release_criteria.md#network-attached-storage) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
-Add a short description here for this Testcase.
+The installer must be able to detect and install to supported NAS devices (if possible and supported by the kernel).
 
 ## Setup
 1. Add steps for setup for this Testcase.
