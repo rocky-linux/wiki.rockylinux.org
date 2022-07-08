@@ -43,8 +43,8 @@ The following openQA test suites satisfy this release criteria:
 - `install_scsi_updates_img`
 
 ## Additional References
-[Red Hat Debug Boot Options](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/performing_an_advanced_rhel_installation/kickstart-and-advanced-boot-options_installing-rhel-as-an-experienced-user#debug-boot-options_kickstart-and-advanced-boot-options)
-[Fedora QA:Testcase Anaconda updates.img via URL](https://fedoraproject.org/wiki/QA:Testcase_Anaconda_updates.img_via_URL)
-[Fedora QA:Testcase Anaconda updates.img via local media](https://fedoraproject.org/wiki/QA:Testcase_Anaconda_updates.img_via_local_media)
+[Red Hat Debug Boot Options](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/performing_an_advanced_rhel_installation/kickstart-and-advanced-boot-options_installing-rhel-as-an-experienced-user#debug-boot-options_kickstart-and-advanced-boot-options)<br>
+[Fedora QA:Testcase Anaconda updates.img via URL](https://fedoraproject.org/wiki/QA:Testcase_Anaconda_updates.img_via_URL)<br>
+[Fedora QA:Testcase Anaconda updates.img via local media](https://fedoraproject.org/wiki/QA:Testcase_Anaconda_updates.img_via_local_media)<br>
 
 {% include 'testing/qa_testcase_bottom.md' %}
