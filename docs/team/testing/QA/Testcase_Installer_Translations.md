@@ -18,12 +18,11 @@ The installer must correctly display all complete translations that are availabl
 {% include 'testing/qa_setup_boot_to_media.md' %}
 
 ## How to test
-1. Do this first...
-2. Then do this...
+1. From the Language Selection spoke, select a language.
 
 ## Expected Results
-1. This is what you should see/verify.
-2. You should also see/verify this.
+1. All spokes should display at least some of the content in the selected language.
+2. It is expected to still see some content displayed in Latin characters even if a language that does not use Latin characters is selected.
 
 ## Testing in openQA
 The following openQA test suites satisfy this release criteria:
