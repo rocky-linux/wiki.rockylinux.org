@@ -40,6 +40,7 @@ This test case verifies that an [update image]() can be loaded into Anaconda and
 
 ## Testing with openQA
 The following openQA test suites satisfy this release criteria:
+
 - `install_scsi_updates_img`
 
 ## Additional References
