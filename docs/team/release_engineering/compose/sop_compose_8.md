@@ -1,5 +1,5 @@
 ---
-title: 'SOP: Compose and Repo Sync'
+title: 'SOP: Compose and Repo Sync for Rocky Linux 8'
 ---
 
 This SOP covers how the Rocky Linux Release Engineering Team handles composes and repository syncs for the distribution. It contains information of the scripts that are utilized and in what order, depending on the use case.
@@ -21,7 +21,7 @@ There are several git repositories used in the overall composition of a reposito
 
 [Comps](https://git.rockylinux.org/rocky/comps) - This repository contains all the necessary comps (which are groups and other data) for a given major version. Pungi uses this information to properly build the repositories.
 
-[Toolkit](https://git.rockylinux.org/release-engineering/public/toolkit) - This repository contains various scripts and utilities used by Release Engineering, such as syncing composes, functionality testing, and mirror maintenance.
+[Toolkit](https://github.com/rocky-linux/sig-core-toolkit) - This repository contains various scripts and utilities used by Release Engineering, such as syncing composes, functionality testing, and mirror maintenance.
 
 ## Composing Repositories
 

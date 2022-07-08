@@ -6,4 +6,4 @@ nav:
   - rpm: rpm
   - guidelines: guidelines
   - legacy: legacy
-  - SOP Compose: sop_compose.md
+  - SOP Compose: compose
