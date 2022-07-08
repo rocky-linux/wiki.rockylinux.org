@@ -15,10 +15,12 @@ rc:
 This test case verifies that the installer can successfully install any of the supported package sets via any of the supported installer sources.
 
 The following package sets are supported for installs from local media:
+
 - server
 - minimal
 
 The following package sets are only available from remote sources and require a network connection:
+
 - workstation
 - graphical-server
 - virtualization-host
@@ -41,6 +43,7 @@ The following package sets are only available from remote sources and require a 
 
 ## Testing in openQA
 The following openQA test suites satisfy this release criteria, provided they pass the `_do_install_reboot` module at a minimum:
+
 - `install_packageset_server`
 - `install_packageset_minimal`
 - `install_packageset_workstation`

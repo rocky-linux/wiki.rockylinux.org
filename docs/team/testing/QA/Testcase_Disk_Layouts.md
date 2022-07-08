@@ -45,6 +45,7 @@ This test case verifies successful installation to any supported partition layou
 
 ## Testing with openQA
 The following openQA test suites satisfy this release criteria:
+
 - `install_standard_partition_ext4`
 - `install_custom_gui_standard_partition_ext4`
 - `install_lvm_ext4`

@@ -28,6 +28,7 @@ The installer must correctly display all complete translations that are availabl
 
 ## Testing in openQA
 The following openQA test suites satisfy this release criteria:
+
 - `install_asian_language`
 - `install_arabic_language`
 - `install_cyrillic_language`

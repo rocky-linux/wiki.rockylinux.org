@@ -40,6 +40,7 @@ Any element in the installer which contains a “help” text must display the a
 
 ## Testing in openQA
 The following openQA test suites satisfy this release criteria:
+
 - `anaconda_help`
 
 {% include 'testing/qa_testcase_bottom.md' %}

@@ -33,6 +33,7 @@ This test case verifies that installations via both local and remote Kickstart c
 
 ## Testing in openQA
 The following openQA test suites satisfy this release criteria:
+
 - `install_kickstart_nfs`
 - `server_realmd_join_kickstart`
 <!-- TODO provide a test suite that does not require PARALLEL_WITH= -->

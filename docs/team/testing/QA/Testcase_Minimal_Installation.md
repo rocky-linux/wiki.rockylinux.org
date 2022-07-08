@@ -31,6 +31,7 @@ This test case verifies that a networked minimal installation is able to install
 
 ## Testing in openQA
 The following openQA test suites satisfy this release criteria:
+
 - `install_minimal`
 
 {% include 'testing/qa_testcase_bottom.md' %}

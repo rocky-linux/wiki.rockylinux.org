@@ -46,6 +46,7 @@ This test case verifies that the installer will successfully resize or delete an
 
 ## Testing in openQA
 The following openQA test suites satisfy this release criteria:
+
 - `install_delete_partial`
 - `install_delete_pata`
 - `install_resize_lvm`

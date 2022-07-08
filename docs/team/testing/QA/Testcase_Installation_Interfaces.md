@@ -43,6 +43,7 @@ This test case verifies that the installer can complete an installation using al
 
 ## Testing in openQA
 The following openQA test suites satisfy this release criteria:
+
 - `install_arabic_language` OR `install_asian_language`
 <!--
 TODO
