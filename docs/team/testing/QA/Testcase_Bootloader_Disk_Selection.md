@@ -1,15 +1,17 @@
 ---
 title: QA:Testcase Bootloader Disk Selection
 author: Al Bowles
-revision_date: 2022-06-06
+revision_date: 2022-07-08
 rc:
   prod: Rocky Linux
-  ver: 8
+  ver:
+  - 8
+  - 9
   level: Final
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#Bootloader Disk Selection](../release_criteria.md#bootloader-disk-selection) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#Bootloader Disk Selection](9_release_criteria.md#bootloader-disk-selection) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 This test case verifies that the user is able to select an alternative disk on which to install the bootloader. It also verifies that, if the user is so inclined, they may choose not to install a bootloader at all.

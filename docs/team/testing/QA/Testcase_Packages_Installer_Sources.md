@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Packages and Installer Sources
 author: Al Bowles
-revision_date: 2022-06-06
+revision_date: 2022-07-08
 rc:
   prod: Rocky Linux
   ver: 8
@@ -9,7 +9,7 @@ rc:
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#Packages and Installer Sources](../release_criteria.md#packages-installer-sources) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#Packages and Installer Sources](9_release_criteria.md#packages-installer-sources) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 This test case verifies that the installer can successfully install any of the supported package sets via any of the supported installer sources.

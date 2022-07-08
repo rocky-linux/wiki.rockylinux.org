@@ -1,15 +1,17 @@
 ---
 title: QA:Testcase Disk Layouts
 author: Al Bowles
-revision_date: 2022-06-09
+revision_date: 2022-07-08
 rc:
   prod: Rocky Linux
-  ver: 8
+  ver:
+  - 8
+  - 9
   level: Final
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#Disk Layouts](../release_criteria.md#disk-layouts) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#Disk Layouts](9_release_criteria.md#disk-layouts) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 This test case verifies successful installation to any supported partition layout using any file system or format combination.

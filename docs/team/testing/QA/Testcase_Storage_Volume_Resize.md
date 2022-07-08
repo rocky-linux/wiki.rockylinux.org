@@ -1,15 +1,17 @@
 ---
 title: QA:Testcase Storage Volume Resize
 author: Al Bowles
-revision_date: 2022-07-07
+revision_date: 2022-07-08
 rc:
   prod: Rocky Linux
-  ver: 8
+  ver:
+  - 8
+  - 9
   level: Final
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#Storage Volume Resize](../release_criteria.md#storage-volume-resize) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#Storage Volume Resize](9_release_criteria.md#storage-volume-resize) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 This test case verifies that the installer will successfully resize or delete and overwrite existing partitions on storage volumes.

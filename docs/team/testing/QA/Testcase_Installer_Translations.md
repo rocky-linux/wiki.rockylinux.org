@@ -1,15 +1,17 @@
 ---
 title: QA:Testcase Installer Translations
 author: Al Bowles
-revision_date: 2022-07-04
+revision_date: 2022-07-08
 rc:
   prod: Rocky Linux
-  ver: 8
+  ver:
+  - 8
+  - 9
   level: Final
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#Installer Translations](../release_criteria.md#installer-translations) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#Installer Translations](9_release_criteria.md#installer-translations) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 The installer must correctly display all complete translations that are available for use.

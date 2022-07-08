@@ -1,7 +1,7 @@
 ---
 title: QA:Testcase Update Image
 author: Al Bowles
-revision_date: 2022-06-06
+revision_date: 2022-07-08
 rc:
   prod: Rocky Linux
   ver: 8
@@ -9,7 +9,7 @@ rc:
 ---
 
 !!! info "Associated release criterion"
-    This test case is associated with the [Release_Criteria#Update Image](../release_criteria.md#update-image) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
+    This test case is associated with the [Release_Criteria#Update Image](9_release_criteria.md#update-image) release criterion. If you are doing release validation testing, a failure of this test case may be a breach of that release criterion.
 
 ## Description
 <!-- TODO provide documentation on the topic of updates.img -->
