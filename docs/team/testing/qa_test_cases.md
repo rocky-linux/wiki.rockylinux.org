@@ -22,21 +22,21 @@ This page lists all test cases in work and who is working on them...
 
 ## Installer Requirements
 
-| Requirement                                         | Test Case                                                                | Assignee                | Status                                  |
-| --------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------- | --------------------------------------- |
-| Media Consistency Verification                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Packages and Installer Sources                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| NAS (Network Attached Storage)                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Installation Interfaces                             | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Minimal Installation                                | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Kickstart Installation                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Disk Layouts                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Firmware RAID                                       | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Bootloader Disk Selection                           | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    |                                         |
-| Storage Volume Resize                               | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Update Image                                        | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Installer Help                                      | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
-| Installer Translations                              | [QA:Testcase TBD](Testcase_Template.md)                                  | @tbd                    | Implemented in openQA, document         |
+| Requirement                                         | Test Case                                                                                 | Assignee                | Status                                  |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------- | --------------------------------------- |
+| Media Consistency Verification                      | [QA:Testcase Media USB dd](Testcase_Media_USB_dd.md)<br>[QA:Testcase Boot Methods Boot ISO](Testcase_Boot_Methods_Boot_Iso.md)<br>[QA:Testcase Boot Methods DVD](Testcase_Boot_Methods_Dvd.md)  | @raktajino              |                                         |
+| Packages and Installer Sources                      | [QA:Testcase Packages and Installer Sources](Testcase_Packages_Installer_Sources.md)      | @raktajino              | Implemented in openQA, document         |
+| NAS (Network Attached Storage)                      | [QA:Testcase Network Attached Storage](Testcase_Network_Attached_Storage.md)              | @raktajino              |                                         |
+| Installation Interfaces                             | [QA:Testcase Installation Interfaces](Testcase_Installation_Interfaces.md)                | @raktajino              | Implemented in openQA, document         |
+| Minimal Installation                                | [QA:Testcase Minimal Installation](Testcase_Minimal_Installation.md)                      | @raktajino              | Implemented in openQA, document         |
+| Kickstart Installation                              | [QA:Testcase Kickstart Installation](Testcase_Kickstart_Installation.md)                  | @raktajino              | Implemented in openQA, document         |
+| Disk Layouts                                        | [QA:Testcase Disk Layouts](Testcase_Disk_Layouts.md)                                      | @raktajino              | Implemented in openQA, document         |
+| Firmware RAID                                       | [QA:Testcase Firmware RAID](Testcase_Firmware_RAID.md)                                    | @raktajino              |                                         |
+| Bootloader Disk Selection                           | [QA:Testcase Bootloader Disk Selection](Testcase_Bootloader_Disk_Selection.md)            | @raktajino              |                                         |
+| Storage Volume Resize                               | [QA:Testcase Storage Volume Resize](Testcase_Storage_Volume_Resize.md)                    | @raktajino              | Implemented in openQA, document         |
+| Update Image                                        | [QA:Testcase Update Image](Testcase_Update_Image.md)                                      | @raktajino              | Implemented in openQA, document         |
+| Installer Help                                      | [QA:Testcase Installer Help](Testcase_Installer_Help.md)                                  | @raktajino              | Implemented in openQA, document         |
+| Installer Translations                              | [QA:Testcase Installer Translations](Testcase_Installer_Translations.md)                  | @raktajino              | Implemented in openQA, document         |
 
 
 ## Cloud Image Requirements
