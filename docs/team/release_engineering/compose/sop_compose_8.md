@@ -104,7 +104,7 @@ When doing updates, the order of operations (preferably) would be:
 ```
 * sync-to-staging.sh
 * sync-to-staging-sig.sh -> Only if sigs are updated
-* prep-staging-X.sh`     -> This is required to ensure the groups, comps, and
+* prep-staging-8.sh`     -> This is required to ensure the groups, comps, and
                             module data stay sane. This helps us provide older
                             packages in the repos as well as signs repo metadata.
 * sync-to-prod.sh        -> After the initial testing, it is sent to prod.
@@ -127,6 +127,10 @@ Once the syncs are done, staging must be tested and vetted before being sent to 
 
 ```
 bash RLVER=8 sync-to-prod.sh
+bash RLVER=8 sync-root-file-list.sh
+bash RLVER=8 sync-full-file-list.sh
 ```
 
 During this phase, staging is rsynced with production, the file list is updated, and the full time list is also updated to allow mirrors to know that the repositories have been updated and that they can sync.
+
+**Note**: If multiple releases are being updated, it is important to run the syncs to completion before running the root and full lists.

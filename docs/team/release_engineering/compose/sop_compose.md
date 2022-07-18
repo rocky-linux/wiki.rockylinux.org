@@ -117,6 +117,10 @@ Once the syncs are done, staging must be tested and vetted before being sent to 
 
 ```
 bash RLVER=X sync-to-prod-X.sh
+bash RLVER=X sync-root-file-list.sh
+bash RLVER=X sync-full-file-list.sh
 ```
 
 During this phase, staging is rsynced with production, the file list is updated, and the full time list is also updated to allow mirrors to know that the repositories have been updated and that they can sync.
+
+**Note**: If multiple releases are being updated, it is important to run the syncs to completion before running the root and full lists.
