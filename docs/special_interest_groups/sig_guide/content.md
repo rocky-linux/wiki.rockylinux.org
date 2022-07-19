@@ -93,6 +93,64 @@ In the case of an rpm or a module, there should be tags associated, otherwise th
   * Note: X is the major version, Y is the minor version. MODULE_NAME and STREAM_NAME_OR_VERSION are required. Ensure you fill out the timestamp as appropriate. You may fill in the final Z's with a portion of the commit hash that you are using for the tag.
   * Example: `imports/r8-stream-1.4/389-ds-1.4-8060020220204145416.ce3e8c9c`
 
+### Peridot Configuration
+
+Each Special Interest Group will need a repository called `peridot-config` which will contain the content of the special interest group. This helps identify what repositories will exist and what exists in each repository. The default file is `catalog.cfg`. Below is just a simple example using SIG/Core.
+
+```
+# kind: resf.peridot.v1.CatalogSync
+package {
+  name: "some-core-tool"
+  type: PACKAGE_TYPE_NORMAL_SRC
+  repository {
+    name: "core-common"
+    include_filter: "core-tool-mgt.noarch"
+    include_filter: "core-tool-keys.noarch"
+  }
+}
+
+package {
+  name: "some-infra-tool"
+  type: PACKAGE_TYPE_NORMAL_SRC
+  repository {
+    name: "core-infra"
+    include_filter: "infra-tool-mgt.x86_64"
+    include_filter: "infra-tool-mgt.aarc64"
+    include_filter: "infra-tool-mgt.s390x"
+    include_filter: "infra-tool-mgt.ppc64le"
+    include_filter: "infra-tool-keys.noarch"
+  }
+}
+```
+
+Below was a SIG/Cloud example.
+
+```
+# kind: resf.peridot.v1.CatalogSync
+exclude_filter {
+  repo_match: "^cloud-common$"
+  arch {
+    key: "*"
+    glob_match: "kernel-debug-devel-matched"
+  }
+}
+package {
+  name: "kernel"
+  type: 2
+  repository {
+    name: "cloud-common"
+    # use an include filter, then exclude same NA to force an empty repo
+    include_filter: "kernel-debug-devel-matched.aarch64"
+  }
+  repository {
+    name: "cloud-kernel"
+    include_filter: "kernel-debug-devel-matched.aarch64"
+    include_filter: "kernel-debug-devel.aarch64"
+. . .
+  }
+}
+```
+
 ## Importing to S3
 
 TBD
