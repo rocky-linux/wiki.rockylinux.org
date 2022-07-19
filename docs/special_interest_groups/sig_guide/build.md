@@ -20,4 +20,13 @@ It is expected that your SIG will have a "shorthand" name assigned to you (eithe
 
 Some single word SIGs can be abbreviated too. Like `hyperscale` can become `hs`. There may be cases where this isn't possible and exceptions can be granted. `cloud` is an example of this.
 
+More examples of dist tags are below:
+
+| SIG        | Dist Tag    |
+|------------|-------------|
+| altarch    | elX.altarch |
+| cloud      | elX.cloud   |
+| core       | elX.core    |
+| hyperscale | elX.hs      |
+
 {% include "releng/resources_bottom.md" %}
