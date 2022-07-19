@@ -67,6 +67,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 * **[Broken "V" Servers](#broken-v-servers)**
 * **Old minor/point releases of Rocky Linux**
+* **Upgrades or upgraded Rocky Linux systems (eg, upgrading 8 to 9)**
 * **Politics or Profanity**
 * **Distro X is better/worse than Rocky**
 * **Personal drama from other channels, namespaces, or other users**
