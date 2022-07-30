@@ -37,9 +37,9 @@ This is more informational more than anything, but it is important for a SIG to 
 
 Repositories will be formatted as such:
 
-`/pub/rocky/sig/MAJOR/NAME/ARCH/PKG_OR_REPO`
+`/pub/sig/MAJOR/NAME/ARCH/PKG_OR_REPO`
 
-This basically means that the sig directory will live along side the major version directories at the root of any mirror. At `/pub/rocky` you'll see `8`, `9`, and so on, and then you'll also see `sig`. Let's break down what each means.
+This basically means that the sig directory will live along side the main distribution directories, potentially at the root a mirror. At `/pub/rocky` you'll see each supported major version. At `/pub/sig` you'll also see major versions, with a different structure. Let's break it down.
 
 * `NAME` can be the name of the SIG or the abbreviation code (eg, cloud, kernel, mcs)
 * `MAJOR` is the major version that's being targetted (8, 9, so on)
