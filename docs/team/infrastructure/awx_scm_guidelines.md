@@ -63,7 +63,7 @@ Generally, your playbooks should be doing the following:
 4. Importing roles, if necessary
 5. Post tasks, if necessary
 
-**At no point should you be using** `./tasks/main.yml` **in any circumstance.**
+**At no point should you be using** `./tasks/main.yml` **under any circumstance.**
 
 #### Pre-flight and Post-flight Tasks
 
@@ -136,10 +136,11 @@ role-* -> These playbooks call roles for potential infrastructure tasks or even
 There will likely be multiple dynamic inventory sources used for hosts managed by AWX, and as a result, there will be a lot of groups defined with one or more hosts at a time. As this is the case, here are some things to keep in mind:
 
 * Use group names where necessary
-* Use localhost if you aren't actually doing anything to a system (eg you're calling an API) and you don't have to connect to a system to use said API
-* Use `hosts: all` and select the inventory where your host or hosts are.
-
-For single hosts, it's better to use either a single group that contains that one (1) host or selecting an inventory with that one host and using the group name again (if applicable or able) or `hosts: all`. The latter should be used in extreme edge cases.
+* Use localhost if you aren't actually doing anything to a system (eg you're calling an API) *and* you don't have to connect to a system to use said API
+* When filling in the `hosts` directive, follow these general guidelines:
+  * If it applies to all hosts in an inventory, use `all`
+  * If you want the host or or a group of hosts to be selectable (via dropdown or manual input), set a variable such as `{{ host }}`
+  * If the above two are not applicable and you must set a hostname, you may do so. Note that this will require you to be more vigilant in keeping your repository up to date.
 
 ##### Local Inventory Files
 
