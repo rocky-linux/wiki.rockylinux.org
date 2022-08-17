@@ -12,7 +12,7 @@ Please read `man 5 dnf.conf`, in particular the section of `enabled` under the `
 
 During a minor release lifecycle as a package receives updates, the previous version will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates). Upon new minor release, all previous updates/versions that are *not* the latest are not carried over.
 
-Rocky Linux 9 does not currently support this policy.
+Rocky Linux 9 does not currently support this policy and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18).
 
 ## Base Repositories
 
