@@ -77,8 +77,10 @@ Every Rocky Linux release provides a set of live images that a user can download
 
 | Version        | GNOME / Workstation | KDE     | XFCE | Architectures |
 |----------------|---------------------|---------|------|---------------|
-| Rocky Linux 8  | Yes                 | Yes     | Yes  | x86_64        |
+| Rocky Linux 8  | Yes                 | No\*    | Yes  | x86_64        |
 | Rocky Linux 9  | Yes                 | Yes     | Yes  | x86_64        |
+
+\* This image is not available either due to image/package issues or issues with the desktop environment in that version of Rocky Linux.
 
 ### Notes about: Missing architectures
 
