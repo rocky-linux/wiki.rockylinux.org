@@ -1,15 +1,17 @@
 ---
-title: IRC and General Chat
+title: General Chat and IRC
 ---
 
-IRC is a common communication tool used in the open source community. Several channels of Mattermost and Libera IRC channels are bridged together to ensure the community can communicate effectively and not be splintered.
+This page goes over General Chat and IRC/Matrix general information and etiquette.
 
-The Rocky Linux teams manage and maintain the mattermost channels and the various Libera IRC channels such as `#rockylinux` and `#rockylinux-social`. A list of our channels can be found in `IRC Mattermost Bridge Info` on the left hand side of this wiki page.
+IRC and Matrix are common communication tools used in the open source community. Several channels of Mattermost, Libera IRC channels, and a matrix space are bridged together to ensure the community can communicate effectively and not be splintered. The Rocky Linux teams manage and maintain the mattermost channels and the various Libera IRC channels such as `#rockylinux` and `#rockylinux-social`. A list of our channels can be found in `Bridge Information` on the left hand side of this wiki page.
+
+More information about Libera can be found [here](https://libera.chat).
 
 ## Contact Information
 | | |
 | - | - |
-| **IRC/Mattermost Contacts** | `bc` `@brian` |
+| **IRC/Mattermost Contacts** | `bc/qi` `@brian` |
 | **IRC/Mattermost Contacts** | `Sokel/label/Sombra` `@label` `@nazunalika` |
 | **IRC/Mattermost Contacts** | `mustafa` `@mustafa` |
 | **IRC/Mattermost Contacts** | `neil` `@neil` |
@@ -21,19 +23,21 @@ The Rocky Linux teams manage and maintain the mattermost channels and the variou
 
 Current mappings below:
 
-| IRC                         | Mattermost      |
-|-----------------------------|-----------------|
-| #rockylinux                 | [~general](https://chat.rockylinux.org/rocky-linux/channels/town-square)        |
-| #rockylinux-devel           | [~development](https://chat.rockylinux.org/rocky-linux/channels/development)    |
-| #rockylinux-docs            | [~documentation](https://chat.rockylinux.org/rocky-linux/channels/documentation)    |
-| #rockylinux-infra           | [~infrastructure](https://chat.rockylinux.org/rocky-linux/channels/infrastructure) |
-| #rockylinux-legal           | [~legal](https://chat.rockylinux.org/rocky-linux/channels/legal)          |
-| #rockylinux-security        | [~security](https://chat.rockylinux.org/rocky-linux/channels/security)       |
-| #rockylinux-sig-altarch     | [~altarch](https://chat.rockylinux.org/rocky-linux/channels/altarch) |
-| #rockylinux-sig-kernel      | [~sig-kernel](https://chat.rockylinux.org/rocky-linux/channels/sig-kernel) |
-| #rockylinux-social          | [~off-topic](https://chat.rockylinux.org/rocky-linux/channels/off-topic)         |
-| #rockylinux-testing         | [~testing](https://chat.rockylinux.org/rocky-linux/channels/testing)        |
-| #rockylinux-www             | [~web](https://chat.rockylinux.org/rocky-linux/channels/web)            |
+| IRC                         | Mattermost                                                                         | Matrix                                                                              |
+|-----------------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| #rockylinux                 | [~general](https://chat.rockylinux.org/rocky-linux/channels/town-square)           | [Rocky Linux General / Support](https://matrix.to/#/#rockylinux-support:matrix.org) |
+| #rockylinux-devel           | [~development](https://chat.rockylinux.org/rocky-linux/channels/development)       | [Rocky Linux Development](https://matrix.to/#/#rockylinux-development:matrix.org)   |
+| #rockylinux-docs            | [~documentation](https://chat.rockylinux.org/rocky-linux/channels/documentation)   |                                                                                     |
+| #rockylinux-infra           | [~infrastructure](https://chat.rockylinux.org/rocky-linux/channels/infrastructure) | [Rocky Linux Infrastructure](https://matrix.to/#/#rockylinux-infra:matrix.org)      |
+| #rockylinux-legal           | [~legal](https://chat.rockylinux.org/rocky-linux/channels/legal)                   | [Rocky Linux Legal](https://matrix.to/#/#rockylinux-legal-bridge:matrix.org)        |
+| #rockylinux-security        | [~security](https://chat.rockylinux.org/rocky-linux/channels/security)             |                                                                                     |
+| #rockylinux-sig-altarch     | [~altarch](https://chat.rockylinux.org/rocky-linux/channels/altarch)               | [Rocky Linux SIG AltArch](https://matrix.to/#/#rockylinux-sig-altarch:matrix.org)   |
+| #rockylinux-sig-kernel      | [~sig-kernel](https://chat.rockylinux.org/rocky-linux/channels/sig-kernel)         | [Rocky Linux SIG Kernel](https://matrix.to/#/#rockylinux-sig-kernel:matrix.org)     |
+| #rockylinux-social          | [~off-topic](https://chat.rockylinux.org/rocky-linux/channels/off-topic)           | [Rocky Linux Social](https://matrix.to/#/#rockylinux-social:matrix.org)             |
+| #rockylinux-testing         | [~testing](https://chat.rockylinux.org/rocky-linux/channels/testing)               | [Rocky Linux Testing](https://matrix.to/#/#rockylinux-testing-channel:matrix.org)   |
+| #rockylinux-www             | [~web](https://chat.rockylinux.org/rocky-linux/channels/web)                       |                                                                                     |
+
+The Rocky Linux matrix space can be joined [here](https://matrix.to/#/!rHvPOeKWNBOYSKTiBr:matrix.org?via=matrix.org), which will provide easier access to the Rocky Linux matrix channels.
 
 ## General
 
@@ -76,7 +80,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 ## Etiquette
 
-This section goes over general etiquette expected of all users of IRC or Mattermost on the bridge.
+This section goes over general etiquette expected of all users of Mattermost or IRC/Matrix on the bridge.
 
 ### How to ask questions
 
@@ -93,9 +97,9 @@ When coming into the IRC or Mattermost channels, it's important to be able to fi
 
 ### Expectations
 
-As `#rockylinux` is the general Rocky Linux support and discussion channel on Libera, it is not a primary support area for learning Linux or general chatting and off topic matter. Off topic matter should go to `#rockylinux-social`. With that being said, below is a list of things you should probably be aware of:
+As `#rockylinux` is the general Rocky Linux support and discussion channel on Libera, it is not a primary support area for learning Linux or general chatting and off topic matter. Off topic matter should go to `#rockylinux-social` or `~off-topic`. With that being said, below is a list of things you should probably be aware of:
 
-* **The channel is filled with supporters of Rocky, end users, volunteers with wide ranges of skillsets and knowledge who use the distribution on a professional or personal level**
+* **The channels are filled with supporters of Rocky, end users, volunteers with wide ranges of skillsets and knowledge who use the distribution on a professional or personal level**
 * **Polite and on-topic people get answers to their queries**
 
   * Insulting, rude, or off topic users are generally ignored or warned for their behavior
@@ -141,7 +145,9 @@ Note that subsequent logins will require you to identify. `/msg nickserv identif
 
 ### Matrix
 
-If you are a user of Matrix, most of the above still applies to you. You will need to login through the bridge on matrix to login with NickServ on libera. After that, you will be able to communicate in the `#rockylinux*` channels through your matrix client.
+If you are a user of Matrix, most of the above still applies to you. You may need to login through the bridge on matrix to login with NickServ on Libera. After that, you will be able to communicate in the `#rockylinux*` channels through your matrix client.
+
+The Rocky Linux matrix space can be joined [here](https://matrix.to/#/!rHvPOeKWNBOYSKTiBr:matrix.org?via=matrix.org).
 
 ## Context
 
@@ -159,6 +165,22 @@ Kernel rebuilds are not recommended nor supported for Rocky Linux. Before buildi
 * **Are you sure you don't just want a newer kernel version**? Newer kernels can be found at [elrepo](https://elrepo.org)
 
 As a final warning, you if you break the kernel, you are on the hook for your system. Rocky Linux volunteers or developers are unable to assist you with these issues.
+
+### Upgraded Systems
+
+System Upgrades are generally unsupported. There are quite a few methods out there of users performing upgrades:
+
+* Updating the system release packages (eg centos-release to rocky-release, or updating rocky-release to another) and running a `yum distro-sync` or `yum update`
+
+  * Example 1: replacing centos-\* packages with rocky-\* packages and running `yum update` or `yum distro-sync`
+  * Example 2: updating rocky-\* packages from 8 to 9, and then running `dnf update` or `dnf distro-sync`
+
+* Using scripts or tools that a user may not review that promise smooth upgrades from X to Y
+* Following guides that promise smooth upgrades from X to Y
+
+Regardless of the method, a system that has been "upgraded" is generally considered unsupported, and you will be recommended to build a new system and restore from backups. Users may try to help or assist with your system, but it may be difficult to do so.
+
+**Note**: While the tool ELevate exists to help users transition from one major release of an Enterprise Linux to another, we have not formally tested it and we cannot officially provide assistance or feedback to the tool or an upgraded system. There may be users in the channel who have done so and can assist, but at this time it's still an unsupported system setup.
 
 ### Broken V Servers
 

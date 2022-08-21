@@ -14,18 +14,24 @@ During a minor release lifecycle as a package receives updates, the previous ver
 
 Rocky Linux 9 does not currently support this policy and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18).
 
+### Notes on: Difference between X and X.Y in mirrors
+
+You may notice that on mirrors or our [primary download location](https://dl.rockylinux.org/pub/rocky) that there are X and X.Y directories. Rocky Linux sets the `releasever` dnf variable to the major version (eg 8, 9) rather than a minor version (8.6, 9.0, and so on). This effectively means that it will ask the mirror manager or configured baseurl for that version, which will always point to the latest available release at a given time.
+
+In the event a new release is released and available, the symlink is changed to point to the new directory, and mirror manager also undergoes changes to accomodate the new release.
+
 ## Base Repositories
 
 Each major release has a set of repositories that come default with the distribution. Below is a list of common repositories for each major release. As of October 12, 2021, "Rocky 9" is projected information based on CentOS Stream 9.
 
-| Repository       | Rocky 8 | Rocky 9 | Enabled |
-|------------------|---------|---------|---------|
-| BaseOS           | Yes     | Yes     | Yes     |
-| AppStream        | Yes     | Yes     | Yes     |
-| PowerTools       | Yes     | No      | No      |
-| CRB              | No      | Yes     | No      |
-| HighAvailability | Yes     | Yes     | No      |
-| ResilientStorage | Yes     | Yes     | No      |
+| Repository       | repoid                    | Rocky 8 | Rocky 9 | Enabled |
+|------------------|---------------------------|---------|---------|---------|
+| BaseOS           | baseos                    | Yes     | Yes     | Yes     |
+| AppStream        | appstream                 | Yes     | Yes     | Yes     |
+| PowerTools       | powertools                | Yes     | No      | No      |
+| CRB              | crb                       | No      | Yes     | No      |
+| HighAvailability | ha (8) / highavailibility | Yes     | Yes     | No      |
+| ResilientStorage | rs (8) / resilientstorage | Yes     | Yes     | No      |
 
 ### Notes on: CRB
 
@@ -39,15 +45,15 @@ In older major versions, it was normal to have an "updates" repo. Fedora for exa
 
 There are extra repositories offered by Rocky Linux.
 
-| Repository       | Rocky 8 | Rocky 9 | Enabled |
-|------------------|---------|---------|---------|
-| Extras           | Yes     | Yes     | Yes     |
-| Plus             | Yes     | Yes     | No      |
-| RT (real time)   | Yes     | Yes     | No      |
-| NFV              | Yes     | TBD     | No      |
-| SAP / SAP HANA   | No      | TBD     | No      |
-| Devel / devel    | Yes     | Yes     | No      |
-| rockyrpi         | Yes\*   | Yes\*   | No      |
+| Repository       | repoid           | Rocky 8 | Rocky 9 | Enabled |
+|------------------|------------------|---------|---------|---------|
+| Extras           | extras           | Yes     | Yes     | Yes     |
+| Plus             | plus             | Yes     | Yes     | No      |
+| RT (real time)   | rt               | Yes     | Yes     | No      |
+| NFV              | nfv              | Yes     | Yes     | No      |
+| SAP / SAP HANA   | sap / saphana    | No      | Yes     | No      |
+| Devel / devel    | devel            | Yes     | Yes     | No      |
+| rockyrpi         | altarch-rockyrpi | Yes\*   | Yes\*   | No      |
 
 ### Notes on: Extras
 
@@ -57,13 +63,17 @@ These are not tested by upstream nor available in the upstream product.
 
 ### Notes on: Plus
 
-This repository contains packages that either A) replace a core component via patched functionality, B) build a component that was originally exclusive for one architecture (eg open-vm-tools built for x86_64 but not aarch64 in Rocky 8) or C) providing packages that were built but not traditionally provided by upstream.
+This repository contains packages that either A) replace a core component via patched functionality, B) build a component that was originally exclusive for one architecture (eg open-vm-tools built for x86_64 but not aarch64 in Rocky 8) or C) providing packages that were built but not traditionally provided by upstream, and requested to be available by the community.
 
 Packages that fall under A and B will have a `.plus` added to their version tag. These are not tested nor available in the upstream product.
 
+### Notes on: Devel
+
+The devel (development) repository are packages that are not normally provided in the base nor extra repositories, but for certain releases contain *all* packages that are provided for Rocky Linux. This repository should only be enabled for package building/development purposes and shouldn't be permanently enabled.
+
 ### Notes on: rockyrpi
 
-The rockyrpi repository is being/has been moved to a SIG repository. It'll no longer be found in the base Rocky Linux repository directories.
+The rockyrpi repository is being/has been moved to a SIG repository. It'll no longer be found in the base Rocky Linux repository directories in the future. All SIG repositories can be found [here](https://dl.rockylinux.org/pub/sig)
 
 ## Vault
 
