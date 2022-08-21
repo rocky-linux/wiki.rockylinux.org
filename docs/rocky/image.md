@@ -13,7 +13,7 @@ It is important to note that the images provided and what they provide may diffe
 | Rocky Linux 8  | Yes  | Yes     | Yes | x86_64, aarch64                 |
 | Rocky Linux 9  | Yes  | Yes     | Yes | x86_64, aarch64, ppc64le, s390x |
 
-Every Rocky Linux release gets a set of ISO's. These ISO's are made by the tooling used to make and finalize the distribution. For a given Rocky Linux release, they will live in an `isos` directory at the root of a Rocky Linux release. There are three formats for the ISO's:
+Every Rocky Linux release gets a set of ISO's. These ISO's are made by the tooling used to make and finalize the distribution. For a given Rocky Linux release, they will live in an `isos` directory at the root of a Rocky Linux release. There are three formats for the ISO's. See the notes below.
 
 ### Notes about: Multiple ISO images, what is what?
 
