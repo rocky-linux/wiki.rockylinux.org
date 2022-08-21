@@ -8,10 +8,10 @@ It is important to note that the images provided and what they provide may diffe
 
 ## About ISO Images
 
-| Version        | boot | minimal | dvd | Architectures                   |
-|----------------|------|---------|-----|---------------------------------|
-| Rocky Linux 8  | Yes  | Yes     | Yes | x86_64, aarch64                 |
-| Rocky Linux 9  | Yes  | Yes     | Yes | x86_64, aarch64, ppc64le, s390x |
+| Version                                                     | boot | minimal | dvd | Architectures                   |
+|-------------------------------------------------------------|------|---------|-----|---------------------------------|
+| [Rocky Linux 8](http://dl.rockylinux.org/pub/rocky/8/isos/) | Yes  | Yes     | Yes | x86_64, aarch64                 |
+| [Rocky Linux 9](http://dl.rockylinux.org/pub/rocky/9/isos/) | Yes  | Yes     | Yes | x86_64, aarch64, ppc64le, s390x |
 
 Every Rocky Linux release gets a set of ISO's. These ISO's are made by the tooling used to make and finalize the distribution. For a given Rocky Linux release, they will live in an `isos` directory at the root of a Rocky Linux release. There are three formats for the ISO's. See the notes below.
 
@@ -44,10 +44,10 @@ The third format is a symlink to the "latest" ISO. Currently, this is not advert
 
 Every Rocky Linux release gets a set of cloud images that can be consumed into their cloud infrastructure as they see fit. They will live in an `images` directory at the root of a Rocky Linux release.
 
-| Version        | Generic Cloud                   | EC2                   |
-|----------------|---------------------------------|-----------------------|
-| Rocky Linux 8  | Yes (x86_64, aarch64)           | Yes (x86_64, aarch64) |
-| Rocky Linux 9  | Yes (x86_64, aarch64, others\*) | Yes (x86_64, aarch64) |
+| Version                                                       | Generic Cloud                   | EC2                   |
+|---------------------------------------------------------------|---------------------------------|-----------------------|
+| [Rocky Linux 8](http://dl.rockylinux.org/pub/rocky/8/images/) | Yes (x86_64, aarch64)           | Yes (x86_64, aarch64) |
+| [Rocky Linux 9](http://dl.rockylinux.org/pub/rocky/9/images/) | Yes (x86_64, aarch64, others\*) | Yes (x86_64, aarch64) |
 
 There are two formats for the images:
 
@@ -75,10 +75,10 @@ There are plans to provide cloud images for our other primary architectures (ppc
 
 Every Rocky Linux release provides a set of live images that a user can download, boot, use, and optionally install to their systems. The live images are desktop oriented images that are primarily for desktop use cases and try to closely match similarly to what Fedora provides for their releases.
 
-| Version        | GNOME / Workstation | KDE     | XFCE | Architectures |
-|----------------|---------------------|---------|------|---------------|
-| Rocky Linux 8  | Yes                 | No\*    | Yes  | x86_64        |
-| Rocky Linux 9  | Yes                 | Yes     | Yes  | x86_64        |
+| Version                                                      | GNOME / Workstation | KDE     | XFCE | Architectures |
+|--------------------------------------------------------------|---------------------|---------|------|---------------|
+| [Rocky Linux 8](https://dl.rockylinux.org/pub/rocky/8/live/) | Yes                 | No\*    | Yes  | x86_64        |
+| [Rocky Linux 9](https://dl.rockylinux.org/pub/rocky/9/live/) | Yes                 | Yes     | Yes  | x86_64        |
 
 \* This image is not available either due to image/package issues or issues with the desktop environment in that version of Rocky Linux.
 
