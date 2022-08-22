@@ -54,13 +54,13 @@ Here is a general rule of thumb:
 
 There are cases where it may do more harm than good to deny or to not provide assistance to a user who is using something that others may consider unsupported as a whole. While this is on a case by case basis and we are unable to list all exceptions, these are some of the more obvious exceptions:
 
-* If the question is related to software in EPEL
+* **If the question is related to software in EPEL**
 
   * If a problem is reproducible or its an issue out of our control, it is recommended to go `#epel`
 
-* If the question is related to drivers from elrepo
+* **If the question is related to drivers from elrepo**
 
-  * It is common for users to be using hardware that is either not supported in a current Rocky release or needs a better driver (eg nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Other issues should go to `#elrepo` or where topical.
+  * It is common for users to be using hardware that is either not supported in a current Rocky release or needs a better driver (eg nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Most users will support one another in this scenario. elrepo volunteers will be in the channel as well assist users. Other issues should go to `#elrepo` or where topical, such as their [Bug Tracker](https://elrepo.org/bugs).
 
 ### What is not supported?
 
