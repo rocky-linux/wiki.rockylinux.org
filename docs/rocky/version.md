@@ -69,9 +69,11 @@ When a new Rocky Linux minor release arrives (for example, `8.6`) the following 
 
 ### Example: An End of Life Release
 
-When an Rocky Linux version has reached its End of Life date (for example, May of 2029), the following is true:
+When a Rocky Linux release has reached its End of Life date (for example, May of 2029), the following is true:
 
 * The release is no longer supported in full by Release Engineering or the community
 * The final version is moved to the [vault](http://dl.rockylinux.org/vault/rocky/).
-* This release receives no more updates and is no longer supported.
+* This release no longer receives updates and thus no longer supported.
 * You are recommended to install a supported Rocky Linux version and migrate your data.
+
+If you cannot install a new system and migrate and you still need support for your system or systems, you may be able to find a support provider. Note that support providers will maintain their own packages and policies outside of the Rocky Linux ecosystem, and thus their policies *do not* apply here. The release is still considered EOL and unsupported from the Rocky Linux point of view.
