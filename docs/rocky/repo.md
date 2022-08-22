@@ -14,7 +14,7 @@ During a Rocky Linux minor release lifecycle as a package receives updates, the 
 
 Rocky Linux 9 does not currently support this policy and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18).
 
-A more detailed explanation of the version policy can be found in our [Version Guide](./version).
+A more detailed explanation of the version policy can be found in our [Version Guide](../version).
 
 ### Notes on: Difference between X and X.Y in mirrors
 

@@ -56,18 +56,18 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 * **If the question is related to software in EPEL**
 
-  * If a problem is reproducible or its an issue out of our control, it is recommended to go `#epel`
+    * If a problem is reproducible or its an issue out of our control, it is recommended to go `#epel`
 
 * **If the question is related to drivers from elrepo**
 
-  * It is common for users to be using hardware that is either not supported in a current Rocky release or needs a better driver (eg nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Most users will support one another in this scenario. elrepo volunteers will be in the channel as well assist users. Other issues should go to `#elrepo` or where topical, such as their [Bug Tracker](https://elrepo.org/bugs).
+    * It is common for users to be using hardware that is either not supported in a current Rocky release or needs a better driver (eg nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Most users will support one another in this scenario. elrepo volunteers will be in the channel as well assist users. Other issues should go to `#elrepo` or where topical, such as their [Bug Tracker](https://elrepo.org/bugs).
 
 ### What is not supported?
 
 * **[Kernel Rebuilds](#kernel-rebuilds)**
 * **Other Derivatives/Forks**
 
-  * This includes, but is not limited to RHEL, OEL, Alma, Springdale, SL
+    * This includes, but is not limited to RHEL, OEL, Alma, Springdale, SL
 
 * **[Broken "V" Servers](#broken-v-servers)**
 * **Old minor/point releases of Rocky Linux**
@@ -76,7 +76,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 * **Distro X is better/worse than Rocky**
 * **Personal drama from other channels, namespaces, or other users**
 
-  * Repeat offenders will be quieted or banned from the `#rockylinux*` namespace
+    * Repeat offenders will be quieted or banned from the `#rockylinux*` namespace
 
 ## Etiquette
 
@@ -89,8 +89,8 @@ When coming into the IRC or Mattermost channels, it's important to be able to fi
 * **Don't ask to ask** - Just ask your question
 * **Don't paste large quantities of text into the channel**
 
-  * This can be disruptive to users on both sides of the IRC/MM bridge
-  * If at all possible, use a paste bin such as [rpaste](https://rpa.st)
+    * This can be disruptive to users on both sides of the IRC/MM bridge
+    * If at all possible, use a paste bin such as [rpaste](https://rpa.st)
 
 * **Be patient** - You may not get an instant answer. We are all volunteers, so it may take minutes or hours to receive an answer to your question.
 * **Read the Topic** - The topic may contain useful information you may want to know about.
@@ -102,18 +102,18 @@ As `#rockylinux` is the general Rocky Linux support and discussion channel on Li
 * **The channels are filled with supporters of Rocky, end users, volunteers with wide ranges of skillsets and knowledge who use the distribution on a professional or personal level**
 * **Polite and on-topic people get answers to their queries**
 
-  * Insulting, rude, or off topic users are generally ignored or warned for their behavior
-  * Consider the human, be civil - Treat people how you would want to be treated
-  * Those who are consistently disruptive (or "trolls") will be removed from the channel by a quiet or ban
+    * Insulting, rude, or off topic users are generally ignored or warned for their behavior
+    * Consider the human, be civil - Treat people how you would want to be treated
+    * Those who are consistently disruptive (or "trolls") will be removed from the channel by a quiet or ban
 
 * **The channel can be busy with several threads running in parallel**
 * **We support what we ship**
 * **Do not be surprised if you are asked to provide some information about your system**
 
-  * `rpaste -s`
-  * `uname -a`
-  * `rpm -V packageName`
-  * **If you refuse to provide such information, volunteers may stop trying to assist you.**
+    * `rpaste -s`
+    * `uname -a`
+    * `rpm -V packageName`
+    * **If you refuse to provide such information, volunteers may stop trying to assist you.**
 
 It is normal for a channel to not be all business all the time. Passing snarkiness or even random off topic matter can occur. However, it can be a problem if it takes over the channel, where a user is unable to get their question in or the discussion turns into animosity, insults, or rude behavior (see the above points).
 

@@ -19,14 +19,14 @@ This however does not tell the full story. See timeline and version policy below
 
 For a major release of Red Hat Enterprise Linux and thus Rocky Linux, the following should be true:
 
-* **Major version is released with support of ten (10) years (exception is Rocky Linux 8, which started at 8.4)**
-* **Five (5) years of minor release updates**
+* Major version is released with support of ten (10) years (exception is Rocky Linux 8, which started at 8.4)
+* Five (5) years of minor release updates
 
-  * There are generally ten (10) minor release updates
-  * Minor releases come typically every six (6) months
-  * Minor releases generally come with new features, modules, and sometimes software rebases
+    * There are generally ten (10) minor release updates
+    * Minor releases come typically every six (6) months
+    * Minor releases generally come with new features, modules, and sometimes software rebases
 
-* **After five (5) years of minor releases, Enterprise Linux and derivatives go into maintenance only mode for the remainder of its life**
+* After five (5) years of minor releases, Enterprise Linux and derivatives go into maintenance only mode for the remainder of its life
 
 The question often becomes, how often are releases? Based on the cadence set out by Red Hat, the months of May and November are generally when minor releases should be released. If May is a guide, that is also when major versions should be released.
 
