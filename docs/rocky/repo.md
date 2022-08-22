@@ -10,15 +10,17 @@ Please read `man 5 dnf.conf`, in particular the section of `enabled` under the `
 
 ## Version Policy
 
-During a minor release lifecycle as a package receives updates, the previous version will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates). Upon new minor release, all previous updates/versions that are *not* the latest are not carried over.
+During a Rocky Linux minor release lifecycle as a package receives updates, the previous version will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates). Upon new minor release, all previous updates/versions that are *not* the latest are not carried over.
 
 Rocky Linux 9 does not currently support this policy and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18).
 
+A more detailed explanation of the version policy can be found in our [Version Guide](./version).
+
 ### Notes on: Difference between X and X.Y in mirrors
 
-You may notice that on mirrors or our [primary download location](https://dl.rockylinux.org/pub/rocky) that there are X and X.Y directories. Rocky Linux sets the `releasever` dnf variable to the major version (eg 8, 9) rather than a minor version (8.6, 9.0, and so on). This effectively means that it will ask the mirror manager or configured baseurl for that version, which will always point to the latest available release at a given time.
+You may notice that on mirrors or our [primary download location](https://dl.rockylinux.org/pub/rocky) that there are X and X.Y directories. Rocky Linux sets the `releasever` dnf variable to the major version (eg 8, 9) rather than a minor version (8.6, 9.0, and so on). This effectively means that it will ask the mirror manager or configured baseurl for that version, which will always point to the latest available release at a given time. This helps simplify the user experience when installing software and updating systems throughout the life of a release.
 
-In the event a new release is released and available, the symlink is changed to point to the new directory, and mirror manager also undergoes changes to accomodate the new release.
+In the event a new release is available, the symlink is changed to point to the new directory, and mirror manager also undergoes changes to accomodate the new release, which should be transparent to most users.
 
 ## Base Repositories
 
@@ -88,7 +90,7 @@ As with Enterprise Linux and Fedora, there are additional community approved rep
 | |
 | - |
 | **Extra Packages for Enterprise Linux (EPEL)** - [EPEL](http://fedoraproject.org/wiki/EPEL) is by for the most commonly used repository for Enterprise Linux. EPEL provides rebuilds of Fedora packages for every supported enterprise linux. Packages in this repository do not replace the base. You can install EPEL by running `dnf install epel-release` and the package will be installed from the extras repository. The package will automatically have EPEL enabled. Support for EPEL can be found in `#epel` on Libera. |
-| **Community Enterprise Linux Repository (ELRepo)** - [ELRepo](http://elrepo.org/) focuses on newer kernels and kmod driver packages to enhance hardware support for EL8 and beyond. This includes display, filesystem, network, storage drivers. You can install the necessary repo files by running `dnf install elrepo-release`. Note that the kernel repositories will have to be enabled. |
+| **Community Enterprise Linux Repository (ELRepo)** - [ELRepo](http://elrepo.org/) focuses on newer kernels and kmod driver packages to enhance hardware support for currently supported Enterprise Linux versions. This includes display, filesystem, network, storage drivers. You can install the necessary repo files by running `dnf install elrepo-release`. Note that the kernel repositories will have to be enabled. |
 | **RPM Fusion** - [RPM Fusion](https://rpmfusion.org/) provides software that the Fedora Project or Red Hat does not want to ship in Enterprise Linux and Fedora. These repositories do rely on EPEL. The policy is to **not** replace EPEL nor base packages. The free repository can be installed by running `dnf install rpmfusion-free-release`. |
 | **Remi Repository** - [Remi](http://rpms.remirepo.net/) maintains a large collection of RPMs, including latest versions of PHP, among other things. His FAQ can be found [here](http://blog.remirepo.net/pages/English-FAQ). This is a collection of repositories. Using the `-safe` series of repositories will ensure that nothing from the base will be replaced or overwritten. However, be aware that these repositories do **not** play well with other third party repositories. You will need to use caution as you enable more repositories on your system. |
 | **GhettoForge** - [GhettoForge](http://ghettoforge.org/) provides packages not in other third party repositories. Packages that overwrite the base would be in the `gf-plus` repository. Please see [usage](http://ghettoforge.org/index.php/Usage) for more information. |

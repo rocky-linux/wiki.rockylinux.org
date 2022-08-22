@@ -182,6 +182,17 @@ Regardless of the method, a system that has been "upgraded" is generally conside
 
 **Note**: While the tool ELevate exists to help users transition from one major release of an Enterprise Linux to another, we have not formally tested it and we cannot officially provide assistance or feedback to the tool or an upgraded system. There may be users in the channel who have done so and can assist, but at this time it's still an unsupported system setup.
 
+### Outdated or End of Life Releases
+
+Outdated or End of Life releases are not generally supported.When you do not update, you are leaving your system in a vulnerable state, prone to bugs and effectively lower security posture. Do not be surprised if community members, volunteers, and channel regulars ask you to run:
+
+* `cat /etc/os-release`
+* `cat /etc/rocky-release`
+* `dnf repolist`
+* `dnf update`
+
+Only the latest available `X.Y` of a given version is supported at a given time. Check out the [Rocky Linux](../rocky/) section for more information.
+
 ### Broken V Servers
 
 Our distribution, like others, use a variant of `yum`/`dnf`. All Rocky Linux releases are shipped with `dnf` and a certain set of matching configuration files (like `.repo` files). This allows your system to work with the mirror system provided by Rocky. Some downstream forks break these configurations and make their system incompatible with what we provide off the shelf.
@@ -222,7 +233,7 @@ A true Rocky Linux system can:
 You will be asked to run some commands by volunteers. Such as:
 
 * `dnf install rpaste -y ; rpaste --sysinfo`
-* `lsb_release -a ; uname -a ; rpm -V dnf rocky-release rocky-repos ; ls /etc/yum.repos.d/ ; dnf repolist all`
+* `cat /etc/os-release ; uname -a ; rpm -V dnf rocky-release rocky-repos ; ls /etc/yum.repos.d/ ; dnf repolist all`
 
 The former produces a sysinfo output (the package is installed from extras). The second produces multi-line output that you can provide at https://rpa.st. Alternatively, you will be asked just to run `uname -a` which is typically sufficient enough.
 
