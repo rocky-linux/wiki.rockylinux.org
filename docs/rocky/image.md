@@ -75,16 +75,16 @@ There are plans to provide cloud images for our other primary architectures (ppc
 
 Every Rocky Linux release provides a set of live images that a user can download, boot, use, and optionally install to their systems. The live images are desktop oriented images that are primarily for desktop use cases and try to closely match similarly to what Fedora provides for their releases.
 
-| Version                                                      | GNOME / Workstation | KDE     | XFCE | Architectures |
-|--------------------------------------------------------------|---------------------|---------|------|---------------|
-| [Rocky Linux 8](https://dl.rockylinux.org/pub/rocky/8/live/) | Yes                 | No\*    | Yes  | x86_64        |
-| [Rocky Linux 9](https://dl.rockylinux.org/pub/rocky/9/live/) | Yes                 | Yes     | Yes  | x86_64        |
+| Version                                                      | GNOME / Workstation | KDE     | XFCE | Architectures   |
+|--------------------------------------------------------------|---------------------|---------|------|-----------------|
+| [Rocky Linux 8](https://dl.rockylinux.org/pub/rocky/8/live/) | Yes                 | No\*    | Yes  | x86_64          |
+| [Rocky Linux 9](https://dl.rockylinux.org/pub/rocky/9/live/) | Yes                 | Yes     | Yes  | x86_64, aarch64 |
 
 \* This image is not available either due to image/package issues or issues with the desktop environment in that version of Rocky Linux.
 
 ### Notes about: Missing architectures
 
-There are plans to potentially provide aarch64 live images, as ARM workstations are starting to become more and more prevalent. This is on top of raspberry pi support that we already provide (but are provided and supported by other means).
+There are plans to potentially provide ppc64le live images, as there are some POWER workstations out in the wild.
 
 ### Notes about: Kickstarts
 
