@@ -20,22 +20,23 @@ This section goes over the current SIGs that may have sponsors and are active or
 
 ### Some that may be established with sponsors/members
 
-| SIG        | Purpose |
-|------------|---------|
-| Core       | Rocky Linux maintainers, packagers, and developers. It is primarily a mix of Release Engineering and Infrastructure |
+| SIG        | Purpose                                                                                                                                                  |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Core       | Rocky Linux maintainers, packagers, and developers. It is primarily a mix of Release Engineering and Infrastructure                                      |
 | AltArch    | Maintains alternative architectures that is not directly supported by Rocky Linux or maintains devices of primary architectures such as the raspberry pi |
-| Desktop    | Supports and maintains the desktop experience for Rocky Linux |
-| Legacy     | Supports and maintains legacy hardware support for Rocky Linux |
-| HPC        | Maintains High Performance Computing support for Rocky Linux |
-| Hyperscale | Hyperscale Computing |
+| Desktop    | Supports and maintains the desktop experience for Rocky Linux                                                                                            |
+| Legacy     | Supports and maintains legacy hardware support for Rocky Linux                                                                                           |
+| HPC        | Maintains High Performance Computing support for Rocky Linux                                                                                             |
+| Hyperscale | Hyperscale Computing                                                                                                                                     |
+| Embedded   | Embedded Systems                                                                                                                                         |
 
 ### Some that have community interest, but no direct sponsors yet
 
-| SIG    | Purpose |
-|--------|---------|
+| SIG    | Purpose                                                                                          |
+|--------|--------------------------------------------------------------------------------------------------|
 | Cloud  | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well |
-| Kernel | Kernels, mainline or otherwise |
-| Leapp  | Focuses on the leapp framework to facilitate upgrades between major versions of Rocky |
+| Kernel | Kernels, mainline or otherwise                                                                   |
+| Leapp  | Focuses on the leapp framework to facilitate upgrades between major versions of Rocky            |
 
 ## SIG Requirements
 
