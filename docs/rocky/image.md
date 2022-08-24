@@ -13,7 +13,9 @@ It is important to note that the images provided and what they provide may diffe
 | [Rocky Linux 8](http://dl.rockylinux.org/pub/rocky/8/isos/) | Yes  | Yes     | Yes | x86_64, aarch64                 |
 | [Rocky Linux 9](http://dl.rockylinux.org/pub/rocky/9/isos/) | Yes  | Yes     | Yes | x86_64, aarch64, ppc64le, s390x |
 
-Every Rocky Linux release gets a set of ISO's. These ISO's are made by the tooling used to make and finalize the distribution. For a given Rocky Linux release, they will live in an `isos` directory at the root of a Rocky Linux release. There are three formats for the ISO's. See the notes below.
+Every Rocky Linux release gets a set of ISO's. These ISO's are made by the tooling used to make and finalize the distribution. For a given Rocky Linux release, they will live in an `isos` directory at the root of a Rocky Linux release.
+
+There are three formats for the ISO's. See the notes below.
 
 ### Notes about: Multiple ISO images, what is what?
 
@@ -39,6 +41,18 @@ The third format is a symlink to the "latest" ISO. Currently, this is not advert
 
 * A pre-determined download location for users/mirrors/service providers who want an always available and deterministic download location, which can be easier to script
 * osinfo database / libvirt use where if a user selects Rocky Linux X, it should be aware of and be able to download from that location. This should be fully supported in Rocky Linux 8.7 and 9.1, and future Fedora versions.
+
+### Notes about: What does each ISO do?
+
+Each ISO that is provided has a specific purpose.
+
+* The `boot` image, or also known as the "net install" media, is used to perform Rocky Linux installations over the internet.
+* The `minimal` image is typically used to install a minimal Rocky Linux environment without downloading the entire DVD image or using the `boot` ISO to do so.
+
+    * The equivalent dnf group/environment would be `Minimal Install`
+    * The equivalent dnf group/environment for a kickstart would be `@^minimal-environment` - This can also be used with dnf install as `@minimal-environment`
+
+* The `dvd` image, or also known as the "everything" or "BaseOS" media, contains everything needed to do a custom installation of Rocky Linux without needing an internet connection.
 
 ## About Cloud Images
 
