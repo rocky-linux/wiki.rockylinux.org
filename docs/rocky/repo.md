@@ -24,7 +24,7 @@ In the event a new release is available, the symlink is changed to point to the 
 
 ## Base Repositories
 
-Each major release has a set of repositories that come default with the distribution. Below is a list of common repositories for each major release. As of October 12, 2021, "Rocky 9" is projected information based on CentOS Stream 9.
+Each major release has a set of repositories that come default with the distribution. Below is a list of common repositories for each major release, including their repo id.
 
 | Repository       | repoid                    | Rocky 8 | Rocky 9 | Enabled |
 |------------------|---------------------------|---------|---------|---------|
