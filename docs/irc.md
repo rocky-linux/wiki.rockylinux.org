@@ -18,6 +18,7 @@ More information about Libera can be found [here](https://libera.chat).
 | **IRC/Mattermost Contacts** | `tg` `@tgo` |
 | **IRC/Mattermost Contacts** | `pgreco` `@pgreco` |
 | **IRC/Mattermost Contacts** | `pj` `@pj` |
+| **IRC/Mattermost Contacts** | `SheriF` `@sherif` |
 
 ## Bridge Information
 
