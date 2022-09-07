@@ -71,7 +71,9 @@ Packages that fall under A and B will have a `.plus` added to their version tag.
 
 ### Notes on: Devel
 
-The devel (development) repository are packages that are not normally provided in the base nor extra repositories, but for certain releases contain *all* packages that are provided for Rocky Linux. This repository should only be enabled for package building/development purposes and shouldn't be permanently enabled.
+The devel (development) repository are packages that are not normally provided in the base nor extra repositories for the purposes of providing dependencies or devel packages that may not be provided by upstream. In some releases, this repository may contain *all* packages that are provided for Rocky Linux.
+
+This repository should only be enabled for package building/development purposes and shouldn't be permanently enabled.
 
 ### Notes on: rockyrpi
 
