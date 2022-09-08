@@ -1,0 +1,1 @@
+This guide is a provisional attempt to pull together a summary specifically for RockyLinux from the numerous areas in which installation and usage of OpenQA is described. It is intended to be useable in itself but will reference (and perhaps comment on) upstream documentation in a helpful way.
