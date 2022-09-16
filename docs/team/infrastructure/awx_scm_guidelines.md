@@ -2,7 +2,7 @@
 title: 'AWX / Ansible SCM Guidelines'
 ---
 
-This document covers the guidelines as set out by the Infrastructure/Core group for designing modular repositories that will be used in the Rocky AWX instance. This is meant to supersede the guidelines in the ansible-awx-template repository.
+This document covers the guidelines as set out by the Infrastructure/Core group for designing modular repositories that may be used in the Rocky AWX instance or local execution based on team needs. This is meant to supersede the guidelines in the ansible-awx-template repository.
 
 This does not cover detailed examples, but is meant to get teams and their contributors started in designing or improving upon all ansible related activities for their group.
 
@@ -161,6 +161,8 @@ Collections and roles should be defined in a `requirements.yml` in their respect
 ansible-galaxy collection install -r collections/requirements.yml
 ansible-galaxy role install -r roles/requirements.yml
 ```
+
+Tools like `ansible-navigator` and `ansible-builder` can also help in this area as well.
 
 #### Pre-commits / linting
 
