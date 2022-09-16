@@ -19,7 +19,7 @@ When we need to make changes, it can possibly be one or more of these things:
 * `?centos` is changed to `?rocky`, but this isn't always consistent or sufficient
 * Assets need to be changed
 
-  * Exceptions come when there is a file being requested from the logos package - We generally have symlinks to deal with this
+    * Exceptions come when there is a file being requested from the logos package - We generally have symlinks to deal with this
 
 * Some patches must be made to the source code or spec file
 
@@ -35,12 +35,14 @@ There is a metadata file that tracks this for us. It can be located [here](https
 
 This is for example, `redhat-logos` or `system-logos` is provided or "becomes" `rocky-logos`.
 
-## Packages that Exist in RHEL, but not in CentOS
-For sake of complete information, here is a list of packages that are in RHEL 8, but do not exist in CentOS 8.  We do not need to worry about these packages:
+## Packages that Exist in RHEL, but do not exist in most derivatives
+For sake of complete information, here is a list of packages that are in RHEL, but may not exist in derivatives.  We do not need to worry about these packages:
 
 - insights-client
 - Red_Hat_Enterprise_Linux-Release_Notes-8-*
 - redhat-access-gui
 - redhat-bookmarks
+- rhc
+- rhc-worker-playbook
 - subscription-manager-migration
 - subscription-manager-migration-data
