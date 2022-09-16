@@ -2,7 +2,9 @@
 title: 'SOP: Compose and Repo Sync for Rocky Linux 8'
 ---
 
-This SOP covers how the Rocky Linux Release Engineering Team handles composes and repository syncs for the distribution. It contains information of the scripts that are utilized and in what order, depending on the use case.
+This SOP covers how the Rocky Linux Release Engineering Team handles composes and repository syncs for Rocky Linux 8. It contains information of the scripts that are utilized and in what order, depending on the use case.
+
+Please see the other SOP for Rocky Linux 9+ that are managed via empanadas and peridot.
 
 ## Contact Information
 | | |
@@ -49,7 +51,7 @@ Each script is titled appropriately:
 
 * `produce-X.sh` -> Generates a full compose for X major release, typically set to the current minor release according to `rX.conf`
 * `updates-X.sh` -> Generates a smaller compose for X major release, typically set to the current minor release according to `rX.conf`
-* `updates-X-NAME.sh` -> Generates a compose for the specific compose, such as NFV, Rocky-devel, Extras, or other various sigs if built within koji.
+* `updates-X-NAME.sh` -> Generates a compose for the specific compose, such as NFV, Rocky-devel, Extras, or Plus
 
 When these scripts are ran, they generate an appropriate directory under `/mnt/compose/X` with a directory and an accompanying symlink. For example. If an update to `Rocky` was made using `updates-8.sh`, the below would be made:
 
@@ -65,16 +67,13 @@ produce-8.sh
 updates-8-devel.sh
 updates-8-extras.sh
 updates-8-plus.sh
-updates-8-nfv.sh
-updates-8-gluster9.sh
-updates-8-advanced-virt.sh
 ```
 
 ## Syncing Composes
 
 Syncing utilizes the sync scripts provided in the release engineering toolkit.
 
-When the scripts are being ran, they are usually ran with a specific purpose or a reason. They are also ran in a certain order to ensure integrity and consistency of a release.
+When the scripts are being ran, they are usually ran for a specific purpose. They are also ran in a certain order to ensure integrity and consistency of a release.
 
 The below are common vars files. common_X will override what's in common. Typically these set what repositories exist and how they are named or look at the top level. These also set the current major.minor release as necessary.
 
@@ -114,12 +113,10 @@ An example of order:
 
 ```
 # The below syncs to staging
-RLVER=8 bash sync-to-staging.sh Rocky
-RLVER=8 bash sync-to-staging.sh Rocky-devel
-RLVER=8 bash sync-to-staging.sh Extras
-RLVER=8 bash sync-to-staging.sh NFV
 RLVER=8 bash sync-to-staging.sh Plus
-RLVER=8 bash sync-to-staging.sh gluster9 storage
+RLVER=8 bash sync-to-staging.sh Extras
+RLVER=8 bash sync-to-staging.sh Rocky-devel
+RLVER=8 bash sync-to-staging.sh Rocky
 bash prep-staging-8.sh
 ```
 
@@ -127,10 +124,9 @@ Once the syncs are done, staging must be tested and vetted before being sent to 
 
 ```
 bash RLVER=8 sync-to-prod.sh
-bash RLVER=8 sync-root-file-list.sh
-bash RLVER=8 sync-full-file-list.sh
+bash bash sync-file-list-parallel.sh
 ```
 
 During this phase, staging is rsynced with production, the file list is updated, and the full time list is also updated to allow mirrors to know that the repositories have been updated and that they can sync.
 
-**Note**: If multiple releases are being updated, it is important to run the syncs to completion before running the root and full lists.
+**Note**: If multiple releases are being updated, it is important to run the syncs to completion before running the file list parallel script.

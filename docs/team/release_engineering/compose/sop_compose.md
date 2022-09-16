@@ -97,30 +97,34 @@ These are for the releases in general. What they do is noted below.
 ```
 ├── gen-torrents.sh                  -> Generates torrents for images
 ├── minor-release-sync-to-staging.sh -> Syncs a minor release to staging
-├── prep-staging-X.sh                -> Preps staging updates and signs repos
-├── sign-repos-only.sh               -> Signs the repomd (only)
+├── prep-staging-X.sh                -> Preps staging updates and signs repos (only for 8)
+├── sign-repos-only.sh               -> Signs the repomd (only for 8)
+├── sync-file-list-parallel.sh       -> Generates file lists in parallel for mirror sync scripts
 ├── sync-to-prod.sh                  -> Syncs staging to production
-├── sync-to-prod-X.s                 -> Syncs staging to production (Rocky Linux X specific)
+├── sync-to-prod.delete.sh           -> Syncs staging to production (deletes artifacts that are no longer in staging)
+├── sync-to-prod-sig.sh              -> Syncs a sig provided compose to production
 ├── sync-to-staging.sh               -> Syncs a provided compose to staging
-├── sync-to-staging-X.sh             -> Syncs a provided compose to staging (Rocky Linux X specific)
+├── sync-to-staging.delete.sh        -> Syncs a provided compose to staging (deletes artifacts that are no longer in the compose)
 ├── sync-to-staging-sig.sh           -> Syncs a sig provided compose to staging
 ```
 
-Generally, you will only run `sync-to-staging-X.sh` to sync.
+Generally, you will only run `sync-to-staging.sh` or `sync-to-staging.delete.sh` to sync. The former is for older releases, the latter is for newer releases.
 
 ```
-# The below syncs to staging for Rocky Linux X (replace X with major version)
-RLVER=X bash sync-to-staging-X.sh Rocky
+# The below syncs to staging for Rocky Linux 8
+RLVER=8 bash sync-to-staging.sh Rocky
+# The below syncs to staging for Rocky Linux 9
+RLVER=9 bash sync-to-staging.delete.sh Rocky
 ```
 
 Once the syncs are done, staging must be tested and vetted before being sent to production. Once staging is completed, it is synced to production.
 
 ```
-bash RLVER=X sync-to-prod-X.sh
-bash RLVER=X sync-root-file-list.sh
-bash RLVER=X sync-full-file-list.sh
+bash RLVER=8 sync-to-prod.sh
+bash RLVER=9 sync-to-prod.delete.sh
+bash sync-file-list-parallel.sh
 ```
 
 During this phase, staging is rsynced with production, the file list is updated, and the full time list is also updated to allow mirrors to know that the repositories have been updated and that they can sync.
 
-**Note**: If multiple releases are being updated, it is important to run the syncs to completion before running the root and full lists.
+**Note**: If multiple releases are being updated, it is important to run the syncs to completion before running the file list parallel script.
