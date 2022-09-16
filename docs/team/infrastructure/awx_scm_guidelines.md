@@ -1,5 +1,5 @@
 ---
-title: 'AWX SCM Guidelines'
+title: 'AWX / Ansible SCM Guidelines'
 ---
 
 This document covers the guidelines as set out by the Infrastructure/Core group for designing modular repositories that will be used in the Rocky AWX instance. This is meant to supersede the guidelines in the ansible-awx-template repository.
@@ -7,15 +7,17 @@ This document covers the guidelines as set out by the Infrastructure/Core group 
 This does not cover detailed examples, but is meant to get teams and their contributors started in designing or improving upon all ansible related activities for their group.
 
 !!! note
-    This guide will be moved to the Core rocky.page wiki in the future.
+    This guide may be moved to the Core rocky.page wiki in the future.
 
 ## Contact Information
-| | |
+|   |   |
 | - | - |
-| **Owner** | Infrastructure Team |
-| **Email Contact** | infrastructure@rockylinux.org |
-| **Mattermost Contacts** | `@label` |
-| **Mattermost Channels** | `~Infrastructure` |
+| **Owner**               | Infrastructure Team           |
+| **Email Contact**       | infrastructure@rockylinux.org |
+| **Mattermost Contacts** | `@label`                      |
+| **Mattermost Contacts** | `@neil`                       |
+| **Mattermost Contacts** | `@tgo`                        |
+| **Mattermost Channels** | `~Infrastructure`             |
 
 ## Guidelines
 
@@ -138,28 +140,37 @@ There will likely be multiple dynamic inventory sources used for hosts managed b
 * Use group names where necessary
 * Use localhost if you aren't actually doing anything to a system (eg you're calling an API) *and* you don't have to connect to a system to use said API
 * When filling in the `hosts` directive, follow these general guidelines:
-  * If it applies to all hosts in an inventory, use `all`
-  * If you want the host or or a group of hosts to be selectable (via dropdown or manual input), set a variable such as `{{ host }}`
-  * If the above two are not applicable and you must set a hostname, you may do so. Note that this will require you to be more vigilant in keeping your repository up to date.
+
+    * If it applies to all hosts in an inventory, use `all`
+    * If you want the host or or a group of hosts to be selectable (via dropdown or manual input), set a variable such as `{{ host }}`
+    * If the above two are not applicable and you must set a hostname, you may do so. Note that this will require you to be more vigilant in keeping your repository up to date.
 
 ##### Local Inventory Files
 
-Generally local inventory files are not recommended. If you are running anything locally outside of AWX, an inventory is allowed but should not be committed to the repository.
+Generally local inventory files are not recommended. If you are running anything locally outside of AWX, an inventory is allowed but should not be committed to the repository. Using `.gitignore` to prevent this is recommended.
+
+##### Local ansible.cfg files
+
+General ansible.cfg files are not recommended as they would be picked up during normal operation. These should be provided only for special cases. Optionally, you may provide it under another name that a user can reference for local execution outside of AWX.
 
 #### Collections and Roles
 
-Collections and roles should be defined in a `requirements.yml` in their respective directories. AWX will pick them up.
+Collections and roles should be defined in a `requirements.yml` in their respective directories. AWX will pick them up. Optionally, you can provide a playbook or script to install roles and collections locally. Example commands that could be in a script or playbook:
+
+```
+ansible-galaxy collection install -r collections/requirements.yml
+ansible-galaxy role install -r roles/requirements.yml
+```
 
 #### Pre-commits / linting
 
 When committing, pre-commit must run to verify your changes. They must be passing to be pushed up. This is an absolute requirement, even for roles.
 
-When the linter passes, the push will complete and you will be able to open a PR for the main branch or use as necessary in AWX.
+When the linter passes, a push can be performed. After that, if a PR is necessary, open one. Otherwise, it should be free to use locally or in AWX.
 
 #### Tests
 
 A template generally comes with a `tests` directory. While not strictly required, it is recommended to create a suite of tests to ensure most, if not all of your playbooks are in working order. This is similar to providing tests to ansible collections, in that they should test at least basic functionality.
 
 Complex situations can be tested for as well and is encouraged.
-
 
