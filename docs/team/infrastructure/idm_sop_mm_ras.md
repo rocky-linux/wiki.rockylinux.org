@@ -20,8 +20,9 @@ Note: This assumes the user is logging in with their RAS credentials to Mattermo
 
 This section covers how a system administrator will create a group Rocky Account Services using ansible. The playbook utilized will be `adhoc-ipagroup.yml`.
 
-0. First, determine where and how the group will be utilized. The starting template will be `mm_X_name`. `mm` is for mattermost, `X` will be for the designated part of Mattermost (eg resf, rl, and so on), and `name` will be the name of the group in question.
-1. On the ansible host, run the necessary ansible playbook: `ansible-playbook -i inventories/production/hosts.ini ansible-ipa-management/adhoc-ipagroup.yml --extra-vars='ipa_group=<GROUP> ipa_description="<DESC>" ipa_nonposix=false ipa_fas=true ipa_group_manager_user=<OWNER>'`
+1. First, determine where and how the group will be utilized. The starting template will be `mm_X_name`. `mm` is for mattermost, `X` will be for the designated part of Mattermost (eg resf, rl, and so on), and `name` will be the name of the group in question.
+2. On the ansible host, run the necessary ansible playbook: `ansible-playbook -i inventories/production/hosts.ini ansible-ipa-management/adhoc-ipagroup.yml --extra-vars='ipa_group=<GROUP> ipa_description="<DESC>" ipa_nonposix=false ipa_fas=true ipa_group_manager_user=<OWNER>'`
+
     a. Ensure that the description is set in a way that it explains what it is for
     b. It is unlikely the group will need to have a GID assigned. Assigning the group as nonposix should be sufficient.
     c. Setting the group with `ipa_fas=true` ensures that the group will appear in Rocky Account Services and can be managed there.
