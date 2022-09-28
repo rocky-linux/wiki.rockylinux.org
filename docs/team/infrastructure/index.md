@@ -14,6 +14,6 @@ The primary mattermost channel is `~Infrastructure` with its bridged IRC channel
 |------------------------------------:	|-------------------------------	|---------------------		|---			| --- |
 | Infrastructure Lead                   | Neil Hanlon                     | neil@resf.org           | @neil             | neil |
 | Infrastructure Lead                   | Taylor Goodwill                 | tg@resf.org             | @tgo              | tg |
-| Identity Management & Release Engineering Lead | Louis Abel          		| label@rockylinux.org		| @nazunalika	    	| Sokel/label/Sombra |
+| Identity Management & Release Engineering | Louis Abel          		| label@rockylinux.org		| @nazunalika	    	| Sokel/label/Sombra |
 | Infrastructure                        | Randolph                        |                         | @meltro           | N/A |
 | Infrastructure                        | Patrick Roberts                 |                         | @preachermanx     | N/A |
