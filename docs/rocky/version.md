@@ -59,6 +59,21 @@ A version of Rocky Linux is considered unsupported if:
 
 See the examples below.
 
+## Beta to Stable Policy
+
+Rocky Linux may release beta versions that are typically in line with the upstream Red Hat Enterprise Linux beta releases. These are released specifically to find bugs or issues in our build process as well as correlate the issues with the upstream beta in case they also have bugs. These are released typically to the Testing team members and others in the community (whether or not they're publicly announced) and are free to download and test by anyone else.
+
+When the stable version is released, updating from the beta to the stable version is not a supported nor recommended system setup.
+
+The following is unsupported:
+
+* Updating from a stable release to beta release
+* Updating from a beta release to stable release
+
+## Upgrade Policy
+
+Updates are not generally supported by Release Engineering nor most of the Rocky community. If you wish to perform upgrades between releases, there is a tool called ELevate that can help you. But as a note of caution, this has not been formally tested and we cannot provide official assistance.
+
 ### Example: An Unsupported Release
 
 When a new Rocky Linux minor release arrives (for example, `8.6`) the following is true:
