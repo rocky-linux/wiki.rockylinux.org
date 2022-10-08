@@ -14,15 +14,25 @@ There are several ways how to setup your development environment, here are the c
 
 For now here is the link to [Trevor's vagrant box setup](https://github.com/tcooper/rocky-linux-wikibox), this might be merged here in the future!
 
-## WSL
+## Manual setup for WSL and toolbox
+
+### WSL specific
 
 - Make sure the Windows Subsystem for Linux is enabled on your machine
 - Download the [Cloud image](https://github.com/rocky-linux/sig-cloud-instance-images/actions/workflows/build.yml)
 - Get the actual disk out of the image (extract rocky-8.5-docker.tar)
 - Run `wsl --import <machine-name> <path-to-vm-dir> <path-to/rocky-8.5-docker.tar> --version 2` to create the machine
 - Run `wsl -d <machine-name>` to initially login to the machine
+
+### toolbox specific
+
+- Make sure you have `toolbox` installed on your system
+- Create a toolbox `toolbox create rocky-wiki` (on Rocky Linux 8 and 9 machines this will create either a Rocky Linux 8 or 9 toolbox container)
+
+### Container setup for both
+
 - Run `dnf -y update` to update the system
-- Run `dnf -y install git python39-pip` to install Python 3.9 and pip
+- Run `dnf -y install git python39-pip` to install Python 3.9 and pip (Python 3.9 is default for Rocky Linux 9, the package is called `python3-pip` there)
 - Run `python3.9 -m pip install -U pip` to update pip
 - Clone the repo `git clone <path-to-git-project>`
 - And get into the folder of the repo `cd <git-project-name>`
@@ -31,6 +41,8 @@ For now here is the link to [Trevor's vagrant box setup](https://github.com/tcoo
 - If you just want to look at the output run `mkdocs serve 2>&1 | tee ./mkdocs.serve.log`
 
 To develop then, the easiest way is to use VS Code with the [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl), where you have to open the repo in the container (click on the Remote symbol on the lower left, 'Open folder in WSL...').
+
+For toolbox just place the repo inside your user profile and you will be able to access it with VS Code inside and outside of the toolbox container.
 
 And finally run `mkdocs serve 2>&1 | tee ./mkdocs.serve.log` in the terminal of this VS Code session. Then you are ready to start changing stuff!
 
