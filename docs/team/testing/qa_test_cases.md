@@ -59,6 +59,7 @@ This page lists all test cases in work and who is working on them...
 | Dual Monitor Setup (Desktop Only)                | [QA:Testcase Multimonitor Setup](Testcase_Post_Multimonitor_Setup.md)                                                                    | @lumarel | manual guide documented                                              |
 | Artwork and Assets (Server and Desktop)          | [QA:Testcase Artwork and Assets](Testcase_Post_Artwork_and_Assets.md)                                                                    | @lumarel | implemented in openQA, additionally documented for manual inspection |
 | Packages and Module Installation                 | [QA:Testcase Basic Package installs](Testcase_Post_Package_installs.md)<br>[QA:Testcase Module Streams](Testcase_Post_Module_Streams.md) | @lumarel | partly implemented in openQA, manual guide documented                |
+| Identity Management (FreeIPA)                    | [QA:Testcase Identity Management](Testcase_Post_Identity_Management.md)                                                                  | @lumarel | manual guide documented, PR open for openQA implementation           |
 
 
 {% include 'content_bottom.md' %}

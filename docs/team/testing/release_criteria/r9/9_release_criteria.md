@@ -266,4 +266,12 @@ Packages (non-module) should be able to be installed without conflicts or depend
         - [QA:Testcase Basic Package installs](Testcase_Post_Package_installs.md)
         - [QA:Testcase Module Streams](Testcase_Post_Module_Streams.md)
 
+#### Identity Management Server Setup
+
+It should be possible to setup a IdM server (FreeIPA), use it's functionality and connect clients.
+
+??? tldr "References"
+    - Test cases
+        - [QA:Testcase Identity Management](Testcase_Post_Identity_Management.md)
+
 {% include 'testing/rc_content_bottom.md' %}
