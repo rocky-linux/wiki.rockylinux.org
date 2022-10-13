@@ -45,7 +45,8 @@ you will automatically have a profile picture assigned. If you do not, you can c
 but clicking the "Change Avatar" button in the profile tab.
 
 It is highly recommended that you fill out the "SSH & GPG Keys" tab. Your ssh
-keys should sync to our [git](https://git.rockylinux.org).
+keys should sync to both the [Rocky Linux GitLab](https://git.rockylinux.org) and
+[RESF Git Service](https://git.resf.org).
 
 It is highly recommended that you add an OTP to your account.
 
@@ -107,5 +108,13 @@ the terms, you will not be able to contribute to Rocky within its own ecosystem.
 Even so, this this does not stop you from contributing to github repositories at
 both the Rocky Linux github organization repositories of the RESF github
 organization repositories.
+
+## Pull Requests
+
+Should have:
+
+* All commits GPG signed
+* Head repo either branched from or rebased onto the development branch
+* Any applicable Rocky Account Services agreements signed
 
 {% include "releng/resources_bottom.md" %}
