@@ -109,3 +109,11 @@ both the Rocky Linux github organization repositories of the RESF github
 organization repositories.
 
 {% include "releng/resources_bottom.md" %}
+
+## Pull Requests
+
+Should have:
+
+* All commits GPG signed
+* Head repo either branched from or rebased onto the development branch
+* Any applicable Rocky Account Services agreements signed
