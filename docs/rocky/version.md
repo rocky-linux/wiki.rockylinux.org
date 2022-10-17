@@ -72,7 +72,7 @@ The following is unsupported:
 
 ## Upgrade Policy
 
-Updates are not generally supported by Release Engineering nor most of the Rocky community. If you wish to perform upgrades between releases, there is a tool called ELevate that can help you. But as a note of caution, this has not been formally tested and we cannot provide official assistance.
+Upgrades are not generally supported by Release Engineering nor most of the Rocky community. If you wish to perform upgrades between releases, there is a tool called ELevate that can help you. But as a note of caution, this has not been formally tested and we cannot provide official assistance.
 
 ### Example: An Unsupported Release
 
