@@ -57,7 +57,7 @@ agreements for Rocky. It is highly recommended that the following is reviewed
 and signed:
 
 * Rocky Open Source Contributor Agreement
-* Rocky Linux GitLab Contributor Agreement
+* Rocky Git Contributor Agreement
 
 See the [details](#details) section for more information.
 
