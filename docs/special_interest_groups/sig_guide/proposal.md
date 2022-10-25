@@ -13,7 +13,7 @@ Creating a new Special Interest Group requires participation from a member of th
 * There must be feedback and control into the Rocky community
 * All communication as to the work of the SIG should be public - Some matters may have to be private, and as such should be out of band
 
-  * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC channel can also be assigned.
+    * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC channel can also be assigned.
 
 * Code produced within the SIG must be compatible with a FOSS license presently used by Rocky and [upstream](https://docs.fedoraproject.org/en-US/legal/) - If a new license is wanted and is not available in the upstream list, consult with Release Engineering/Core or `~Legal` in Mattermost.
 * All documentation produced within the SIG must be a compatible documentation license
@@ -26,8 +26,9 @@ It is up to the requestor to:
 
 * Check and verify that the topic of interest is already covered by an existing Special Interest Group within Rocky or CentOS Stream
 * Post an introductory RFC message:
-  * As an email to the rocky-devel mailing list and ask for comments or...
-  * As a message to `SIG/general` in mattermost
+
+    * As an email to the rocky-devel mailing list and ask for comments or...
+    * As a message to `SIG/general` in mattermost
 
 Upon approval, a Core/RelEng member will request/create initial resources as needed:
 
