@@ -30,13 +30,15 @@ It is up to the requestor to:
     * As an email to the rocky-devel mailing list and ask for comments or...
     * As a message to `SIG/general` in mattermost
 
-Upon approval, a Core/RelEng member will request/create initial resources as needed:
+Upon approval, a Core/RelEng member will request/create initial resources as needed at the [SIG/Core Tracker](https://git.resf.org/sig_core/meta/issues) using a predefined template:
 
   * RESF Git Service organization is created (git.resf.org)
   * Rocky Linux GitLab groups are created (git.rockylinux.org) if applicable
   * groups in Rocky Account Services
   * mail list
   * channel in mattermost + IRC channel as a bridge if requested
+  
+A copy of the proposal or another version of it that is related to the original request should be in the request.
 
 ## Acceptance
 
