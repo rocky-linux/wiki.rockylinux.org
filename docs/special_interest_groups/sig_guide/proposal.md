@@ -37,6 +37,7 @@ Upon approval, a Core/RelEng member will request/create initial resources as nee
   * groups in Rocky Account Services
   * mail list
   * channel in mattermost + IRC channel as a bridge if requested
+  * Bug Tracker project
   
 A copy of the proposal or another version of it that is related to the original request should be in the request.
 
