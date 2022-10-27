@@ -96,6 +96,8 @@ As with Enterprise Linux and Fedora, there are additional community approved rep
 | **RPM Fusion** - [RPM Fusion](https://rpmfusion.org/) provides software that the Fedora Project or Red Hat does not want to ship in Enterprise Linux and Fedora. These repositories do rely on EPEL. The policy is to **not** replace EPEL nor base packages. The free repository can be installed by running `dnf install rpmfusion-free-release`. |
 | **Remi Repository** - [Remi](http://rpms.remirepo.net/) maintains a large collection of RPMs, including latest versions of PHP, among other things. His FAQ can be found [here](http://blog.remirepo.net/pages/English-FAQ). This is a collection of repositories. Using the `-safe` series of repositories will ensure that nothing from the base will be replaced or overwritten. However, be aware that these repositories do **not** play well with other third party repositories. You will need to use caution as you enable more repositories on your system. |
 | **GhettoForge** - [GhettoForge](http://ghettoforge.org/) provides packages not in other third party repositories. Packages that overwrite the base would be in the `gf-plus` repository. Please see [usage](http://ghettoforge.org/index.php/Usage) for more information. |
+| **Trinity Desktop Environment (TDE)** - [TDE](http://www.trinitydesktop.org/about.php) provides Enterprise Linux packages for a KDE 3.5 style desktop environment. As of this writing, EL8 repositories exist. You can TDE find support resources [here](https://www.trinitydesktop.org/support.php). |
+| **ZFS On Linux** - The [ZFS on Linux](http://www.zfsonlinux.org/) project is an implementation of OpenZFS, designed to work in a Linux environment. While this filesystem is very popular, it receives no testing or support from Rocky Release Engineering or Testing. Use at your own risk. |
 | **Upstream centos-release-*** - In the extras repository, there are `centos-release-*` packages that provide additional repositories from the Special Interest Groups of CentOS. As they are available in extras and should work on Rocky Linux, they are considered approved and community supported. |
 
 ### Notes on: EPEL
@@ -115,3 +117,7 @@ Using **EPEL** requires that the `CRB` or `PowerTools` repository is enabled on 
 * Running `dnf install epel-release` and then running `crb enable`
 
 We recommend checking out the [EPEL Quickstart Guide](https://docs.fedoraproject.org/en-US/epel/#_quickstart) for more information.
+
+### Notes on: Unlisted Repositories
+
+If there is a repository that you use (or maintain) and you do not see it here, it is likely that we may not know of it. Unfortunately, this happens. If there are popular repositories that are used in the Enterprise Linux community that should be added to the list, you may drop us a line in Mattermost or IRC.
