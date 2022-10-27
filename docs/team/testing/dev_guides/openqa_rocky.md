@@ -1,7 +1,7 @@
 ---
 title: openQA for rocky
-editor: Alan Marshall
-revision_date: 2022-10-23
+author: Alan Marshall
+revision_date: 2022-10-27
 rc:
   prod: Rocky Linux
   vers:
@@ -11,21 +11,19 @@ rc:
 ---
 
 #### History (briefly)
-
+It started with OS-autoinst: automated testing of Operating Systems
+The OS-autoinst project aims at providing a means to run fully automated tests. Especially to run tests of basic and low-level operating system components such as bootloader, kernel, installer and upgrade, which can not easily be tested with other automated testing frameworks. However, it can just as well be used to test firefox and openoffice operation on top of a newly installed OS.
+openQA is a test-scheduler and web-front for openSUSE and Fedora using OS-autoinst as a backend.
 OpenQA originated at openSuse and was adopted by Fedora as the automated test system for their frequent distribution updates. Maintenance activity is fairly intense and is ongoing at various levels of users. OpenQA was adopted by Rocky Linux Test Team as the preferred automated testing system for the ongoing releases of it's distribution.
 openQA is free software released under the GPLv2 license.
 
 #### Attribution
+This guide is heavily inspired by the numerous upstream documents in which installation and usage of OS-autoinst and openQA are described.
 
-This guide is heavily inspired by the numerous upstream documents in which installation and usage of openQA is described.
+#### Intended Audience
+This is an augmented summary for those who wish to use the openQA automated testing system configured for Rocky Linux tests. To run your own automated tests in openQA, you need a PC or server with hardware-virtualisation and an up-to-date Fedora Linux.
 
-###### Intended Audience
-This is an augmented summary for those who wish to use the openQA automated testing system configured for Rocky Linux tests.
-
-## Contents
-<preferably automated>
-
-#### Introduction
+### Introduction
 This guide explains the use of the openQA automated testing system to test various aspects of Rocky Linux releases either at the pre-release stage or thereafter.
 openQA is an automated test tool that makes it possible to test the whole installation process. It uses virtual machines set up via libvirt (but not qemu) to reproduce the process, check the output (both serial console and GUI screen) in every step and send the necessary keystrokes and commands to proceed to the next step. openQA checks whether the system can be installed, whether it works properly, whether applications work or whether the system responds as expected to different installation options and commands.
 openQA can run numerous combinations of tests for every revision of the operating system, reporting the errors detected for each combination of hardware configuration, installation options and variant of the operating system.
@@ -33,94 +31,126 @@ openQA can run numerous combinations of tests for every revision of the operatin
 Upstream documentation is useful for reference but since it is a mixture of advice and instructions relating to openSUSE and Fedora which have significant differences between them it is not always clear which are significant for Rocky.
 As you would expect, as an rpm based distribution, Rocky Linux is closely related to the Fedora version.
 
-### Templates
+### WebUI
+In general the web UI should be intuitive or self-explanatory. Look out for the little blue help icons and click them for detailed help on specific sections.
 
+Some pages use queries to select what should be shown. The query parameters are generated on clickable links, for example starting from the index page or the group overview page clicking on single builds. On the query pages there can be UI elements to control the parameters, for example to look for older builds or show only failed jobs, or other settings. Additionally, the query parameters can be tweaked by hand if you want to provide a link to specific views.
 
-This section describes how an instance of openQA could be configured using the options in the admin area to automatically create all the required jobs for each revision of your operating system that needs to be tested. **If** you were starting from scratch, you would probably go through the following order:
+### Using Templates
+
+#### Problem
+A problem arises when testing an operating system, especially when doing continuous testing, that there is always a certain combination of jobs, each one with its own settings, that needs to be run for every revision. Those combinations can be different for different 'flavors' of the same revision, like running a different set of jobs for each architecture. This combinational problem can go one step further if openQA is being used for different kinds of tests, like running some simple pre-integration tests for some snapshots combined with more comprehensive post-integration tests for release candidates.
+
+This section describes how an instance of openQA *could* be configured using the options in the admin area of the webUI to automatically create all the required jobs for each revision of your operating system that needs to be tested. *If* you were starting from scratch (the difficult way), you would probably go through the following order:
 
 1. Define machines in 'Machines' menu
-
 1. Define medium types (products) you have in 'Medium types' menu
-
 1. Specify various collections of tests you want to run in the 'Test suites' menu
-
 1. Define job groups in 'Job groups' menu for groups of tests
-
 1. Select individual 'Job groups' and decide what combinations make sense and need to be tested
 
 Machines, mediums, test suites and job templates can all set various configuration variables. The so called job templates within the job groups define how the test suites, mediums and machines should be combined in various ways to produce individual 'jobs'. All the variables from the test suite, medium, machine and job template are combined and made available to the actual test code run by the 'job', along with variables specified as part of the job creation request. Certain variables also influence openQA’s and/or os-autoinst’s own behavior in terms of how it configures the environment for the job.
 
+#### Machines
+You need to have at least one machine set up to be able to run any tests. Those machines represent virtual machine types that you want to test. To make tests actually happen, you have to have an 'openQA worker' connected that can fulfill those specifications.
+
+- Name. User defined string - only needed for operator to identify the machine configuration.
+- Backend. What backend should be used for this machine. Recommended value is qemu as it is the most tested one, but other options (such as kvm2usb or vbox) are also possible.
+- Variables Most machine variables influence os-autoinst’s behavior in terms of how the test machine is set up. A few important examples:
+  - QEMUCPU can be 'qemu32' or 'qemu64' and specifies the architecture of the virtual CPU.
+  - QEMUCPUS is an integer that specifies the number of cores you wish for.
+
+  - USBBOOT when set to 1, the image will be loaded through an emulated USB stick.
+
+#### Medium Types (products)
+A medium type (product) in openQA is a simple description without any definite meaning. It basically consists of a name and a set of variables that define or characterize this product in os-autoinst.
+
+Some example variables are:
+
+- ISO_MAXSIZE contains the maximum size of the product. There is a test that checks that the current size of the product is less or equal than this variable.
+- DVD if it is set to 1, this indicates that the medium is a DVD.
+- LIVECD if it is set to 1, this indicates that the medium is a live image (can be a CD or USB)
+- GNOME this variable, if it is set to 1, indicates that it is a GNOME only distribution.
+- RESCUECD is set to 1 for rescue CD images.
+
+#### Test Suites
+A test suite consists of a name and a set of test variables that are used inside this particular test together with an optional description. The test variables can be used to parameterize the actual test code and influence the behaviour according to the settings.
+
+Some sample variables are:
+
+- BTRFS if set, the file system will be BtrFS.
+- DESKTOP possible values are 'kde' 'gnome' 'lxde' 'xfce' or 'textmode'. Used to indicate the desktop selected by the user during the test.
+- ENCRYPT encrypt the home directory via YaST.
+- HDDSIZEGB hard disk size in GB.
+- HDD_1 path for the pre-created hard disk
+- RAIDLEVEL RAID configuration variable
+
+#### Job Groups
+The job groups are the place where the actual test scenarios are defined by the selection of the medium type, the test suite and machine together with a priority value.
+
+The priority value is used in the scheduler to choose the next job. If multiple jobs are scheduled and their requirements for running them are fulfilled the ones with a lower priority value are triggered. The id is the second sorting key: of two jobs with equal requirements and same priority value the one with lower id is triggered first.
+
+Job groups themselves can be created over the web UI as well as the REST API. Job groups can optionally be nested into categories. The display order of job groups and categories can be configured by drag-and-drop in the web UI.
+
+The scenario definitions within the job groups can be created and configured by different means:
+
+- A simple web UI wizard which is automatically shown for job groups when a new medium is added to the job group.
+- An intuitive table within the web UI for adding additional test scenarios to existing media including the possibility to configure the priority values.
+- The scripts openqa-load-templates and openqa-dump-templates to quickly dump and load the configuration from custom plain-text dump format files using the REST API.
+- Using declarative schedule definitions in the YAML format using REST API routes or an online-editor within the web UI including a syntax checker.
 
 ### Needles
-
-The needles are very precise and the slightest deviation from the required display will be detected. This means that every time there is a new release, very small changes occur in layout of displays resulting in many new needles being required. There is always a significant amount of work needed by the test team to produce the automatic tests for a new version.
+Needles are very precise and the slightest deviation from the specified display will be detected. This means that every time there is a new release, very small changes occur in layout of displays resulting in many new or modified needles being required. There is always a significant amount of work needed by the Test Team to produce the automatic tests for a new version.
 
 #### Operation
-
-##### webUI
 
 ### Helper Scripts
 
 #### Installation
 
 ##### Glossary
-
 The following terms are used within the context of openQA:-
 
 test module
-
 * An individual test case in a single perl module (.pm) file, e.g. "sshxterm". If not further specified a test module is denoted with its "short name" equivalent to the filename including the test definition. The "full name" is composed of the test group (TBC), which itself is formed by the top-folder of the test module file, and the short name, e.g. "x11-sshxterm" (for x11/sshxterm.pm)
 
 test suite
-
 1. A collection of test modules, e.g. "textmode". All test modules within one test suite are run serially
 job
-
 1. One run of individual test cases in a row denoted by a unique number for one instance of openQA, e.g. one installation with subsequent testing of applications within gnome
 
 test run
 * Equivalent to job
-
 test result
 * The result of one job, e.g. "passed" with the details of each individual test module
-
 test step
 * the execution of one test module within a job
 
 distri
-
 * A test distribution but also sometimes referring to a product (CAUTION: ambiguous, historically a "GNU/Linux distribution"), composed of multiple test modules in a folder structure that compose test suites, e.g. "rocky" (test distribution, short for "os-autoinst-distri-rocky")
 
 product
-
 * The main "system under test" (SUT), e.g. "rocky", also called "Medium Types" in the web interface of openQA
 
 job group
-
 * Equivalent to product, used in context of the webUI
 
 version
-
 * One version of a product, don’t confuse with builds
 
 flavor
-
 * A specific variant of a product to distinguish differing variants, e.g. "DVD"
 
 arch
-
 * An architecture variant of a product, e.g. "x86_64"
 
 machine
-
 * Additional variant of machine, e.g. used for "64bit", "uefi", etc.
 
 scenario
-
 * A composition of <distri>-<version>-<flavor>-<arch>-<test_suite>@<machine>, e.g. "Rocky-9-dvd-x86_64-gnome@64bit"
 
 build
-
 * Different versions of a product as tested, can be considered a "sub-version" of version, e.g. "Build1234"; CAUTION: ambiguity: either with the prefix "Build" included or not
 
 #### References
