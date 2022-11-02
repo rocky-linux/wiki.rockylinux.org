@@ -54,6 +54,33 @@ Each ISO that is provided has a specific purpose.
 
 * The `dvd` image, or also known as the "everything" or "BaseOS" media, contains everything needed to do a custom installation of Rocky Linux without needing an internet connection.
 
+### Notes about: Writing the ISO's
+
+There are many ways to write ISO's to a USB. See the below lists for what to and what not to use.
+
+
+#### Recommended
+
+* Fedora Media Writer
+
+    * [Windows](https://getfedora.org/fmw/FedoraMediaWriter-win32-latest.exe)
+    * [MacOS](https://getfedora.org/fmw/FedoraMediaWriter-osx-latest.dmg)
+    * On Fedora: `dnf install mediawriter`
+
+* [dd for windows](http://www.chrysocome.net/dd)
+* [Rawrite32](https://www.netbsd.org/~martin/rawrite32/)
+
+#### Not Recommended (avoid)
+
+The following are listed as **do not use** as they are known for breaking isohybrid images or causing other inconsistencies:
+
+* rufus
+* unetbootin
+* multibootusb
+* universal usb installer
+
+Rufus can only work for Rocky Linux images if you use "dd mode" only. Do not use ISO mode as it will result in a broken installer. It is recommended that you use the recommended list of writers in the recommended section.
+
 ## About Cloud Images
 
 Every Rocky Linux release gets a set of cloud images that can be consumed into their cloud infrastructure as they see fit. They will live in an `images` directory at the root of a Rocky Linux release.
