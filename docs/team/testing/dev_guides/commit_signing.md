@@ -92,6 +92,14 @@ Find the *primary keypair* and import it (preferably into an ephemeral system li
     # User or workspace setting
     "git.enableCommitSigning": true
 
+# Upload your public key to a keyserver
+
+    gpg --keyserver pgp.mit.edu --send-keys 0xDEADB33FBAD1D3A
+
+# Verify your key has been published
+
+    gpg --keyserver pgp.mit.edu --search-key my@email.addr
+
 # References
 [OpenPGP Best Practices](https://riseup.net/en/security/message-security/openpgp/best-practices#key-configuration)<br>
 [Github: Signing Commits](https://docs.github.com/en/enterprise-server@3.5/authentication/managing-commit-signature-verification/signing-commits)<br>
