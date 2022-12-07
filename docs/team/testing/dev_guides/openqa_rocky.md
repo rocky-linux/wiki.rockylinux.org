@@ -12,7 +12,7 @@ rc:
 
 #### History (briefly)
 It started with OS-autoinst: automated testing of Operating Systems
-The OS-autoinst project aims at providing a means to run fully automated tests. Especially to run tests of basic and low-level operating system components such as bootloader, kernel, installer and upgrade, which can not easily be tested with other automated testing frameworks. However, it can just as well be used to test firefox and openoffice operation on top of a newly installed OS.
+The OS-autoinst project aims at providing a means to run fully automated tests, especially to run tests of basic and low-level operating system components such as bootloader, kernel, installer and upgrade, which can not easily be tested with other automated testing frameworks. However, it can just as well be used to test firefox and openoffice operation on top of a newly installed OS.
 openQA is a test-scheduler and web-front for openSUSE and Fedora using OS-autoinst as a backend.
 OpenQA originated at openSuse and was adopted by Fedora as the automated test system for their frequent distribution updates. Maintenance activity is fairly intense and is ongoing at various levels of users. OpenQA was adopted by Rocky Linux Test Team as the preferred automated testing system for the ongoing releases of it's distribution.
 openQA is free software released under the GPLv2 license.
@@ -21,7 +21,7 @@ openQA is free software released under the GPLv2 license.
 This guide is heavily inspired by the numerous upstream documents in which installation and usage of OS-autoinst and openQA are described.
 
 #### Intended Audience
-This is an augmented summary for those who wish to use the openQA automated testing system configured for Rocky Linux tests. To run your own automated tests in openQA, you need a PC or server with hardware-virtualisation and an up-to-date Fedora Linux.
+Those who wish to use the openQA automated testing system configured for Rocky Linux tests. To run your own automated tests in openQA, you need a PC or server with hardware-virtualisation and an up-to-date Fedora Linux.
 
 ### Introduction
 This guide explains the use of the openQA automated testing system to test various aspects of Rocky Linux releases either at the pre-release stage or thereafter.
@@ -29,12 +29,93 @@ openQA is an automated test tool that makes it possible to test the whole instal
 openQA can run numerous combinations of tests for every revision of the operating system, reporting the errors detected for each combination of hardware configuration, installation options and variant of the operating system.
 
 Upstream documentation is useful for reference but since it is a mixture of advice and instructions relating to openSUSE and Fedora which have significant differences between them it is not always clear which are significant for Rocky.
-As you would expect, as an rpm based distribution, Rocky Linux is closely related to the Fedora version.
+However, as an rpm based distribution, Rocky Linux use is closely related to the Fedora version.
 
 ### WebUI
-In general the web UI should be intuitive or self-explanatory. Look out for the little blue help icons and click them for detailed help on specific sections.
+The web UI is a very useful feature of the openQA system since it provides an easily accessed view of the progress and details of openQA tests either on the local machine or remotely or both. It is intended to be intuitive and self-explanatory. Look out for the little blue help icons and click them for detailed help on specific sections.
 
 Some pages use queries to select what should be shown. The query parameters are generated on clickable links, for example starting from the index page or the group overview page clicking on single builds. On the query pages there can be UI elements to control the parameters, for example to look for older builds or show only failed jobs, or other settings. Additionally, the query parameters can be tweaked by hand if you want to provide a link to specific views.
+
+## Step-by-step Install Guide
+
+OpenQA can be installed only on a Fedora (or OpenSUSE) workstation or server.
+
+\# Install Fedora
+Install fedora workstation
+
+\# Install Packages
+sudo dnf install openqa openqa-httpd openqa-worker fedora-messaging python3-jsonschema
+
+\# Configure httpd:
+cd /etc/httpd/conf.d/
+sudo cp openqa.conf.template openqa.conf
+sudo cp openqa-ssl.conf.template openqa-ssl.conf
+sudo setsebool -P httpd_can_network_connect 1
+sudo systemctl restart httpd
+
+\# Configure the web UI
+in /etc/openqa/openqa.ini
+\[global]
+branding=plain
+download_domains = rockylinux.org
+\[auth]
+method = Fake
+\# or:
+\# [oauth2]
+\# provider = github
+\# key = ...
+\# secret = ...
+
+sudo dnf install postgresql-server
+postgresql-setup --initdb
+
+\# enable and start services
+sudo systemctl enable postgresql --now
+sudo systemctl enable httpd --now
+sudo systemctl enable openqa-gru --now
+sudo systemctl enable openqa-scheduler --now
+sudo systemctl enable openqa-websockets --now
+sudo systemctl enable openqa-webui --now
+sudo systemctl enable fm-consumer@fedora_openqa_scheduler --now
+
+\# Create API key in web interface at http://localhost.
+
+\# Click Login, then Manage API Keys, create a key and secret.
+sudo vi /etc/openqa/client.conf
+
+\# Insert key and secret
+\[localhost]
+key = ... 
+secret = ... 
+
+\# create workers
+sudo systemctl start openqa-worker@1
+\# then ...@2 ...etc as desired. Look in webui workers to check.
+
+\# Get Rocky tests
+cd /var/lib/openqa/tests/
+sudo git clone https://github.com/rocky-linux/os-autoinst-distri-rocky.git rocky
+sudo chown -R geekotest:geekotest rocky
+cd rocky
+sudo su
+git config --global --add safe.directory /var/lib/openqa/share/tests/rocky
+
+git checkout 8.7-release
+\# or whichever branch has the latest updates for your tests
+
+./fifloader.py -l -c templates.fif.json templates-updates.fif.json
+git clone https://github.com/rocky-linux/createhdds.git  ~/createhdds
+dnf install libguestfs-tools libguestfs-xfs python3-fedfind python3-libguestfs libvirt-daemon-config-network libvirt-python3 virt-install withlock
+mkdir -p /var/lib/openqa/factory/hdd/fixed
+
+\# will need about 200GB disk space available for ongoing tests
+cd /var/lib/openqa/factory/hdd/fixed
+
+\# starts a long running process
+~/createhdds/createhdds.py all
+
+
+
 
 ### Using Templates
 
@@ -108,7 +189,7 @@ Needles are very precise and the slightest deviation from the specified display 
 
 #### Installation
 
-##### Glossary
+### Glossary
 The following terms are used within the context of openQA:-
 
 test module
