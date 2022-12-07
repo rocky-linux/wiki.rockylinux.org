@@ -1,7 +1,7 @@
 ---
 title: openQA for rocky
 author: Alan Marshall
-revision_date: 2022-10-27
+revision_date: 2022-12-07
 rc:
   prod: Rocky Linux
   vers:
@@ -40,36 +40,34 @@ Some pages use queries to select what should be shown. The query parameters are 
 
 OpenQA can be installed only on a Fedora (or OpenSUSE) workstation or server.
 
-\# Install Fedora
-Install fedora workstation
-
-\# Install Packages
+```
+# Install Packages
 sudo dnf install openqa openqa-httpd openqa-worker fedora-messaging python3-jsonschema
 
-\# Configure httpd:
+# Configure httpd:
 cd /etc/httpd/conf.d/
 sudo cp openqa.conf.template openqa.conf
 sudo cp openqa-ssl.conf.template openqa-ssl.conf
 sudo setsebool -P httpd_can_network_connect 1
 sudo systemctl restart httpd
 
-\# Configure the web UI
+# Configure the web UI
 in /etc/openqa/openqa.ini
-\[global]
+[global]
 branding=plain
 download_domains = rockylinux.org
-\[auth]
+[auth]
 method = Fake
-\# or:
-\# [oauth2]
-\# provider = github
-\# key = ...
-\# secret = ...
+# or:
+# [oauth2]
+# provider = github
+# key = ...
+# secret = ...
 
 sudo dnf install postgresql-server
 postgresql-setup --initdb
 
-\# enable and start services
+# enable and start services
 sudo systemctl enable postgresql --now
 sudo systemctl enable httpd --now
 sudo systemctl enable openqa-gru --now
@@ -78,21 +76,21 @@ sudo systemctl enable openqa-websockets --now
 sudo systemctl enable openqa-webui --now
 sudo systemctl enable fm-consumer@fedora_openqa_scheduler --now
 
-\# Create API key in web interface at http://localhost.
+# Create API key in web interface at http://localhost.
 
-\# Click Login, then Manage API Keys, create a key and secret.
+# Click Login, then Manage API Keys, create a key and secret.
 sudo vi /etc/openqa/client.conf
 
-\# Insert key and secret
-\[localhost]
+# Insert key and secret
+[localhost]
 key = ... 
 secret = ... 
 
-\# create workers
+# create workers
 sudo systemctl start openqa-worker@1
-\# then ...@2 ...etc as desired. Look in webui workers to check.
+# then ...@2 ...etc as desired. Look in webui workers to check.
 
-\# Get Rocky tests
+# Get Rocky tests
 cd /var/lib/openqa/tests/
 sudo git clone https://github.com/rocky-linux/os-autoinst-distri-rocky.git rocky
 sudo chown -R geekotest:geekotest rocky
@@ -101,21 +99,21 @@ sudo su
 git config --global --add safe.directory /var/lib/openqa/share/tests/rocky
 
 git checkout 8.7-release
-\# or whichever branch has the latest updates for your tests
+# or whichever branch has the latest updates for your tests
 
 ./fifloader.py -l -c templates.fif.json templates-updates.fif.json
 git clone https://github.com/rocky-linux/createhdds.git  ~/createhdds
 dnf install libguestfs-tools libguestfs-xfs python3-fedfind python3-libguestfs libvirt-daemon-config-network libvirt-python3 virt-install withlock
 mkdir -p /var/lib/openqa/factory/hdd/fixed
 
-\# will need about 200GB disk space available for ongoing tests
+# will need about 200GB disk space available for ongoing tests
 cd /var/lib/openqa/factory/hdd/fixed
 
-\# starts a long running process
+# starts a long running process
 ~/createhdds/createhdds.py all
 
 
-
+```
 
 ### Using Templates
 
