@@ -52,9 +52,9 @@ Rocky Linux 9 does not currently support this policy and can be expected in a fu
 
 ### General Update Timeline
 
-Updates for Rocky Linux are generally expected to be built and released between twenty-four (24) and fourty-eight (48) hours, assuming best effort allows the packages to build without issues.
+Updates for Rocky Linux are generally expected to be built and released between twenty-four (24) and fourty-eight (48) hours, assuming best effort allows the packages to build without any complications or unforeseen added dependencies by upstream mid-support cycle.
 
-Minor releases for Rocky Linux are generally expected to be built and released at least a week (7 days) after upstream, assuming best effort allows the packages to builds to build without issues and it passes the Testing Team OpenQA and general testing.
+Minor releases for Rocky Linux are generally expected to be built and released at least a week (7 days) after upstream, assuming best effort allows the packages to builds to build without any complications and it passes the Testing Team OpenQA and general testing.
 
 ## End of Life and Unsupported Release Policy
 
