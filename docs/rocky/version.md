@@ -44,11 +44,17 @@ After `X.10` is released, the following may be true:
 
 ## Version Policy
 
-Rocky Linux follows the same pattern as Red Hat Enterprise Linux. As such, releases aim to be as on time as possible as they are released upstream.
+Rocky Linux attempts to follow the same pattern as Red Hat Enterprise Linux. As such, releases aim to be as on time as possible as they are released upstream.
 
 For Rocky Linux 8, previous versions of packages will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates). However, when a new minor release arrives, all previous updates/versions are *not* carried over.
 
 Rocky Linux 9 does not currently support this policy and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18).
+
+### General Update Timeline
+
+Updates for Rocky Linux are generally expected to be built and released between twenty-four (24) and fourty-eight (48) hours, assuming best effort allows the packages to build without issues.
+
+Minor releases for Rocky Linux are generally expected to be built and released at least a week (7 days) after upstream, assuming best effort allows the packages to builds to build without issues and it passes the Testing Team OpenQA and general testing.
 
 ## End of Life and Unsupported Release Policy
 
@@ -61,7 +67,7 @@ See the examples below.
 
 ### Example: An Unsupported Release
 
-When a new Rocky Linux minor release arrives (for example, `8.6`) the following is true:
+When a new Rocky Linux minor release arrives (using version format `X.Y`, any increment of `Y`) the following is true:
 
 * The previous version is no longer supported by Release Engineering and the community
 * This version is no longer updated and is moved to the [vault](http://dl.rockylinux.org/vault/rocky/)
