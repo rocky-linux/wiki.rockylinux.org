@@ -52,35 +52,13 @@ As of this writing, the `name.yaml` file generated in the root may be done by th
 
 ### src
 
-This area is specifically used for having the source of the rpm. This means that instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group, by using dist-git/src-git. This is an optional group and does not have to be used. These are subject to the correct branch names template.
+This area is specifically used for having the source of the rpm. This means that instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group, by using dist-git/src-git. This is an optional group and does not have to be used. These are subject to the correct branch names.
 
 ### Branch Names
 
 This is **important**. **main is NOT an acceptable branch name under any cirumstances.**
 
-You **must** follow the correct branch name format for your package to be used in the CBS. You must use this format:
-
-```
-rX-SIG-PKG_QUALIFIER[-OPTIONAL_VERSION]
-```
-
-Let's break it down:
-
-* `X` will the rocky major version. For example, `r8`
-* `SIG` will be your SIG name - For example, if it's one word, `storage` could be used. If it's a multi-word, abbreviate it. For example, `Messaging and Communication` could just be `mc`.
-* `PKG_QUALIFIER` is the name of or the group of packages that you plan on building. For example, `gluster`. Gluster is more than one package, so each rpm repo would have this in the branch name.
-* `OPTIONAL_VERSION` is straight forward. If you have multiple versions, you can put a version here.
-
-Here's full examples using this format:
-
-```
-r8-storage-gluster-9
-r8-mc-ejabberd
-```
-
-The top one says this is for Rocky Linux 8, storage sig, gluster packages, version 9. It implies there may be a version 10 at some point or there may be a version 8 that is/was there. It also implies there will be different repos per version, so a user could use the gluster 9 repo even though there may be a 10 version.
-
-The bottom one says this is for Rocky Linux 8, the `mc` sig, and the package(s) are for ejabberd, with no specific version listed as it will be continuously updated.
+You **must** use `rX`, `X` being the major version number. At this time, there is no support for multiple versions of a package.
 
 ### Tagging
 
