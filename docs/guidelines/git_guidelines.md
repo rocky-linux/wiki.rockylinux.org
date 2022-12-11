@@ -55,7 +55,7 @@ DON'T:
 
 ### Exceptions
 
-Exceptions to personal projects under your namespace would be for code that will be utilized in some way for the Rocky ecosystem, whether directly, indirectly (eg for people.rocky). This can also be the case of using Peridot as a COPR-like service.
+Exceptions to personal projects under your namespace would be for code that will be utilized in some way for the Rocky ecosystem, whether directly, indirectly (e.g., for people.rocky). This can also be the case of using Peridot as a COPR-like service.
 
 ## Source Code (for SIGs or other software)
 
@@ -210,7 +210,7 @@ There are a few ways to submit a patch to fix build issues in the main distribut
 
 #### Patch Repo Doesn't Exist
 
-If there is a package failing, or you are looking to submit a patch for example to allow something to compile correctly on another architecture (eg `armv7`/`armhfp`), or perhaps you found a piece of the base that was not debranded properly, generally a bug report should be opened at our [Bug Tracker](https://bugs.rockylinux.org) with relevant information and logs. Opening a project under your namespace can be done and can eventually be transferred in into `staging` after review.
+If there is a package failing, or you are looking to submit a patch for example to allow something to compile correctly on another architecture (e.g., `armv7`/`armhfp`), or perhaps you found a piece of the base that was not debranded properly, generally a bug report should be opened at our [Bug Tracker](https://bugs.rockylinux.org) with relevant information and logs. Opening a project under your namespace can be done and can eventually be transferred in into `staging` after review.
 
 #### Patch Repo Exists
 

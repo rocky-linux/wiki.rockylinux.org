@@ -124,7 +124,7 @@ adhoc  -> These playbooks are one-off playbooks that can be used on the CLI or
           in AWX. These are typically for basic tasks.
 
 import -> Playbooks that should be imported from the top level playbooks or
-          used to "import" or "add" data somewhere (eg a database or LDAP)
+          used to "import" or "add" data somewhere (e.g., a database or LDAP)
 
 role-* -> These playbooks call roles for potential infrastructure tasks or even
           roles in general.
@@ -138,7 +138,7 @@ role-* -> These playbooks call roles for potential infrastructure tasks or even
 There will likely be multiple dynamic inventory sources used for hosts managed by AWX, and as a result, there will be a lot of groups defined with one or more hosts at a time. As this is the case, here are some things to keep in mind:
 
 * Use group names where necessary
-* Use localhost if you aren't actually doing anything to a system (eg you're calling an API) *and* you don't have to connect to a system to use said API
+* Use localhost if you aren't actually doing anything to a system (e.g., you're calling an API) *and* you don't have to connect to a system to use said API
 * When filling in the `hosts` directive, follow these general guidelines:
 
     * If it applies to all hosts in an inventory, use `all`

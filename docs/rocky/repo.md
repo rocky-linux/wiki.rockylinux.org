@@ -18,7 +18,7 @@ A more detailed explanation of the version policy can be found in our [Version G
 
 ### Notes on: Difference between X and X.Y in mirrors
 
-You may notice that on mirrors or our [primary download location](https://dl.rockylinux.org/pub/rocky) that there are X and X.Y directories. Rocky Linux sets the `releasever` dnf variable to the major version (eg 8, 9) rather than a minor version (8.6, 9.0, and so on). This effectively means that it will ask the mirror manager or configured baseurl for that version, which will always point to the latest available release at a given time. This helps simplify the user experience when installing software and updating systems throughout the life of a release.
+You may notice that on mirrors or our [primary download location](https://dl.rockylinux.org/pub/rocky) that there are X and X.Y directories. Rocky Linux sets the `releasever` dnf variable to the major version (e.g., 8, 9) rather than a minor version (8.6, 9.0, and so on). This effectively means that it will ask the mirror manager or configured baseurl for that version, which will always point to the latest available release at a given time. This helps simplify the user experience when installing software and updating systems throughout the life of a release.
 
 In the event a new release is available, the symlink is changed to point to the new directory, and mirror manager also undergoes changes to accomodate the new release, which should be transparent to most users.
 
@@ -65,7 +65,7 @@ These are not tested by upstream nor available in the upstream product.
 
 ### Notes on: Plus
 
-This repository contains packages that either A) replace a core component via patched functionality, B) build a component that was originally exclusive for one architecture (eg open-vm-tools built for x86_64 but not aarch64 in Rocky 8) or C) providing packages that were built but not traditionally provided by upstream, and requested to be available by the community.
+This repository contains packages that either A) replace a core component via patched functionality, B) build a component that was originally exclusive for one architecture (e.g., open-vm-tools built for x86_64 but not aarch64 in Rocky 8) or C) providing packages that were built but not traditionally provided by upstream, and requested to be available by the community.
 
 Packages that fall under A and B will have a `.plus` added to their version tag. These are not tested nor available in the upstream product.
 

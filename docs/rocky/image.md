@@ -101,7 +101,7 @@ There are two formats for the images:
 * Y is the minor version
 * ARCH is the architecture
 * DATE will be the date of when the image was produced
-* CLOUD will the type of cloud image (eg GenericCloud)
+* CLOUD will the type of cloud image (e.g., GenericCloud)
 * FORMAT will be `raw` or `qcow2`
 
 The first format will always be a constant. Cloud images will appear in this format in majority of cases and there may be more than one at any given time. Updates can occur for newer kernels or to address issues in previous versions.
@@ -135,6 +135,6 @@ The kickstarts that help generate these live images can be found at [https://git
 
 The raspberry pi images are exactly what's labeled on the tin, images for the means of installing to an sd card to run Rocky Linux on a raspberry pi. These images are supported by SIG/AltArch community members.
 
-Traditionally, the repositories and images would be in the same directory as a major release (eg `/pub/rocky/9/rockyrpi`). They are now provided in [SIG](http://dl.rockylinux.org/pub/sig/) directories for Rocky Linux 9 and will likely be backported in the future.
+Traditionally, the repositories and images would be in the same directory as a major release (e.g., `/pub/rocky/9/rockyrpi`). They are now provided in [SIG](http://dl.rockylinux.org/pub/sig/) directories for Rocky Linux 9 and will likely be backported in the future.
 
 The git repository that contains the kickstart and other data related to the creation of these images are located at [https://git.resf.org/sig_altarch/RockyRpi](https://git.resf.org/sig_altarch/RockyRpi).
