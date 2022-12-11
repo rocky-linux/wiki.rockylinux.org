@@ -6,7 +6,7 @@ This section goes over how to manage content in git and the community build syst
 
 ## Importing to the RESF Git Service
 
-All Special Interset Groups get an organization created in the RESF Git Service. Each organization will have a `meta` repository that can track issues or requests for the SIG as a whole. This is not a requirement and each SIG can dictate how issues or requests are handled.
+All Special Interest Groups get an organization created in the RESF Git Service. Each organization will have a `meta` repository that can track issues or requests for the SIG as a whole. This is not a requirement, and each SIG can dictate how issues or requests are handled.
 
 There is no strict requirement on what repositories should and should not exist. It is up to the discretion of the SIG.
 
@@ -21,7 +21,7 @@ Special Interest Groups that build and release packages will have a subgroup und
 
 This area is specifically used for rpm sources (spec file, patches, light text files). The expected format is:
 
-* `SOURCES/...` -- light text files, scripts, patches, etc can come here (eg ones not in a tar ball)
+* `SOURCES/...` -- light text files, scripts, patches, etc. can come here (e.g., ones not in a tar ball)
 * `SPECS/name.spec` -- Your spec file comes here - note it should only be one spec file
 * `.name.metadata` -- Required, lists your source archives or otherwise that will be in lookaside. Empty if there are no sources to pull from lookaside.
 
@@ -41,7 +41,7 @@ b7b91082908db35e4acbcd0221b8df4044913dc1 SOURCES/freeipa-4.9.6.tar.gz
 
 This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms, especially when there are multiple versions. See the `branch` section in this document for more information.
 
-The name of the module does not necessarily have to match the actual package or package names. For example, the idm module. There is no package named `idm`, but each package as part of the module have the correct branch names as referenced in the source yaml for the module.
+The name of the module does not necessarily have to match the actual package or package names. For example, the idm module. There is no package named `idm`, but each package as part of the module has the correct branch names as referenced in the source yaml for the module.
 
 The format expected:
 
@@ -62,7 +62,7 @@ You **must** use `rX`, `X` being the major version number. At this time, there i
 
 ### Tagging
 
-In the case of an rpm or a module, there should be tags associated, otherwise the build system will *not* pick up your builds. The general format for a tags are as follows:
+In the case of an rpm or a module, there should be tags associated, otherwise the build system will *not* pick up your builds. The general format for tags is as follows:
 
 * RPM: `imports/rX/NEVR` (for example, `imports/r8/bash-4.4.20-2.el8` is acceptable)
   * Note: You cannot choose a tag/branch destined for one rocky release and build on another. Ensure your tags and branches are in alignment.
