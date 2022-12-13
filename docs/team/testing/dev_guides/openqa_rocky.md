@@ -45,6 +45,8 @@ OpenQA can be installed only on a Fedora (or OpenSUSE) server or workstation.
 # Install Packages
 # for openqa
 sudo dnf install openqa openqa-httpd openqa-worker fedora-messaging python3-jsonschema
+sudo dnf install perl-REST-Client.noarch
+
 # and for createhdds
 sudo dnf install libguestfs-tools libguestfs-xfs python3-fedfind python3-libguestfs
 sudo dnf install libvirt-daemon-config-network libvirt-python3 virt-install withlock
@@ -64,12 +66,6 @@ branding=plain
 download_domains = rockylinux.org
 [auth]
 method = Fake
-
-# or:
-# [oauth2]
-# provider = github
-# key = ...
-# secret = ...
 
 sudo dnf install postgresql-server
 sudo postgresql-setup --initdb
@@ -99,8 +95,9 @@ key = ...
 secret = ... 
 
 # create workers
-sudo systemctl start openqa-worker@1
-# then ...@2 ...etc as desired. Look in webui workers to check.
+sudo systemctl enable openqa-worker@1 --now
+# then ...@2 ...etc as desired. Look in webui workers to check shown idle.
+# as a rule of thumb, you can have about half the number of workers as cores
 
 # Get Rocky tests
 cd /var/lib/openqa/tests/
@@ -108,7 +105,7 @@ sudo git clone https://github.com/rocky-linux/os-autoinst-distri-rocky.git rocky
 sudo chown -R geekotest:geekotest rocky
 cd rocky
 
-# when working in /var/lib/openqa nearly all commands need sudo so it is much
+# when working in /var/lib/openqa nearly all commands need sudo so it is
 #   easier to su to root. If desired sudo per command can be used instead.
 sudo su
 git config --global --add safe.directory /var/lib/openqa/share/tests/rocky
@@ -118,13 +115,26 @@ git checkout develop
 
 ./fifloader.py -l -c templates.fif.json templates-updates.fif.json
 git clone https://github.com/rocky-linux/createhdds.git  ~/createhdds
-mkdir -p /var/lib/openqa/factory/hdd/fixed
+mkdir -p /var/lib/openqa/share/factory/hdd/fixed
 
 # will need about 200GB disk space available for ongoing tests
 cd /var/lib/openqa/factory/hdd/fixed
 
-# start a long running process
+# start a long running process that provides hdd image files for ongoing tests
 ~/createhdds/createhdds.py all
+
+# get Rocky iso files for testing
+mkdir -p /var/lib/openqa/share/factory/iso/fixed
+cd /var/lib/openqa/factory/iso/fixed
+
+curl -LOR https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.1-x86_64-boot.iso
+curl -LOR https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.1-x86_64-minimal.iso
+curl -LOR https://dl.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.1-x86_64-dvd.iso
+
+# post tests and view progress on webui
+cd /var/lib/openqa/tests/rocky/
+openqa-cli api -X POST isos ISO=Rocky-9.1-x86_64-minimal.iso ARCH=x86_64 DISTRI=rocky FLAVOR=minimal-iso VERSION=9.1 BUILD="$(date +%Y%m%d.%H%M%S).0"-minimal
+openqa-cli api -X POST isos ISO=Rocky-9.1-x86_64-boot.iso ARCH=x86_64 DISTRI=rocky FLAVOR=boot-iso VERSION=9.1 BUILD="$(date +%Y%m%d.%H%M%S).0"-boot
 
 # ...to be continued, watch this space.
 
