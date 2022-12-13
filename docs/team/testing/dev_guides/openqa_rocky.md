@@ -165,8 +165,8 @@ You need to have at least one machine set up to be able to run any tests. Those 
 - Name. User defined string - only needed for operator to identify the machine configuration.
 - Backend. What backend should be used for this machine. Recommended value is qemu as it is the most tested one, but other options (such as kvm2usb or vbox) are also possible.
 - Variables Most machine variables influence os-autoinst’s behavior in terms of how the test machine is set up. A few important examples:
-  - QEMUCPU can be 'qemu32' or 'qemu64' and specifies the architecture of the virtual CPU.
-  - QEMUCPUS is an integer that specifies the number of cores you wish for.
+  - QEMUCPU can be 'qemu32' or 'qemu64' and specifies the architecture of the virtual CPU
+  - QEMUCPUS is an integer that specifies the number of cores you wish for
 
   - USBBOOT when set to 1, the image will be loaded through an emulated USB stick.
 
