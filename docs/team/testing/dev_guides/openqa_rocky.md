@@ -1,7 +1,7 @@
 ---
 title: OpenQA for rocky
 author: Alan Marshall
-revision_date: 2022-12-07
+revision_date: 2022-12-13
 rc:
   prod: Rocky Linux
   vers:
@@ -39,11 +39,15 @@ Some pages use queries to select what should be shown. The query parameters are 
 
 ## Step-by-step Install Guide
 
-OpenQA can be installed only on a Fedora (or OpenSUSE) workstation or server.
+OpenQA can be installed only on a Fedora (or OpenSUSE) server or workstation.
 
 ```
 # Install Packages
+# for openqa
 sudo dnf install openqa openqa-httpd openqa-worker fedora-messaging python3-jsonschema
+# and for createhdds
+sudo dnf install libguestfs-tools libguestfs-xfs python3-fedfind python3-libguestfs
+sudo dnf install libvirt-daemon-config-network libvirt-python3 virt-install withlock
 
 # Configure httpd:
 cd /etc/httpd/conf.d/
@@ -60,6 +64,7 @@ branding=plain
 download_domains = rockylinux.org
 [auth]
 method = Fake
+
 # or:
 # [oauth2]
 # provider = github
@@ -67,7 +72,7 @@ method = Fake
 # secret = ...
 
 sudo dnf install postgresql-server
-postgresql-setup --initdb
+sudo postgresql-setup --initdb
 
 # enable and start services
 sudo systemctl enable postgresql --now
@@ -78,9 +83,12 @@ sudo systemctl enable openqa-websockets --now
 sudo systemctl enable openqa-webui --now
 sudo systemctl enable fm-consumer@fedora_openqa_scheduler --now
 sudo setsebool -P httpd_can_network_connect 1
+sudo firewall-cmd --add-service=http --permanent
+sudo firewall-cmd --reload
 sudo systemctl restart httpd
 
-# to create API key in web interface at http://localhost.
+# to create API key in local web interface at http://localhost
+#   or on remote system   http://<ip addr>
 # Click Login, then Manage API Keys, create a key and secret.
 
 # Insert key and secret
@@ -99,15 +107,17 @@ cd /var/lib/openqa/tests/
 sudo git clone https://github.com/rocky-linux/os-autoinst-distri-rocky.git rocky
 sudo chown -R geekotest:geekotest rocky
 cd rocky
+
+# when working in /var/lib/openqa nearly all commands need sudo so it is much
+#   easier to su to root. If desired sudo per command can be used instead.
 sudo su
 git config --global --add safe.directory /var/lib/openqa/share/tests/rocky
 
-git checkout 8.7-release
+git checkout develop
 # or whichever branch has the latest updates for your tests
 
 ./fifloader.py -l -c templates.fif.json templates-updates.fif.json
 git clone https://github.com/rocky-linux/createhdds.git  ~/createhdds
-dnf install libguestfs-tools libguestfs-xfs python3-fedfind python3-libguestfs libvirt-daemon-config-network libvirt-python3 virt-install withlock
 mkdir -p /var/lib/openqa/factory/hdd/fixed
 
 # will need about 200GB disk space available for ongoing tests
@@ -116,8 +126,11 @@ cd /var/lib/openqa/factory/hdd/fixed
 # start a long running process
 ~/createhdds/createhdds.py all
 
+# ...to be continued, watch this space.
 
 ```
+### Helper Scripts
+
 
 ### Using Templates
 
@@ -189,8 +202,6 @@ Needles are very precise and the slightest deviation from the specified display 
 #### Operation
 
 openqa-cli
-
-### Helper Scripts
 
 #### Installation
 
