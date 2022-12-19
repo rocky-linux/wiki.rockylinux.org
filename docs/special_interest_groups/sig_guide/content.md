@@ -58,7 +58,9 @@ This area is specifically used for having the source of the rpm. This means that
 
 This is **important**. **main is NOT an acceptable branch name under any cirumstances.**
 
-You **must** use `rX`, `X` being the major version number. At this time, there is no support for multiple versions of a package.
+You **must** use `rX` as the prefix, `X` being the major version number. To support multiple versions, there will need to be multiple projects and branches need to be named appropriately.
+
+`rX-SIG-NAME-VERSION`
 
 ### Tagging
 
