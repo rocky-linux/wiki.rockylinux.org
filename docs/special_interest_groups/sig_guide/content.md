@@ -60,7 +60,7 @@ This is **important**. **main is NOT an acceptable branch name under any cirumst
 
 You **must** use `rX` as the prefix, `X` being the major version number. To support multiple versions, there will need to be multiple projects and branches need to be named appropriately.
 
-`rX-SIG-NAME-VERSION`
+`rX-sig-SIGNAME[-PKGNAME]-VERSION`
 
 ### Tagging
 
