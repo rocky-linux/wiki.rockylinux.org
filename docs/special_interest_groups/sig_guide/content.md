@@ -56,11 +56,36 @@ This area is specifically used for having the source of the rpm. This means that
 
 ### Branch Names
 
-This is **important**. **main is NOT an acceptable branch name under any cirumstances.**
+Branch naming is **important**. **main is NOT an acceptable branch name under any cirumstances.**
 
-You **must** use `rX` as the prefix, `X` being the major version number. To support multiple versions, there will need to be multiple projects and branches need to be named appropriately.
+You **must** use `rX` as the prefix, `X` being the major version number. All packages that are part of a SIG and will be in a peridot project together must have matching branch names.
+
+To support multiple versions, there will need to be multiple projects and branches need to be named appropriately. Multiple versions of a package cannot coexist in a single peridot project.
+
+#### Multiple Versions + Multiple Projects
+
+There may be cases where:
+
+* Multiple version of a package will exist in some form and/or
+* Although the cases may be rare, sets of packages may not coexist with others and live in completely separate projects.
+
+If this applies to your SIG, you can use branch names and the proper configuration in peridot to make this separation possible. The names of the branches are used to separate packages if need be. See the ideal template:
 
 `rX-sig-SIGNAME[-PKGNAME]-VERSION`
+
+* `rX-sig` is considered the SIG prefix
+* `SIGNAME` would be the name of the SIG (for example, `kernel`)
+* `PKGNAME` is optional
+* `VERSION` is required
+
+Examples:
+
+```
+* Kernel SIG for kernel 5.15 (Rocky Linux 8): r8-sig-kernel-5.15
+* Kernel SIG for kernel 5.15 (Rocky Linux 9): r9-sig-kernel-5.15
+* Kernel SIG for kernel 6.1 on (Rocky Linux 8): r8-sig-kernel-6.1
+* Kernel SIG for kernel 6.1 on (Rocky Linux 9): r9-sig-kernel-6.1
+```
 
 ### Tagging
 
