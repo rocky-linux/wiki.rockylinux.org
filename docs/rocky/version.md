@@ -46,9 +46,11 @@ After `X.10` is released, the following may be true:
 
 Rocky Linux attempts to follow the same pattern as Red Hat Enterprise Linux. As such, releases aim to be as on time as possible as they are released upstream.
 
-For Rocky Linux 8, previous versions of packages will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates). However, when a new minor release arrives, all previous updates/versions are *not* carried over.
+For Rocky Linux 8, previous versions of packages will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates).
 
 Rocky Linux 9 does not currently support this policy and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18).
+
+For all Rocky Linux versions: When a new minor release arrives, all previous updates/versions are *not* carried over.
 
 ### General Update Timeline
 
