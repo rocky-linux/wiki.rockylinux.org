@@ -150,6 +150,12 @@ If you are a user of Matrix, most of the above still applies to you. You may nee
 
 The Rocky Linux matrix space can be joined [here](https://matrix.to/#/!rHvPOeKWNBOYSKTiBr:matrix.org?via=matrix.org).
 
+### IRC Cloaks for libera.chat network
+
+Cloaks allow you to show your association with the Rocky Linux project and protect your hostname from being seen from others. Cloaks can be received from a project or just by the network upon request.
+
+If you would like to receive a cloak, contact Neil or Louis on IRC or Mattermost.
+
 ## Context
 
 This section provides context to some things mentioned throughout this document that would've likely crowded the section entirely. These sections may end up on different pages entirely but they are here for now.
