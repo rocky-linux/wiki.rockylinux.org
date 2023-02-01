@@ -13,7 +13,7 @@ Below is a table of Rocky Linux versions, with accompanying general release and 
 | Rocky Linux 8  | June 21, 2021 | May 31, 2029         |
 | Rocky Linux 9  | July 14, 2022 | May 31, 2032         |
 
-This however does not tell the full story. See timeline and version policy below.
+This is a general idea of the release date to end of life date. See the timeline and version policy below for a more in-depth look and big picture information.
 
 ## Timeline
 
@@ -32,9 +32,19 @@ The question often becomes, how often are releases? Based on the cadence set out
 
 Below is a general guideline (which will likely have mistakes) for the "full support" cycle for an Enterprise Linux distribution.
 
-| Info          | .0   | .1       | .2   | .3       | .4  | .5       | .6  | .7       | .8  | .9       | .10 |
-|---------------|------|----------|------|----------|-----|----------|-----|----------|-----|----------|-----|
-| Release Month | May  | November | May  | November | May | November | May | November | May | November | May |
+| Version | Month    |
+|---------|----------|
+| .0      | May      |
+| .1      | November |
+| .2      | May      |
+| .3      | November |
+| .4      | May      |
+| .5      | November |
+| .6      | May      |
+| .7      | November |
+| .8      | May      |
+| .9      | November |
+| .10     | May      |
 
 After `X.10` is released, the following may be true:
 
