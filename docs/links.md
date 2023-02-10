@@ -37,7 +37,7 @@ title: Link Directory
   * [Peridot Development Instance](https://peridot.pdot-dev.rockylinux.org/)
 ## Social
   * [Mattermost](https://chat.rockylinux.org)
-  * IRC ([libera.chat](https://libera.chat)): [IRC<-->Mattermost mappings](https://wiki.rockylinux.org/en/irc-mattermost-bridge)
+  * IRC ([libera.chat](https://libera.chat)): [IRC<-->Mattermost mappings](irc.md)
   * [Twitter](https://twitter.com/rocky_linux)
   * LinkedIn
     - [Company Page](https://linkedin.com/company/rockylinux)

@@ -29,7 +29,7 @@ to be aware of:
   issues, bugs, and problems with the packages and software that is provided in
   Rocky Linux. Tickets opened that are asking for support on the operating
   system or software will be closed. You are encouraged to go to our subreddit,
-  Freenode IRC channel (#rockylinux), mattermost, or our forums.
+  Libera IRC channel (#rockylinux), mattermost, or our forums.
 
 ## Expectations
 
