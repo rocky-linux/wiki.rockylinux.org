@@ -1,5 +1,5 @@
 ---
-title: Reporting Bugs and Requests for Enhancementx
+title: Reporting Bugs and Requests for Enhancements
 ---
 
 The Rocky Linux Project has several ways of reporting issues or requesting enhancements, depending on what the issue is and who it pertains to. This page aims to try to steer you in the right direction on where to go.
