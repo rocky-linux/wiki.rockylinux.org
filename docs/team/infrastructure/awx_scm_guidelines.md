@@ -23,6 +23,8 @@ This does not cover detailed examples, but is meant to get teams and their contr
 
 This section covers the basics for your AWX project. It is absolutely important that you start with these as an absolute bare minimum. While you will be forking/cloning off of `infrastructure/ansible-awx-template` and using that as the starting point, the next few sections will explain the basic structure and basic design principals.
 
+You should begin by starting from the [Infrastructure Ansible AWX Template](https://git.resf.org/infrastructure/ansible-awx-template).
+
 ### Root Structure
 
 The general structure will always start from this:
