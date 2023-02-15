@@ -65,7 +65,11 @@ These are not tested by upstream nor available in the upstream product.
 
 ### Notes on: Plus
 
-This repository contains packages that either A) replace a core component via patched functionality, B) build a component that was originally exclusive for one architecture (e.g., open-vm-tools built for x86_64 but not aarch64 in Rocky 8) or C) providing packages that were built but not traditionally provided by upstream, and requested to be available by the community.
+This repository contains packages that either:
+
+* A) replace a core component via patched functionality
+* B) build a component that was originally exclusive for one architecture (e.g., open-vm-tools built for x86_64 but not aarch64 in Rocky 8) or...
+* C) providing packages that were built but not traditionally provided by upstream, and requested to be available by the community.
 
 Packages that fall under A and B will have a `.plus` added to their version tag. These are not tested nor available in the upstream product.
 
