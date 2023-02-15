@@ -142,12 +142,14 @@ There will likely be multiple dynamic inventory sources used for hosts managed b
 * When filling in the `hosts` directive, follow these general guidelines:
 
     * If it applies to all hosts in an inventory, use `all`
-    * If you want the host or or a group of hosts to be selectable (via dropdown or manual input), set a variable such as `{{ host }}`
+    * If you want the host or or a group of hosts to be selectable (via dropdown or manual input), create in your playbook and set a variable such as `{{ host }}`
     * If the above two are not applicable and you must set a hostname, you may do so. Note that this will require you to be more vigilant in keeping your repository up to date.
 
 ##### Local Inventory Files
 
 Generally local inventory files are not recommended. If you are running anything locally outside of AWX, an inventory is allowed but should not be committed to the repository. Using `.gitignore` to prevent this is recommended.
+
+Note that using a name that isn't `inventory` is fine as well, as it will not be picked up by default.
 
 ##### Local ansible.cfg files
 
@@ -166,7 +168,7 @@ Tools like `ansible-navigator` and `ansible-builder` can also help in this area 
 
 #### Pre-commits / linting
 
-When committing, pre-commit must run to verify your changes. They must be passing to be pushed up. This is an absolute requirement, even for roles.
+When committing, pre-commit must run to verify your changes. They must be passing to be pushed up. This is an absolute requirement, even for roles. There are very rare exceptions to this rule and they may be granted depending on what it is.
 
 When the linter passes, a push can be performed. After that, if a PR is necessary, open one. Otherwise, it should be free to use locally or in AWX.
 
