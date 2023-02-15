@@ -26,7 +26,7 @@ interest you. Here's some basic things you can do to get you going:
 ## Helping with bug hunting & finding fixes
 
 There are occasions that Rocky Linux users may find problems that may or may not be reproducible
-on our upstream distribution RHEL. We encourage users to to use our [bug tracker](https://bug.rockylinux.org)
+on our upstream distribution RHEL. We encourage users to to use our [bug tracker](https://bugs.rockylinux.org)
 to file bugs. **Note** that this is not meant to be a support system. We encourage users to ask
 for support on our forums, Mattermost, IRC, or Matrix.
 
