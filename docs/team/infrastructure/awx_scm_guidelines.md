@@ -55,7 +55,7 @@ This structure follows the basic expected structure for ansible (this means igno
 * Handlers should be clearly defined and used
 * There should be wiggle room to add callback_plugins, filter_plugins, libraries
 
-With these basic ideas in mind, we can now move deeper.
+With these basic ideas in mind, we can move into playbook design.
 
 ### Designing Playbooks
 
@@ -128,12 +128,11 @@ adhoc  -> These playbooks are one-off playbooks that can be used on the CLI or
 import -> Playbooks that should be imported from the top level playbooks or
           used to "import" or "add" data somewhere (e.g., a database or LDAP)
 
-role-* -> These playbooks call roles for potential infrastructure tasks or even
-          roles in general.
+role-* -> These playbooks call roles for potential tasks or even roles in general.
 ```
 
 !!! note "Using the role prefix without an ansible role"
-    While it is feasible to use `role-` as a way to say "this system will do X" without calling out to an ansible role, you are encouraged to use `init-` instead in these cases. This is **not** a strict requirement. Go with what feels right for your project.
+    It is perfectly fine to use `role-` as a way to say "this system will do or be X" without calling out to an ansible role. You may use `role` for this case or you can use `init`. This is **not** a strict requirement and you should go with what feels right for your project.
 
 #### Defining Hosts
 
@@ -144,14 +143,17 @@ There will likely be multiple dynamic inventory sources used for hosts managed b
 * When filling in the `hosts` directive, follow these general guidelines:
 
     * If it applies to all hosts in an inventory, use `all`
-    * If you want the host or or a group of hosts to be selectable (via dropdown or manual input), create in your playbook and set a variable such as `{{ host }}`
+    * If you want the host or a group of hosts to be selectable (via dropdown or manual input), set `host: {{ host }}` and the host var can be defined as an extra var
     * If the above two are not applicable and you must set a hostname, you may do so. Note that this will require you to be more vigilant in keeping your repository up to date.
 
 ##### Local Inventory Files
 
-Generally local inventory files are not recommended. If you are running anything locally outside of AWX, an inventory is allowed but should not be committed to the repository. Using `.gitignore` to prevent this is recommended.
+Generally local inventory files are not recommended. Some general rules to follow is this:
 
-Note that using a name that isn't `inventory` is fine as well, as it will not be picked up by default.
+* If your project can be ran in AWX *and* locally outside of AWX, the inventory file should not be committed as `inventory` (the current `.gitignore` prevents this from being committed by default)
+* If your project is local only (meaning it will not be used in AWX, but your team will be using it locally), you may modify `.gitignore` to include the file
+
+We want to prevent AWX from picking up a random inventory that isn't defined within it.
 
 ##### Local ansible.cfg files
 
