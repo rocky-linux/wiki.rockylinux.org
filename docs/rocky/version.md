@@ -8,10 +8,10 @@ This page goes over the Rocky Linux Release Versions, their support, timelines, 
 
 Below is a table of Rocky Linux versions, with accompanying general release and (planned or are) end of life dates.
 
-| Major Version  | Release Date  | End of Life          |
-|----------------|---------------|----------------------|
-| Rocky Linux 8  | June 21, 2021 | May 31, 2029         |
-| Rocky Linux 9  | July 14, 2022 | May 31, 2032         |
+| Major Version  | Codename       | Release Date  | End of Life          |
+|----------------|----------------|---------------|----------------------|
+| Rocky Linux 8  | Green Obsidian | June 21, 2021 | May 31, 2029         |
+| Rocky Linux 9  | Blue Onyx      | July 14, 2022 | May 31, 2032         |
 
 This is a general idea of the release date to end of life date. See the timeline and version policy below for a more in-depth look and big picture information.
 
