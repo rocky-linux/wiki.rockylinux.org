@@ -93,6 +93,13 @@ When coming into the IRC or Mattermost channels, it's important to be able to fi
     * This can be disruptive to users on both sides of the IRC/MM bridge
     * If at all possible, use a paste bin such as [rpaste](https://rpa.st)
 
+* **Limit edits** - Refrain from unnecessary edits in Mattermost.
+
+    * Each time you edit a message the entire message is re-copied to IRC
+    * Please refrain from minor typographical edits.
+    * Please refrain from edits which add a small amount of text to an already large message.
+    * Consider sending a new separate message instead with only the added content.
+
 * **Be patient** - You may not get an instant answer. We are all volunteers, so it may take minutes or hours to receive an answer to your question.
 * **Read the Topic** - The topic may contain useful information you may want to know about.
 
