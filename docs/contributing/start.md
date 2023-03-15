@@ -42,7 +42,7 @@ It is highly recommended that you fill out the following information on the
 
 By default, if your email address has an account on [libravatar](https://www.libravatar.org),
 you will automatically have a profile picture assigned. If you do not, you can create one
-but clicking the "Change Avatar" button in the profile tab.
+by clicking the "Change Avatar" button in the profile tab.
 
 It is highly recommended that you fill out the "SSH & GPG Keys" tab. Your ssh
 keys should sync to both the [Rocky Linux GitLab](https://git.rockylinux.org) and
@@ -52,7 +52,7 @@ It is highly recommended that you add an OTP to your account.
 
 ### Signing Agreements
 
-While editting your profile, there is an "Agreements" tab with all of the current
+While editing your profile, there is an "Agreements" tab with all of the current
 agreements for Rocky. It is highly recommended that the following is reviewed
 and signed:
 
@@ -93,10 +93,11 @@ with.
 ### Agreements
 
 Agreements in Rocky Account Services are there to show that you understand
-and agree to the terms in how you are expected to use Rocky-related services.
+and agree to the terms in how you are expected to use any Rocky-related
+service.
 
-You will find 100% of the time, you will be required to sign at least one of
-the agreements, and that's the `Rocky Open Source Contributor Agreement`. If
+You will find that 100% of the time, you will be required to sign at least one
+of the agreements, and that's the `Rocky Open Source Contributor Agreement`. If
 you plan on utilizing git.rockylinux.org or git.resf.org (as most contributors
 will), signing of the `Rocky Git Contributor Agreement` is a requirement.
 
@@ -104,10 +105,10 @@ Before a sponsor or a team leader will add you to a group, they will have the
 ability to check your profile to verify that you have signed the appropriate
 agreements before proceeding. In the event your profile is set to private, this
 information may be requested from Core/RelEng. If you do not or cannot agree to
-the terms, you will not be able to contribute to Rocky within its own ecosystem.
-Even so, this this does not stop you from contributing to github repositories at
-both the Rocky Linux github organization repositories of the RESF github
-organization repositories.
+the terms, you will not be able to contribute to any Rocky project. Even so,
+this does not stop you from contributing to github repositories at both the
+Rocky Linux github organization repositories of the RESF github organization
+repositories.
 
 ## Pull Requests
 
