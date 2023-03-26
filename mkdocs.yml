@@ -11,11 +11,12 @@ repo_name: rocky-linux/wiki.rockylinux.org
 edit_uri: edit/main/docs/
 
 # Copyright
-copyright: Rocky Enterprise Software Foundation
+copyright: Copyright &copy; 2023 Rocky Enterprise Software Foundation
 
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default

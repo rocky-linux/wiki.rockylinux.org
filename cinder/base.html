@@ -62,8 +62,6 @@
     </script>
     {% endif %}
 
-    <script defer data-domain="wiki.rockylinux.org" data-api="https://img.resf.workers.dev/img/event" src="https://img.resf.workers.dev/js/script.js"></script>
-
     {% block extrahead %} {% endblock %}
 </head>
 
@@ -88,7 +86,7 @@
           {% if not config.theme.disable_footer_except_revision %}
             <hr>
             <p>{% if config.copyright %}
-        <small>Copyright &copy; {{ build_date_utc.strftime('%Y') }} {{ config.copyright }}</small><br>
+            <small>{{ config.copyright }}</small><br>
             {% endif %}
             <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
             </p>
