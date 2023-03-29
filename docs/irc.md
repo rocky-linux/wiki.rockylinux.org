@@ -95,9 +95,7 @@ When coming into the IRC or Mattermost channels, it's important to be able to fi
 
 * **Limit edits** - Refrain from unnecessary edits in Mattermost.
 
-    * Each time you edit a message the entire message is re-copied to IRC
-    * Please refrain from minor typographical edits.
-    * Please refrain from edits which add a small amount of text to an already large message.
+    * Edits are not propogated to IRC at this time.
     * Consider sending a new separate message instead with only the added content.
 
 * **Be patient** - You may not get an instant answer. We are all volunteers, so it may take minutes or hours to receive an answer to your question.
