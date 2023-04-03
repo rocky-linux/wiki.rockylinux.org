@@ -7,9 +7,9 @@ Anyone can propose or participate in a Special Interest Group.
 
 ## Proposal
 
-Creating a new Special Interest Group requires participation from a member of the Rocky teams or a member of the board. A SIG must meet these requirements:
+Creating a new Special Interest Group requires participation from a member of the Rocky teams or a member of the Rocky Linux project board. A SIG must meet these requirements:
 
-* The group must be related to Rocky or a use-case for Rocky or Enterprise Linux as a whole
+* The group should be related to Rocky or a use-case for Rocky or Enterprise Linux as a whole
 * There must be feedback and control into the Rocky community
 * All communication as to the work of the SIG should be public - Some matters may have to be private, and as such should be out of band
 
@@ -19,6 +19,7 @@ Creating a new Special Interest Group requires participation from a member of th
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
 * A member of the SIG should also come from the Core/RelEng team, in the case that the SIG produces packages for use on a Rocky system.
+* General reports, requests, and communication, on at least a quarterly basis, will be required with the Rocky Linux project board
 
 ## Proposal Process
 
@@ -43,6 +44,8 @@ A copy of the proposal or another version of it that is related to the original 
 
 ## Acceptance
 
-TBD
+Upon acceptance, the request for resources will be completed and the ticket will be closed out.
+
+(To be continued)
 
 {% include "releng/resources_bottom.md" %}
