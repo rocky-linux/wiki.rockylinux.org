@@ -2,7 +2,8 @@
 title: Release Engineering Team
 ---
 
-This section is primarily for documentation for the Release Engineering team.
+This section is primarily for general information for the Release Engineering
+team. A more detailed wiki can be found at the dedicated [SIG/Core Wiki](https://sig-core.rocky.page)
 
 There is a legacy section that is not maintained but is meant for historical
 references.
