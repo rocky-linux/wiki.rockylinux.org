@@ -48,6 +48,7 @@ theme:
     - search.highlight
     - search.suggest
     - toc.integrate
+    - content.action.edit
   logo: assets/icon-white.svg
 
 # Plugins
