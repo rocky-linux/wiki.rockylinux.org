@@ -26,7 +26,7 @@ jobs:
           # doc paths to exclude from checking
           exclude_files: archive/*
           # url patterns to exclude
-          exclude_pattern: '\$arch,pagure.io/includedmodule.git,pagure.io/bar.git,.iso,example.com,localhost'
+          exclude_pattern: '$arch,pagure.io/includedmodule.git,pagure.io/bar.git,.iso,example.com,localhost'
 
       - name: Affected URLs
         id: gather
