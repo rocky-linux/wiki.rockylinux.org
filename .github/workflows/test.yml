@@ -15,14 +15,18 @@ jobs:
         uses: urlstechie/urlchecker-action@master
         with:
           subfolder: docs
-          file_types: .md
+          file_types: .en.md,.md
+          include_files: '\/([\w-]+)\.(en\.)?md'
           print_all: false
           retry_count: 2
           timeout: 7
           force_pass: true # Don't block deployment
           save: "output.csv"
           verbose: true
+          # doc paths to exclude from checking
           exclude_files: archive/*
+          # url patterns to exclude
+          exclude_pattern: '\$arch,pagure\.io/(includedmodule|bar)\.git,\.iso$'
 
       - name: Affected URLs
         id: gather
