@@ -8,13 +8,84 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: check urls
-        uses: urlstechie/urlchecker-action@0.0.25
+        uses: urlstechie/urlchecker-action@master
         with:
           subfolder: docs
           file_types: .md
           print_all: false
-          retry_count: 3
-          exclude_files: docs/archive
+          retry_count: 2
+          timeout: 7
           force_pass: true # Don't block deployment
+          save: "output.csv"
+          verbose: true
+
+      - name: Affected URLs
+        id: gather
+        run: |
+          OUT="$(awk -F, '((NR>1 && $2=="failed") || NR==1 ){print}' output.csv)"
+          echo 'URLS<<EOF' >> $GITHUB_OUTPUT
+          echo $OUT >> $GITHUB_OUTPUT
+          echo 'EOF' >> $GITHUB_OUTPUT
+          echo "COUNT_U=$(( $(wc -l <<<$OUT) - 1 ))" >> $GITHUB_OUTPUT
+    outputs:
+      URLS: ${{ steps.gather.outputs.URLS }}
+      COUNT_U: ${{ steps.gather.outputs.COUNT_U }}
+
+  comment:
+    name: "Comment on PR"
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment
+        uses: actions/github-script@v5
+        env:
+          URLS: "${{ needs.test.outputs.URLS }}"
+          COUNT_U: "${{ needs.test.outputs.COUNT_U }}"
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const count_u = process.env.COUNT_U.toString();
+            const commentText = 'Test results for ' + context.payload.pull_request.head.sha + ":\n\nNumber of broken URLs: " + count_u + "\n";
+            const output = process.env.URLS.toString().trimEnd();
+            var body = "<details>\n<summary>" + commentText + "</summary>\n\n```csv\n" + output + "\n```\n\n</details>";
+
+            const fs = require('fs');
+            fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, body);
+            needNewComment = true;
+            console.log('Reviewing existing comments...');
+            for await (const { data: comments } of github.paginate.iterator(
+              github.rest.issues.listComments,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+              }
+            )) {
+              for (const comment of comments) {
+                if (comment.user.login === 'github-actions[bot]') {
+                  if (needNewComment && comment.body.includes(commentText)) {
+                    needNewComment = false;
+                  } else {
+                    console.log('Deleting comment: ' + comment.id);
+                    await github.rest.issues.deleteComment({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      comment_id: comment.id,
+                    });
+                  }
+                }
+              }
+            }
+            if (needNewComment) {
+              console.log('Creating new comment...');
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: body,
+              });
+            }
