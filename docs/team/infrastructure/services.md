@@ -44,7 +44,7 @@ Services and software in use by the Rocky Linux project
 
 <sup>[1]</sup> - Google [legal terms](https://developers.google.com/terms), [privacy policy](https://policies.google.com/privacy)
 <sup>[2]</sup> - Slack [legal terms](https://slack.com/intl/en-us/legal)
-<sup>[3]</sup> - Freenode [legal terms](https://freenode.net/policies)
+<sup>[3]</sup> - Libera [bylaws](https://libera.chat/bylaws/) and [policies](https://libera.chat/policies/)
 <sup>[4]</sup> - Matrix [legal terms](https://matrix.org/legal/)
 <sup>[5]</sup> - GitHub [terms of service](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-terms-of-service), [privacy policy](https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement)
 <sup>[6]</sup> - Figma [legal terms](https://www.figma.com/tos/), [privacy policy](https://www.figma.com/privacy/)
