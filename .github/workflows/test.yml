@@ -22,6 +22,7 @@ jobs:
           force_pass: true # Don't block deployment
           save: "output.csv"
           verbose: true
+          exclude_files: archive/*
 
       - name: Affected URLs
         id: gather
