@@ -8,6 +8,8 @@ This section goes over how to manage content in git and the community build syst
 
 All Special Interest Groups get an organization created in the RESF Git Service. Each organization will have a `meta` repository that can track issues or requests for the SIG as a whole. This is not a requirement and each SIG can dictate how issues or requests are handled.
 
+All Special Interest Groups also get a `wiki` repository in which they can manage their documentation and content for their `sig-X.rocky.page` website.
+
 There is no strict requirement on what repositories should and should not exist. It is up to the discretion of the SIG.
 
 ## Importing to the Rocky Linux GitLab
