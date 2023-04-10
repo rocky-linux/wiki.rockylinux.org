@@ -8,7 +8,7 @@ site_description: >-
 # Repository
 repo_url: https://github.com/rocky-linux/wiki.rockylinux.org
 repo_name: rocky-linux/wiki.rockylinux.org
-edit_uri: edit/main/docs/
+edit_uri: edit/development/docs/
 
 # Copyright
 copyright: Copyright &copy; 2023 Rocky Enterprise Software Foundation
