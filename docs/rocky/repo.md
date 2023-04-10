@@ -55,7 +55,6 @@ There are extra repositories offered by Rocky Linux.
 | NFV              | nfv              | Yes     | Yes     | No      |
 | SAP / SAP HANA   | sap / saphana    | No      | Yes     | No      |
 | Devel / devel    | devel            | Yes     | Yes     | No      |
-| rockyrpi         | altarch-rockyrpi | Yes\*   | Yes\*   | No      |
 
 ### Notes on: Extras
 
@@ -75,13 +74,15 @@ Packages that fall under A and B will have a `.plus` added to their version tag.
 
 ### Notes on: Devel
 
-The devel (development) repository are packages that are not normally provided in the base nor extra repositories for the purposes of providing dependencies or devel packages that may not be provided by upstream. In some releases, this repository may contain *all* packages that are provided for Rocky Linux.
+The devel (development) repository are packages that are not normally provided in the base nor extra repositories for the purposes of providing dependencies or devel packages that may not be provided by upstream. As such, it is treated as a "buildroot" repository, as this repository may contain *all* packages that are provided for Rocky Linux. Additionally, the i686 architecture is provided for the cases of building multilib, as it is not a primary architecture released.
 
-This repository should only be enabled for package building/development purposes and shouldn't be permanently enabled.
+This repository should only be enabled for package building/development purposes and **should not** be permanently enabled.
 
-### Notes on: rockyrpi
+### Notes on: SIG repositories
 
-The rockyrpi repository is being/has been moved to a SIG repository. It'll no longer be found in the base Rocky Linux repository directories in the future. All SIG repositories can be found [here](https://dl.rockylinux.org/pub/sig)
+Some Special Interest Groups provide additional repositories that enhance the Enterprise Linux experience. These repositories are installable via `rocky-release-*` and `centos-release-*` packages found in the `extras` repository.
+
+All SIG repositories can be found [here](https://dl.rockylinux.org/pub/sig)
 
 ## Vault
 
@@ -124,4 +125,4 @@ We recommend checking out the [EPEL Quickstart Guide](https://docs.fedoraproject
 
 ### Notes on: Unlisted Repositories
 
-If there is a repository that you use (or maintain) and you do not see it here, it is likely that we may not know of it. Unfortunately, this happens. If there are popular repositories that are used in the Enterprise Linux community that should be added to the list, you may drop us a line in Mattermost or IRC.
+If there is a repository that you use (or maintain) and you do not see it here, it is likely that we may not know of it. Unfortunately, this happens. If there are popular repositories that are used in the Enterprise Linux community that should be added to the list, you may drop us a line in Mattermost, IRC, or an issue to the wiki git repository.
