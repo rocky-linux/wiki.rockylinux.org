@@ -26,8 +26,11 @@ This team is lead by Brian Clemens and Gregory Curtzer, along with all the Team 
 ## Members
 
 TODO(bclemens):
-|                                Role 	| Name                          	| Email               		| Mattermost Name  	| IRC Name |
-|------------------------------------:	|-------------------------------	|---------------------		|---			| --- |
+
+| Role                             | Name                            | Email                | Mattermost Name   | IRC Name |
+|----------------------------------|---------------------------------|----------------------|------------------|-----------|
+|                                  |                                 |                      |                  |           |
+
 
 ## Join Team
 
