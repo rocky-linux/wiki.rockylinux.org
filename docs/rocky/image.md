@@ -108,10 +108,6 @@ The first format will always be a constant. Cloud images will appear in this for
 
 The second format is symlinked to the latest available image. This allows users/mirrors/service providers to have an always available and deterministic download location that can be scripted if they wish to always pull the latest available.
 
-### Notes about: Other Architectures
-
-There are plans to provide cloud images for our other primary architectures (ppc64le, s390x). At this time they are not available, but may soon be.
-
 ## About Live Images
 
 Every Rocky Linux release provides a set of live images that a user can download, boot, use, and optionally install to their systems. The live images are desktop oriented images that are primarily for desktop use cases and try to closely match similarly to what Fedora provides for their releases.
@@ -135,6 +131,13 @@ The kickstarts that help generate these live images can be found at [https://git
 
 The raspberry pi images are exactly what's labeled on the tin, images for the means of installing to an sd card to run Rocky Linux on a raspberry pi. These images are supported by SIG/AltArch community members.
 
-Traditionally, the repositories and images would be in the same directory as a major release (e.g., `/pub/rocky/9/rockyrpi`). They are now provided in [SIG](http://dl.rockylinux.org/pub/sig/) directories for Rocky Linux 9 and will likely be backported in the future.
+These are provided in the [SIG](http://dl.rockylinux.org/pub/sig/) directories.
 
 The git repository that contains the kickstart and other data related to the creation of these images are located at [https://git.resf.org/sig_altarch/RockyRpi](https://git.resf.org/sig_altarch/RockyRpi).
+
+For general quickstart information, checkout the readme for the images.
+
+| Version                                                                                       | README (direct)                                                                 |
+|-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| [Rocky Linux 8 for Raspberry Pi](https://dl.rockylinux.org/pub/sig/8/altarch/aarch64/images/) | [README](https://dl.rockylinux.org/pub/sig/8/altarch/aarch64/images/README.txt) |
+| [Rocky Linux 9 for Raspberry Pi](https://dl.rockylinux.org/pub/sig/9/altarch/aarch64/images/) | [README](https://dl.rockylinux.org/pub/sig/9/altarch/aarch64/images/README.txt) |
