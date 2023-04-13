@@ -19,9 +19,19 @@ Special Interest Groups that build and release packages will have a subgroup und
 !!! info "Additional Subgroups"
     While this is the default layout, additional subgroups can be made at the root of the SIG group. It is expected that some SIG's may not have plans to build packages as they could have an entirely separate focus.
 
+### src
+
+This area doubles as the source of the rpm itself or the rpm sources (spec file, metadata file, and so on). While this area is optional, it is likely you will be using it for managing rpm sources.
+
+For the case of sources, instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group by using dist-git/src-git.
+
+For the case of rpm sources, imports start here and would appear in `rpms` as long as the peridot catalog configuration is made aware. **Note** that all rules from the `rpms` section below apply.
+
 ### rpms
 
-This area is specifically used for rpm sources (spec file, patches, light text files). The expected format is:
+This area is specifically used for rpm sources (spec file, patches, light text files). This is generally where "imports" happen and there is no manual intervention or manual commits. Imports from "src" would land here, for example.
+
+The expected format is:
 
 * `SOURCES/...` -- light text files, scripts, patches, etc can come here (e.g., ones not in a tar ball)
 * `SPECS/name.spec` -- Your spec file comes here - note it should only be one spec file
@@ -39,6 +49,8 @@ The left column is generally a hashed sum of the archive. This *is* the name of 
 b7b91082908db35e4acbcd0221b8df4044913dc1 SOURCES/freeipa-4.9.6.tar.gz
 ```
 
+Ensure that you are also using the correct branch names. See the `Branch Names` section below.
+
 ### modules
 
 This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms, especially when there are multiple versions. See the `branch` section in this document for more information.
@@ -51,10 +63,6 @@ The format expected:
 * `.name.metadata` - Just like rpms, a metadata file is required, even though it will be empty.
 
 As of this writing, the `name.yaml` file generated in the root may be done by the Rocky Automation account.
-
-### src
-
-This area is specifically used for having the source of the rpm. This means that instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group, by using dist-git/src-git. This is an optional group and does not have to be used. These are subject to the correct branch names.
 
 ### Branch Names
 
