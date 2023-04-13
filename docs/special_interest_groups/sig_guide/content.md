@@ -19,17 +19,21 @@ Special Interest Groups that build and release packages will have a subgroup und
 !!! info "Additional Subgroups"
     While this is the default layout, additional subgroups can be made at the root of the SIG group. It is expected that some SIG's may not have plans to build packages as they could have an entirely separate focus.
 
+!!! info "Examples and Inspiration"
+    If you are ever confused on designing your imports and packages, you may look into other sig's or even Rocky Linux itself in the `staging` group.
+
 ### src
 
-This area doubles as the source of the rpm itself or the rpm sources (spec file, metadata file, and so on). While this area is optional, it is likely you will be using it for managing rpm sources.
+This area is typically for the rpm sources (spec file, metadata file, and so on), with support for dist-git/src-git coming soon. While this area is optional, it is highly likely you will be using it for managing rpm sources, and uploading the tarball sources to the lookaside.
 
-For the case of sources, instead of uploading directly to S3, sources can be managed within a repository that matches the name of an rpm in the `rpms` group by using dist-git/src-git.
+For the case of rpm sources, which is the most standard usage, imports start here. When an import occurs, these would appear in `rpms` as long as the peridot catalog configuration is made aware. **Note** that all rules from the `rpms` section below apply.
 
-For the case of rpm sources, imports start here and would appear in `rpms` as long as the peridot catalog configuration is made aware. **Note** that all rules from the `rpms` section below apply.
+!!! info "rpm rules"
+    To repeat: All rules from the `rpms` section below apply. Please ensure that you read carefully.
 
-### rpms
+#### RPM Format Rules
 
-This area is specifically used for rpm sources (spec file, patches, light text files). This is generally where "imports" happen and there is no manual intervention or manual commits. Imports from "src" would land here, for example.
+The expectation is that you will be designing repositories to be imported here in majority of cases. As this is likely, this is the expected format:
 
 The expected format is:
 
@@ -49,7 +53,11 @@ The left column is generally a hashed sum of the archive. This *is* the name of 
 b7b91082908db35e4acbcd0221b8df4044913dc1 SOURCES/freeipa-4.9.6.tar.gz
 ```
 
-Ensure that you are also using the correct branch names. See the `Branch Names` section below.
+Ensure that you are also using the correct branch names. See the `Branch Names` section later in this guide for further details.
+
+### rpms
+
+This area is specifically used for rpm sources (spec file, patches, light text files, and so on). This is where "imports" will occur and no manual intervention or manual commits are necessary. Any manual changes made will never be picked up by the build system.
 
 ### modules
 
@@ -99,7 +107,7 @@ Examples:
 
 ### Tagging
 
-In the case of an rpm or a module, there should be tags associated, otherwise the build system will *not* pick up your builds. The general format for tags are as follows:
+In the case of an rpm or a module, there should be tags associated, otherwise the build system *may not* pick up your builds. The general format for tags are as follows:
 
 * RPM: `imports/rX/NEVR` (for example, `imports/r8/bash-4.4.20-2.el8` is acceptable)
   * Note: You cannot choose a tag/branch destined for one rocky release and build on another. Ensure your tags and branches are in alignment.
@@ -168,6 +176,6 @@ package {
 
 ## Importing to S3
 
-TBD
+TBD. Please work with a member of Release Engineering or SIG/Core for assistance for now.
 
 {% include "releng/resources_bottom.md" %}
