@@ -94,7 +94,7 @@ If this applies to your SIG, you can use branch names and the proper configurati
 * `rX-sig` is considered the SIG prefix
 * `SIGNAME` would be the name of the SIG (for example, `kernel`)
 * `PKGNAME` is optional
-* `VERSION` is required
+* `VERSION` is required. This can be numerical or simply another name/acronym.
 
 Examples:
 
