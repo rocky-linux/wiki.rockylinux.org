@@ -24,6 +24,7 @@ This section goes over the current SIGs that may have sponsors and are active or
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Cloud](https://sig-cloud.rocky.page/) | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well.                                                         |
 | [Core](https://sig-core.rocky.page)    | Rocky Linux maintainers, packagers, and developers. It is primarily a mix of Release Engineering and Infrastructure.                                      |
+[AI](https://sig-ai.rocky.page/)         | Rocky Linux SIG for AI, ML, Data Science, Big Data. |
 | AltArch                                | Maintains alternative architectures that are not directly supported by Rocky Linux or maintains devices of primary architectures such as the raspberry pi |
 | Desktop                                | Supports and maintains the desktop experience for Rocky Linux                                                                                             |
 | Legacy                                 | Supports and maintains legacy hardware support for Rocky Linux                                                                                            |
