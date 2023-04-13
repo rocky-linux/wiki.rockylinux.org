@@ -22,15 +22,15 @@ This section goes over the current SIGs that may have sponsors and are active or
 
 | SIG                                    | Purpose                                                                                                                                                   |
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Cloud](https://sig-cloud.rocky.page/) | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well.                                                         |
 | [Core](https://sig-core.rocky.page)    | Rocky Linux maintainers, packagers, and developers. It is primarily a mix of Release Engineering and Infrastructure.                                      |
-| [AI](https://sig-ai.rocky.page/) | Rocky Linux Ecosystem for AI, ML, Data Science & BigData. |
+| [Cloud](https://sig-cloud.rocky.page/) | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well.                                                         |
+| [AI](https://sig-ai.rocky.page/)       | Rocky Linux Ecosystem for AI, ML, Data Science & BigData.                                                                                                 |
 | AltArch                                | Maintains alternative architectures that are not directly supported by Rocky Linux or maintains devices of primary architectures such as the raspberry pi |
 | Desktop                                | Supports and maintains the desktop experience for Rocky Linux                                                                                             |
+| Embedded                               | Embedded Systems                                                                                                                                          |
 | Legacy                                 | Supports and maintains legacy hardware support for Rocky Linux                                                                                            |
 | HPC                                    | Maintains High Performance Computing support for Rocky Linux                                                                                              |
 | Hyperscale                             | Hyperscale Computing                                                                                                                                      |
-| Embedded                               | Embedded Systems                                                                                                                                          |
 
 ### Some that have community interest, but no direct sponsors yet
 

@@ -3,6 +3,4 @@ nav:
   - ... | index.md
   - 'AWX / Ansible SCM Guidelines': 'awx_scm_guidelines.md'
   - 'PDR Delete Request': 'idm_pdr.md'
-  - 'SOP: Personal Data Request - Deletion': 'idm_sop_gdpr.md'
   - 'Software and Services': 'services.md'
-  - 'SOP: Mattermost and RAS Group Sync': 'idm_sop_mm_ras.md'

@@ -2,7 +2,9 @@
 title: Infrastructure Team
 ---
 
-This section is primarily for documentation for the Infrastructure Team.
+This section is primarily for general documentation as it pertains to the Infrastructure that runs Rocky Linux and RESF activities.
+
+For more detailed documentation, SOP's, and guidelines, see the [Infrastructure Wiki](https://infra.rocky.page)
 
 The primary contact email is [infrastructure@rockylinux.org](mailto:infrastructure@rockylinux.org)
 
