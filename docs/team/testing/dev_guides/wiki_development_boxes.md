@@ -3,7 +3,7 @@ title: Create live devbox for wiki.rockylinux.org
 author:
     - Lukas Magauer
     - Al Bowles
-revision_date: 2022-05-07
+revision_date: 2023-04-29
 ---
 
 # How to create a live system to work on the documentation
@@ -18,11 +18,7 @@ For now here is the link to [Trevor's vagrant box setup](https://github.com/tcoo
 
 ### WSL specific
 
-- Make sure the Windows Subsystem for Linux is enabled on your machine
-- Download the [Cloud image](https://github.com/rocky-linux/sig-cloud-instance-images/actions/workflows/build.yml)
-- Get the actual disk out of the image (extract rocky-8.5-docker.tar)
-- Run `wsl --import <machine-name> <path-to-vm-dir> <path-to/rocky-8.5-docker.tar> --version 2` to create the machine
-- Run `wsl -d <machine-name>` to initially login to the machine
+Create a WSL machine like [described here](https://docs.rockylinux.org/guides/interoperability/import_rocky_to_wsl), make sure to give it a name like `rocky-wiki`.
 
 ### toolbox specific
 
