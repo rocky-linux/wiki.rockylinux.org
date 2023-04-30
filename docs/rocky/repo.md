@@ -37,7 +37,7 @@ Each major release has a set of repositories that come default with the distribu
 
 ### Notes on: CRB
 
-CRB is "Code Ready Builder" - PowerTools was a carryover from CentOS, which is still the equivalent of CRB in RHEL. `crb` will be the repository name going forward in Rocky Linux and other derivatives.
+CRB is "Code Ready Builder" - PowerTools was a carryover from CentOS, which is still the equivalent of CRB in RHEL. `crb` will be the repository name going forward in Rocky Linux and other derivatives starting with version 9. Rocky Linux 8 matches CentOS's use of PowerTools in order to be as compatible as possible with what users expect from a rebuild of version 8.
 
 ### Notes on: Lack of "updates" repo
 
