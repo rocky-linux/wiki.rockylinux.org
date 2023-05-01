@@ -25,7 +25,7 @@ The following example demonstrates the testing of an open Github pull request in
 
 ***NOTE: The Github CLI tool (`gh`) is used to display PR information statically in this guide.***
 
-```
+```text
 ➜  os-autoinst-distri-rocky git:(develop) gh pr view 168
 Serial console install #168
 Merged • AlanMarshall wants to merge 1 commit into develop from serial_console • about 27 days ago
@@ -57,7 +57,7 @@ Above is the information provided in the original PR and it includes tests perfo
 
 In practice it is useful to run `openqa-clone-custom-git-refspec` in `--verbose` and `--dry-run` mode to observe it's behavior even for the Basic cases...
 
-```
+```bash
 $ openqa-clone-custom-git-refspec --verbose --dry-run \
     https://github.com/rocky-linux/os-autoinst-distri-rocky/pull/168 \
     https://openqa.rockylinux.org/tests/16080 2>&1 | tee pr-168
@@ -65,7 +65,7 @@ $ openqa-clone-custom-git-refspec --verbose --dry-run \
 
 ***NOTE: The full output of `openqa-clone-custom-git-refspece` will not be shown here.***
 
-```
+```diff
 + shift
 + true
 + case "$1" in
@@ -114,10 +114,9 @@ What can be seen from the complete `--dry-run` output for `openqa-clone-custom-g
 
 Without using `--dry-run` the final `openqa-clone-job` command shown above will be run causing the job of interest to be cloned with additional `POST` variables that will cause the repository/branch referenced in the PR to be cloned into the test directory with important files referenced in the cloned job.
 
-
 ### Run `openqa-clone-custom-git-refspec` without `--verbose --dry-run` mode...
 
-```
+```bash
 $ openqa-clone-custom-git-refspec \
     https://github.com/rocky-linux/os-autoinst-distri-rocky/pull/168 \
     https://openqa.rockylinux.org/tests/16080
@@ -126,7 +125,7 @@ Created job #16119: rocky-9.1-universal-x86_64-Build20230329-Rocky-9.1-x86_64.0-
 
 ### Cloned job information...
 
-```
+```bash
 $ openqa-cli api jobs/16119 --pretty
 {
    "job" : {
@@ -206,10 +205,9 @@ $ openqa-cli api jobs/16119 --pretty
 
 The following example demonstrates the testing of an open Github pull request in the {{ rc.prod }} openQA production system. The PR changes test code and supplies updated needles for the test.
 
-
 ### Github PR information
 
-```
+```text
 ➜  os-autoinst-distri-rocky git:(nazunalika/develop) gh pr view 162
 
 Anaconda text install #162
@@ -244,9 +242,8 @@ View this pull request on GitHub: https://github.com/rocky-linux/os-autoinst-dis
 
 ### Run `openqa-clone-custom-git-refspec` in `--verbose --dry-run` mode
 
-```
-$ openqa-clone-custom-git-refspec --verbose --dry-run https://github.com/rocky-linux/os-autoinst-d
-istri-rocky/pull/162 https://openqa.rockylinux.org/tests/13371
+```diff
+$ openqa-clone-custom-git-refspec --verbose --dry-run https://github.com/rocky-linux/os-autoinst-distri-rocky/pull/162 https://openqa.rockylinux.org/tests/13371
 + shift
 + true
 + case "$1" in
@@ -288,33 +285,40 @@ istri-rocky/pull/162 https://openqa.rockylinux.org/tests/13371
 
 This PR provides updated needles and the default behavior of `openqa-clone-custom-git-refspec` is to **not** provide an alternate location for `NEEDLES`. The `--verbose --dry-run` output needs to be modified to ensure the needles provided in the PR are used in the test.
 
-
 ### Modify `--verbose --dry-run` output to point to needles in the PR...
 
 Use output to modify clone job...
 
 #### original
-```
-$ /usr/bin/openqa-clone-job --skip-chained-deps --parental-inheritance --within-instance https://openqa.rockylinux.org 13371 _GROUP=0 TEST+=@AlanMarshall/os-autoinst-distri-rocky#anaconda-txt BUILD=AlanMarshall/os-autoinst-distri-rocky#162 CASEDIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt PRODUCTDIR=os-autoinst-distri-rocky
+
+```bash
+$ /usr/bin/openqa-clone-job --skip-chained-deps --parental-inheritance --within-instance https://openqa.rockylinux.org \
+  13371 _GROUP=0 TEST+=@AlanMarshall/os-autoinst-distri-rocky#anaconda-txt \
+  BUILD=AlanMarshall/os-autoinst-distri-rocky#162 CASEDIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt \
+  PRODUCTDIR=os-autoinst-distri-rocky
 NEEDLES_DIR=rocky/needles
 ```
 
 #### specify NEEDLES_DIR manually pointing at PR branch
-```
-$ /usr/bin/openqa-clone-job --skip-chained-deps --parental-inheritance --within-instance https://o
-penqa.rockylinux.org 13371 _GROUP=0 TEST+=@AlanMarshall/os-autoinst-distri-rocky#anaconda-txt BUILD=AlanMarshall/os-autoinst-distr
-i-rocky#162 CASEDIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt PRODUCTDIR=os-autoinst-distri-rocky
-NEEDLES_DIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git/needles#anaconda-txt
+
+```bash
+$ /usr/bin/openqa-clone-job --skip-chained-deps --parental-inheritance --within-instance https://openqa.rockylinux.org \
+  13371 _GROUP=0 TEST+=@AlanMarshall/os-autoinst-distri-rocky#anaconda-txt \
+  BUILD=AlanMarshall/os-autoinst-distri-rocky#162 CASEDIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt \
+  PRODUCTDIR=os-autoinst-distri-rocky NEEDLES_DIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt/needles
 ```
 
 #### {{ rc.prod }} 9.1
 
-```
-$ /usr/bin/openqa-clone-job --skip-chained-deps --parental-inheritance --within-instance https://openqa.rockylinux.org 13255 _GROUP=0 TEST+=@AlanMarshall/os-autoinst-distri-rocky#anaconda-txt BUILD=AlanMarshall/os-autoinst-distri-rocky#162 CASEDIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt PRODUCTDIR=os-autoinst-distri-rocky NEEDLES_DIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt/needles
+```bash
+$ /usr/bin/openqa-clone-job --skip-chained-deps --parental-inheritance --within-instance https://openqa.rockylinux.org \
+  13255 _GROUP=0 TEST+=@AlanMarshall/os-autoinst-distri-rocky#anaconda-txt \
+  BUILD=AlanMarshall/os-autoinst-distri-rocky#162 CASEDIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt \
+  PRODUCTDIR=os-autoinst-distri-rocky NEEDLES_DIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt/needles
 Created job #14228: rocky-9.1-universal-x86_64-Build20230319-Rocky-9.1-x86_64.0-install_anaconda_text@64bit -> https://openqa.rockylinux.org/t14228
 ```
 
-```
+```bash
 $ openqa-cli api jobs/14228 --pretty
 {
    "job" : {
@@ -389,12 +393,15 @@ $ openqa-cli api jobs/14228 --pretty
 
 #### {{ rc.prod }} 8.7
 
-```
-$ /usr/bin/openqa-clone-job --skip-chained-deps --parental-inheritance --within-instance https://openqa.rockylinux.org 13371 _GROUP=0 TEST+=@AlanMarshall/os-autoinst-distri-rocky#anaconda-txt BUILD=AlanMarshall/os-autoinst-distri-rocky#162 CASEDIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt PRODUCTDIR=os-autoinst-distri-rocky NEEDLES_DIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt/needles
+```bash
+$ /usr/bin/openqa-clone-job --skip-chained-deps --parental-inheritance --within-instance https://openqa.rockylinux.org \
+  13371 _GROUP=0 TEST+=@AlanMarshall/os-autoinst-distri-rocky#anaconda-txt \
+  BUILD=AlanMarshall/os-autoinst-distri-rocky#162 CASEDIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt \
+  PRODUCTDIR=os-autoinst-distri-rocky NEEDLES_DIR=https://github.com/AlanMarshall/os-autoinst-distri-rocky.git#anaconda-txt/needles
 Created job #14229: rocky-8.7-universal-x86_64-Build20230319-Rocky-8.7-x86_64.0-install_anaconda_text@64bit -> https://openqa.rockylinux.org/t14229
 ```
 
-```
+```bash
 $ openqa-cli api jobs/14229 --pretty
 {
    "job" : {

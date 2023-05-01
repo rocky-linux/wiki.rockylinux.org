@@ -11,7 +11,6 @@ rc:
 
 To complete any of the examples below you will need access to a system providing the openQA client. Typically that will be a Fedora based system/container with the `openqa-client` package and it's (~239) dependencies installed.
 
-
 ## Access Requirement
 
 ### API `GET` access
@@ -22,10 +21,9 @@ The {{ rc.prod }} openQA system allows unrestricted public access via it's web i
 
 In order to use the openQA client to interact with the {{ rc.prod }} openQA system for `POST` operations the following are required:
 
-- an account in good standing in the [{{ rc.prod }} Account Services](https://accounts.rockylinux.org) system, 
+- an account in good standing in the [{{ rc.prod }} Account Services](https://accounts.rockylinux.org) system,
 - authorization for API `POST` access from the {{ rc.prod }} Testing Team, and
-- an [openQA API key](http://open.qa/docs/#_authentication) generated on the {{ rc.prod }} openQA system.
-
+- an [openQA API key](https://open.qa/docs/#_authentication) generated on the {{ rc.prod }} openQA system.
 
 ## Configuring your openqa client
 
@@ -34,7 +32,7 @@ Per the openqa client command help you can configure your client to use your API
 The following example shows how to configure your client by the most common method used. It's possible to configure
 multiple openqa client API keys in this way.
 
-```
+```bash
 $ mkdir -p ~/.config/openqa
 
 $ vim ~/.config/openqa/client.conf
@@ -48,10 +46,9 @@ key = your_api_key
 secret = your_api_secret
 ```
 
-
 ## Testing your openqa client installation
 
-```
+```bash
 $ openqa-cli api --host http://openqa.rockylinux.org --pretty jobs/1
 {
    "job" : {
@@ -118,7 +115,6 @@ $ openqa-cli api --host http://openqa.rockylinux.org --pretty jobs/1
 
 ## References
 
-[openQA Documentation](http://open.qa/documentation/)
-
+[openQA Documentation](https://open.qa/documentation/)
 
 {% include 'content_bottom.md' %}

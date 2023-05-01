@@ -21,7 +21,7 @@ To complete any of the examples please complete the API `POST` Access steps outl
 
 First you might want to query the {{ rc.prod }} openQA system for the latest job ID for a specific job or test. The openQA client, hereafter refered to as `openqa-cli` will allow you to quickly do that via the API. Here is an example...
 
-```
+```bash
 $ openqa-cli api --host http://openqa.rockylinux.org jobs/overview groupid=0 distri=rocky version=9.1 test=install_default_upload latest=1 | jq '.'
 [
   {
@@ -33,12 +33,11 @@ $ openqa-cli api --host http://openqa.rockylinux.org jobs/overview groupid=0 dis
 
 This basically says "give me the job id and name of the most recent `install_default_upload` test for {{ rc.prod }} 9.1".
 
-
 ### Cloning a job "as-is"
 
 With that job id in hand you can now clone that job directly to your local openQA development system with...
 
-```
+```bash
 $ openqa-clone-job --from https://openqa.rockylinux.org --skip-download 22735
 Cloning children of rocky-9.1-dvd-iso-x86_64-Build20230423-Rocky-9.1-x86_64.0-install_default_upload@64bit
 Created job #23: rocky-9.1-dvd-iso-x86_64-Build20230423-Rocky-9.1-x86_64.0-install_default_upload@64bit -> http://localhost/t23
@@ -48,14 +47,14 @@ Created job #23: rocky-9.1-dvd-iso-x86_64-Build20230423-Rocky-9.1-x86_64.0-insta
 
 Now you should have the same job running in your local instance...
 
-```
+```bash
 $ openqa-cli api jobs/overview
 [{"id":23,"name":"rocky-9.1-dvd-iso-x86_64-Build20230423-Rocky-9.1-x86_64.0-install_default_upload@64bit"}]
 ```
 
 ### Basic job details
 
-```
+```bash
 $ openqa-cli api jobs/23 | jq '.'
 {
   "job": {
@@ -130,34 +129,30 @@ $ openqa-cli api jobs/23 | jq '.'
 
 ***NOTE: In the above job information you can clearly see the job was cloned from `https://openqa.rockylinux.org/tests/22735`.
 
-
 ## Advanced `openqa-clone-job`
 
 You can, of course, perform more elaborate operations while cloneing a job either from your local instance or from the production instance. Typically, this might be done to modify some of the job POST variables in the cloned job while keeping all other variables unchanged.
-
 
 ### Changing variable during clone
 
 Here is an example where the ISO is changed in the cloned job...
 
-```
+```bash
 $ openqa-clone-job --from https://openqa.rockylinux.org --skip-download 22735 ISO=Rocky-9.1-x86_64-dvd.iso
 Cloning children of rocky-9.1-dvd-iso-x86_64-Build20230423-Rocky-9.1-x86_64.0-install_default_upload@64bit
 Created job #24: rocky-9.1-dvd-iso-x86_64-Build20230423-Rocky-9.1-x86_64.0-install_default_upload@64bit -> http://localhost/t24
 ```
 
-
 ### Job overview
 
-```
+```bash
 $ openqa-cli api jobs/overview
 [{"id":24,"name":"rocky-9.1-dvd-iso-x86_64-Build20230423-Rocky-9.1-x86_64.0-install_default_upload@64bit"}]
 ```
 
-
 ### Job details
 
-```
+```bash
 $ openqa-cli api jobs/24 | jq '.'
 {
   "job": {
@@ -234,7 +229,7 @@ $ openqa-cli api jobs/24 | jq '.'
 
 You should notice that the only substantive difference between the two cloned jobs is the ISO that is used to run the `install_default_upload` test...
 
-```
+```bash
 $ openqa-cli api jobs/23 | jq '.job.settings.ISO'
 "Rocky-9.1-20221214.1-x86_64-dvd.iso"
 
