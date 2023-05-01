@@ -127,7 +127,7 @@ $ openqa-cli api jobs/23 | jq '.'
 }
 ```
 
-***NOTE: In the above job information you can clearly see the job was cloned from `https://openqa.rockylinux.org/tests/22735`.
+**NOTE: In the above job information you can clearly see the job was cloned from `https://openqa.rockylinux.org/tests/22735`.**
 
 ## Advanced `openqa-clone-job`
 
