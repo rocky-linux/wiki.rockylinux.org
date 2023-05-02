@@ -8,6 +8,7 @@ rc:
   level: Final
 ---
 # Creating your primary keypair
+
 1. Initiate the keypair generation wizard
 
         gpg --full-generate-key --expert
@@ -19,6 +20,7 @@ rc:
 1. Type a passphrase (twice)
 
 # Create a signing keypair
+
 1. Add a signing subkey
 
         gpg --expert --edit-key my@email.addr
@@ -43,6 +45,7 @@ Export the *primary keypair* (put these somewhere very safe along with revocatio
     gpg --export --armor my@email.addr > my_email_addr.public.gpg-key
 
 # Remove the *primary keypair* from your keyring
+
 1. Export all subkeys from the new keypair to a file
 
         gpg --export-secret-subkeys my@email.addr > $HOME/.gnupg/subkeys
@@ -60,6 +63,7 @@ Export the *primary keypair* (put these somewhere very safe along with revocatio
         gpg --list-secret-keys $HOME/.gnupg/secring.gpg
 
 # Revoking a *signing keypair*
+
 Find the *primary keypair* and import it (preferably into an ephemeral system like a liveUSB)
 
     gpg --import /path/to/my_email_addr.public.gpg-key /path/to/my_email_addr.private.gpg-key
@@ -67,7 +71,6 @@ Find the *primary keypair* and import it (preferably into an ephemeral system li
     gpg> revkey
     [ passphrase twice ]
     gpg> save
-
 
 # Renew an expired or expiring keypair
 
@@ -101,6 +104,7 @@ Find the *primary keypair* and import it (preferably into an ephemeral system li
     gpg --keyserver pgp.mit.edu --search-key my@email.addr
 
 # References
+
 [OpenPGP Best Practices](https://riseup.net/en/security/message-security/openpgp/best-practices#key-configuration)<br>
 [Github: Signing Commits](https://docs.github.com/en/enterprise-server@3.5/authentication/managing-commit-signature-verification/signing-commits)<br>
 [Braincoke's Log: Create a GPG Key](https://blog.braincoke.fr/security/create-a-gpg-key/)<br>

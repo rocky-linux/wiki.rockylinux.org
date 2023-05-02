@@ -17,7 +17,7 @@ To complete any of the examples please complete the API `POST` Access steps outl
 
 ## Basic POST
 
-A basic `POST` can be used for any of the default test suites for the various {{ rc.prod }} media that are made available. The following examples show some of these standard `POST`s that are commonly used by our team and will be used to demonstrate how some minor variations
+A basic `POST` can be used for any of the default test suites for the various {{ rc.prod }} media that are made available. The following examples show some of these standard `POST`s that are commonly used by our team and will be used to demonstrate how some minor variations.
 
 ### FLAVOR=boot-iso
 
@@ -30,7 +30,7 @@ $ openqa-cli api -X POST isos ISO=Rocky-9.1-x86_64-boot.iso ARCH=x86_64 \
 
 ### FLAVOR=minimal-iso
 
-This `POST` demonstrates how a different media type, in this case the minimal ISO, for an alternate {{ rc.prod }} version, in this case {{ rc.prod }} 8.7, can be triggered. As can be seen by this and the previous `POST` the `BUILD` variable will typically be designate the date, version and architecture of the test suite. Since the minimal ISO contains all packages required to conduct a ***minimal*** install of {{ rc.prod }} that is the behavior of this test suite. 
+This `POST` demonstrates how a different media type, in this case the minimal ISO, for an alternate {{ rc.prod }} version, in this case {{ rc.prod }} 8.7, can be triggered. As can be seen by this and the previous `POST` the `BUILD` variable will typically be designate the date, version and architecture of the test suite. Since the minimal ISO contains all packages required to conduct a ***minimal*** install of {{ rc.prod }} that is the behavior of this test suite.
 
 ```bash
 $ openqa-cli api -X POST isos ISO=Rocky-8.7-x86_64-minimal.iso ARCH=x86_64 \
@@ -47,7 +47,6 @@ $ openqa-cli api -X POST isos ISO=Rocky-9.1-20221214.1-x86_64-dvd.iso ARCH=x86_6
 ```
 
 These three test suites provide for the minimal testing of all ISOs produced for a given release of {{ rc.prod }}. 
-
 
 ## Advanced POST
 
@@ -76,7 +75,6 @@ $ openqa-cli api -X POST isos ISO=Rocky-9.1-20221214.1-x86_64-dvd.iso ARCH=x86_6
   DISTRI=rocky FLAVOR=universal VERSION=9.1 CURRREL=9 BUILD=20230409-Rocky-9.1-x86_64.0
 ```
 
-
 ## Collection of test suites by BUILD
 
 A feature of openQA is that for a given job group test suites which use the same `BUILD` identifier are collected into a single view in the web UI.
@@ -89,7 +87,6 @@ Thus, the examples show above which all use `BUILD=20230409-Rocky-9.1-x86_64.0` 
 
 ## References
 
-[openQA Documentation](http://open.qa/documentation/)
-
+[openQA Documentation](https://open.qa/documentation/)
 
 {% include 'content_bottom.md' %}

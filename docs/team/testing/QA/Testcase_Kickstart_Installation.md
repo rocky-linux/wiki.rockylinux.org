@@ -23,7 +23,7 @@ This test case verifies that installations via both local and remote Kickstart c
 1. Connect the USB stick to the test system
 {% include 'testing/qa_setup_boot_to_media.md' %}
 1. Hit the Tab key to edit the boot command
-1. Provide a local Kickstart file by supplying the GRUB boot option `inst.ks=file:/path/to/local.ks` or a remote Kickstart file by supplying the GRUB boot option `inst.ks=https://dl.rockylinux.org/remote.ks`.
+1. Provide a local Kickstart file by supplying the GRUB boot option `inst.ks=file:/path/to/local.ks` or a remote Kickstart file by supplying the GRUB boot option `inst.ks=https://git.resf.org/testing/createhdds/raw/branch/rocky/server.ks`.
 
 ## How to test
 1. Continue booting the installer as normal.
