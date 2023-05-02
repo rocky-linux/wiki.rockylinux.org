@@ -14,6 +14,7 @@ jobs:
       - name: check urls
         uses: urlstechie/urlchecker-action@master
         with:
+          branch: ${{ github.event.pull_request.head.sha }}
           subfolder: docs
           file_types: .en.md,.md
           include_files: '\/([\w-]+)\.(en\.)?md'
