@@ -83,13 +83,14 @@ When a new Rocky Linux minor release arrives (using version format `X.Y`, any in
 
 * The previous version is no longer supported by Release Engineering and the community
 * This version is no longer updated and is moved to the [vault](http://dl.rockylinux.org/vault/rocky/)
-* You are recommended to update your system with `dnf update`
+* This version does not receive bug fix nor security updates.
+* You are recommended to update your system with `dnf update`.
 
 ### Example: An End of Life Release
 
 When a Rocky Linux release has reached its End of Life date (for example, May of 2029), the following is true:
 
-* The release is no longer supported in full by Release Engineering or the community
+* The release is no longer supported in full by Release Engineering and the community
 * The final version is moved to the [vault](http://dl.rockylinux.org/vault/rocky/).
 * This release no longer receives updates and thus no longer supported.
 * You are recommended to install a supported Rocky Linux version and migrate your data.
