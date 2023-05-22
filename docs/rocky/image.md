@@ -92,21 +92,25 @@ Every Rocky Linux release gets a set of cloud images that can be consumed into t
 
 There are two formats for the images:
 
-| Format                             | Type       | Context                     |
-|------------------------------------|------------|-----------------------------|
-| Rocky-X-CLOUD-X.Y-DATE-ARCH.FORMAT | Image File | Any given cloud image       |
-| Rocky-X-CLOUD.latest.ARCH.FORMAT   | Symlink    | Symlink to the latest image |
+| Format                                    | Type       | Context                             |
+|-------------------------------------------|------------|-------------------------------------|
+| Rocky-X-CLOUD{-TYPE}-X.Y-DATE-ARCH.FORMAT | Image File | Any given cloud image               |
+| Rocky-X-CLOUD{-TYPE}.latest.ARCH.FORMAT   | Symlink    | Symlink to the latest image         |
+| Rocky-X-CLOUD.latest.ARCH.FORMAT          | Symlink    | Symlink to the latest primary image |
 
 * X is the major version
 * Y is the minor version
 * ARCH is the architecture
 * DATE will be the date of when the image was produced
 * CLOUD will the type of cloud image (e.g., GenericCloud)
+* TYPE will be the type of image such as Base or LVM, if applicable
 * FORMAT will be `raw` or `qcow2`
 
 The first format will always be a constant. Cloud images will appear in this format in majority of cases and there may be more than one at any given time. Updates can occur for newer kernels or to address issues in previous versions.
 
-The second format is symlinked to the latest available image. This allows users/mirrors/service providers to have an always available and deterministic download location that can be scripted if they wish to always pull the latest available.
+The second format is a symlink to the latest cloud image of that variant and type, if applicable.
+
+The third format is symlinked to the latest available image. This allows users/mirrors/service providers to have an always available and deterministic download location that can be scripted if they wish to always pull the latest available. This is typically the "Base" variant.
 
 ## About Live Images
 
