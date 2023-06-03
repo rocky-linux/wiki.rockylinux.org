@@ -25,11 +25,11 @@ This team is lead by Brian Clemens and Gregory Curtzer, along with all the Team 
 
 ## Members
 
-TODO(bclemens):
 
-| Role                             | Name                            | Email                | Mattermost Name   | IRC Name |
-|----------------------------------|---------------------------------|----------------------|------------------|-----------|
-|                                  |                                 |                      |                  |           |
+| Role                             | Name                            | Email                | Mattermost Name  |  IRC Name    |
+|----------------------------------|---------------------------------|----------------------|------------------|--------------|
+|  Team Lead / Community Manager   | Krista Burdine                  | krista@resf.org      | @grammaresque    | grammaresque |
+|  Star Trek Meme Officer          | Neil Hanlon                     | neil@resf.org        | @neil            | neil         |
 
 
 ## Join Team
