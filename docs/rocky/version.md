@@ -6,12 +6,12 @@ This page goes over the Rocky Linux Release Versions, their support, timelines, 
 
 ## Current Supported Releases
 
-Below is a table of Rocky Linux versions, with accompanying general release and (planned or are) end of life dates.
+Below is a table of Rocky Linux versions, with accompanying general release and (planned or are planned) end of life dates.
 
-| Major Version  | Codename       | Release Date  | End of Life          |
-|----------------|----------------|---------------|----------------------|
-| Rocky Linux 8  | Green Obsidian | June 21, 2021 | May 31, 2029         |
-| Rocky Linux 9  | Blue Onyx      | July 14, 2022 | May 31, 2032         |
+| Major Version  | Codename       | Release Date  | End of Life          | Current Version    |
+|----------------|----------------|---------------|----------------------|--------------------|
+| Rocky Linux 8  | Green Obsidian | June 21, 2021 | May 31, 2029         | 8.8 (May 30, 2023) |
+| Rocky Linux 9  | Blue Onyx      | July 14, 2022 | May 31, 2032         | 9.2 (May 20, 2023) |
 
 This is a general idea of the release date to end of life date. See the timeline and version policy below for a more in-depth look and big picture information.
 
@@ -28,9 +28,11 @@ For a major release of Red Hat Enterprise Linux and thus Rocky Linux, the follow
 
 * After five (5) years of minor releases, Enterprise Linux and derivatives go into maintenance only mode for the remainder of its life
 
-The question often becomes, how often are releases? Based on the cadence set out by Red Hat, the months of May and November are generally when minor releases should be released. If May is a guide, that is also when major versions should be released.
+### Release Cadence
 
-Below is a general guideline (which will likely have mistakes) for the "full support" cycle for an Enterprise Linux distribution.
+Based on the cadence set out by Red Hat, the months of May and November are generally when minor releases should be released. May is also generally when major releases arrive. Rocky Linux attempts to follow as closely as possible to this same cadence.
+
+Below is a general guideline (based on Red Hat documentation) for the "full support" cycle for an Enterprise Linux distribution.
 
 | Version | Month    |
 |---------|----------|
@@ -45,6 +47,8 @@ Below is a general guideline (which will likely have mistakes) for the "full sup
 | .8      | May      |
 | .9      | November |
 | .10     | May      |
+
+Upon a new minor release (`X.Y+1`), the previous Rocky Linux release is no longer supported and is moved to the vault.
 
 After `X.10` is released, the following may be true:
 
@@ -79,7 +83,7 @@ See the examples below.
 
 ### Example: An Unsupported Release
 
-When a new Rocky Linux minor release arrives (using version format `X.Y`, any increment of `Y`) the following is true:
+When a new Rocky Linux minor release arrives (using version format `X.Y`, `Y+1` or an increment of `Y`) the following is true:
 
 * The previous version is no longer supported by Release Engineering and the community
 * This version is no longer updated and is moved to the [vault](http://dl.rockylinux.org/vault/rocky/)
@@ -88,7 +92,7 @@ When a new Rocky Linux minor release arrives (using version format `X.Y`, any in
 
 ### Example: An End of Life Release
 
-When a Rocky Linux release has reached its End of Life date (for example, May of 2029), the following is true:
+When a Rocky Linux release has reached its End of Life date typically after ten (10) years (for example, May of 2029), the following is true:
 
 * The release is no longer supported in full by Release Engineering and the community
 * The final version is moved to the [vault](http://dl.rockylinux.org/vault/rocky/).
