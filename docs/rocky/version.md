@@ -26,7 +26,7 @@ For a major release of Red Hat Enterprise Linux and thus Rocky Linux, the follow
 * Major version is released with support of ten (10) years (exception is Rocky Linux 8, which started at 8.4)
 * Five (5) years of minor release updates
 
-    * There are generally ten (10) minor release updates
+    * There is generally one (1) major release with ten (10) minor release updates
     * Minor releases come typically every six (6) months
     * Minor releases generally come with new features, modules, and sometimes software rebases
 
