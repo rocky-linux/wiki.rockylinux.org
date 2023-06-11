@@ -176,7 +176,7 @@ Kernel rebuilds are not recommended nor supported for Rocky Linux. Before buildi
 * **Are you ABSOLUTELY sure**? 99.9% of the users no longer need to build their own kernel. You may simple need a kernel module/driver, in which case, you can use [elrepo](https://elrepo.org) or build your own kernel module (kmod/dkms)
 * **Are you sure you don't just want a newer kernel version**? Newer kernels can be found at [elrepo](https://elrepo.org)
 
-As a final warning, you if you break the kernel, you are on the hook for your system. Rocky Linux volunteers or developers are unable to assist you with these issues.
+As a final warning, if you break the kernel, you are on the hook for your system. Rocky Linux volunteers or developers are unable to assist you with these issues.
 
 ### Upgraded Systems
 
@@ -227,7 +227,7 @@ So you have a VPS and you've discovered `dnf` is not working as it should. This 
 
 The above tend to only install parts of Rocky Linux on their virtual servers and some are known for entirely removing `dnf` from the system entirely or altering the settings entirely. Typical changes are that they exclude locally modified packages from our base repositories. You can verify this by running `grep -ir exclude /etc/{yum,dnf}*` which will show what they are excluding. Some will also manage the box outside of the package manager.
 
-Why these provides do this is unclear. Regardless of their reasons, this approach is seen negatively as `dnf` has mechanisms to protect specific packages from change.
+Why these providers do this is unclear. Regardless of their reasons, this approach is seen negatively as `dnf` has mechanisms to protect specific packages from change.
 
 Before you try anything, please **STOP** and ask your provider **why** they removed `dnf` and how are you supposed to keep your system up to date/secure without it.
 
