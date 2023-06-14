@@ -24,6 +24,8 @@ Creating a new Special Interest Group requires participation from a member of th
 * A member of the SIG should also come from the Core/RelEng team, in the case that the SIG produces packages for use on a Rocky system.
 * General reports, requests, and communication, on at least a quarterly basis, will be required with the Rocky Linux project board
 
+It is also highly recommended to have packaged software (if applicable) to present in the proposal, e.g. on a Fedora Copr project or another setting.
+
 ## Proposal Process
 
 It is up to the requestor to:
