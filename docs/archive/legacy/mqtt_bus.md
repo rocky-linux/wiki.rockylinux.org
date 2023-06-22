@@ -1,6 +1,13 @@
 ---
 title: CentOS MQTT message bus
 ---
+
+!!! danger
+  As of 2023-06-21, [updates are no longer published to git.centos.org](https://www.redhat.com/en/blog/furthering-evolution-centos-stream). This page will eventually be replaced with documentation on the Fedora MessageBus which contains the events for publishing into gitlab.com/redhat/centos-stream, and how we have implemented inside our build system.
+
+  As such, the information below should be considered historical and may move to the Archive at some time in the future. Proceed with caution.
+
+
 CentOS provides a message bus which can be used for subscribing to certain messages on their git repository.
 
 More information, and setup on subscribing to their message bus can be found at [https://wiki.centos.org/Sources?highlight=%28mqtt%29#Message_Broker_.28MQTT.29](https://wiki.centos.org/Sources?highlight=%28mqtt%29#Message_Broker_.28MQTT.29).
