@@ -89,11 +89,10 @@ There may be cases where:
 
 If this applies to your SIG, you can use branch names and the proper configuration in peridot to make this separation possible. The names of the branches are used to separate packages if need be. See the ideal template:
 
-`rX-sig-SIGNAME[-PKGNAME]-VERSION`
+`rX-sig-SIGNAME-VERSION`
 
 * `rX-sig` is considered the SIG prefix
 * `SIGNAME` would be the name of the SIG (for example, `kernel`)
-* `PKGNAME` is optional
 * `VERSION` is required. This can be numerical or simply another name/acronym.
 
 Examples:
