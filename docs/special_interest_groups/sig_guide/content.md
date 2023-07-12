@@ -108,7 +108,7 @@ Examples:
 
 In the case of an rpm or a module, there should be tags associated, otherwise the build system *may not* pick up your builds. The general format for tags are as follows:
 
-* RPM: `imports/rX/NEVR` (for example, `imports/r8/bash-4.4.20-2.el8` is acceptable)
+* RPM: `imports/rX[-SIGNAME-VERSION]/NEVR` (for example, `imports/r8/bash-4.4.20-2.el8` is acceptable)
   * Note: You cannot choose a tag/branch destined for one rocky release and build on another. Ensure your tags and branches are in alignment.
 
 * Module: `imports/rX-stream-STREAM_NAME_OR_VERSION/MODULE_NAME-STREAM_NAME_OR_VERSION-X0Y00YYYYMMDDHHMMSS.ZZZZZZZZ`
