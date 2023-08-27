@@ -109,13 +109,15 @@ Examples:
 In the case of an rpm or a module, there should be tags associated, otherwise the build system *may not* pick up your builds. The general format for tags are as follows:
 
 * RPM: `imports/rX[-SIGNAME-VERSION]/NEVR` (for example, `imports/r8/bash-4.4.20-2.el8` is acceptable)
-  * Note: You cannot choose a tag/branch destined for one rocky release and build on another. Ensure your tags and branches are in alignment.
+  * Note: You cannot choose a tag/branch destined for one rocky release and build on another. Ensuring your tags and branches are in alignment will generally make things easier for you and other maintainers.
 
 * Module: `imports/rX-stream-STREAM_NAME_OR_VERSION/MODULE_NAME-STREAM_NAME_OR_VERSION-X0Y00YYYYMMDDHHMMSS.ZZZZZZZZ`
   * Note: X is the major version, Y is the minor version. MODULE_NAME and STREAM_NAME_OR_VERSION are required. Ensure you fill out the timestamp as appropriate. You may fill in the final Z's with a portion of the commit hash that you are using for the tag.
   * Example: `imports/r8-stream-1.4/389-ds-1.4-8060020220204145416.ce3e8c9c`
 
-### Peridot Configuration
+## Peridot Project Configuration
+
+### peridot-config repository
 
 Each Special Interest Group will need a repository called `peridot-config` which will contain the content of the special interest group. This helps identify what repositories will exist and what exists in each repository. The default file is `catalog.cfg`. Below is just a simple example using SIG/Core.
 
@@ -173,8 +175,27 @@ package {
 }
 ```
 
+### Dist Tags
+
+It is expected that your SIG will have a "shorthand" name assigned to you (either by core or yourself during the proposal). This name will be part of the `dist` macro that gets applied to your builds in Peridot, which serve as identifiers of where the package was built and who the package was built for. Because of this, it is a requirement that the group project's packages all have it set for the entire scope of the group. For example, if the SIG's name is "Messaging and Communication", the shorthand would be "mc", and an example package would be named:
+
+`erlang-22.0.7-1.el9.mc.x86_64.rpm`
+
+Some single word SIGs can be abbreviated too. Like `hyperscale` can become `hs`. There may be cases where this isn't possible and exceptions can be granted. `cloud` is an example of this.
+
+**Note**: In majority of cases, this will be configured for the SIG and won't be user modifiable for consistency purposes.
+
+More examples of dist tags are below:
+
+| SIG        | Dist Tag    |
+|------------|-------------|
+| altarch    | elX.altarch |
+| cloud      | elX.cloud   |
+| core       | elX.core    |
+| hyperscale | elX.hs      |
+
 ## Importing to S3
 
-TBD. Please work with a member of Release Engineering or SIG/Core for assistance for now.
+TBD. Please work with a member of Release Engineering or SIG/Core for assistance for now. In a future peridot version, there should be more capabilities to enable users further.
 
 {% include "releng/resources_bottom.md" %}
