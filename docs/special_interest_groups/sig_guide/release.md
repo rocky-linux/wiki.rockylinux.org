@@ -11,10 +11,10 @@ It is expected with Special Interest Groups that are delivering packages to have
 * Repo file(s) for dnf
 * GPG key assosciated with the signing of your packages
 
-During the initial request process, a GPG key is assigned to you in the build system to be used to sign your packages. A release package must be requested to be built and submitted to the extras repository. A request can be opened at git.rockylinux.org/rocky/rocky-linux or git.resf.org/sig-core/meta
+During the initial request process, a GPG key is assigned to you in the build system to be used to sign your packages. A release package must be requested to be built and submitted to the extras repository. A request can be opened at [SIG/Core Issues](git.resf.org/sig-core/meta).
 
 !!! info "Key/Package Restrictions"
-    The Special Interest Group cannot submit a key nor can they have access to the private key. At this time, a SIG cannot submit their own release package.
+    The Special Interest Group cannot submit a key nor can they have access to the private key. A SIG cannot submit their own release package.
 
 When you are opening the request, use the following template:
 
