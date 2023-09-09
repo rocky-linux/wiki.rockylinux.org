@@ -14,7 +14,7 @@ It is expected with Special Interest Groups that are delivering packages to have
 !!! info "Key/Package Restrictions"
     The Special Interest Group cannot submit a key nor can they have access to the private key. A SIG cannot submit their own release package.
 
-During the initial request process, a GPG key is assigned to you in the build system to be used to sign your packages. A release package must be requested to be built and submitted to the extras repository. In the event that a release package was not requested nor fulfilled during the initial request, a new request can be opened at [SIG/Core Issues](git.resf.org/sig-core/meta).
+During the initial request process, a GPG key is assigned to you in the build system to be used to sign your packages. A release package must be requested to be built and submitted to the extras repository. In the event that a release package was not requested nor fulfilled during the initial request, a new request can be opened at [SIG/Core Issues](https://git.resf.org/sig_core/meta).
 
 When submitting the request, click on the "[New Issue](https://git.resf.org/sig_core/meta/issues/new/choose)" button and then click "[Get Started](https://git.resf.org/sig_core/meta/issues/new?template=.gitea%2fISSUE_TEMPLATE%2fsig_release_request.md)" for "Requests for SIG Release Package" and fill out the template as shown, which includes:
 
