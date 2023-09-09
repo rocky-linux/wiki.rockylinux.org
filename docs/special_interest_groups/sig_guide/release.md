@@ -9,7 +9,7 @@ title: Releasing Packages
 It is expected with Special Interest Groups that are delivering packages to have associated release packages that provide:
 
 * Repo file(s) for dnf
-* GPG key assosciated with the signing of your packages
+* GPG key associated with the signing of your packages
 
 During the initial request process, a GPG key is assigned to you in the build system to be used to sign your packages. A release package must be requested to be built and submitted to the extras repository. A request can be opened at [SIG/Core Issues](https://git.resf.org/sig_core/meta).
 
@@ -18,7 +18,7 @@ During the initial request process, a GPG key is assigned to you in the build sy
 
 When you are opening the request, use the following template:
 
-* Title: [SIG] NAME_OF_SIG - Release Package Request
+* Title: [SIG] Request for SIG Release Package: NAME_OF_SIG
 * How many repositories - By default a "common" repository is assigned.
 
   * Do you plan on having multiple versions of some software? (example: ceph, glusterfs)
@@ -33,7 +33,7 @@ TBD
 
 ### Directory Format for Repositories (Informational)
 
-This is more informational more than anything, but it is important for a SIG to know where their exported repositories will live.
+This is more informational than anything, but it is important for a SIG to know where their exported repositories will live.
 
 Repositories will be formatted as such:
 
@@ -42,7 +42,7 @@ Repositories will be formatted as such:
 This basically means that the sig directory will live along side the main distribution directories, potentially at the root a mirror. At `/pub/rocky` you'll see each supported major version. At `/pub/sig` you'll also see major versions, with a different structure. Let's break it down.
 
 * `NAME` can be the name of the SIG or the abbreviation code (eg, cloud, kernel, mcs)
-* `MAJOR` is the major version that's being targetted (8, 9, so on)
+* `MAJOR` is the major version that's being targeted (8, 9, so on)
 * `ARCH` is for the architecture
 * `PKG_OR_REPO` could be for the specific set of packages of just any repository. (For example, you could have a "common" directory alongside the others)
 
