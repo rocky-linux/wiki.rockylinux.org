@@ -61,7 +61,7 @@ This area is specifically used for rpm sources (spec file, patches, light text f
 
 ### modules
 
-This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms, especially when there are multiple versions. See the `branch` section in this document for more information.
+This area is specifically used for modularity. If you plan on maintaining multiple versions of a package and want to use modularity, this is the place to do it. The branch names *should always match* with rpms. For example, say your module is `idm` and you have a stream named `DL1`. The branch could be `rX-stream-DL1`.
 
 The name of the module does not necessarily have to match the actual package or package names. For example, the idm module. There is no package named `idm`, but each package as part of the module has the correct branch names as referenced in the source yaml for the module.
 
