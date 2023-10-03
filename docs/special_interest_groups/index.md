@@ -29,8 +29,9 @@ This section goes over the current SIGs that may have sponsors and are active or
 | Desktop                                | Supports and maintains the desktop experience for Rocky Linux                                                                                             |
 | Embedded                               | Embedded Systems                                                                                                                                          |
 | Legacy                                 | Supports and maintains legacy hardware support for Rocky Linux                                                                                            |
-| HPC                                    | Maintains High Performance Computing support for Rocky Linux                                                                                              |
+| [HPC](https://sig-hpc.rocky.page/)     | Maintains High Performance Computing support for Rocky Linux                                                                                              |
 | Hyperscale                             | Hyperscale Computing                                                                                                                                      |
+| [Security](https://sig-security.rocky.page/)|Extra security features and security-hardened override packages (replacing those from the main distribution) for Rocky Linux and other EL distros     |
 
 ### Some that have community interest, but no direct sponsors yet
 
