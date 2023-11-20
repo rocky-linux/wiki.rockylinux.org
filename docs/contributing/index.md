@@ -17,9 +17,7 @@ interest you. Here's some basic things you can do to get you going:
 
 * Join our [Mattermost](https://chat.rockylinux.org) and search for channels that interest you
 
-* Join our [Matrix Space or IRC channels](../irc.md)
-
-* Join our [IRC](https://libera.chat) channels, which are bridged with Matrix and Mattermost.
+* Join our [IRC channels](../irc.md), which are bridged with Mattermost.
 
 * Check out our [forums](https://forums.rockylinux.org) and [reddit](https://reddit.com/r/rockylinux)
 

@@ -4,6 +4,9 @@ title: General Chat and IRC
 
 This page goes over General Chat and IRC/Matrix general information and etiquette.
 
+!!! note
+    IRC (libera.chat) and Matrix are no longer bridged by default. You will find that if you join the Matrix channels, they are quiet. It is recommended that you join us via [Mattermost](https://chat.rockylinux.org) or via [IRC](https://libera.chat).
+
 IRC and Matrix are common communication tools used in the open source community. Several channels of Mattermost, Libera IRC channels, and a matrix space are bridged together to ensure the community can communicate effectively and not be splintered. The Rocky Linux teams manage and maintain the mattermost channels and the various Libera IRC channels such as `#rockylinux` and `#rockylinux-social`. A list of our channels can be found in `Bridge Information` on the left hand side of this wiki page.
 
 More information about Libera can be found [here](https://libera.chat).
