@@ -66,7 +66,7 @@ Rocky Linux attempts to follow the same pattern as Red Hat Enterprise Linux. As 
 
 For Rocky Linux 8, previous versions of packages will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates).
 
-Rocky Linux 9 does not currently support this policy and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18).
+Rocky Linux 9 does not currently support this policy and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18). Older versions of packages can by found in [Koji](https://kojidev.rockylinux.org) when they're uploaded.
 
 For all Rocky Linux versions: When a new minor release arrives, all previous updates/versions are *not* carried over.
 
@@ -103,7 +103,7 @@ When a Rocky Linux release has reached its End of Life date typically after ten 
 * This release no longer receives updates and thus no longer supported.
 * You are recommended to install a supported Rocky Linux version and migrate your data.
 
-If you cannot install a new system and migrate and you still need support for your system or systems, you may be able to find a support provider. Note that support providers will maintain their own packages and policies outside of the Rocky Linux ecosystem, and thus their policies *do not* apply here. The release is still considered EOL and unsupported from the Rocky Linux point of view.
+If you cannot install a new system and migrate and you still need support for your system or systems, you may be able to find a support provider. Note that support providers will maintain their own packages and policies outside of the Rocky Linux ecosystem, and thus their policies *do not* apply here. The release is still considered EOL and unsupported by the Rocky Linux project.
 
 ## Beta to Stable Policy
 
