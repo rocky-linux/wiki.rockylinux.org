@@ -185,6 +185,7 @@ This section goes over the general guidelines for the main backgrounds included 
 * **General Theme**: Each Rocky release has a codename, and thus is the general theme. Examples.
     * Rocky 8: `Green Obsidian` - Submissions only to extras
     * Rocky 9: `Blue Onyx` - This should be generally a blue theme/color scheme
+    * Rocky 10: `Red Quartz` - This should be generally a red-like theme/color scheme
 * **Required Resolution(s) for Normal Submissions**:
     * Resolution must **not** exceed nor fall below: 4092x3072
 
