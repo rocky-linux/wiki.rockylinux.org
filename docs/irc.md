@@ -25,9 +25,12 @@ More information about Libera can be found [here](https://libera.chat).
 
 ## Bridge Information
 
-Current mappings below:
+Current mappings are below. Note that this is not an all inclusive list.
 
-| IRC                         | Mattermost                                                                         | Matrix                                                                              |
+!!! note
+    Since matrix and IRC are no longer bridged, the mapping is no longer 1:1.
+
+| IRC                         | Mattermost                                                                         | Matrix (no longer bridged)                                                          |
 |-----------------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | #rockylinux                 | [~general](https://chat.rockylinux.org/rocky-linux/channels/town-square)           | [Rocky Linux General / Support](https://matrix.to/#/#rockylinux-support:matrix.org) |
 | #rockylinux-devel           | [~development](https://chat.rockylinux.org/rocky-linux/channels/development)       | [Rocky Linux Development](https://matrix.to/#/#rockylinux-development:matrix.org)   |
@@ -75,12 +78,14 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 * **[Broken "V" Servers](#broken-v-servers)**
 * **Old minor/point releases of Rocky Linux**
-* **Upgrades or upgraded Rocky Linux systems (eg, upgrading 8 to 9)**
+* **Upgrades or upgraded Rocky Linux systems (e.g., upgrading 8 to 9)**=
+* **Upgrades of the default python version (e.g. python 3.6 to 3.9 or python 3.9 to 3.11)**
 * **Politics or Profanity**
 * **Distro X is better/worse than Rocky**
 * **Personal drama from other channels, namespaces, or other users**
 
-    * Repeat offenders will be quieted or banned from the `#rockylinux*` namespace
+    * IRC: Repeat offenders will be quieted or banned from the `#rockylinux*` namespace
+    * Mattermost: Repeat offenders will be banned from the Rocky Linux mattermost instance
 
 ## Etiquette
 
