@@ -52,6 +52,9 @@ proper manner.
     * An archive created by sosreport
     * Patch files or workarounds
 
+  Do NOT attempt to submit arbritrary scripts as they will be rejected. This
+  includes but is not limited to sh, py, pl files.
+
 * Do not submit support questions - The Bug Tracker is not a support desk; as
   such the tickets will be closed if they are asking for assistance or support.
   You are recommended to go to our reddit, Freenode channel (#rockylinux), or

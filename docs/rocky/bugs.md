@@ -10,7 +10,7 @@ The Rocky Linux Project has several ways of reporting issues or requesting enhan
 
 Bugs are an inevitable part of any Linux distribution. Users may find problems and want a way to report the bug.
 
-All bug reports (which includes packages from Special Interest Groups) should be reported at our [Bug Tracker](https://bugs.rockylinux.org).
+All bug reports (which includes some packages from Special Interest Groups) should be reported at our [Bug Tracker](https://bugs.rockylinux.org).
 
 When reporting bugs, ensure you have read the [Bug Tracker Guidelines](../guidelines/bug_tracker_guidelines.md) so you can make a proper bug report.
 
@@ -45,9 +45,11 @@ Examples of SIG's that use "meta" are below:
 
 ## Other Resources
 
-If you have reproduced a bug or an issue in RHEL (or even Stream), or you would like to request something for a future Enterprise Linux version (that will make it to Rocky Linux in a future version), you are encouraged to submit a report to the [Red Hat Jira](https://issues.redhat.com). Below are some quick links for submitting such requests.
+If you have reproduced a bug or an issue in RHEL or even CentOS Stream, or you would like to request something for a future Enterprise Linux version (that will make it to Rocky Linux in a future version), you are encouraged to submit a report to the [Red Hat Jira](https://issues.redhat.com). Below are some quick links for submitting such requests.
 
 * [Red Hat Enterprise Linux](https://issues.redhat.com/projects/RHEL/issues/RHEL-2997?filter=allopenissues) - For RHEL bugs found in both Rocky Linux and RHEL
 * [CentOS Stream](https://issues.redhat.com/projects/CS/issues/CS-1759?filter=allopenissues) - Bugs or RFE's for CentOS Stream
+
+You may also see if a feature, package, or otherwise can be included into a SIG, plus, or extras repositories if they fit. You can also request a package to EPEL at the [Red Hat Bugzilla](https://bugzilla.redhat.com).
 
 [^1]: Packages may be for a core Rocky Linux package or a Special Interest Group package. Note that if an RFE is put in for a Rocky Linux core package, it will most likely be rejected and you may be encouraged to request it upstream to CentOS Stream. If the RFE is to a package that contains `rocky-` in the name *or* it is a package that we actively patch, it may be considered. RFE's to prepare for upcoming features from Stream to RHEL (e.g. to prepare for said feature) is encouraged.
