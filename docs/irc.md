@@ -65,7 +65,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 
     * If a problem is reproducible or its an issue out of our control, it is recommended to go `#epel`
 
-* **If the question is related to drivers from elrepo**
+* **If the question is related to drivers from elrepo or rpmfusion**
 
     * It is common for users to be using hardware that is either not supported in a current Rocky release or needs a better driver (e.g., nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Most users will support one another in this scenario. elrepo volunteers will be in the channel as well assist users. Other issues should go to `#elrepo` or where topical, such as their [Bug Tracker](https://elrepo.org/bugs).
 
