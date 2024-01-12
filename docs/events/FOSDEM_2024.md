@@ -9,7 +9,7 @@
 CentOS Connect is the contributor conference for CentOS, focusing on CentOS Stream, Special Interest Groups, and the entire Enterprise Linux ecosystem. CentOS Connect at FOSDEM happens February 1-2, 2024, as part of the FOSDEM Fringe.
 
 * Website: [connect.centos.org](https://connect.centos.org/)
-* Location: [Raddison Collection Hotel, Grand Place](https://www.radissonhotels.com/en-us/hotels/radisson-collection-grand-place-brussels) - Royal Room
+* Location: [Raddison Collection Hotel, Grand Place]([https://www.radissonhotels.com/en-us/hotels/radisson-collection-grand-place-brussels](https://www.radissonhotels.com/en-us/hotels/radisson-collection-grand-place-brussels?cid=a:se+b:gmb+c:emea+i:local+e:rco+d:ukirwe+h:BEBRUROY)) - Royal Room
   * 47 Rue du Fossé aux Loups, Brussels,1000,Belgium 
 * Time Zone: Central European Time (CET), or UTC+1
 * Schedule: not available yet
