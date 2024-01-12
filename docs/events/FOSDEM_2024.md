@@ -33,6 +33,11 @@ First time at FOSDEM? Read the FOSDEM practical info guide to learn more.
 
 The events are easily reachable by public transportation. For details, see below. If you are afraid of getting lost, the following links might help you:
 
+### CentOS Connect - Raddison Collection Hotel, Grand Place (Royal Room)
+
+* [OpenStreetMap](http://openstreetmap.org/?lat=50.84965&lon=4.357013&zoom=15&layers=B000FTF)
+* [Google Maps](http://maps.google.com/maps?ie=UTF8&z=17&ll=50.84965,4.357013&spn=0.005369,0.011373&om=1)
+
 ### FODSEM 2024 - ULB Campus
 
 * [OpenStreetMap](http://openstreetmap.org/?lat=50.81284&lon=4.3805&zoom=15&layers=B000FTF)
