@@ -83,6 +83,7 @@ If you are a Rocky Contributor or Community member planning on attending FOSDEM 
 |No|Name|RAS|Thu, 1 Feb|Fri, 2 Feb|Sat, 3 Feb|Sun, 4 Feb|Travel itinerary|Languages|Comments|
 |---|---|---|---|---|---|---|---|---|---|
 |1|Neil Hanlon|neil|✔️|✔️|✔️|✔️|BOS->IAD->BRU arriving Morning of 30th|en, bad fr|Rocky Infrastructure Lead, RESF Founder|
+|2|Louis Abel|label|✔️|✔️|✔️|x|PHX->IAD->BRU arriving Morning of 29th|en, bad es|Rocky Linux Release Engineering Lead, RESF Founder|
 
 ## Speakers / Events
 
