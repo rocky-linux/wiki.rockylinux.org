@@ -84,6 +84,7 @@ If you are a Rocky Contributor or Community member planning on attending FOSDEM 
 |---|---|---|---|---|---|---|---|---|---|
 |1|Neil Hanlon|neil|✔️|✔️|✔️|✔️|BOS->IAD->BRU arriving Morning of 30th|en, bad fr|Rocky Infrastructure Lead, RESF Founder|
 |2|Louis Abel|label|✔️|✔️|✔️|x|PHX->IAD->BRU arriving Morning of 29th|en, bad es|Rocky Linux Release Engineering Lead, RESF Founder|
+|3|Sherif Nagy|sherif|✔️|✔️|✔️|✔️|DUB->BRU arriving evening of 31st|en, ar, bad de|Rocky Linux Release Engineering member, RESF board member|
 
 ## Speakers / Events
 
