@@ -78,7 +78,7 @@ As we're all staying in the same place, we can travel in groups as needed.
 
 ## Rocky presence
 
-If you are a Rocky Contributor or Community member planning on attending FOSDEM or CentOS Connect, we would love for you to add your name to the list and come introduce yourself! Use the comments collumn to specify your role in the Rocky community.
+If you are a Rocky Contributor or Community member planning on attending FOSDEM or CentOS Connect, we would love for you to add your name to the list and come introduce yourself! Use the comments column to specify your role in the Rocky community.
 
 |No|Name|RAS|Thu, 1 Feb|Fri, 2 Feb|Sat, 3 Feb|Sun, 4 Feb|Travel itinerary|Languages|Comments|
 |---|---|---|---|---|---|---|---|---|---|
