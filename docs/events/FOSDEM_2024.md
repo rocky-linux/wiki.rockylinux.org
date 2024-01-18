@@ -88,6 +88,7 @@ If you are a Rocky Contributor or Community member planning on attending FOSDEM 
 |4|Krista Burdine|grammaresque|✔️|✔️|✔️|✔️|DFW->LHR->BRU arriving noonish on Tuesday 30th|en, sp|RESF Community Manager|
 |5|Antoine Le Morvan|alemorvan|✔️|✔️|✔️|✔️|RNS->BRU arriving 4PM of 31th|fr, bad en|RESF Member, Documentation Author & Translation Lead|
 |6|Brian Phan|bphan|✔️|✔️|✔️|✔️|SFO->IAD->BRU arriving Morning of 31st|en, bad fr|Rocky Community Member|
+|7|Forrest Burt|fburt|✔️|✔️|✔️|✔️|PDX->AMS->BRU arriving Morning of 31st|en|Rocky Community Member|
 
 ## Speakers / Events
 
