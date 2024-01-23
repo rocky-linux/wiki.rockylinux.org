@@ -4,6 +4,9 @@ title: Getting Community Help & Support
 
 The Rocky Linux Project has several places where users can find community support, depending on the nature of issue.
 
+!!! note
+    This is for general support of Rocky Linux and is not meant for bug reporting. Please see our [Reporting Bugs and RFE's page](bugs.md) for more information.
+
 ## Rocky Linux (core distribution)
 
 Core distribution community support can be obtained at the following locations:
@@ -16,7 +19,7 @@ Core distribution community support can be obtained at the following locations:
 
 ## Rocky Linux Infrastructure and Services
 
-Rocky Linux Infrastructure have responsibility over several areas. Support or questions can be asked at any of the following:
+Rocky Linux Infrastructure have responsibility over several areas, such as mirror manager and Mattermost. Support or questions that pertain only to the infrastructure managed by the project can be asked at any of the following:
 
 * [Mattermost](https://chat.rockylinux.org/rocky-linux/channels/infrastructure)
 * [IRC (Libera)](https://libera.chat) (`#rockylinux-infra`)

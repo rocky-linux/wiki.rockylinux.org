@@ -8,17 +8,17 @@ The Rocky Linux Project has several ways of reporting issues or requesting enhan
 
 ### Bugs
 
+!!! note
+    The bug tracker is **not** meant for general support questions. Do not be surprised if a maintainer closes the bug report immediately if it's found to be a general question rather than an actual bug report.
+
 Bugs are an inevitable part of any Linux distribution. Users may find problems and want a way to report the bug.
 
-All bug reports (which includes some packages from Special Interest Groups) should be reported at our [Bug Tracker](https://bugs.rockylinux.org).
+All bug reports should be reported at our [Bug Tracker](https://bugs.rockylinux.org).
 
 When reporting bugs, ensure you have read the [Bug Tracker Guidelines](../guidelines/bug_tracker_guidelines.md) so you can make a proper bug report.
 
 !!! note
     You may be asked to reproduce the issue on Red Hat Enterprise Linux. If the issue is reproducible on RHEL, you are encouraged to also open a bug report at the [Red Hat Jira](https://issues.redhat.com). The assignee on your bug report can do this for you also if you wish.
-
-!!! note
-    The bug tracker is not meant for general support questions. Do not be surprised if a maintainer closes the bug report immediately if it's found to be a general support question rather than an actual bug report.
 
 ### RFE (Request for Enhancement)
 
