@@ -17,6 +17,9 @@ When reporting bugs, ensure you have read the [Bug Tracker Guidelines](../guidel
 !!! note
     You may be asked to reproduce the issue on Red Hat Enterprise Linux. If the issue is reproducible on RHEL, you are encouraged to also open a bug report at the [Red Hat Jira](https://issues.redhat.com). The assignee on your bug report can do this for you also if you wish.
 
+!!! note
+    The bug tracker is not meant for general support questions. Do not be surprised if a maintainer closes the bug report immediately if it's found to be a general support question rather than an actual bug report.
+
 ### RFE (Request for Enhancement)
 
 Requests for Enhancements to packages[^1] are typically handled at the [Bug Tracker](https://bugs.rockylinux.org). In some cases, this may not apply. A Special Interest Group may ask that an RFE be submitted elsewhere. See the SIG section later in this page.
