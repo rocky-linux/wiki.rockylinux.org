@@ -12,7 +12,7 @@ CentOS Connect is the contributor conference for CentOS, focusing on CentOS Stre
 * Location: [Raddison Collection Hotel, Grand Place](https://www.radissonhotels.com/en-us/hotels/radisson-collection-grand-place-brussels?cid=a:se+b:gmb+c:emea+i:local+e:rco+d:ukirwe+h:BEBRUROY) - Royal Room
   * 47 Rue du Fossé aux Loups, Brussels,1000,Belgium 
 * Time Zone: Central European Time (CET), or UTC+1
-* Schedule: not available yet
+* Schedule: https://connect.centos.org/
 * Rocky Talks / Events: Releng Meetup, see below
 * Format: In-person participation only, live-streaming available
 
@@ -56,14 +56,22 @@ As we're all staying in the same place, we can travel in groups as needed.
 ### Thursday, 1 February
 
 * CentOS Connect Meetups (morning) and presentations (afternoon)
-  * Rocky Releng Planning & Meetup scheduled
-* Arrival time, TBD, depends on schedule
+ * Arrival time: 08:30 - 09:00
+  * [Rocky Releng Planning & Meetup](https://connect.centos.org/#rocky-meetup) scheduled
+    * Begins at 09:00 in Oslo room 
+* Conference programming: 09:00 - 13:00 (Meetups), 14:00-16:00 (Sessions)
+* Evening reception hosted by CentOS celebrating 20 years of CentOS
+  * Location TBD
 
 ### Friday, 2 February
 
 * CentOS Connect presentations continue
-* Arrival time: TBD, depends on schedule
-
+  * Arrival time: 08:30 - 09:00
+* Arrival time: 08:30
+* Conference programming: 09:00 - 18:30
+* Rocky Contributor Dinner: 19:30 - ???
+  * Location TBD 
+  
 ### Saturday, 3 February
 
 * FOSDEM - ULB Campus
@@ -89,6 +97,7 @@ If you are a Rocky Contributor or Community member planning on attending FOSDEM 
 |5|Antoine Le Morvan|alemorvan|✔️|✔️|✔️|✔️|RNS->BRU arriving 4PM of 31th|fr, bad en|RESF Member, Documentation Author & Translation Lead|
 |6|Brian Phan|bphan|✔️|✔️|✔️|✔️|SFO->IAD->BRU arriving Morning of 31st|en, bad fr|Rocky Community Member|
 |7|Forrest Burt|fburt|✔️|✔️|✔️|✔️|PDX->AMS->BRU arriving Morning of 31st|en|Rocky Community Member|
+|8|Pablo Greco|pgreco|✔️|✔️|✔️|✔️|EZE->MAD->BRU arriving evening of 29th|en, sp, it|Rocky Linux Release Engineering member, altarch guru|
 
 ## Speakers / Events
 
