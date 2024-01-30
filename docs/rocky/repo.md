@@ -89,7 +89,7 @@ All SIG repositories can be found [here](https://dl.rockylinux.org/pub/sig)
 The vault is a historic archive of previous Rocky Linux releases. These previous releases, including ISOs and other images, are typically moved into the vault area of our tier 0 mirror between a day and a week once a new minor release version is available. The vault can be found [here](https://dl.rockylinux.org/vault/rocky).
 
 !!! warning
-    The vault is meant as a historic archive of previous releases of Rocky Linux and not for general use. These are versions that are NOT supported and NOT recommended for general use as they contain unfixed bugs and unpatched security vulnerabilities.
+    The vault is meant as a historic archive of previous releases of Rocky Linux and not for general use. These are versions that are NOT supported and are NOT recommended for general use as they contain unfixed bugs and unpatched security vulnerabilities.
 
     The community may not be able to assist you with issues with these releases, so it is recommended that you keep your systems up to date.
 

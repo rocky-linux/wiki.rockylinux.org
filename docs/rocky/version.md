@@ -52,7 +52,7 @@ Below is a general guideline (based on Red Hat documentation) for the "full supp
 | .9      | November |
 | .10     | May      |
 
-Upon a new minor release (`X.Y+1`), the previous Rocky Linux release is no longer supported and is moved to the vault.
+Upon a new minor release (`X.Y+1`), the previous Rocky Linux release is no longer supported and is moved to the [vault](repo.md#vault).
 
 After `X.10` is released, the following may be true:
 
@@ -90,7 +90,7 @@ See the examples below.
 When a new Rocky Linux minor release arrives (using version format `X.Y`, `Y+1` or an increment of `Y`) the following is true:
 
 * The previous version is no longer supported by Release Engineering and the community
-* This version is no longer updated and is moved to the [vault](http://dl.rockylinux.org/vault/rocky/)
+* This version is no longer updated and is moved to the [vault](http://dl.rockylinux.org/vault/rocky/).
 * This version does not receive bug fix nor security updates.
 * You are recommended to update your system with `dnf update`.
 
