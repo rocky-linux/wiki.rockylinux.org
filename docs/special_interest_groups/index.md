@@ -45,11 +45,11 @@ This section goes over the current SIGs that may have sponsors and are active or
 
 We expect SIGs to satisfy some basic requirements, such as:
 
-* The group should be related to Rocky, a use-case for Rocky or Enterprise Linux, or related to Enterprise Linux as a whole
-* There must be feedback and control into the Rocky community
+* The group should be related to Rocky Linux, a use-case for Rocky Linux or Enterprise Linux, or related to Enterprise Linux as a whole
+* There must be feedback and control into the Rocky Linux community
 * All communication as to the work of the SIG should be public - Some matters may have to be private, and as such should be out of band
     * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC or Matrix channel can also be assigned.
-* Code produced within the SIG must be compatible with a FOSS license presently used by Rocky - If a new license is wanted, consult with Release Engineering/Core or the `~Legal` channel in mattermost.
+* Code produced within the SIG must be compatible with a FOSS license presently used by Rocky Linux - If a new license is wanted, consult with Release Engineering/Core or the `~Legal` channel in mattermost.
 * All documentation and information of the SIG should be on a wiki produced in the [RESF Git Service](https://git.resf.org).
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
@@ -60,7 +60,7 @@ Each SIG should have a wiki that will have documentation for their particular gr
 
 * An "about" section on the index that explains what the group does/a group description
 * Mission Statement
-* How to Contribute
+* How to Contribute / Onboarding Process
 * Meeting Information (time, location, other information that they feel is important)
 * Policies and Resources, if applicable
 
