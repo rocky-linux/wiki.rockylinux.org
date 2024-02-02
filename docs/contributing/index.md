@@ -7,7 +7,8 @@ you can contribute to Rocky Linux, such as helping users on forums, Mattermost/I
 mail lists to debugging packages, hunting bugs, and finding fixes. Other ways to
 contribute may be joining a Special Interest Group.
 
-See below for the some of the ways you can contribute.
+See below for the some of the ways you can contribute. Note that this information
+is subject to change.
 
 ## Helping other users
 

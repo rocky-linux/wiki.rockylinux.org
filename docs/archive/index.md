@@ -2,10 +2,10 @@
 title: Archives
 ---
 
-This section of the wiki is meant as an archive area of the original Rocky
-Linux wiki. This contains various documents considered "legacy" and meant
-for instructional and historical purposes only. This area will likely not
-be updated any further.
-
-If you find there are documents that should be here from the old wiki,
-please consider opening an issue [here](https://github.com/rocky-linux/wiki.rockylinux.org/issues).
+This section of the wiki is meant as a historical archive of the original
+Rocky Linux wiki, as well as pages that are no longer considered relevant
+to the current wiki. This contains various documents that are considered
+either "legacy" or "obsolete", and are intended to be instructional in
+nature and will not reflect the current status of the project, its
+documentation, nor current wiki content. This content will not be updated
+beyond what is currently dropped here.

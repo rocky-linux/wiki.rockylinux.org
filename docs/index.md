@@ -6,7 +6,7 @@ title: Welcome
 
 ## About
 
-Rocky Linux is a community enterprise Operating System designed to be 100% bug-for-bug compatible with Enterprise Linux.
+Rocky Linux is a community enterprise Operating System designed to be 1:1 compatible with Enterprise Linux.
 
 ## Quick Links
 
@@ -31,15 +31,15 @@ Below is a list of links to common resources for Rocky Linux. For more, see the 
 
 ## Contact
 
-| Team                               | Contact                                            | Channel               |
-|------------------------------------|----------------------------------------------------|-----------------------|
-| Community                          | community@rockylinux.org                           | |
-| Design                             | design@rockylinux.org                              | |
-| Development & Release Engineering  | development@rockylinux.org & releng@rockylinux.org | [~development](https://chat.rockylinux.org/rocky-linux/channels/development) |
-| Documentation                      |                                                    | [~documentation](https://chat.rockylinux.org/rocky-linux/channels/documentation)   |
-| Infrastructure                     | infrastructure@rockylinux.org                      | [~infrastructure](https://chat.rockylinux.org/rocky-linux/channels/infrastructure) |
-| Security                           | security@rockylinux.org                            | [~Security](https://chat.rockylinux.org/rocky-linux/channels/security) |
-| Web                                | web@rockylinux.org                                 | |
+| Team                               | Contact                         | Channel                                                                            |
+|------------------------------------|---------------------------------|------------------------------------------------------------------------------------|
+| Community                          | community@rockylinux.org        |                                                                                    |
+| Design                             | design@rockylinux.org           | [~design](https://chat.rockylinux.org/rocky-linux/channels/design )                |
+| Development & Release Engineering  | releng@rockylinux.org           | [~development](https://chat.rockylinux.org/rocky-linux/channels/development)       |
+| Documentation                      |                                 | [~documentation](https://chat.rockylinux.org/rocky-linux/channels/documentation)   |
+| Infrastructure                     | infrastructure@rockylinux.org   | [~infrastructure](https://chat.rockylinux.org/rocky-linux/channels/infrastructure) |
+| Security                           | security@rockylinux.org         | [~Security](https://chat.rockylinux.org/rocky-linux/channels/security)             |
+| Web                                | web@rockylinux.org              |                                                                                    |
 
 For all other questions: hello@rockylinux.org
 
@@ -47,9 +47,7 @@ Alternatively, you can use our [mail lists](https://lists.resf.org)
 
 ## Contributing
 
-See our [Contributing](contributing) section for information on how to contribute to the project.
-
-**NOTE**: We **do not** currently have any official crowdsourcing established.
+See our current [Contributing](contributing) section for information on how to contribute to the project.
 
 ## Special Thanks
 
