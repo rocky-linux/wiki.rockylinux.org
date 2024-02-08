@@ -79,7 +79,8 @@ The following are listed as **do not use** as they are known for breaking isohyb
 * multibootusb
 * universal usb installer
 
-Rufus can only work for Rocky Linux images if you use "dd mode" **only**. Do **not** use ISO mode as it will result in a broken installer. It is recommended by Release Engineering that you use a writer from the recommended section.
+!!! warning
+    Rufus can **only** work for Rocky Linux images if you use "dd mode". Do **not** use ISO mode as it will result in a broken installer. It is recommended by Release Engineering that you use a writer from the recommended section on this page.
 
 ## About Cloud Images
 
