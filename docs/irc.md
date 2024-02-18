@@ -65,7 +65,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 * **If the question is related to drivers from elrepo or rpmfusion**
 
-    * It is common for users to be using hardware that is either not supported in a current Rocky Linux release or needs a better driver (e.g., nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Most users will support one another in this scenario. elrepo volunteers will be in the channel as well assist users. Other issues should go to `#elrepo` or where topical, such as their [Bug Tracker](https://elrepo.org/bugs).
+    * It is common for users to be using hardware that is either not supported in a current Rocky Linux release or needs a better driver (e.g., nouveau -> nvidia). Providing general assistance for getting such drivers should be considered semi-topical. Most users will support one another in this scenario. elrepo volunteers will be in the channel as well to assist users. Other issues should go to `#elrepo` or where topical, such as their [Bug Tracker](https://elrepo.org/bugs).
 
 * **If the question is related to CentOS Stream as it pertains to Rocky Linux**
 
@@ -80,7 +80,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 * **[Broken "V" Servers](#broken-v-servers)**
 * **Old minor/point releases of Rocky Linux (See our [version policy](rocky/version.md))**
-* **Upgrades or upgraded Rocky Linux systems (e.g., upgrading 8 to 9)**
+* **Upgrades or upgraded Rocky Linux systems (e.g., upgrading 8 to 9, see our [version policy](rocky/version.md))**
 * **Upgrades of the default python version (e.g. python 3.6 to 3.9 or python 3.9 to 3.11)**
 * **Politics or Profanity**
 * **Distro X is better/worse than Rocky**
@@ -137,7 +137,7 @@ A recommendation would be to join the channel and observe for a while to get an 
 
 **Note**: The channels are logged and routinely checked. What is seen in IRC is also seen in Mattermost and vice versa. It is also likely we are not the only ones who monitor the channel. This means that your conversations are considered public.
 
-Persistent abusers and those who act out in bad faith in a consistent manner will receive a ban or quiet, if they have been repeatedly warned. If you find you have been banned and do not know why, you may want to ask in `#rockylinux-ops` and an available channel operator will try to assist you.
+Persistent abusers and those who act out in bad faith in a consistent manner will receive a ban or silence/quiet, if they have been repeatedly warned. If you find you have been banned and do not know why, you may want to ask in `#rockylinux-ops` and an available channel operator will try to assist you.
 
 ## IRC For Beginners
 
@@ -172,11 +172,11 @@ If you are a user of Matrix, most of the above still applies to you. You may nee
 
 Cloaks allow you to show your association with the Rocky Linux project and protect your hostname from being seen from others. Cloaks can be received from a project or just by the network upon request.
 
-If you would like to receive a cloak, contact Neil or Louis on IRC or Mattermost.
+If you would like to receive a cloak, contact neil or Louis on IRC or Mattermost.
 
 ## Context
 
-This section provides context to some things mentioned throughout this document that would've likely crowded the section entirely. These sections may end up on different pages entirely but they are here for now.
+This section provides context to some things mentioned throughout this document that would've likely crowded the section entirely. These sections may end up on different pages in the future, but they are here for now.
 
 ### Kernel Rebuilds
 
@@ -224,7 +224,7 @@ If you are stuck on a release due to vendor software locking or certifying only 
 
 ### Broken V Servers
 
-Our distribution, like others, use a variant of `dnf`. All Rocky Linux releases are shipped with `dnf` and a certain set of matching configuration files (like `.repo` files). This allows your system to work with the mirror system provided by Rocky. Some downstream forks break these configurations and make their system incompatible with what we provide off the shelf.
+Our distribution, like others, use a variant of `dnf`. All Rocky Linux releases are shipped with `dnf` and a certain set of matching configuration files (like `.repo` files). This allows your system to work with the mirror system provided by the Rocky Linux project. Some downstream forks break these configurations and make their system incompatible with what we provide off the shelf.
 
 Regulars (developers/volunteers) will typically decline to help in this type of scenario. Below are examples of "broken V servers" where `dnf` is either missing, misconfigured, or outright crippled.
 
@@ -242,7 +242,7 @@ So you have a VPS and you've discovered `dnf` is not working as it should. This 
 * Trixbox
 * Elastix
 
-The above tend to only install parts of Rocky Linux on their virtual servers and some are known for entirely removing `dnf` from the system entirely or altering the settings entirely. Typical changes are that they exclude locally modified packages from our base repositories. You can verify this by running `grep -ir exclude /etc/{yum,dnf}*` which will show what they are excluding. Some will also manage the box outside of the package manager.
+The above tend to only install parts of Rocky Linux on their virtual servers and some are known for removing `dnf` from the system entirely or altering the settings in a way that is unconducive to a working Rocky Linux system. Typical changes are that they exclude locally modified packages from our base repositories. You can verify this by running `grep -ir exclude /etc/{yum,dnf}*` which will show what they are excluding. Some will also manage the box outside of the package manager.
 
 Why these providers do this is unclear. Regardless of their reasons, this approach is seen negatively as `dnf` has mechanisms to protect specific packages from change.
 
