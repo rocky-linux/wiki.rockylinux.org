@@ -12,7 +12,7 @@ In addition to the above, the community team runs outreach for Rocky, including 
 
 ### Management
 
-This team is lead by Brian Clemens and Gregory Curtzer, along with all the Team Leads.
+This team is lead by the Team Leads listed below.
 
 ### Contact
 
@@ -26,10 +26,10 @@ This team is lead by Brian Clemens and Gregory Curtzer, along with all the Team 
 ## Members
 
 
-| Role                             | Name                            | Email                | Mattermost Name  |  IRC Name    |
-|----------------------------------|---------------------------------|----------------------|------------------|--------------|
-|  Team Lead / Community Manager   | Krista Burdine                  | krista@resf.org      | @grammaresque    | grammaresque |
-|  Star Trek Meme Officer          | Neil Hanlon                     | neil@resf.org        | @neil            | neil         |
+| Role                             | Name                            | Email                   | Mattermost Name  |  IRC Name    |
+|----------------------------------|---------------------------------|-------------------------|------------------|--------------|
+|  Team Lead / Community Manager   | Krista Burdine                  | krista@resf.org         | @grammaresque    | grammaresque |
+|  Deputy Team Lead                | Alexia Rivera Steinberg         | alexia@rockylinux.org   | @alexia          | alexia       |
 
 
 ## Join Team
