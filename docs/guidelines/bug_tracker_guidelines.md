@@ -57,8 +57,8 @@ proper manner.
 
 * Do not submit support questions - The Bug Tracker is not a support desk; as
   such the tickets will be closed if they are asking for assistance or support.
-  You are recommended to go to our reddit, Freenode channel (#rockylinux), or
-  our forum.
+  You are recommended to go to our reddit, Libera IRC channel (#rockylinux),
+  or our forum.
 
 ## Types of Tickets
 
