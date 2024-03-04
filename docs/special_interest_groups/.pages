@@ -1,4 +1,5 @@
 ---
 nav:
   - ... | index.md
+  - Current SIGs: current.md
   - SIG Guide: sig_guide
