@@ -9,7 +9,8 @@ This document covers how the Rocky Enterprise Software Foundation (RESF) handles
 | - | - |
 | **Owner** | Release Engineering (SIG/Core) / Infrastructure |
 | **Mattermost Contacts** | `@label` `@mustafa` `@skip77` `@sherif` `@pgreco` `@neil` `@tgo` |
-| **Mattermost Channels** | `~Dev/Packaging` `~Dev/General` |
+| **Mattermost Channels** | `~development` `~infrastructure` |
+| **IRC Channels** | `#rockylinux-devel` `#rockylinux-infra` |
 | **IRC Contacts** | `Sokel` `neil` `tg` |
 
 ## General Information
