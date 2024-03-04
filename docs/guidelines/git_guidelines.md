@@ -7,7 +7,7 @@ This document covers how the Rocky Enterprise Software Foundation (RESF) handles
 ## Contact Information
 | | |
 | - | - |
-| **Owner** | SIG Core / Release Engineering |
+| **Owner** | Release Engineering (SIG/Core) / Infrastructure |
 | **Mattermost Contacts** | `@label` `@mustafa` `@skip77` `@sherif` `@pgreco` `@neil` `@tgo` |
 | **Mattermost Channels** | `~Dev/Packaging` `~Dev/General` |
 | **IRC Contacts** | `Sokel` `neil` `tg` |
