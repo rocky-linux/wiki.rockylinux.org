@@ -61,9 +61,13 @@ and signed:
 
 See the [details](#details) section for more information.
 
-### Requesting Access to Groups/SIGs
+### Requesting Access to Groups in Rocky Account Services
 
-In general, the baseline steps to requesting access comes down to this:
+Groups in Rocky Account Services define roles, access, membership to a
+group, or any combination of the three. These groups can be for a Special
+Interest Group or a team in the Rocky Linux project or RESF ecosystem.
+
+In general, the baseline steps to requesting access starts here:
 
 * Create your account in RAS
 * Fill out your profile
@@ -75,14 +79,14 @@ In general, the baseline steps to requesting access comes down to this:
 
 * Contact the sponsor directly or send a message to appropriate channel for the group
 
-Each group/SIG will have different procedures for becoming part of the groups/SIGs
-within Rocky Account Services. Most groups will require agreement(s) to be
-signed, others may be on a request basis. Each group should have "sponsors"
-that can be contacted with information on joining the groups. They can be
-contacted in the [mattermost](https://chat.rockylinux.org).
+Each group will have different procedures for becoming part of the groups within
+Rocky Account Services. Most groups will require agreement(s) to be signed,
+others may be on a per-request basis. Each group should have "sponsors" that can
+be contacted with information on joining the groups. They can be contacted in
+the [Rocky Linux Mattermost](https://chat.rockylinux.org).
 
 Some sponsors may have additional documents they'll send you from the main wiki
-or the SIG wiki that will detail the procedure they expect you to follow.
+or their dedicated wiki that will detail the procedure they expect you to follow.
 
 ## Details
 
