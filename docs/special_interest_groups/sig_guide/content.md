@@ -196,6 +196,6 @@ More examples of dist tags are below:
 
 ## Importing to S3
 
-TBD. Please work with a member of Release Engineering or SIG/Core for assistance for now. In a future peridot version, there should be more capabilities to enable users further.
+TBD. Please work with a member of Release Engineering (SIG/Core) for assistance for now. In a future peridot version, there should be more capabilities to enable users further.
 
 {% include "releng/resources_bottom.md" %}

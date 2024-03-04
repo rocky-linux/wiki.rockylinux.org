@@ -27,7 +27,7 @@ When submitting the request, click on the "[New Issue](https://git.resf.org/sig_
 
 ### Releasing Packages for your SIG
 
-TBD. As of now, releasing requires feedback to SIG/Core / Release Engineering to push out to mirrors.
+TBD. As of now, releasing requires feedback to Release Engineering (SIG/Core) to push out to mirrors.
 
 ### Directory Format for Repositories (Informational)
 
