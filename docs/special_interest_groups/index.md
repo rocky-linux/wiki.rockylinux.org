@@ -2,46 +2,19 @@
 title: Special Interest Groups
 ---
 
-Special Interest Groups are a core piece of the Rocky Linux community, in which
-various members of these groups can extend the Enterprise Linux experience, by
-way of packages, images, or other community engagement.
+Special Interest Groups are a core component of the Rocky Linux community, in
+which various members of these groups can extend the Enterprise Linux experience,
+by way of packages, images, and/or other community engagement.
 
-For the case of the wiki, Special Interest Groups are recommended not to have
-direct wiki pages, but instead maintain their own set of Git generated pages
-in the form of a wiki (such as with mkdocs or hugo).
+For the case of this wiki, Special Interest Groups are recommended not to have
+direct wiki pages, but instead maintain their own wiki pages, maintained at
+the [RESF Git Service](https://git.resf.org).
 
-This page and section will serve as an overview. See the [SIG Guide](sig_guide/index.md)
-section for specific information such as proposing a SIG, content management,
-and so on.
+This page serves simply as an overview to Special Interest Groups. See the
+[SIG Guide](sig_guide/index.md) for specific information such as proposing a SIG,
+content management, and much more.
 
-## Current SIGs
-
-This section goes over the current SIGs that may have sponsors and are active or has community interest.
-
-### Some that may be established with sponsors/members
-
-| SIG                                          | Purpose                                                                                                                                                   |
-|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Core](https://sig-core.rocky.page)          | Rocky Linux maintainers, packagers, and developers. It is primarily a mix of Release Engineering and Infrastructure.                                      |
-| [Cloud](https://sig-cloud.rocky.page/)       | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well.                                                         |
-| [AI](https://sig-ai.rocky.page/)             | Rocky Linux Ecosystem for AI, ML, Data Science & BigData.                                                                                                 |
-| AltArch                                      | Maintains alternative architectures that are not directly supported by Rocky Linux or maintains devices of primary architectures such as the raspberry pi |
-| Desktop                                      | Supports and maintains the desktop experience for Rocky Linux                                                                                             |
-| Embedded                                     | Embedded Systems                                                                                                                                          |
-| Legacy                                       | Supports and maintains legacy hardware support for Rocky Linux                                                                                            |
-| [HPC](https://sig-hpc.rocky.page/)           | Maintains High Performance Computing support for Rocky Linux                                                                                              |
-| Hyperscale                                   | Hyperscale Computing                                                                                                                                      |
-| [Security](https://sig-security.rocky.page/) | Extra security features and security-hardened override packages (replacing those from the main distribution) for Rocky Linux and other EL distros         |
-
-### Some that have community interest, but no direct sponsors yet
-
-| SIG                                         | Purpose                                                                                          |
-|---------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [Database](https://sig-database.rocky.page) | Databases of all shapes, sizes, and use cases                                                    |
-| Kernel                                      | Kernels, mainline or otherwise                                                                   |
-| Leapp                                       | Focuses on the leapp framework to facilitate upgrades between major versions of Rocky            |
-
-## SIG Requirements
+## Special Interest Group Requirements
 
 We expect SIGs to satisfy some basic requirements, such as:
 
@@ -54,7 +27,7 @@ We expect SIGs to satisfy some basic requirements, such as:
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
 
-## SIG Wiki
+## Special Interest Group Wiki
 
 Each SIG should have a wiki that will have documentation for their particular group as well as information on how the group operates. Required information should be as follows:
 
@@ -83,11 +56,37 @@ SIGs are expected to report at least quarterly, with a brief summary of what the
 * General activity or health report
 * Issues to address within the SIG
 
-## Joining a SIG
+## Joining a Special Interest Group
 
 Joining an established Special Interest Group should be simple. Each SIG will
 have its own process and outlines. Please see sponsors or other members of the
 Special Interest Group you're interested in if a wiki or other documentation
 is not available.
+
+## Current Special Interest Groups
+
+This section goes over the current SIGs that may have sponsors and are active or has community interest.
+
+### Some that may be established with sponsors/members
+
+| SIG                                          | Purpose                                                                                                                                                   |
+|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Cloud](https://sig-cloud.rocky.page/)       | Cloud images and infrastructure - May work upstream with Stream for openstack and others as well.                                                         |
+| [AltArch](https://sig-altarch.rocky.page/)   | Maintains alternative architectures or devices (such as the raspberry pi) that are not directly supported by Rocky Linux                                  |
+| Desktop                                      | Supports and maintains the desktop experience for Rocky Linux                                                                                             |
+| Embedded                                     | Embedded Systems                                                                                                                                          |
+| [Kernel](https://sig-kernel.rocky.page/)     | Maintains kernels (such as mainline or other long term support) and drivers                                                                               |
+| Legacy                                       | Supports and maintains legacy hardware support for Rocky Linux                                                                                            |
+| [HPC](https://sig-hpc.rocky.page/)           | Maintains High Performance Computing support for Rocky Linux                                                                                              |
+| Hyperscale                                   | Hyperscale Computing                                                                                                                                      |
+| [Security](https://sig-security.rocky.page/) | Extra security features and security-hardened override packages (replacing those from the main distribution) for Rocky Linux and other EL distros         |
+
+### Some that have community interest, but no direct sponsors yet
+
+| SIG                                         | Purpose                                                                                          |
+|---------------------------------------------|--------------------------------------------------------------------------------------------------|
+| [Database](https://sig-database.rocky.page) | Databases of all shapes, sizes, and use cases                                                    |
+| [AI](https://sig-ai.rocky.page/)            | Rocky Linux Ecosystem for AI, ML, Data Science & BigData.                                        |
+| Leapp                                       | Focuses on the leapp framework to facilitate upgrades between major versions of Rocky            |
 
 {% include "releng/resources_bottom.md" %}
