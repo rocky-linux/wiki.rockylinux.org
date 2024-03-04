@@ -5,5 +5,5 @@ nav:
   - Debranding and Patching: debranding
   - rpm: rpm
   - guidelines: guidelines
-  - legacy: legacy
   - SOP Compose: compose
+  - legacy: legacy.md
