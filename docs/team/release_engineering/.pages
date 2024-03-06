@@ -3,7 +3,6 @@ nav:
   - ... | index.md
   - Package Kit: packagekit.md
   - Debranding and Patching: debranding
-  - rpm: rpm
   - guidelines: guidelines
   - SOP Compose: compose
   - legacy: legacy.md
