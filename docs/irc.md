@@ -2,12 +2,12 @@
 title: General Chat and IRC
 ---
 
-This page goes over General Chat and IRC/Matrix general information and etiquette.
+This page goes over General Chat and IRC general information and etiquette.
 
 !!! note
-    IRC (libera.chat) and Matrix are no longer bridged by default. You will find that if you join the Matrix channels, they are quiet. It is recommended that you join us via [Mattermost](https://chat.rockylinux.org) or via [IRC](https://libera.chat).
+    IRC (libera.chat) and Matrix are no longer bridged. You will find that if you join the Matrix channels, you will be asked to join us in other ways. It is recommended that you join us via [Mattermost](https://chat.rockylinux.org) or via [IRC](https://libera.chat).
 
-IRC and Matrix are common communication tools used in the open source community. Several channels of Mattermost, Libera IRC channels, and a matrix space are bridged together to ensure the community can communicate effectively and not be splintered. The Rocky Linux teams manage and maintain the mattermost channels and the various Libera IRC channels such as `#rockylinux` and `#rockylinux-social`. A list of our channels can be found in `Bridge Information` on the left hand side of this wiki page.
+IRC is a common communication tool used in the open source community. Several channels of Mattermost and Libera IRC channels are bridged together to ensure the community can communicate effectively and not be splintered. Rocky Linux Infrastructure and other teams manage and maintain the mattermost channels and the various Libera IRC channels such as `#rockylinux` and `#rockylinux-social`. A list of our channels can be found in `Bridge Information` on the left hand side of this wiki page.
 
 More information about Libera can be found [here](https://libera.chat).
 
@@ -28,7 +28,7 @@ More information about Libera can be found [here](https://libera.chat).
 Current mappings are below. Note that this is not an all inclusive list.
 
 !!! note
-    As matrix and IRC are no longer briged, the Matrix section has been removed.
+    As matrix and IRC are no longer briged, the Matrix section has been removed. There are no plans to bridge Matrix. If you wish to request or provide any kind of knowledge or help in maintaining a bridge, please [file a ticket](https://git.resf.org/infrastructure/meta/issues).
 
 | IRC                         | Mattermost                                                                         |
 |-----------------------------|------------------------------------------------------------------------------------|
@@ -158,15 +158,6 @@ Note that our channels require users to be registered on Libera in order to part
 Once you have registered and you are identified with `NickServ`, you can type `/join #rockylinux` or another related channel.
 
 Note that subsequent logins will require you to identify. `/msg nickserv identify password` will help you to ensure you don't get locked out of the `#rockylinux*` channels.
-
-### Matrix
-
-!!! note
-    Matrix and IRC is no longer bridged. This means to have communication with the Rocky Linux community, you are recommended to join us on Mattermost or Libera IRC.
-
-If you are a user of Matrix, most of the above still applies to you. You may need to login through the bridge on matrix to login with NickServ on Libera. After that, you will be able to communicate in the `#rockylinux*` channels through your matrix client.
-
-~~The Rocky Linux matrix space can be joined [here](https://matrix.to/#/!rHvPOeKWNBOYSKTiBr:matrix.org?via=matrix.org).~~
 
 ### IRC Cloaks for libera.chat network
 
