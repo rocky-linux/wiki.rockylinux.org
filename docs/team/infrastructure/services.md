@@ -36,7 +36,7 @@ Services and software in use by the Rocky Linux project
 | **reCAPTCHA**        | Anti-abuse                                       | In use     |<sup>[1]</sup>| https://www.google.com/recaptcha/about |
 | **Slack**            | Communications, chat                             | Deprecated |<sup>[2]</sup>| https://www.slack.com                  |
 | **Libera**           | IRC, chat                                        | In use     |<sup>[3]</sup>| https://www.libera.chat                |
-| **Matrix**           | Chat                                             | In use     |<sup>[4]</sup>| https://matrix.org                     |
+| **Matrix**           | Chat                                             | Deprecated |<sup>[4]</sup>| https://matrix.org                     |
 | **GitHub**           | Source control, collaboration, registry, actions | In use     |<sup>[5]</sup>| https://www.github.com                 |
 | **Figma**            | Design collaboration                             | In use     |<sup>[6]</sup>| https://figma.com                      |
 | **Discourse**        | Community forums                                 | In use     |<sup>[7]</sup>| https://www.discourse.org              |
