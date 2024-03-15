@@ -43,8 +43,9 @@ Each Special Interest Group may do things a bit differently from the next. In ma
 
 Examples of SIG's that use "meta" are below:
 
-* [SIG/Core](https://git.resf.org/sig_core/meta/issues)
 * [SIG/AltArch](https://git.resf.org/sig_altarch/meta/issues)
+* [SIG/HPC](https://git.resf.org/sig_hpc/meta/issues)
+* [SIG/Kernel](https://git.resf.org/sig_kernel/meta/issues)
 
 ## Other Resources
 
