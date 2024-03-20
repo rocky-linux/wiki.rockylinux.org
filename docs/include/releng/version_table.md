@@ -2,6 +2,7 @@
 
     | Version | Release Kernel    | Release Date      | End of Life       | Supported |
     |---------|-------------------|-------------------|-------------------|-----------|
+    | 8.3     | 4.18.0-240        | May 1, 2021       | June 21, 2021     | <div style="background-color:red">NO</div> |
     | 8.4     | 4.18.0-305        | June 21, 2021     | November 15, 2021 | <div style="background-color:red">NO</div> |
     | 8.5     | 4.18.0-348        | November, 15 2021 | May 15, 2022      | <div style="background-color:red">NO</div> |
     | 8.6     | 4.18.0-372.9.1    | May 15, 2022      | November 11, 2022 | <div style="background-color:red">NO</div> |
