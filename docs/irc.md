@@ -7,21 +7,20 @@ This page goes over General Chat and IRC general information and etiquette.
 !!! note
     IRC (libera.chat) and Matrix are no longer bridged. You will find that if you join the Matrix channels, you will be asked to join us in other ways. It is recommended that you join us via [Mattermost](https://chat.rockylinux.org) or via [IRC](https://libera.chat).
 
-IRC is a common communication tool used in the open source community. Several channels of Mattermost and Libera IRC channels are bridged together to ensure the community can communicate effectively and not be splintered. Rocky Linux Infrastructure and other teams manage and maintain the mattermost channels and the various Libera IRC channels such as `#rockylinux` and `#rockylinux-social`. A list of our channels can be found in `Bridge Information` on the left hand side of this wiki page.
+Mattermost is the primary communication tool for the Rocky Linux project. IRC is a common communication tool used in the open source community. This means that several channels of Mattermost and Libera IRC channels are bridged together to ensure the community can communicate effectively and not be splintered. Rocky Linux Infrastructure and other teams manage and maintain both the mattermost channels and the various Libera IRC channels such as `#rockylinux` and `#rockylinux-social`. A list of our channels can be found in `Bridge Information` section on this page.
 
 More information about Libera can be found [here](https://libera.chat).
 
 ## Contact Information
-| | |
-| - | - |
-| **IRC/Mattermost Contacts** | `bc/qi` `@brian` |
-| **IRC/Mattermost Contacts** | `Sokel/label/Sombra` `@label` `@nazunalika` |
-| **IRC/Mattermost Contacts** | `mustafa` `@mustafa` |
-| **IRC/Mattermost Contacts** | `neil` `@neil` |
-| **IRC/Mattermost Contacts** | `tg` `@tgo` |
-| **IRC/Mattermost Contacts** | `pgreco` `@pgreco` |
-| **IRC/Mattermost Contacts** | `pj` `@pj` |
-| **IRC/Mattermost Contacts** | `SheriF` `@sherif` |
+
+| **IRC**                     | **Mattermost**                              |
+|-----------------------------|---------------------------------------------|
+| `Sokel/label/Sombra`        | `@label`                                    |
+| `neil`                      | `@neil`                                     |
+| `tg`                        | `@tgo`                                      |
+| `pj`                        | `@pj`                                       |
+| `lexi`                      |                                             |
+|                             | `@grammaresque`                             |
 
 ## Bridge Information
 
@@ -80,7 +79,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 * **[Broken "V" Servers](#broken-v-servers)**
 * **Old minor/point releases of Rocky Linux (See our [version policy](rocky/version.md))**
-* **Upgrades or upgraded Rocky Linux systems (e.g., upgrading 8 to 9, see our [version policy](rocky/version.md))**
+* **Upgrades or upgraded Rocky Linux systems (e.g., upgrading CentOS 7 to 8, or Rocky Linux 8 to 9, see our [version policy](rocky/version.md))**
 * **Upgrades of the default python version (e.g. python 3.6 to 3.9 or python 3.9 to 3.11)**
 * **Politics or Profanity**
 * **Distro X is better/worse than Rocky**
@@ -135,9 +134,12 @@ It is normal for a channel to not be all business all the time. Passing snarkine
 
 A recommendation would be to join the channel and observe for a while to get an idea of how the channel operates; try to avoid dropping in, asking a question, and disappearing.
 
-**Note**: The channels are logged and routinely checked. What is seen in IRC is also seen in Mattermost and vice versa. It is also likely we are not the only ones who monitor the channel. This means that your conversations are considered public.
+!!! note
+    The channels are logged and routinely checked. What is seen in Mattermost is also seen in IRC and vice versa. It is also very likely we (channel operators) are not the only ones who monitor the channel. This means that your conversations are considered public.
 
-Persistent abusers and those who act out in bad faith in a consistent manner will receive a ban or silence/quiet, if they have been repeatedly warned. If you find you have been banned and do not know why, you may want to ask in `#rockylinux-ops` and an available channel operator will try to assist you.
+    Persistent abusers and those who consistently act out in bad faith will receive a silence/quiet or a ban, if they have been repeatedly warned. If you find that you have been banned in IRC and do not know why, you may want to ask in `#rockylinux-ops` and an available channel operator will try to assist you.
+
+Please also see our [Code of Conduct](https://rockylinux.org/coc/).
 
 ## IRC For Beginners
 
