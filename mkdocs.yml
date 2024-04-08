@@ -61,6 +61,8 @@ plugins:
   - redirects:
       redirect_maps:
         'team/release_engineering/packagekit.md': 'rocky/packagekit.md'
+        'team/release_engineering/debranding/index.md': 'https://sig-core.rocky.page/documentation/debranding'
+        'team/release_engineering/compose/index.md': 'https://sig-core.rocky.page/sop/'
   - search
 
 # Extensions
