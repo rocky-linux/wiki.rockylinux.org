@@ -59,8 +59,8 @@ plugins:
   - macros:
       include_dir: docs/include
   - redirects:
-    redirect_maps:
-      'team/release_engineering/packagekit.md': 'rocky/packagekit.md'
+      redirect_maps:
+        'team/release_engineering/packagekit.md': 'rocky/packagekit.md'
   - search
 
 # Extensions
