@@ -6,11 +6,11 @@ title: Welcome
 
 ## About
 
-Rocky Linux is a community enterprise Operating System designed to be 1:1 compatible with Enterprise Linux.
+Rocky Linux is a community enterprise Operating System designed to be fully compatible with Enterprise Linux.
 
 ## Quick Links
 
-Below is a list of links to common resources for Rocky Linux. For more, see the "links" section found on the top of this page.
+Below is a list of links to common resources for Rocky Linux. For more, click the "Links Directory" at the top of this page.
 
 * [Website](https://rockylinux.org/)
 * [Public Repository](https://dl.rockylinux.org)
@@ -51,4 +51,6 @@ See our current [Contributing](contributing) section for information on how to c
 
 ## Special Thanks
 
-We would like to thank the following groups for their support thus far on the project. Our sponsors can be found [here](https://rockylinux.org/sponsors).
+We would like to thank all of those out there for their support on our project. It is thanks to you, our users, ours mirrors, and our sponsors for your continued support that allows us to continue to grow. 
+
+Our sponsors can be found [here](https://rockylinux.org/sponsors).

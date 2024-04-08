@@ -112,7 +112,7 @@ When coming into the IRC or Mattermost channels, it's important to be able to fi
 
 ### Expectations
 
-As `#rockylinux` is the general Rocky Linux support and discussion channel on Libera, it is not a primary support area for learning Linux or general chatting and off topic matter. Off topic matter should go to `#rockylinux-social` or `~off-topic`. With that being said, below is a list of things you should probably be aware of:
+As `#rockylinux` is the general Rocky Linux support and discussion channel on Libera, it is not a primary support area for learning Linux or general chatting and off topic matter. Off-topic matter should go to `#rockylinux-social` or `~off-topic`. With that being said, below is a list of things you should probably be aware of:
 
 * **The channels are filled with supporters of Rocky, end users, volunteers with wide ranges of skillsets and knowledge who use the distribution on a professional or personal level**
 * **Polite and on-topic people get answers to their queries**

@@ -2,15 +2,12 @@
 title: Release Engineering Team
 ---
 
-This section is primarily for general information for the Release Engineering
-team. Release Engineering is a combination of development and infrastructure,
-primarily focused on the development, building, management, and production of
-Rocky Linux.
+The Rocky Linux Release Engineering Team dedicates themselves to the development,
+building, management, production, and release of Rocky Linux. This team combines
+development and infrastruture into a single, cohesive unit that ultimately makes
+the distribution happen.
 
-A more detailed wiki can be found at their dedicated [wiki](https://sig-core.rocky.page).
-
-There is a legacy section that is not maintained but is meant for historical
-references.
+The team has a detailed wiki which can be found [here](https://sig-core.rocky.page).
 
 ## Members
 
