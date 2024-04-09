@@ -1,6 +1,5 @@
 ---
 nav:
   - ... | index.md
-  - 'AWX / Ansible SCM Guidelines': 'awx_scm_guidelines.md'
   - 'PDR Delete Request': 'idm_pdr.md'
   - 'Software and Services': 'services.md'
