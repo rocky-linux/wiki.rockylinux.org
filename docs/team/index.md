@@ -24,3 +24,5 @@ documentation.
 [Design Team](design/index.md)
 
 [Community Team](community/index.md)
+
+[Documentation Team](documentation/index.md)
