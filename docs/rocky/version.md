@@ -8,10 +8,10 @@ This page goes over the Rocky Linux Release Versions, their support, timelines, 
 
 Below is a table of Rocky Linux versions, with accompanying general release and (planned or are planned) end of life dates.
 
-| Release         | Codename       | Release Date  | Active Support       | End of Life          | Latest/Current Version   |
+| Release         | Codename       | Release Date  | Active Support Ends  | End of Life          | Latest/Current Version   |
 |-----------------|----------------|---------------|----------------------|----------------------|--------------------------|
 | Rocky Linux 8   | Green Obsidian | May 1, 2021   | May 31, 2024         | May 31, 2029         | 8.9 (November 22, 2023)  |
-| Rocky Linux 9   | Blue Onyx      | July 14, 2022 | May 31, 2027         | May 31, 2032         | 9.3 (November 20, 2023)  |
+| Rocky Linux 9   | Blue Onyx      | July 14, 2022 | May 31, 2027         | May 31, 2032         | 9.4 (May 7, 2024)        |
 
 For more detailed information on each version, click any of the tabs below.
 
@@ -25,12 +25,13 @@ See the [Timeline and Terminology](#timeline-and-terminology) and [Release Caden
 
 Throughout this page, you will see terms such as "major version" or "minor version", among others. You will see these terms used throughout many discussions online forums, mail lists, or even our Mattermost. See below for their basic definitions.
 
-| Term          | Definition                                                                                                                                                        |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Major Version | A major version is denoted by a whole number, such as "Rocky Linux 9". This number is left-most number in a version, such as 9.0, where "9" is the major version. |
-| Minor Version | A minor version is denoted by the right-most number in a version, such as "Rocky Linux 9.3". "9" being the major version, "3" being the minor version. These updates come with version upgrades, rebases, new software and features. |
-| Release       | Release typically refers to a major version release, such as "Rocky Linux 9". It is typically assumed it is referring to the latest/current version of that release. |
-| Minor Release | Used as "Minor Version" in most cases. |
+| Term           | Definition                                                                                                                                                        |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Major Version  | A major version is denoted by a whole number, such as "Rocky Linux 9". This number is left-most number in a version, such as 9.0, where "9" is the major version. |
+| Minor Version  | A minor version is denoted by the right-most number in a version, such as "Rocky Linux 9.3". "9" being the major version, "3" being the minor version. These updates come with version upgrades, rebases, new software and features. |
+| Release        | Release typically refers to a major version release, such as "Rocky Linux 9". It is typically assumed it is referring to the latest/current version of that release. |
+| Minor Release  | Used as "Minor Version" in most cases. |
+| Active Support | Active support, also known as "full support" is the period of time in which minor releases are provided every six (6) months, whilst providing new software, rebases, or other new features. When Active Support ends, a release receives maintenance-only updates. |
 
 ### Timeline
 
