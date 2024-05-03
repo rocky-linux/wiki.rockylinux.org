@@ -64,6 +64,21 @@ plugins:
         'team/release_engineering/debranding/index.md': 'https://sig-core.rocky.page/documentation/debranding'
         'team/release_engineering/compose/index.md': 'https://sig-core.rocky.page/sop/'
         'team/release_engineering/guidelines/rocky_logos_guidelines/index.md': 'https://sig-core.rocky.page/documentation/guidelines/rocky_logos_guidelines/'
+        'team/testing/index.md': 'https://testing.rocky.page/'
+        'team/testing/qa_test_cases/index.md': 'https://testing.rocky.page/documentation/qa_test_cases'
+        'team/testing/release_criteria/release_criteria/index.md': 'https://testing.rocky.page/guidelines/release_criteria/release_criteria/'
+        'team/testing/release_criteria/r8/8_release_criteria/index.md': 'https://testing.rocky.page/guidelines/release_criteria/r8/8_release_criteria/'
+        'team/testing/release_criteria/r8/8.6_qa_testing_summary/index.md': 'https://testing.rocky.page/guidelines/release_criteria/r8/8.6_qa_testing_summary/'
+        'team/testing/release_criteria/r8/8.6_qa_testing_go_no_go/index.md': 'https://testing.rocky.page/guidelines/release_criteria/r8/8.6_qa_testing_go_no_go/'
+        'team/testing/release_criteria/r9/9_release_criteria/index.md': 'https://testing.rocky.page/guidelines/release_criteria/r9/9_release_criteria/'
+        'team/testing/release_criteria/r9/9.0_qa_testing_summary/index.md': 'https://testing.rocky.page/guidelines/release_criteria/r9/9.0_qa_testing_summary/'
+        'team/testing/release_criteria/r9/9.0_qa_testing_go_no_go/index.md': 'https://testing.rocky.page/guidelines/release_criteria/r9/9.0_qa_testing_go_no_go/'
+        'team/testing/dev_guides/wiki_development_boxes/index.md': 'https://testing.rocky.page/documentation/dev_guides/wiki_development_boxes/'
+        'team/testing/dev_guides/commit_signing/index.md': 'https://testing.rocky.page/documentation/dev_guides/commit_signing/'
+        'team/testing/dev_guides/openqa_access/index.md': 'https://testing.rocky.page/documentation/dev_guides/openqa_access/'
+        'team/testing/dev_guides/openqa_cli_post_examples/index.md': 'https://testing.rocky.page/documentation/dev_guides/openqa_cli_post_examples/'
+        'team/testing/dev_guides/openqa_clone_job_examples/index.md': 'https://testing.rocky.page/documentation/dev_guides/openqa_clone_job_examples/'
+        'team/testing/dev_guides/openqa_clone_custom_git_refspec_examples/index.md': 'https://testing.rocky.page/documentation/dev_guides/openqa_clone_custom_git_refspec_examples/'
   - search
 
 # Extensions
