@@ -1,4 +1,4 @@
-FROM rockylinux:8
+FROM rockylinux:9
 
 RUN dnf update -y &&\
     dnf install -y git python3 &&\
