@@ -88,16 +88,16 @@ As we're all staying in the same place, we can travel in groups as needed.
 
 If you are a Rocky Contributor or Community member planning on attending FOSDEM or CentOS Connect, we would love for you to add your name to the list and come introduce yourself! Use the comments column to specify your role in the Rocky community.
 
-|No|Name|RAS|Thu, 1 Feb|Fri, 2 Feb|Sat, 3 Feb|Sun, 4 Feb|Travel itinerary|Languages|Comments|
+|No|Name|RAS|Thu, 1 Feb|Fri, 2 Feb|Sat, 3 Feb|Sun, 4 Feb|Languages|Comments|
 |---|---|---|---|---|---|---|---|---|---|
-|1|Neil Hanlon|neil|✔️|✔️|✔️|✔️|BOS->IAD->BRU arriving Morning of 30th|en, bad fr|Rocky Infrastructure Lead, RESF Founder|
-|2|Louis Abel|label|✔️|✔️|✔️|x|PHX->IAD->BRU arriving Morning of 29th|en, bad es|Rocky Linux Release Engineering Lead, RESF Founder|
-|3|Sherif Nagy|sherif|✔️|✔️|✔️|✔️|DUB->BRU arriving evening of 31st|en, ar, bad de|Rocky Linux Release Engineering member, RESF board member|
-|4|Krista Burdine|grammaresque|✔️|✔️|✔️|✔️|DFW->LHR->BRU arriving noonish on Tuesday 30th|en, sp|RESF Community Manager|
-|5|Antoine Le Morvan|alemorvan|✔️|✔️|✔️|✔️|RNS->BRU arriving 4PM of 31th|fr, bad en|RESF Member, Documentation Author & Translation Lead|
-|6|Brian Phan|bphan|✔️|✔️|✔️|✔️|SFO->IAD->BRU arriving Morning of 31st|en, bad fr|Rocky Community Member|
-|7|Forrest Burt|fburt|✔️|✔️|✔️|✔️|PDX->AMS->BRU arriving Morning of 31st|en|Rocky Community Member|
-|8|Pablo Greco|pgreco|✔️|✔️|✔️|✔️|EZE->MAD->BRU arriving evening of 29th|en, sp, it|Rocky Linux Release Engineering member, altarch guru|
+|1|Neil Hanlon|neil|✔️|✔️|✔️|✔️|en, bad fr|Rocky Infrastructure Lead, RESF Founder|
+|2|Louis Abel|label|✔️|✔️|✔️|x|en, bad es|Rocky Linux Release Engineering Lead, RESF Founder|
+|3|Sherif Nagy|sherif|✔️|✔️|✔️|✔️|en, ar, bad de|Rocky Linux Release Engineering member, RESF board member|
+|4|Krista Burdine|grammaresque|✔️|✔️|✔️|✔️|en, sp|RESF Community Manager|
+|5|Antoine Le Morvan|alemorvan|✔️|✔️|✔️|✔️|fr, bad en|RESF Member, Documentation Author & Translation Lead|
+|6|Brian Phan|bphan|✔️|✔️|✔️|✔️|en, bad fr|Rocky Community Member|
+|7|Forrest Burt|fburt|✔️|✔️|✔️|✔️|en|Rocky Community Member|
+|8|Pablo Greco|pgreco|✔️|✔️|✔️|✔️|en, sp, it|Rocky Linux Release Engineering member, altarch guru|
 
 ## Speakers / Events
 
