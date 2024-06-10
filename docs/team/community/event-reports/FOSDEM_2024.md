@@ -89,7 +89,7 @@ As we're all staying in the same place, we can travel in groups as needed.
 If you are a Rocky Contributor or Community member planning on attending FOSDEM or CentOS Connect, we would love for you to add your name to the list and come introduce yourself! Use the comments column to specify your role in the Rocky community.
 
 |No|Name|RAS|Thu, 1 Feb|Fri, 2 Feb|Sat, 3 Feb|Sun, 4 Feb|Languages|Comments|
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 |1|Neil Hanlon|neil|✔️|✔️|✔️|✔️|en, bad fr|Rocky Infrastructure Lead, RESF Founder|
 |2|Louis Abel|label|✔️|✔️|✔️|x|en, bad es|Rocky Linux Release Engineering Lead, RESF Founder|
 |3|Sherif Nagy|sherif|✔️|✔️|✔️|✔️|en, ar, bad de|Rocky Linux Release Engineering member, RESF board member|
