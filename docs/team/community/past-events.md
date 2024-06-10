@@ -16,7 +16,7 @@ Please use [this template](event-reports/template.md) to create summaries for ea
 - Texas Linux Festival (TXLF)
 - Southern California Linux Expo (SCaLE)
 - HPC Energy Conference
-- FOSDEM
+- [FOSDEM 2024](event-reports/FOSDEM_2024.md)
 
 ### 2023
 - SC23
