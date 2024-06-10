@@ -102,12 +102,12 @@ There are two formats for the images:
 * X is the major version
 * Y is the minor version
 * ARCH is the architecture
-* DATE will be the date of when the image was produced
+* DATE will be the date of when the image was produced (YYYYMMDD.X, X starts at 0)
 * CLOUD will the type of cloud image (e.g., GenericCloud)
 * TYPE will be the type of image such as Base or LVM, if applicable
 * FORMAT will be `raw` or `qcow2`
 
-The first format will always be a constant. Cloud images will appear in this format in majority of cases and there may be more than one at any given time. Updates can occur for newer kernels or to address issues in previous versions.
+The first format will always exist. Cloud images will appear in this format in majority of cases and there may be more than one at any given time. Updates can occur for newer kernels or to address issues in previous versions. This means the date will change frequently.
 
 The second format is a symlink to the latest cloud image of that variant and type, if applicable.
 
