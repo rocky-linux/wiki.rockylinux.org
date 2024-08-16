@@ -4,6 +4,9 @@ title: Git Guidelines
 
 This document covers how the Rocky Enterprise Software Foundation (RESF) handles the use of Git in the ecosystem for the RESF and its projects such as Rocky Linux. It contains information about how various teams and the community interact and work with Git, as well as expectations and requirements.
 
+!!! note
+    Usage of Git services hosted by the RESF are subject to the [Rocky Git Contributor Agreement](../contributing/git.md)
+
 ## Contact Information
 | | |
 | - | - |
