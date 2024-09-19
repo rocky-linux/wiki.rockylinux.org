@@ -14,7 +14,7 @@ Please use [this template](event-reports/template.md) to create summaries for ea
 - SouthEast LinuxFest (SELF)
 - LinuxFest Northwest (LFNW)
 - Texas Linux Festival (TXLF)
-- Southern California Linux Expo (SCaLE)
+- [Southern California Linux Expo (SCaLE)](https://rockylinux.org/news/scale21x-recap)
 - HPC Energy Conference
 - [FOSDEM 2024](event-reports/FOSDEM_2024.md)
 
