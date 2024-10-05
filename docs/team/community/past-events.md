@@ -22,6 +22,6 @@ Please use [this template](event-reports/template.md) to create summaries for ea
 - SC23
 - OpenLibreFree (OLF)
 - Flock to Fedora
-- SELF
+- [SouthEast LinuxFest (SELF)](event-reports/23SELF.md)
 - Write the Docs
 - FOSDEM
