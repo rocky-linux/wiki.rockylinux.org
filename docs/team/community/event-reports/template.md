@@ -21,3 +21,6 @@ title: Event Reports Template
 
 ## Additional Resources
 - [Link to event website or related resources]
+
+## Did we meet you there?
+*Please add your name, a link to your public posts about the event, your GitHub handle, or whatever other relevant information you want to include.*
