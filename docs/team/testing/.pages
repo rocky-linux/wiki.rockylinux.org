@@ -1,6 +1,3 @@
 ---
 nav:
   - Testing Team: index.md
-  - QA:Test Cases: qa_test_cases.md
-  - Release Criteria & Status: release_criteria
-  - Wiki Development Guides: dev_guides

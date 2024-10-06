@@ -24,10 +24,11 @@ We encourage users to either:
 
 * Use formats such as OGG, Dirac, and FLAC
 * Consider finding a third party repository that provides such codecs such as rpmfusion
-  * Note that we cannot support you if you choose to use such repositories.
+
+    * Note that we cannot support you if you choose to use repositories that are not community approved.
 
 ## Missing Drivers
-Since Rocky Linux matches upstream with Red Hat Enterprise Linux, we are limited to the hardware that their kernel configuration supports. We are encourage you to use [ELRepo](https://elrepo.org) where you can kind kmod's + newer kernerls or a future legacy hardware SIG if Rocky Linux supports as such.
+Since Rocky Linux attempts to be compatible with Red Hat Enterprise Linux, we are limited to the hardware that their kernel configuration supports. We are encourage you to use [ELRepo](https://elrepo.org) where you can kind kmod's + newer kernerls or SIG/Kernel where there may be similar support.
 
 ## Missing Fonts
-The font that you are looking for is not available in Rocky Linux. This is because we only include fonts that are available in the upstream Red Hat Enterprise Linux.
+The font that you are looking for is not available in Rocky Linux. This is because we only include fonts that are available in our upstreams CentOS Stream and Red Hat Enterprise Linux.
