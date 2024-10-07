@@ -6,18 +6,19 @@ Please use [this template](event-reports/template.md) to create summaries for ea
 
 Did we meet you at one of these events? 
   1. Please add your name, link any related social media posts you made, or add a highlight to the relevant report. 
-  2. If the report does not yet exist, use the above template to initialize the report and add to the directory docs/team/community/event-reports.  
-  3. Then modify this document with the link to that file.
-  4. Submit PR against the development branch.
+  2. If the report does not yet exist, use the above template to initialize the report and add to the directory docs/team/community/event-reports. Use naming convention ([YY][acronym or brief name].md).
+  3. Helpful ways to flesh out that initial document include looking up the event website and noting it in the "Additional Resources" section, and then adding Event Name, Event Dates, and Event Location to the appropriate places in the template.
+  4. Then modify this document with the link to that file. e.g., if the document is for SuperComputing '24, the link will look like this: (event-reports/24SC.md)
+  5. Submit PR against the development branch.
 
-*Even a link to the main page for that event is helpful. It's okay if the document is very sparse. Every bit of help, helps.*
+*It's okay if the document is very sparse. Every bit of help, helps.*
 
 ### 2024
 - SuperComputing (SC24)
 - All Things Open
 - OpenLibreFree (OLF)
-- Hacktoberfest
-- Nerdearla
+- [Hacktoberfest](event-reports/24hacktoberfest.md)
+- [Nerdearla 10th Anniversary](event-reports/24nerdearla.md)
 - Columbia LUG
 - DevConfUS Boston incl Boston Python
 - Flock to Fedora
@@ -32,9 +33,9 @@ Did we meet you at one of these events?
 
 ### 2023
 - Rockmas - Rocky's online celebration of community
-- SC23
+- SuperComputing (SC23)
 - OpenLibreFree (OLF)
-- Toronto LUG
+- Greater Toronto Area LUG (online)
 - Flock to Fedora
 - [SouthEast LinuxFest (SELF)](event-reports/23SELF.md)
 - Write the Docs Portland
