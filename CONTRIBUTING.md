@@ -17,6 +17,8 @@ Before contributing, ensure you have a basic understanding of the following:
 
 1. **Fork and Clone:** Start by forking the repository and then cloning your fork locally.
 2. **Branch:** Always create a new branch from `development` for your work. The `development` branch is our main development branch, and all PRs should target this branch.
+<img width="971" alt="Screenshot 2024-10-08 at 17 39 53" src="https://github.com/user-attachments/assets/09b8024a-4d41-4795-b976-4fd1c34ab38a">
+
 
 **Issue-Driven Development**
 
