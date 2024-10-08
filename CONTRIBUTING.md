@@ -16,7 +16,9 @@ Before contributing, ensure you have a basic understanding of the following:
 **Development Environment**
 
 1. **Fork and Clone:** Start by forking the repository and then cloning your fork locally.
-2. **Branch:** Always create a new branch from `develop` for your work. The `develop` branch is our main development branch, and all PRs should target this branch.
+2. **Branch:** Always create a new branch from `development` for your work. The `development` branch is our main development branch, and all PRs should target this branch.
+<img width="971" alt="Screenshot 2024-10-08 at 17 39 53" src="docs/assets/images/development-branch.png">
+
 
 **Issue-Driven Development**
 
