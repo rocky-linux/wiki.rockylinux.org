@@ -34,3 +34,5 @@ This will be updated after the event.
 
 ## Hacktoberfest Participants
 *Please add your name, a link to your public posts about the event, your GitHub handle, or whatever other relevant information you want to include.*
+
+👉 Panayiotis Georgiou [@georgioupanayiotis](https://github.com/georgioupanayiotis) - [Facebook Post](https://www.facebook.com/panayiotisgeorgiou.net/posts/pfbid0KdrYwEcgFZgwoQpxMh4wmdNtg3PF6PK3jezynnrmgtyCV5tcvVJecVpPtFKcwVZxl)
