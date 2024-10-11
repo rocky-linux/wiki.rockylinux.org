@@ -36,3 +36,5 @@ This will be updated after the event.
 *Please add your name, a link to your public posts about the event, your GitHub handle, or whatever other relevant information you want to include.*
 
 👉 Panayiotis Georgiou [@georgioupanayiotis](https://github.com/georgioupanayiotis) - [Facebook Post](https://www.facebook.com/panayiotisgeorgiou.net/posts/pfbid0KdrYwEcgFZgwoQpxMh4wmdNtg3PF6PK3jezynnrmgtyCV5tcvVJecVpPtFKcwVZxl)
+
+👉 Andrew Scott [@andcscott](https://github.com/andcscott) - [LinkedIn Post](https://www.linkedin.com/posts/andcscott_hacktoberfest-rockycommunity-activity-7250528102840197120-VsTR?utm_source=share&utm_medium=member_desktop)
