@@ -29,7 +29,7 @@ This team is lead by the Team Leads listed below.
 | Role                             | Name                            | Email                   | Mattermost Name  |  IRC Name    |
 |----------------------------------|---------------------------------|-------------------------|------------------|--------------|
 |  Team Lead / Community Manager   | Krista Burdine                  | krista@resf.org         | @grammaresque    | grammaresque |
-|  Deputy Team Lead                | Alexia Rivera Steinberg         | alexia@rockylinux.org   | @alexia          | alexia       |
+|  Deputy Team Lead                | Alexia Steinberg                | alexia@rockylinux.org   | @alexia          | alexia       |
 
 
 ## Join Team
