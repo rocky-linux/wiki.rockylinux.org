@@ -23,6 +23,8 @@ Rocky Linux is a Silver Sponsor of the event
 ## Highlights
 Community Focus on Linux and Open Source: SELF is a community event designed for anyone interested in Linux and open source software, offering educational sessions and networking opportunities for all skill levels.
 
+[SouthEast LinuxFest (SELF)](http://event-reports/24SELF.md)
+
 Wide Range of Topics: While focused on Linux and open source, SELF includes talks on related topics like networking, hardware, programming, information security, and amateur radio, with a flexible "/dev/random" track that covers diverse subjects.
 
 Social and Networking Events: SELF leans into social aspects, offering a lounge with recharge stations, a LAN party, tabletop games, and parties featuring a Craft Beer Bottle Share event, enhancing both learning and networking.
