@@ -38,3 +38,5 @@ This will be updated after the event.
 👉 Panayiotis Georgiou [@georgioupanayiotis](https://github.com/georgioupanayiotis) - [Facebook Post](https://www.facebook.com/panayiotisgeorgiou.net/posts/pfbid0KdrYwEcgFZgwoQpxMh4wmdNtg3PF6PK3jezynnrmgtyCV5tcvVJecVpPtFKcwVZxl)
 
 👉 Andrew Scott [@andcscott](https://github.com/andcscott) - [LinkedIn Post](https://www.linkedin.com/posts/andcscott_hacktoberfest-rockycommunity-activity-7250528102840197120-VsTR?utm_source=share&utm_medium=member_desktop)
+
+👉 Johnny Santamaria[johnny603](https://github.com/johnny603) - [Linkedin Post](https://www.linkedin.com/posts/johnnyds_i-got-the-hacktoberfest-2024-registered-activity-7250296534712385536-t9u9?utm_source=share&utm_medium=member_desktop)
