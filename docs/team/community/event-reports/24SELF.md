@@ -1,5 +1,5 @@
 ---
-title: SouthEast LinuxFest Event Report
+title: SouthEast LinuxFest 2024
 ---
 # Event Name: SouthEast LinuxFest (SELF)
 
