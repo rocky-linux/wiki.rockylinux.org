@@ -23,7 +23,7 @@ Did we meet you at one of these events?
 - DevConfUS Boston incl Boston Python
 - Flock to Fedora
 - GUADEC
-- SouthEast LinuxFest (SELF)
+- [SouthEast LinuxFest (SELF)](event-reports/24SELF.md)
 - LinuxFest Northwest (LFNW)
 - Texas Linux Festival (TXLF)
 - [Southern California Linux Expo (SCaLE)](https://rockylinux.org/news/scale21x-recap)
