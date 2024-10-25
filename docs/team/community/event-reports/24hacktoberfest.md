@@ -38,3 +38,5 @@ This will be updated after the event.
 👉 Panayiotis Georgiou [@georgioupanayiotis](https://github.com/georgioupanayiotis) - [Facebook Post](https://www.facebook.com/panayiotisgeorgiou.net/posts/pfbid0KdrYwEcgFZgwoQpxMh4wmdNtg3PF6PK3jezynnrmgtyCV5tcvVJecVpPtFKcwVZxl)
 
 👉 Andrew Scott [@andcscott](https://github.com/andcscott) - [LinkedIn Post](https://www.linkedin.com/posts/andcscott_hacktoberfest-rockycommunity-activity-7250528102840197120-VsTR?utm_source=share&utm_medium=member_desktop)
+
+👉 Joey Brinkman[@j0eybrinkman](https://github.com/j0eybrinkman) - [Linkedin Post](https://www.linkedin.com/posts/activity-7249133914332499968-CboE?utm_source=share&utm_medium=member_desktop)
