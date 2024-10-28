@@ -11,7 +11,7 @@ repo_name: rocky-linux/wiki.rockylinux.org
 edit_uri: edit/development/docs/
 
 # Copyright
-copyright: Copyright &copy; 2023 Rocky Enterprise Software Foundation
+copyright: Copyright &copy; 2024 Rocky Enterprise Software Foundation
 
 # Configuration
 theme:
