@@ -1,6 +1,6 @@
 ---
-Flock to Fedora Report 2024
-Krista Burdine, Community Team Lead
+title: Flock to Fedora Report 2024
+authors: Krista Burdine, Community Team Lead
 ---
 # Flock to Fedora
 
