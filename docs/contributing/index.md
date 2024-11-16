@@ -7,7 +7,7 @@ you can contribute to Rocky Linux, such as helping users on forums, Mattermost/I
 mail lists to debugging packages, hunting bugs, and finding fixes. Other ways to
 contribute may be joining a Special Interest Group.
 
-See below for the some of the ways you can contribute. Note that this information
+See below for some of the ways you can contribute. Note that this information
 is subject to change.
 
 ## Helping other users
@@ -25,7 +25,7 @@ interest you. Here's some basic things you can do to get you going:
 ## Helping with bug hunting & finding fixes
 
 There are occasions that Rocky Linux users may find problems that may or may not be reproducible
-on our upstream distributions RHEL and CentOS Stream. We encourage users to to use our
+on our upstream distributions RHEL and CentOS Stream. We encourage users to use our
 [bug tracker](https://bugs.rockylinux.org) to file bugs. **Note** that this is not meant to be
 a support system. We encourage users to ask for support on our forums, Mattermost, or IRC.
 
