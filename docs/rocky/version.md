@@ -11,7 +11,7 @@ Below is a table of Rocky Linux versions, with accompanying general release and 
 | Release         | Codename       | Release Date  | Active Support Ends  | End of Life          | Latest/Current Version   |
 |-----------------|----------------|---------------|----------------------|----------------------|--------------------------|
 | Rocky Linux 8   | Green Obsidian | May 1, 2021   | May 31, 2024         | May 31, 2029         | 8.10 (May 31, 2024)      |
-| Rocky Linux 9   | Blue Onyx      | July 14, 2022 | May 31, 2027         | May 31, 2032         | 9.4 (May 9, 2024)        |
+| Rocky Linux 9   | Blue Onyx      | July 14, 2022 | May 31, 2027         | May 31, 2032         | 9.5 (November 19, 2024)  |
 
 For more detailed information on each version, click any of the tabs below.
 
@@ -27,7 +27,7 @@ Throughout this page, you will see terms such as "major version" or "minor versi
 
 | Term           | Definition                                                                                                                                                        |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Major Version  | A major version is denoted by a whole number, such as "Rocky Linux 9". This number is left-most number in a version, such as 9.0, where "9" is the major version. |
+| Major Version  | A major version is denoted by a whole number, such as "Rocky Linux 9". This number is left-most number in a version, such as 9.0, where "9" is the major version. These releases come with significant changes to its preceding major version. |
 | Minor Version  | A minor version is denoted by the right-most number in a version, such as "Rocky Linux 9.3". "9" being the major version, "3" being the minor version. These updates come with version upgrades, rebases, new software and features. |
 | Release        | Release typically refers to a major version release, such as "Rocky Linux 9". It is typically assumed it is referring to the latest/current version of that release. |
 | Minor Release  | Used as "Minor Version" in most cases. |
@@ -35,18 +35,18 @@ Throughout this page, you will see terms such as "major version" or "minor versi
 
 ### Timeline
 
-Rocky Linux strives to follow Red Hat Enterprise Linux and CentOS Stream within reason. As such, Rocky Linux releases should follow fairly close to our upstreams.
+Rocky Linux attempts to follow CentOS Stream development and Red Hat Enterprise Linux releases as close as possible. With this model, Rocky Linux releases should follow fairly close to our upstreams.
 
 #### Major Version Release
 
 For a new Rocky Linux release, the following should be true:
 
-* New major version is released with support of ten (10) years[1], starting at `.0`.
-* Release will have five (5) years of minor version updates
+* New major version is released with support of ten (10) years, starting at `.0`.
+* Release will have five (5) years of minor version updates or "active support"
 
-    * Releases come with two minor version releases a year: Every six (6) months
-    * Minor releases will come with new features, software rebases, and sometimes brand new software
-    * Final minor version will almost always be `.10`
+    * Each major version will come with two minor version releases a year: Every six (6) months
+    * Minor version releases will come with new features, software rebases, and sometimes brand new software
+    * Final minor version will be `.10`
 
 #### Minor Version Release
 
@@ -58,11 +58,11 @@ For a new Rocky Linux minor version release, the following should be true:
 However, when the minor version is `.10`, this means:
 
 * Rocky Linux (and other Enterprise Linux derivatives) go into security maintenance for the next five (5) years
-* This version of Rocky Linux will likely not receive new features nor new software
+* This version of Rocky Linux will likely not receive new features, but new packages may appear occasionally
 
-### Release Cadence
+### Release Schedule
 
-Based on Red Hat's life cycle policy, the month of May is when new major versions are released *and* every May and November a new minor version release is provided for prior supported releases. Rocky Linux attempts to follow as closely as possible to this same cadence.
+Based on Red Hat's life cycle policy, the month of May is when new major versions are released *and* every May and November a new minor version release is provided for prior supported releases. Rocky Linux attempts to follow this system as closely as possible.
 
 Below is a general guideline (based on Red Hat documentation) for the "full support" cycle for Rocky Linux.
 
@@ -78,25 +78,22 @@ Below is a general guideline (based on Red Hat documentation) for the "full supp
 | .7      | November |
 | .8      | May      |
 | .9      | November |
-| .10     | May      |
+| .10*    | May      |
 
-Upon a new minor release (`X.Y+1`), the previous Rocky Linux minor version is no longer supported and is moved to the [vault](repo.md#vault).
+Upon each new minor release, (`X.Y+1`), the previous version is no longer supported and is moved to the [vault](repo.md#vault).
 
-After `X.10` is released, the following may be true:
-
-* Maintenance Mode starts for the next five (5) years
-* `X.10` is considered the final version for a release and only this receives updates until End of Life
-* CentOS Stream X will cease development near the end of the month of May
+!!! warning "X.10"
+    `X.10` is the final minor release. When it is released, that version of Rocky Linux is now in maintenance mode for the next five (5) years until End of Life, receiving only maintenance related updates. CentOS Stream X will also cease development upstream. This marks the end of "active support".
 
 ## Version Policy
 
-Rocky Linux attempts to follow closely with the updates of our upstream Red Hat Enterprise Linux. As such, updates aim to be released as on time as possible.
+Rocky Linux attempts to follow closely with the updates of our upstream Red Hat Enterprise Linux. This means that updates aim to be released as on time as possible.
 
 **For Rocky Linux 8**: Previous versions of packages will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates).
 
 **For Rocky Linux 9**: This policy is not currently supported and can be expected in a future Rocky Linux version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18). Older versions of packages can by found in [Koji](https://kojidev.rockylinux.org) when they're uploaded or the vault.
 
-**For all Rocky Linux versions**: When a new minor release arrives, all previous updates/versions are *not* carried over.
+**For all Rocky Linux versions**: When a new minor release arrives, all previous updates/versions are *not* carried over and will be found in the vault.
 
 ### General Update Timeline
 
@@ -108,14 +105,14 @@ Minor releases for Rocky Linux are generally expected to be built and released a
 
 A release or version of Rocky Linux is considered unsupported if:
 
-* The Rocky Linux minor version has been superseded by another minor release *or*
+* The Rocky Linux minor version has been superseded by another release *or*
 * The Rocky Linux release is End of Life
 
 See the examples below.
 
 ### Example: An Unsupported Version
 
-When a new Rocky Linux minor release arrives (`X.Y+1`) the following is true:
+When a new Rocky Linux minor release arrives in May/November, the following is true:
 
 * The previous version is no longer supported by Release Engineering and the community
 * This version is no longer updated and is moved to the [vault](http://dl.rockylinux.org/vault/rocky/).
