@@ -20,4 +20,4 @@
     | 9.2     | 5.14.0-284.11.1   | May 16, 2023      | November 20, 2023 | <div style="background-color:red">NO</div>    |
     | 9.3     | 5.14.0-362.8.1    | November 20, 2023 | May 09, 2024      | <div style="background-color:red">NO</div>    |
     | 9.4     | 5.14.0-427.13.1   | May 09, 2024      | November 19, 2024 | <div style="background-color:red">NO</div>    |
-    | 9.5     | 5.14.0-503.14.1   | November 19, 2024 | May 2024          | <div style="background-color:green">Yes</div> |
+    | 9.5     | 5.14.0-503.14.1   | November 19, 2024 | May 2025          | <div style="background-color:green">Yes</div> |
