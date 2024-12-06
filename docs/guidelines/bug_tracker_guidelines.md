@@ -9,11 +9,11 @@ you have.
 
 ## Preface
 
-Bugzilla is a core part of the Rocky Linux distribution and Rocky Enterprise
-Software Foundation as a whole. Whether you're a bug reporter, a contributor,
-or perhaps on the Release Engineering team, the Bug Tracker is a utility for
-everyone to be able to read and engage with others to find solutions to issues
-affecting the software that is shipped and available in Rocky Linux.
+Mants is a core part of the Rocky Linux distribution. Whether you're a bug
+reporter, a contributor, or perhaps on the Release Engineering team, the Bug
+Tracker is a utility for everyone to be able to read and engage with others to
+find solutions to issues affecting the software that is shipped and available in
+Rocky Linux.
 
 ## General Guidelines
 
@@ -30,6 +30,10 @@ to be aware of:
   Rocky Linux. Tickets opened that are asking for support on the operating
   system or software will be closed. You are encouraged to go to our subreddit,
   Libera IRC channel (#rockylinux), mattermost, or our forums.
+
+* Custom compiled software and libraries, including those that either replace or
+  live side-by-side with system packages, is not supported. Majority, if not all
+  of those reports will be closed.
 
 ## Expectations
 
