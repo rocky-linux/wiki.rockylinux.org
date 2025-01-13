@@ -54,8 +54,6 @@ follow. Below are a list of general things to be aware of:
   https://bugs.rockylinux.org. Issues pertaining to a project under RESF may
   have other guidelines.
 
-* Do not perform your work or changes on a system that is owned by your employer
-
 Expectations
 ============
 
