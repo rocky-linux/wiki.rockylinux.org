@@ -18,6 +18,7 @@ to the resources at the bottom of each page. The list of pages in this guide are
 listed below:
 
 * [Proposing a SIG](proposal.md)
+* [Onboarding members](onboarding.md)
 * [Managing Content](content.md)
 * [Building Packages](build.md)
 * [Automated Testing](testing.md)

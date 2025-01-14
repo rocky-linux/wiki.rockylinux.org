@@ -24,11 +24,20 @@ We expect SIGs to satisfy some basic requirements, such as:
 * The group should be related to Rocky Linux, a use-case for Rocky Linux or Enterprise Linux, or related to Enterprise Linux as a whole
 * There must be feedback and control into the Rocky Linux community
 * All communication as to the work of the SIG should be public - Some matters may have to be private, and as such should be out of band
-    * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC channel can also be assigned.
+    * It is expected that each SIG will have a public channel as `SIG/name` in mattermost. Optionally an IRC channel can also be linked to the Mattermost channel, if requested.
 * Code produced within the SIG must be compatible with a FOSS license presently used by Rocky Linux - If a new license is wanted, consult with Release Engineering/Core or the `~Legal` channel in mattermost.
 * All documentation and information of the SIG should be on a wiki produced in the [RESF Git Service](https://git.resf.org).
 * All documentation produced within the SIG must be a compatible documentation license
 * Groups should be aware/watchful of the direction from the Release Engineering team/Core as it can affect how SIGs operate if they are producing compiled software.
+* Groups should maintain minutes of past meetings and record decisions made within and without of those meetings for transparency
+
+### Onboarding
+
+Each SIG is expected to implement the guidelines set forth in the [SIG Onboarding Guide](onboarding.md) to welcome and facilitate contributions for new members.
+
+When onboarding a new member, follow the guidelines in the [SIG Onboarding Guide - Leads](onboarding_leads.md).
+
+Leads are welcome and encouraged to maintain a customized set of instructions on the SIG wiki--especially for instructions that are unique to the SIG.
 
 ## Special Interest Group Wiki
 
@@ -50,20 +59,71 @@ The following rules apply for SIG membership:
 * SIG channels will be public under a name such as `SIG/name` with an optional IRC channel to be bridged.
 * Optionally: define if work with CentOS Stream will be applicable for the SIG
 
-## SIG Reporting
+Special Interest Groups (SIGs) in Rocky Linux are required to report quarterly, summarizing their accomplishments, challenges, and overall health. Below is a suggested outline and template for creating your quarterly report.
 
-SIGs are expected to report at least quarterly, with a brief summary of what they've accomplished. A suggested outline:
+Completion of these reports helps the Community team have a large selection of content to promote and market so the SIG can grow in membership and usage.
 
-* Membership update (members joined or parted, sponsor/leader changes)
-* Releases in the current quarter (or previous quarter if no releases)
-* General activity or health report
-* Issues to address within the SIG
+### Suggested Outline:
+
+* **Membership Update**: Include details on new members, departures, and any changes in sponsors or leaders.
+* **Releases**: List releases from the current quarter (or previous quarter if there have been no new releases).
+* **General Activity/Health Report**: Provide a summary of the overall activity and health of the SIG.
+* **Issues**: Identify any issues the SIG is currently facing and any actions being taken to address them.
+
+### Markdown Template
+
+```markdown
+# [SIG Name] Quarterly Report
+_**Quarter:** [Specify the quarter and year]_
+
+## 1. Membership Update
+* **New Members**:
+  - [Name], [Role]
+  - [Name], [Role]
+* **Departed Members**:
+  - [Name], [Role]
+* **Sponsor/Leader Changes**:
+  - [Name], [New Role]
+
+## 2. Releases
+* **Released in Current Quarter**:
+  - [Package/Version] - [Release Date]
+    - Short description of the release.
+  - [Package/Version] - [Release Date]
+    - Short description of the release.
+* **No new releases this quarter. Releases from previous quarter**:
+  - [Product/Version] - [Release Date]
+    - Short description of the release.
+
+## 3. General Activity/Health Report
+* **Project Updates**:
+  - Brief summary of ongoing projects.
+  - Goals achieved, milestones reached.
+* **Meetings Held**: 
+  - [Date] - Summary
+  - [Date] - Summary
+* **Collaboration**:
+  - Summary of collaboration with other SIGs or external groups.
+
+## 4. Issues
+* **Current Issues**:
+  - Description of issue 1 and steps taken to address it.
+  - Description of issue 2 and steps taken to address it.
+* **Upcoming Challenges**:
+  - Description of any anticipated challenges in the next quarter.
+
+### Additional Notes
+* [Any additional notes or comments relevant to the report.]
+
+## Conclusion
+* Brief conclusion or call to action for SIG members.
+```
 
 ## Joining a Special Interest Group
 
 Joining an established Special Interest Group should be simple. Each SIG will
-have its own process and outlines. Please see sponsors or other members of the
-Special Interest Group you're interested in if a wiki or other documentation
-is not available.
+have its own process and outlines, but the general process can be seen [here](onboarding.md).
+Please see sponsors or other members of the Special Interest Group you're interested in if
+you can't find an answer to your question
 
 {% include "releng/resources_bottom.md" %}
