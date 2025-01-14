@@ -8,7 +8,7 @@ You have been redirected here to answer why you cannot find certain packages in 
 The package you are searching for is not available in Rocky Linux. There are a few reasons why this could be:
 
 * We cannot include software that is encumbered by software patents
-* We cannot include software that is not in the Base OS (you are encouraged to use EPEL and SIGs)
+* We cannot include software that is not in the Base OS (you are encouraged to use EPEL and Special Interest Group repositories)
 * In the case of a SIG, we cannot package proprietary software.
 * Perhaps someone has not packaged it yet to be included in a SIG.
 
@@ -28,7 +28,7 @@ We encourage users to either:
     * Note that we cannot support you if you choose to use repositories that are not community approved.
 
 ## Missing Drivers
-Since Rocky Linux attempts to be compatible with Red Hat Enterprise Linux, we are limited to the hardware that their kernel configuration supports. We are encourage you to use [ELRepo](https://elrepo.org) where you can kind kmod's + newer kernerls or SIG/Kernel where there may be similar support.
+Since Rocky Linux attempts to be compatible with Red Hat Enterprise Linux, we are limited to the hardware that their kernel configuration supports. We encourage you to use [ELRepo](https://elrepo.org) where you can find kmod's + newer kernels or SIG/Kernel where there may be similar support.
 
 ## Missing Fonts
 The font that you are looking for is not available in Rocky Linux. This is because we only include fonts that are available in our upstreams CentOS Stream and Red Hat Enterprise Linux.
