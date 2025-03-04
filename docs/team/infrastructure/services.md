@@ -17,8 +17,9 @@ Services and software in use by the Rocky Linux project
 | **Koji**        | Distro packaging               | Deployed   | LGPL-2.1                | https://fedoraproject.org/wiki/Koji                  |
 | **Mattermost**  | Communications                 | Deployed   | Mattermost EE           | https://mattermost.com                               |
 | **Mock**        | Distro packaging               |            | GPL-2.0                 | https://github.com/rpm-software-management/mock/wiki |
-| **GitLab EE**   | Distro Packaging               | Deployed   | MIT + GitLab EE License | https://gitlab.com                                   |
-| **Gitea**       | Community Git Forge            | Deployed   | MIT                     | https://gitea.io                                     |
+| **GitLab EE**   | Distro packaging               | Deployed   | MIT + GitLab EE License | https://gitlab.com                                   |
+| **Gitea**       | Community Git Forge            | Removed    | MIT                     | https://gitea.io                                     |
+| **Forgejo**     | Community Git Forge            | Deployed   | GPL-3.0                 | https://forgejo.org                                  |
 | **OpenProject** | Project management             | Deployed   | GPL-3.0                 | https://www.openproject.org                          |
 | -               | SIEM                           | -          | -                       | -                                                    |
 | **Wiki.js**     | Documentation                  | Removed    | AGPL-3.0                | https://wiki.js.org                                  |
