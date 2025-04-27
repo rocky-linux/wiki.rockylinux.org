@@ -79,10 +79,11 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 * **[Broken "V" Servers](#broken-v-servers)**
 * **Old minor/point releases of Rocky Linux (See our [version policy](rocky/version.md))**
-* **Upgrades or upgraded Rocky Linux systems (e.g., upgrading CentOS 7 to 8, or Rocky Linux 8 to 9, see our [version policy](rocky/version.md))**
+* **Upgrades or upgraded Rocky Linux systems (e.g., upgrading Rocky Linux 8 to 9, see our [version policy](rocky/version.md))**
 * **Upgrades of the default python version (e.g. python 3.6 to 3.9 or python 3.9 to 3.11)**
+* **Upgrades of the default glibc version provided**
 * **Politics or Profanity**
-* **Distro X is better/worse than Rocky**
+* **Distro X is better/worse than Rocky Linux**
 * **Personal drama from other channels, namespaces, or other users**
 
     * IRC: Repeat offenders will be quieted or banned from the `#rockylinux*` namespace
