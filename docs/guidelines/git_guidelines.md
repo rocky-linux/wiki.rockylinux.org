@@ -35,7 +35,7 @@ This section goes over the expectations of using a Git service.
 Most of this information is covered in our `Git Contributor Agreement`, which generally covers the RESF Git Service and Rocky Linux GitLab. However, we are duplicating the information here for all readers.
 
 * Moderation is enforced - As is done in the Rocky Linux Mattermost chat, it is important to mind your language and word choice whether in Git issues or the Bug Tracker.
-* A valid GPG key must be uploaded and used to sign your commits - Signed commits, as a general rule are recommended. Expect that most projects will have unsigned commits disabled.
+* A valid GPG key must be uploaded and used to sign your commits - Signed commits, as a general rule are **required**. Expect that most projects will have unsigned commits disabled.
 * Do not treat git as an issue tracker - All issues for Rocky Linux should be tracked at our Bug Tracker. As of this writing, issues are opened for build issues.
 * Do not perform your work or changes on a system that is owned by your employer.
 * Creating personal projects are discouraged (see exceptions)
