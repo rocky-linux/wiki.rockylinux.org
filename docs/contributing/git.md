@@ -43,8 +43,8 @@ follow. Below are a list of general things to be aware of:
   want them to speak to you.
 
 * A valid GPG key must be uploaded and used to sign your commits. Signed
-  commits, as a general rule, are recommended. Expect that most projects will
-  have unsigned commits disabled.
+  commits, as a general rule, are considered **required**. Expect that most git
+  repositories will have unsigned commits disabled.
 
 * Accounts that are not in use or have not logged in may be deactivated or
   disabled
