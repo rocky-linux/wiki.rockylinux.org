@@ -44,11 +44,7 @@ By default, if your email address has an account on [libravatar](https://www.lib
 you will automatically have a profile picture assigned. If you do not, you can create one
 by clicking the "Change Avatar" button in the profile tab.
 
-It is highly recommended that you fill out the "SSH & GPG Keys" tab. Your ssh
-keys should sync to both the [Rocky Linux GitLab](https://git.rockylinux.org) and
-[RESF Git Service](https://git.resf.org).
-
-It is **required** that you add your GPG key to your account, as all commits to the wiki repository must be GPG signed. This is enforced for all contributions. If you have not set up GPG signing for your git commits, please follow the [GitHub guide to signing commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) or refer to your platform's documentation.
+It is **required** that you fill out the "SSH & GPG Keys" tab, as all commits must be GPG signed to contribute to git.rockylinux.org and git.resf.org.
 
 It is highly recommended that you add an OTP to your account.
 
