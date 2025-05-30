@@ -11,8 +11,8 @@ Below is a table of Rocky Linux versions, with accompanying general release and 
 | Release         | Codename       | Release Date  | Active Support Ends  | End of Life          | Latest/Current Version   |
 |-----------------|----------------|---------------|----------------------|----------------------|--------------------------|
 | Rocky Linux 8   | Green Obsidian | May 1, 2021   | May 31, 2024         | May 31, 2029         | 8.10 (May 31, 2024)      |
-| Rocky Linux 9   | Blue Onyx      | July 14, 2022 | May 31, 2027         | May 31, 2032         | 9.6 (June 01, 2025)      |
-| Rocky Linux 10  | Red Quartz     | June 01, 2025 | May 31, 2030         | May 31, 2035         | 10.0 (June 01, 2025)     |
+| Rocky Linux 9   | Blue Onyx      | July 14, 2022 | May 31, 2027         | May 31, 2032         | 9.6 (June 02, 2025)      |
+| Rocky Linux 10  | Red Quartz     | June 02, 2025 | May 31, 2030         | May 31, 2035         | 10.0 (June 02, 2025)     |
 
 For more detailed information on each version, click any of the tabs below.
 
