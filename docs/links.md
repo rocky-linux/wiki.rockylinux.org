@@ -35,6 +35,8 @@ title: Link Directory
 ### Rocky Linux 9
   * [Peridot](https://peridot.build.resf.org/)
   * [Peridot Development Instance](https://peridot.pdot-dev.rockylinux.org/)
+### Rocky Linux 10
+  * [Koji](https://koji.rockylinux.org)
 ## Social
   * [Mattermost](https://chat.rockylinux.org)
   * IRC ([libera.chat](https://libera.chat)): [IRC<-->Mattermost mappings](irc.md)

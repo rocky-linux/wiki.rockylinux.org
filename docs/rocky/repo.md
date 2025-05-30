@@ -26,18 +26,18 @@ In the event a new release is available, the symlink is changed to point to the 
 
 Each major release has a set of repositories that come default with the distribution. Below is a list of common repositories for each major release, including their repo id.
 
-| Repository       | repoid                    | Rocky 8 | Rocky 9 | Enabled |
-|------------------|---------------------------|---------|---------|---------|
-| BaseOS           | baseos                    | Yes     | Yes     | Yes     |
-| AppStream        | appstream                 | Yes     | Yes     | Yes     |
-| PowerTools       | powertools                | Yes     | No      | No      |
-| CRB              | crb                       | No      | Yes     | No      |
-| HighAvailability | ha (8) / highavailibility | Yes     | Yes     | No      |
-| ResilientStorage | rs (8) / resilientstorage | Yes     | Yes     | No      |
+| Repository       | repoid                    | Rocky 8 | Rocky 9 | Rocky 10 | Enabled |
+|------------------|---------------------------|---------|---------|----------|---------|
+| BaseOS           | baseos                    | Yes     | Yes     | Yes      | Yes     |
+| AppStream        | appstream                 | Yes     | Yes     | Yes      | Yes     |
+| PowerTools       | powertools                | Yes     | No      | No       | No      |
+| CRB              | crb                       | No      | Yes     | Yes      | No      |
+| HighAvailability | ha (8) / highavailibility | Yes     | Yes     | Yes      | No      |
+| ResilientStorage | rs (8) / resilientstorage | Yes     | Yes     | No       | No      |
 
 ### Notes on: CRB
 
-CRB is "Code Ready Builder" - PowerTools was a carryover from CentOS, which is still the equivalent of CRB in RHEL. `crb` will be the repository name going forward in Rocky Linux and other derivatives starting with version 9. Rocky Linux 8 matches CentOS's use of PowerTools in order to be as compatible as possible with what users expect from a rebuild of version 8.
+CRB is "Code Ready Builder" - PowerTools was a carryover from CentOS, which is still the equivalent of CRB in RHEL. `crb` will be the repository name going forward in Rocky Linux and other derivatives starting with version 9. Rocky Linux 8 matches CentOS's use of PowerTools in order to be as compatible as possible with what users expect.
 
 ### Notes on: Lack of "updates" repo
 
@@ -47,14 +47,14 @@ In older major versions, it was normal to have an "updates" repo. Fedora for exa
 
 There are extra repositories offered by Rocky Linux.
 
-| Repository       | repoid           | Rocky 8 | Rocky 9 | Enabled |
-|------------------|------------------|---------|---------|---------|
-| Extras           | extras           | Yes     | Yes     | Yes     |
-| Plus             | plus             | Yes     | Yes     | No      |
-| RT (real time)   | rt               | Yes     | Yes     | No      |
-| NFV              | nfv              | Yes     | Yes     | No      |
-| SAP / SAP HANA   | sap / saphana    | No      | Yes     | No      |
-| Devel / devel    | devel            | Yes     | Yes     | No      |
+| Repository       | repoid           | Rocky 8 | Rocky 9 | Rocky 10 | Enabled |
+|------------------|------------------|---------|---------|----------|---------|
+| Extras           | extras           | Yes     | Yes     | Yes      | Yes     |
+| Plus             | plus             | Yes     | Yes     | Yes      | No      |
+| RT (real time)   | rt               | Yes     | Yes     | Yes      | No      |
+| NFV              | nfv              | Yes     | Yes     | Yes      | No      |
+| SAP / SAP HANA   | sap / saphana    | No      | Yes     | Yes      | No      |
+| Devel / devel    | devel            | Yes     | Yes     | Yes      | No      |
 
 ### Notes on: Extras
 

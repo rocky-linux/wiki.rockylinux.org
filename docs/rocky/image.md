@@ -8,10 +8,11 @@ It is important to note that the images provided and what they provide may diffe
 
 ## About ISO Images
 
-| Version                                                     | boot | minimal | dvd | Architectures                   |
-|-------------------------------------------------------------|------|---------|-----|---------------------------------|
-| [Rocky Linux 8](http://dl.rockylinux.org/pub/rocky/8/isos/) | Yes  | Yes     | Yes | x86_64, aarch64                 |
-| [Rocky Linux 9](http://dl.rockylinux.org/pub/rocky/9/isos/) | Yes  | Yes     | Yes | x86_64, aarch64, ppc64le, s390x |
+| Version                                                       | boot | minimal | dvd | Architectures                            |
+|---------------------------------------------------------------|------|---------|-----|------------------------------------------|
+| [Rocky Linux 8](http://dl.rockylinux.org/pub/rocky/8/isos/)   | Yes  | Yes     | Yes | x86_64, aarch64                          |
+| [Rocky Linux 9](http://dl.rockylinux.org/pub/rocky/9/isos/)   | Yes  | Yes     | Yes | x86_64, aarch64, ppc64le, s390x          |
+| [Rocky Linux 10](http://dl.rockylinux.org/pub/rocky/10/isos/) | Yes  | Yes     | Yes | x86_64, aarch64, ppc64le, s390x, riscv64 |
 
 Every Rocky Linux release gets a set of ISO's. These ISO's are made by the tooling used to make and finalize the distribution. For a given Rocky Linux release, they will live in an `isos` directory at the root of a Rocky Linux release.
 
@@ -37,10 +38,7 @@ The first format is the most common and is the day-of-release ISO.
 
 The second format is in the case of rebuilt ISO's, typically in the case of addressing a bug or providing updated images (in the case of a newer kernel, a new secure boot shim, and so on).
 
-The third format is a symlink to the "latest" ISO. Currently, this is not advertised on the main site but may be in the future. This unversioned image is for these cases:
-
-* A pre-determined download location for users/mirrors/service providers who want an always available and deterministic download location, which can be easier to script
-* osinfo database / libvirt use where if a user selects Rocky Linux X, it should be aware of and be able to download from that location. This should be fully supported in Rocky Linux 8.7 and 9.1, and future Fedora versions.
+The third format is a symlink to the "latest" ISO, which is deprecated.
 
 ### Notes about: What does each ISO do?
 
