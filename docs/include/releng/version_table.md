@@ -27,5 +27,5 @@
 
     | Version | Release Kernel    | Release Date      | End of Life       | Supported                                     |
     |---------|-------------------|-------------------|-------------------|-----------------------------------------------|
-    | 10.0    | 6.12.0-55.12.1    | June 10, 2025     | November, 2025    | <div style="background-color:green">Yes</div> |
+    | 10.0    | 6.12.0-55.12.1    | June 11, 2025     | November, 2025    | <div style="background-color:green">Yes</div> |
 

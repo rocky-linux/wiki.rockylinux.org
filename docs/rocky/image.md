@@ -38,7 +38,8 @@ The first format is the most common and is the day-of-release ISO.
 
 The second format is in the case of rebuilt ISO's, typically in the case of addressing a bug or providing updated images (in the case of a newer kernel, a new secure boot shim, and so on).
 
-The third format is a symlink to the "latest" ISO, which is deprecated.
+The third format is a symlink to the "latest" ISO, which is deprecated and will
+not appear in versions after Rocky Linux 9.
 
 ### Notes about: What does each ISO do?
 
