@@ -12,7 +12,7 @@ Below is a table of Rocky Linux versions, with accompanying general release and 
 |-----------------|----------------|---------------|----------------------|----------------------|--------------------------|
 | Rocky Linux 8   | Green Obsidian | May 1, 2021   | May 31, 2024         | May 31, 2029         | 8.10 (May 31, 2024)      |
 | Rocky Linux 9   | Blue Onyx      | July 14, 2022 | May 31, 2027         | May 31, 2032         | 9.6 (June 04, 2025)      |
-| Rocky Linux 10  | Req Quartz     | June 11, 2025 | May 31, 2030         | May 31, 2035         | 10.0 (June 11, 2025)     |
+| Rocky Linux 10  | Red Quartz     | June 11, 2025 | May 31, 2030         | May 31, 2035         | 10.0 (June 11, 2025)     |
 
 For more detailed information on each version, click any of the tabs below.
 
@@ -84,15 +84,15 @@ Below is a general guideline (based on Red Hat documentation) for the "full supp
 Upon each new minor release, (`X.Y+1`), the previous version is no longer supported and is moved to the [vault](repo.md#vault).
 
 !!! warning "X.10"
-    `X.10` is the final minor release. When it is released, that version of Rocky Linux is now in maintenance mode for the next five (5) years until End of Life, receiving only maintenance related updates. CentOS Stream X will also cease development upstream. This marks the end of "active support".
+    `X.10` is the final minor release and marks the end of "active support". When it is released, that version of Rocky Linux is now in maintenance mode for the next five (5) years until End of Life, receiving only maintenance related updates. CentOS Stream X will also cease development upstream, marking that upstream's end of life.
 
 ## Version Policy
 
-Rocky Linux attempts to follow closely with the updates of our upstream Red Hat Enterprise Linux. This means that updates aim to be released as on time as possible.
+Rocky Linux attempts to follow closely with the updates of our one of our upstreams Red Hat Enterprise Linux. This means that updates aim to be released as on time as possible.
 
 **For Rocky Linux 8 and 10**: Previous versions of packages will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates).
 
-**For Rocky Linux 9**: This policy is not currently supported and can be expected in a future Rocky Linux version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18). Older versions of packages can by found in [Koji](https://kojidev.rockylinux.org) when they're uploaded or the vault.
+**For Rocky Linux 9**: This policy is not currently supported and can be expected in a future Rocky Linux 9 version. Please see [Peridot Issue #18](https://github.com/rocky-linux/peridot/issues/18). Older versions of packages can by found in the vault.
 
 **For all Rocky Linux versions**: When a new minor release arrives, all previous updates/versions are *not* carried over and will be found in the vault.
 
@@ -111,7 +111,7 @@ A release or version of Rocky Linux is considered unsupported if:
 * The Rocky Linux minor version has been superseded by another release *or*
 * The Rocky Linux release is End of Life
 
-See the examples below.
+See below for examples of unsupported releases.
 
 ### Example: An Unsupported Version
 
