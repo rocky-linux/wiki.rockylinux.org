@@ -151,8 +151,8 @@ The following is unsupported:
 
 Upgrades are not generally supported by Release Engineering nor most of the Rocky community. If you wish to perform upgrades between releases, there is a tool called ELevate that may be able to help you. But as a note of caution, this has not been formally tested and we cannot provide official assistance.
 
+!!! note
+    If you would like to see the project support major version upgrades, we encourage all interested parties to join our mattermost or our forums and open a conversation on the topic.
+
 !!! warning
     Some users have expressed success with doing upgrades with this tool. However, it is not formally tested by the Rocky Linux project and we cannot provide official assistance.
-
-!!! note
-    If you wish to be part of an effort to ensure upgrades are possible, we recommend that you join us in our Mattermost and ask how you can help.

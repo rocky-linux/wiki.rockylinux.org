@@ -201,7 +201,7 @@ System Upgrades are generally unsupported. There are quite a few methods out the
 Regardless of the method, a system that has been "upgraded" is generally considered unsupported, and you will be recommended to build a new system and restore from backups. Users may try to help or assist with your system, but it may be difficult to do so.
 
 !!! note
-    While the tool ELevate exists to help users transition from one major release of an Enterprise Linux to another, we have not formally tested it and we cannot officially provide assistance or feedback to the tool or an upgraded system. There may be users in the channel who have done so and can assist, but at this time it's still an unsupported system setup.
+    While the tool ELevate exists to help users transition from one major release of an Enterprise Linux to another, we have not formally tested it and we cannot officially provide assistance or feedback to the tool or an upgraded system. There may be users in the channel who have done so and can assist, but at this time it's still unsupported.
 
 ### Outdated or End of Life Releases
 
