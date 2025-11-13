@@ -17,7 +17,7 @@
 
     **Purpose**: General projects, code, and so on for the Rocky Enterprise Software Foundation.
 
-    **Technology**: [Gitea](https://gitea.io/en-us/)
+    **Technology**: [Forgejo](https://forgejo.org/)
 
     **Contact**: `~Infrastructure`, `~Development` in Mattermost and `#rockylinux-infra`, `#rockylinux-devel` in Libera IRC
 

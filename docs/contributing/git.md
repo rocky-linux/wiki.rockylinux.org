@@ -4,7 +4,7 @@ title: Rocky Linux Git Contributor Agreement
 
 Account Services helps the Rocky Enterprise Software Foundation keep track of
 contributors as well as the projects that they work on. This agreement goes over
-the RESF Git Service (Gitea) and the Rocky Linux GitLab instance, as well as
+the RESF Git Service (Forgejo) and the Rocky Linux GitLab instance, as well as
 their overall usage and what is expected for contributors.
 
 We require that contributors of Rocky (RESF) accept the following agreement, as
@@ -15,7 +15,7 @@ Please read carefully before accepting this agreement.
 Preface
 =======
 
-The RESF Git Service (Gitea) is a core part of the Rocky Enterprise Software
+The RESF Git Service (Forgejo) is a core part of the Rocky Enterprise Software
 Foundation. It is used to host code/software that is under the RESF or provide
 the teams within the Rocky ecosystem to manage their own projects, code, wiki,
 and so on. It will also act as a mirror for some repositories from the Rocky
@@ -129,10 +129,10 @@ signed this agreement and in the case of GitLab, be part of "gitusers" to login.
 Direct sign-ups or local git accounts are not permitted and no exceptions will
 be granted.
 
-Obtaining Access to the RESF Gitea Instance
+Obtaining Access to the RESF Forgejo Instance
 -------------------------------------------
 
-A user obtains access to the RESF Gitea instance as long as the following
+A user obtains access to the RESF Forgejo instance as long as the following
 conditions have been met:
 
 * The user accepts the relevant contributor agreements in Account Services

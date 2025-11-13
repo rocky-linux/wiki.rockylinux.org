@@ -20,7 +20,7 @@ This document covers how the Rocky Enterprise Software Foundation (RESF) handles
 
 Git is a core component of the Rocky Linux build ecosystem, RESF projects, and thus a mode of the development process for the distribution and available software.
 
-**Gitea** is used for the RESF, its projects, its code, mirrored repositories, and potentially other components.
+**Forgejo** is used for the RESF, its projects, its code, mirrored repositories, and potentially other components.
 
 **GitLab** is the software currently used to storing mostly RPM spec files, patches, configurations for debranding/modification to packages, as well as some scripts/utilities. Generally source code does not live here with the exception of src-git scenarios.
 
@@ -112,7 +112,7 @@ SIG group access is typically obtained by contacting a sponsor (as found in Acco
 
 ## Other Groups
 
-Other groups generally will not exist in the Rocky GitLab instance. Rather, they will (and should) exist in the RESF Gitea instance instead. These groups could contain repos for:
+Other groups generally will not exist in the Rocky GitLab instance. Rather, they will (and should) exist in the RESF Forgejo instance instead. These groups could contain repos for:
 
 * A team's source code
 * A team's set of tools or scripts
