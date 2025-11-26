@@ -22,7 +22,7 @@
     | 9.4     | 5.14.0-427.13.1   | May 09, 2024      | November 19, 2024 | <div style="background-color:red">NO</div>    |
     | 9.5     | 5.14.0-503.14.1   | November 19, 2024 | June 04, 2025     | <div style="background-color:red">NO</div>    |
     | 9.6     | 5.14.0-570.17.1   | June 04, 2025     | November, 2025    | <div style="background-color:green">Yes</div> |
-    | 9.7     | 5.14.0-611.5.1    | December, 2025    | May, 2026         | <div style="background-color:yellow">Not Available</div> |
+    | 9.7     | 5.14.0-611.5.1    | December, 2025    | May, 2026         | <div style="background-color:yellow">Testing</div> |
 
 === "Rocky Linux 10"
 
