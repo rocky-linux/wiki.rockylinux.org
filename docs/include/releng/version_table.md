@@ -22,10 +22,12 @@
     | 9.4     | 5.14.0-427.13.1   | May 09, 2024      | November 19, 2024 | <div style="background-color:red">NO</div>    |
     | 9.5     | 5.14.0-503.14.1   | November 19, 2024 | June 04, 2025     | <div style="background-color:red">NO</div>    |
     | 9.6     | 5.14.0-570.17.1   | June 04, 2025     | November, 2025    | <div style="background-color:green">Yes</div> |
+    | 9.7     | 5.14.0-611.5.1    | December, 2025    | May, 2026         | <div style="background-color:yellow">Not Available</div> |
 
 === "Rocky Linux 10"
 
     | Version | Release Kernel    | Release Date      | End of Life       | Supported                                     |
     |---------|-------------------|-------------------|-------------------|-----------------------------------------------|
-    | 10.0    | 6.12.0-55.12.1    | June 11, 2025     | November, 2025    | <div style="background-color:green">Yes</div> |
+    | 10.0    | 6.12.0-55.12.1    | June 11, 2025     | November 23, 2025 | <div style="background-color:red">NO</div>    |
+    | 10.1    | 6.12.0-124.8.1    | November 25, 2025 | May, 2026         | <div style="background-color:green">Yes</div> |
 
