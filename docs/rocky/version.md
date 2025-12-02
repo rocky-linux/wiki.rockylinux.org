@@ -88,7 +88,7 @@ Upon each new minor release, (`X.Y+1`), the previous version is no longer suppor
 
 ## Version Policy
 
-Rocky Linux attempts to follow closely with the updates of our one of our upstreams Red Hat Enterprise Linux. This means that updates aim to be released as on time as possible.
+Rocky Linux attempts to follow closely with the updates of our upstreams CentOS Stream and Red Hat Enterprise Linux. This means that updates aim to be released as timely as possible.
 
 Previous versions of packages will coexist in the repositories to allow a user to downgrade in case of a regression or other use cases (such as security only updates).
 
