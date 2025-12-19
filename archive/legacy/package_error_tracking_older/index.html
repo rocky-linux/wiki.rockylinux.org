@@ -1,0 +1,4136 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The wiki for the Rocky Linux project">
+      
+      
+      
+        <link rel="canonical" href="https://wiki.rockylinux.org/archive/legacy/package_error_tracking_older/">
+      
+      
+        <link rel="prev" href="../package_error_tracking/">
+      
+      
+        <link rel="next" href="../packaging/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Package Build Issues Tracking - Rocky Linux Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Rocky Linux Wiki" class="md-header__button md-logo" aria-label="Rocky Linux Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/icon-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rocky Linux Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Package Build Issues Tracking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/rocky-linux/wiki.rockylinux.org" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rocky-linux/wiki.rockylinux.org
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../links/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Link Directory
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../irc/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  General Chat and IRC
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../rocky/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Rocky Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guidelines/bug_tracker_guidelines/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Guidelines
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../special_interest_groups/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Special Interest Groups
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../team/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Teams
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../events/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Events
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../contributing/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Rocky Linux Wiki" class="md-nav__button md-logo" aria-label="Rocky Linux Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/icon-white.svg" alt="logo">
+
+    </a>
+    Rocky Linux Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/rocky-linux/wiki.rockylinux.org" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rocky-linux/wiki.rockylinux.org
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Link Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../irc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Chat and IRC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../rocky/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Linux
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rocky Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rocky/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Community Help & Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rocky/bugs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting Bugs and RFE's
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rocky/errata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Linux Errata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rocky/image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Linux ISOs and Images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rocky/repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Linux Repositories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rocky/rss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Linux RSS Feeds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rocky/version/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Linux Release and Version Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rocky/packagekit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PackageKit Missing Items
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guidelines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guidelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guidelines/bug_tracker_guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bug Tracker Guidelines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guidelines/git_guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Guidelines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guidelines/maillist_guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RESF Mailing List Guidelines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../special_interest_groups/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Special Interest Groups
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Special Interest Groups
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../special_interest_groups/current/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Current SIGs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../special_interest_groups/sig_guide/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIG Guide
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SIG Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../special_interest_groups/sig_guide/proposal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proposing a SIG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../special_interest_groups/sig_guide/content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../special_interest_groups/sig_guide/build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../special_interest_groups/sig_guide/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automated Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../special_interest_groups/sig_guide/release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releasing Packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../team/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Teams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../team/infrastructure/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure Team
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Infrastructure Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/infrastructure/idm_pdr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDR Delete Request
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../team/release_engineering/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Engineering Team
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release Engineering Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../team/testing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Team
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../team/design/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Team
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../team/community/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Team
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Community Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/meeting-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Meeting Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/past-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Past Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_6_5" id="__nav_7_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Event Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/event-reports/23SELF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SouthEast LinuxFest ‘23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/event-reports/24FOSDEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOSDEM 2024 with CentOS Connect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/event-reports/24GUADEC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GUADEC Denver 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/event-reports/24SELF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SouthEast LinuxFest 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/event-reports/24flock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flock to Fedora Report 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/event-reports/24hacktoberfest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hacktoberfest 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/event-reports/24nerdearla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NERDEARLA ‘24 10mo Aniversario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../team/community/event-reports/FOSDEM_2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CentOS Connect &amp; FOSDEM 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../team/documentation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Team
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../events/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Events
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../contributing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contributing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Linux Git Contributor Agreement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/rosca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Open Source Contributor Agreement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Legacy
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Legacy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8_4_package_errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Release 8.4 Package Errors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bootstrap_i686/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootstrap i686
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rocky Build Process Overview (Revised)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external_package_space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Package Scratch Space
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently Asked Questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hidden_deps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hidden / External Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koji_bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Koji Bootstrap (setup)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koji_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Koji setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mbs_installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module-build-service "mbs" setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mock_building_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mock building guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modularity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modularity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_build_order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Build Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mqtt_bus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CentOS MQTT message bus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package_debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to Help - Getting Started with Package Debugs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package_error_tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Build Issues Tracking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Build Issues Tracking
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Build Issues Tracking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositoriesbuilds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repositories/Builds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology-and-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methodology and Links
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methodology and Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-note-on-modularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Note on Modularity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-build-tips-discovered-so-far" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package Build Tips Discovered so far:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-new-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The New List
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-old-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The (old) List
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packaging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/rocky-linux/wiki.rockylinux.org/edit/development/docs/archive/legacy/package_error_tracking_older.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Package Build Issues Tracking</h1>
+
+<p><strong>NOTE: This page is deprecated, and refers to Skip's CentOS 8.3 "practice" build.  It is being kept as a reference in case there are similar issues with the listed packages.</strong></p>
+<p><strong>The actual build is in progress, and Koji build errors are tracked on the main error tracking page: https://wiki.rockylinux.org/e/en/team/development/Package_Error_Tracking</strong></p>
+<p><br /></p>
+<h6 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h6>
+<p><br /></p>
+<p>This page details packages that have failed to build, or which something "special" had to be done to achieve a build.</p>
+<p>For example, a package which fails when building with the newest version of a dependency, and requires the forced-downgrade to the older build dependency would go here.</p>
+<p>This page is NOT for dependency issues, or tracking which order to build dependent packages in.  That information is being tracked under Development/Build_Order/ in this wiki.</p>
+<h2 id="repositoriesbuilds">Repositories/Builds<a class="headerlink" href="#repositoriesbuilds" title="Permanent link">&para;</a></h2>
+<p>This page tracks build failures from these sources:</p>
+<ul>
+<li>CentOS BaseOS</li>
+<li>CentOS AppStream</li>
+<li>CentOS PowerTools</li>
+<li>External Dependencies</li>
+</ul>
+<p>"External Dependencies" means packages that are downloaded and built from git.centos.org , and don't belong in an official repository.  Many packages from the official repositories depend on these external dependency packages.</p>
+<h2 id="methodology-and-links">Methodology and Links<a class="headerlink" href="#methodology-and-links" title="Permanent link">&para;</a></h2>
+<p>Right now, build passes are done from CentOS 8.3 SRPMs and Skip's build server: ( https://rocky.lowend.ninja/RockyDevel/ )</p>
+<p>Official Koji/MBS infrastructure is nearly complete and will of course be the official location for Rocky builds.  This unofficial work is being done to gather information that will help the official build go smoothly.</p>
+<p>All build "passes" are done via Mock, and their results are added to a repository on the build server.  These repositories are available to subsequent builds, so more packages get their dependencies and successfully build.</p>
+<h3 id="links">Links:<a class="headerlink" href="#links" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Build Result Repositories:</strong>  https://rocky.lowend.ninja/RockyDevel/ {BaseOS_final, BaseOS_devel, AppStream_final, AppStream_devel, PowerTools_final, PowerTools_devel, External_Deps}  (Repos are separated into what goes in the official repo, and other build artifacts produced from the build that aren't in the official repo)</li>
+<li><strong>Mock Configurations:</strong>  https://rocky.lowend.ninja/RockyDevel/mock_configs/  - The mock config files used for each Build Pass.</li>
+<li><strong>Mock Build logs and RPMs:</strong> https://rocky.lowend.ninja/RockyDevel/MOCK_RAW/ - Logs and result RPMs from the mock builds.  Separated by repo and package name/version.  Dig into here to find error logs and match them with build results listed in the wiki.</li>
+<li><strong>Summarized build results:</strong> https://rocky.lowend.ninja/RockyDevel/deliverables/ - Results from each build pass.  What new packages succeeded, which ones failed, and what RPM files were created as a result of the build.  This information gets copied to the Wiki under Development/Build_Order/ for easy viewing, but is available in raw form here.</li>
+</ul>
+<p><br /></p>
+<h2 id="a-note-on-modularity">A Note on Modularity<a class="headerlink" href="#a-note-on-modularity" title="Permanent link">&para;</a></h2>
+<p>The current method for package testing is very simplistic, and doesn't take into account modular-stream packages (new feature in RHEL 8).  While we don't produce modular metadata with this method to create proper modules, it's still possible to compile modular packages and use modular dependencies.</p>
+<p>Our Mock config uses the option <code>module_hotfixes=1</code> in the DNF repo config files, which causes DNF to consider all packages for build dependencies in Mock, even ones from modules that are not enabled.</p>
+<p><br /></p>
+<h2 id="package-build-tips-discovered-so-far">Package Build Tips Discovered so far:<a class="headerlink" href="#package-build-tips-discovered-so-far" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Perl:</strong> Build everything (especially external dependencies!) against the default Perl 5.26 stream, NOT the latest available 5.30 stream.  Perl packages higher up the chain depend on 5.26.</p>
+</li>
+<li>
+<p><strong>Maven:</strong>  Create blank maven.conf file : <code>config_opts['files']['/etc/java/maven.conf'] = " "</code> by changing mock config.  Maven-related packages have a script that checks for it and will fail if it's not present</p>
+</li>
+<li>
+<p><strong>Various(SystemD)</strong>: SystemD changed its version string output from a simple "239" to a more complicated "239 (239-41.el8_3.1)" starting with the listed version.  Breaks several package scripts.</p>
+</li>
+<li>
+<p><strong>javapackages-tools:</strong> In order to produce "maven-local-openjdk8", you need a specific commit, more info under External Dependencies page.</p>
+</li>
+</ul>
+<p><br /></p>
+<h2 id="the-new-list">The New List<a class="headerlink" href="#the-new-list" title="Permanent link">&para;</a></h2>
+<p>This is a list of failing builds from <strong>kojidev.rockylinux.org</strong> that need help.  We're now focusing development efforts on helping the real builds, and not doing "practice" builds of CentOS.</p>
+<p>This list is not grouped according to repo.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Package</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">bolt-0.9-1.el8</td>
+<td>Using simple mock chroot (<code>isolation=simple</code>) solves permission issues, but there are still 2 tests that fail with signal 5 (SIGTRAP).  Investigation still ongoing</td>
+</tr>
+<tr>
+<td style="text-align: left;">graphviz-2.40.1-40</td>
+<td>Fixed if <code>module_hotfixes=1</code> is turned off.  It pulls in the latest Ruby 2.7 and not the default Ruby 2.5 stream, which breaks the build</td>
+</tr>
+<tr>
+<td style="text-align: left;">marisa</td>
+<td>Succeeded locally for Leigh + tjyang.  More investigation...?</td>
+</tr>
+<tr>
+<td style="text-align: left;">python-requests</td>
+<td>Succeeded locally for Leigh + tjyang.  More investigation...?</td>
+</tr>
+<tr>
+<td style="text-align: left;">python-psycopg2</td>
+<td><strong>Failed</strong> locally also.  Possible patch required?  https://src.fedoraproject.org/rpms/python-psycopg2/c/89f4b65570783ea763c37311e974296d3ff40d90?branch=master</td>
+</tr>
+<tr>
+<td style="text-align: left;">scrub</td>
+<td>Succeeded locally for Leigh + tjyang.  More investigation...?</td>
+</tr>
+<tr>
+<td style="text-align: left;">uglify-js</td>
+<td>Succeeded locally for Leigh + tjyang.  More investigation...?</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-old-list">The (old) List<a class="headerlink" href="#the-old-list" title="Permanent link">&para;</a></h2>
+<p>The following is a list of the packages we have investigated.  Notes are kept about why they failed, and any workarounds used to build them successfully.  Expect this to get updated as we gather more information!</p>
+<p><strong>CentOS 8 BaseOS Repository</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Package</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">~~efibootmgr-16-1.el8~~</td>
+<td>~~Patch: https://git.rockylinux.org/staging/patch/efibootmgr~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~fwupdate-11-3.el8~~</td>
+<td>~~Patch: https://git.rockylinux.org/staging/patch/fwupdate~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~libkcapi-1.2.0-2.el8~~</td>
+<td>~~Will not build in the default Mock systemd-nspawn container.  MUST use <code>mock --isolation=simple</code> option to build in traditional chroot~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~libusbx-1.0.23-4.el8~~</td>
+<td>~~Patch: https://github.com/elguero/centos8-libusbx/commit/daaad4ad85e7306ad0f111558bb143a2e9700b6d (mock should already have git-core available~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~python-cffi-1.11.5-5.el8~~</td>
+<td>~~Need to define %__python. Build with <code>--define '__python %__python3'</code> (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~tpm2-abrmd-2.1.1-3.el8~~</td>
+<td>~~Patch: https://git.rockylinux.org/staging/patch/tpm2-abrmd~~</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<p><strong>CentOS 8 AppStream Repository</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Package</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">~~abattis-cantarell-fonts-0.0.25-4.el8~~</td>
+<td>~~Patched fontforge to fix segfault issue.  Builds fine using the patched fontforge in its BuildRequires~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~apache-commons-logging-1.2-13.module_el8.0.0+39+6a9b6e22~~</td>
+<td>~~Needs to be built <code>--without avalon</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~brltty-5.6-28.el8~~</td>
+<td>~~Needs patch to change location of asoundlib.h in newer version of alsa. https://github.com/sjpp/centos8-brltty/commit/388ddcf6493d50ce34542c8badb1a54a9f811950 (see https://bugzilla.redhat.com/show_bug.cgi?id=1716389, https://src.fedoraproject.org/rpms/brltty/c/897ad85a69cd7fb53cabcbac2fbc7c0ca1719da7?branch=master)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~ceph-12.2.7-9.el8~~</td>
+<td>~~Need to define %__python. Build with <code>--define '__python %__python3'</code> (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~cobbler-2.0.7.1-6.module_el8.1.0+210+a3d63f21~~</td>
+<td>~~Need to define %__python. Build with <code>--define '__python %__python3'</code> (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~cogl-1.22.2-10.el8~~</td>
+<td>~~Fix was committed to Rocky Git. Possible fix: https://github.com/elguero/centos8-cogl/commit/a8b47440f5c7290d96d0b8786f48f323a8a950f9. Got further in the build by force-including these packages in buildroot: <code>libdrm-devel libXxf86vm-devel  mesa-libGL-devel mesa-libEGL-devel xml-common mesa-khr-devel</code> (matches centos koji build).  Still fails though.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~cyrus-imapd-3.0.7-19.el8~~</td>
+<td>~~Hidden dependencies added to the list, <code>perl-Encode-IMAPUTF7</code>. Will build once dependencies are satisfied.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~egl-wayland-1.1.4-1.el8~~</td>
+<td>~~We are unable to use the SRPM in vault.centos.org for <code>egl-wayland</code> due to a newer version of <code>mesa-libEGL-devel</code> being present (See https://github.com/NVIDIA/egl-wayland/commit/4a343a4b563e84c6258efbddf1d910f9dd6e0300). Building <code>egl-wayland</code> was resolved by checking out the latest code from git.centos.org (produces same version 1.1.4-1) that now contains a patch to fix this.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~gegl04-0.4.4-6.el8~~</td>
+<td>~~Need to patch SPEC file. Change <code>BuildRequires: pkgconfig(exiv2) &gt;= 0.25</code> to <code>BuildRequires: compat-exiv2-026</code>.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~gcc-toolset-9-dyninst~~</td>
+<td>~~This is a scl build.  In chroot, add <code>scl-utils-build</code> and <code>gcc-toolset-9-build</code>. Then define the <code>scl</code> macro as follows: <code>--define 'scl gcc-toolset-9'</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~gcc-toolset-9-gcc~~</td>
+<td>~~This is a scl build.  In chroot, add <code>scl-utils-build</code> and <code>gcc-toolset-9-build</code>. Then define the <code>scl</code> macro as follows: <code>--define 'scl gcc-toolset-9'</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~gcc-toolset-10-dyninst~~</td>
+<td>~~This is a scl build.  In chroot, add <code>scl-utils-build</code> and <code>gcc-toolset-10-build</code>. Then define the <code>scl</code> macro as follows: <code>--define 'scl gcc-toolset-10'</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~gcc-toolset-10-gcc~~</td>
+<td>~~This is a scl build.  In chroot, add <code>scl-utils-build</code> and <code>gcc-toolset-10-build</code>. Then define the <code>scl</code> macro as follows: <code>--define 'scl gcc-toolset-10'</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~gcc-toolset-10-systemtap~~</td>
+<td>~~This is a scl build.  In chroot, add <code>scl-utils-build</code> and <code>gcc-toolset-10-build</code>. Then define the <code>scl</code> macro as follows: <code>--define 'scl gcc-toolset-10'</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~google-guice-4.2.2-4.module_el8.~~</td>
+<td>With javapackages-tool from branch c8-stream-201902 built without forcing anything into buildroot. ~~Hidden dependency (newer version): <code>objectweb-asm-7</code> added to list 101. Built successfully by forcing <code>plexus-utils-3.3.0-3.el8.noarch objectweb-asm-7.2-2.el8_3.noarch</code> into buildroot, and setting the _without macros found in the maven modules.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~grafana~~</td>
+<td>~~Tries to download dependencies. No network available in mock (normally unless enabled).  Crossing off list because latest version builds correctly.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~gstreamer1-plugins-base~~</td>
+<td>~~Dependency: <code>egl-wayland-devel</code>. Already fixed and should build during next pass~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~HdrHistogram-2.1.11-2.module_el8.2.0+460+6583c1d0~~</td>
+<td>~~Hidden dependency: <code>replacer</code>. Already been added and should build in next pass.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">httpcomponents-client-4.5.5-4.module_el8.0.0+39+6a9b6e22</td>
+<td>Built using <code>--without memcached</code> and <code>--without ehcache</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">httpcomponents-client-4.5.10-*</td>
+<td>Successfully built. Needs <code>mockito-3.1.2-2.el8_3</code> - Added to list 101 (<code>byte-buddy</code> added to list 100, <code>hamcrest</code> added to list 100 and <code>objectweb-asm-7</code> (v7.3) added to list 99)</td>
+</tr>
+<tr>
+<td style="text-align: left;">httpcomponents-core-4.4.12-*</td>
+<td>Successfully built. Needs <code>mockito-3.1.2-2.el8_3</code> - Added to list 101 (<code>byte-buddy</code> added to list 100, <code>hamcrest</code> added to list 100 and <code>objectweb-asm-7</code> (v7.3) added to list 99)</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~istack-commons~~</td>
+<td>~~Dependency: <code>dom4j</code> - Need to get dom4j built.  Also had to force <code>plexus-utils-3.3.0-3.el8.noarch</code> into build root (override version 3.1)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jackson-annotations~~</td>
+<td>~~Hidden dependency: <code>jackson-parent</code> (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jackson-core~~</td>
+<td>~~Hidden dependency: <code>jackson-bom</code>. (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jackson-databind~~</td>
+<td>~~Hidden dependency: <code>jackson-bom</code>. (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jackson-jaxrs-providers~~</td>
+<td>~~Hidden dependency: <code>glassfish-jax-rs-api, jackson-bom</code>. (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jackson-module-jaxb-annotations~~</td>
+<td>~~Hidden dependency: <code>jackson-parent</code> (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jline~~</td>
+<td>~~Needs to be built against <code>jansi-1.17*</code>. Completed build by forcing jansi-1.17 and <code>plexus-utils-3.3.0-3</code> into the buildroot.  Should be ok when the module is built, as it specifies these in modulemd src.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jmc~~</td>
+<td>~~Hidden dependency: <code>eclipse-pde</code>, provided by building <code>eclipse</code> which has its long list of hidden dependencies. (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jolokia-jvm-agent~~</td>
+<td>~~Hidden dependency: <code>json-simple</code> (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~jss~~</td>
+<td>~~Patch committed to staging: https://git.rockylinux.org/staging/patch/jss~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~liborcus-0.14.1-1.el8~~</td>
+<td>~~Hidden dependency: <code>mdds-1.4</code> is in branch <code>c8s</code> and is a specific tag, <code>imports/c8s/mdds-1.4.3-1.el8</code> (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">libreoffice-6.3.6.2-3.el8</td>
+<td>Should build once <code>liborcus-0.14-1-1.el8</code> is able to built. See above.</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~libucil~~</td>
+<td>~~Newer <code>alsa-libs</code> has moved the location of <code>asoundlib.h</code>. Patch: https://github.com/elguero/centos8-libucil/commit/cd15a416fc10456bab7a2ae67b2073d4a12a4b8c~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~libvirt-python-4.5.0-2.module_el8.2.0+320+13f867d7~~</td>
+<td>~~Newer version is present.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~mariadb-java-client-2.2.5~~</td>
+<td>~~Hidden dependency: <code>replacer</code> (added to list 101)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~maven-3.5.4-5.module_el8.0.0+39+6a9b6e22~~</td>
+<td>~~Built <code>--without logback</code>.  Also disabled module_hotfixes and enabled maven-3.5 module to build.  Should be fine under MBS we think(?)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~maven-3.6.2-4.module_*~~</td>
+<td>~~Built <code>javapackages-tools</code> from c8-stream-201902 and was able to then build maven. ~~Hidden dependencies: <code>slf4j-sources</code> (artifact of building slf4j), <code>modello</code>, <code>mockito-core</code> (which has dependencies too, <code>byte-buddy</code> (needs <code>objectweb-asm-7</code>) and <code>hamcrest-core</code>), <code>xmlunit</code>.  Needed to disable module_hotfixes and enable maven:3.6 stream in mock, should build automatically using MBS~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~maven-wagon-3.1.0-1.module_el8.0.0+39+6a9b6e22~~</td>
+<td>~~Built <code>--without scm</code> and <code>--without ssh</code>. Dependencies displayed in build pass 10 were not used in koji build which indicates that it was built without them by using these conditionals (https://koji.mbox.centos.org/pkgs/packages/maven-wagon/3.1.0/1.module_el8.0.0+39+6a9b6e22/data/logs/noarch/root.log)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~mesa-libGLU-9.0.0-15.el8~~</td>
+<td>~~Patch: https://github.com/elguero/centos8-mesa-libGLU/commit/87fc0e63afb3ac0eb65ff480ee6e616979f39927~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~mod_wsgi~~</td>
+<td>~~Need to <code>--define 'python3_pkgversion 38'</code> macro (as specified in python38 module)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~mutter-3.32.2~~</td>
+<td>Needed <code>pkgconfig(wayland-eglstream)</code> .  Appears to work after that is satisfied.</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~numpy-1.14.2-*~~</td>
+<td>~~These are part of the python27 module, and must be built <code>--with python2</code> and <code>--without python3</code> .  Should be fine when the module is built by MBS.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">perl-File-HomeDir-1.00-14.module_el8.1.0+229+cd132df8</td>
+<td>Missing <code>BuildRequires: perl(Module::Install)</code> (maybe ok when built as a module?)</td>
+</tr>
+<tr>
+<td style="text-align: left;">perl-JSON-2.97.001-2.el8</td>
+<td>~~Missing <code>BuildRequires: perl-tests</code>~~ No longer able to reproduce error.</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-Module-Build-0.42.29-4.module_el8.3.0+406+78614513~~</td>
+<td>~~Needs <code>--define 'perl_bootstrap 1'</code> to build without the need for dependencies that have been removed from RHEL8~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-URI-1.7~~</td>
+<td>~~Needs <code>--define 'perl_bootstrap 1'</code> to build without the need for dependencies that have been removed from RHEL8~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~pesign~~</td>
+<td>~~https://github.com/elguero/centos8 pesign/commit/8e0b2ac48129cfe51dd1d53531e77dbc34317dc7~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">plexus-containers</td>
+<td>Built now that javapackages-tool from c8-stream-201902 is present. ~~<code>[ERROR] COMPILATION ERROR : [INFO] ------------------------------------------------------------- [ERROR] /builddir/build/BUILD/plexus-containers-plexus-containers-2.1.0/plexus-component-metadata/src/main/java/org/codehaus/plexus/metadata/ann/AnnReader.java:[38,18] cannot find symbol  symbol:   variable ASM7 location: interface org.objectweb.asm.Opcodes</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~plexus-build-api-0.0.7-20.module_el8.0.0+30+832da3a1~~</td>
+<td>~~Newer version in Git should build properly~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~plexus-interpolation-1.26-3.module_el8.~~</td>
+<td>~~Needs <code>JAVA_HOME</code> set. <code>config_opts['files']['/etc/profile.d/mystuff.sh'] = """ export JAVA_HOME=/ """</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">postgresql-jdbc-42.2.3-*</td>
+<td>Built fine localy ?? Maybe next build will pass.</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~prometheus-jmx-exporter-0.12.0-5.el8~~</td>
+<td>~~Hidden dependencies: <code>prometheus-simpleclient-java</code> and <code>snakeyaml</code> (added to list 101). <code>snakeyaml</code> depends on <code>base64coder</code> (added to list 100).  Build is successful~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~prometheus-jmx-exporter-0.12.0-5.el8~~</td>
+<td>~~One of the hidden dependencies is <code>snakeyaml</code>. This version depends on <code>snakeyaml 1.26-2</code> which is in branch <code>c8s</code>.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~python-cups-1.9.72-21.el8.0.1~~</td>
+<td>~~Build with <code>--define '__python %__python3'</code> (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~python-systemd~~</td>
+<td>~~Possible fix: https://github.com/elguero/centos8-python-systemd/commit/b015bd9c2673939465162cd8a03003222d00327e   Affected by version string in new Systemd running longer ("239" vs. "239 (239.4-rhel)"  Reference:  https://github.com/systemd/python-systemd/issues/90~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~pytz-2019.*~~</td>
+<td>~~Need to <code>--define 'python3_pkgversion 38'</code> - part of the python38 module, so should be fine in MBS~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~qt5-qtdoc-5.12.5-1.el8~~</td>
+<td>~~Hidden dependency <code>qt5-qtbase-doc</code>. Build <code>qt5-doc</code> from git.centos.org to satisfy.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~qt5-qtwayland-5.12.5-1.el8~~</td>
+<td>~~Missing <code>BuildRequires:  libXext-devel</code>. Fixed in git already.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~rhncfg-5.10.120-10.module_el8.1.0+210+a3d63f21~~</td>
+<td>~~Need to define %__python. Built with <code>--define '__python %__python3'</code> (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~rust-1.41.1-1.module_el8.2.0+322+d7f93ccc~~</td>
+<td>~~Outdated SRPM - use rust-1.47 from CentOS repo (OK, removed from Skip's build server)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">scipy-1.3.1-4*</td>
+<td>Need to <code>--define 'python3_pkgversion 38'</code> - otherwise it grabs python3 packages which does not satisfy dependency</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~SLOF~~</td>
+<td>~~Needs to be built for <code>ppc64le</code>. Spec requires that target arch.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~spacewalk-backend-2.8.48-4.module_el8.1.0+210+a3d63f21~~</td>
+<td>~~Need to define %__python. Built with <code>--define '__python %__python3'</code> (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~spacewalk-usix-2.8.1-5.module_el8.1.0+210+a3d63f21~~</td>
+<td>~~Need to define %__python. Built with <code>--define '__python %__python3'</code> (see https://fedoraproject.org/wiki/Changes/PythonMacroError)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~subversion-~~</td>
+<td>~~Needs to be build <code>--without kwallet</code>. CentOS Koji logs shows kwallet is not present.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~varnish-6.0{2-1, 6-2}.~~</td>
+<td>~~Needs to be built <code>--with python3</code> and <code>--without python2</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~varnish-modules-0.15.0-~~</td>
+<td>~~Needs to be built <code>--with python3</code> and <code>--without python2</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~velocity-1.7-24.module_*~~</td>
+<td>~~Needs to be built <code>_without_hsqldb=1</code>, and point to jdk instead of jre in profile.d: <code>export JAVA_HOME=/usr/lib/jvm/java/</code> .  Both likely work when building the module.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~xdg-desktop-portal-gtk-1.6.0-1.el8~~</td>
+<td>~~It looks like it succeeded in build pass 10 (dependencies fulfilled)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~xorg-x11-docs-1.7.1-7.el8~~</td>
+<td>~~Hidden dependency: <code>passivetex</code>, built hidden dependency from branch c8. Dependecy satisfied and built.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~xorg-x11-server-1.20.{6-3, 8-6, 8-6.1}~~</td>
+<td>~~Dependency on <code>egl-wayland</code>, which is currently failing to build. We are unable to use the SRPM in vault.centos.org for <code>egl-wayland</code> due to a newer version of <code>mesa-libEGL-devel</code> being present (See https://github.com/NVIDIA/egl-wayland/commit/4a343a4b563e84c6258efbddf1d910f9dd6e0300). Building <code>egl-wayland</code> was resolved by checking out the latest code from git.centos.org (produces same version 1.1.4-1) that now contains a patch to fix this. Once <code>egl-wayland</code> was built, <code>egl-wayland-devel</code> is present to satisfy the dependency.~~</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<p><strong>CentOS 8 PowerTools Repository</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Package</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">apache-commons-logging</td>
+<td>Builds using <code>--without avalon</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">~~apache-ivy~~</td>
+<td>~~Enabled javapackages-tools-201801 module, and turned on javapackages-tools-201801 macros.  Should build fine with MBS.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">assertj-core</td>
+<td>Builds using <code>--without memoryfilesystem</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">bsh</td>
+<td>Builds when using <code>--without desktop</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">~~compat-guile18~~</td>
+<td>~~Incorrect syntax for <code>Obsoletes</code> in spec file. Patch: https://github.com/N3WWN/rocky-debranding/tree/master/compat-guile18/ROCKY/CFG~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">dejagnu</td>
+<td>Hidden dependency: <code>screen</code> (added to list 101)</td>
+</tr>
+<tr>
+<td style="text-align: left;">jaxen</td>
+<td>Built using <code>--without dom4j</code> <strong>Note:</strong> We have dom4j now in our externals repo and it builds fine with that as well. The original packge was built without dom4j. I would recommend building without dom4j if we want to match the package available from CentOS.</td>
+</tr>
+<tr>
+<td style="text-align: left;">maven-doxia</td>
+<td>Builds using <code>--without itext</code>, <code>--without markdown</code> and <code>--without fop</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">maven-doxia-sitetools</td>
+<td>Builds using <code>--without markdown</code> and <code>--without fop</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">maven-invoker-plugin</td>
+<td>Builds using <code>--without groovy</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">maven-plugin-testing</td>
+<td>Depends on <code>maven-wagon</code> from PowerTools. See below. Built successfully using maven-wagon in local repo with priority over RockyDevExternals</td>
+</tr>
+<tr>
+<td style="text-align: left;">maven-script-interpreter</td>
+<td>Builds using <code>--without groovy</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">maven-wagon</td>
+<td>Builds using <code>--without scm</code> and <code>--without ssh</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">~~mingw-cairo~~</td>
+<td>~~Hidden dependencies: <code>mingw-w64-tools , mingw-libxml2</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~mingw-gstreamer1~~</td>
+<td>~~Hidden dependencies: <code>mingw-w64-tools , mingw-libxml2</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~mingw-harfbuzz~~</td>
+<td>~~Hidden dep: <code>mingw-w64-tools</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~mingw-sqlite~~</td>
+<td>~~Hidden dependency: <code>mingw-pdcurses</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">pandoc</td>
+<td>Need to bootstrap Haskell compiler + dependencies (worked on...)</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-B-Hooks-EndOfScope~~</td>
+<td>~~Hidden dependency: <code>perl-Devel-Hide</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-DateTime-Format-Builder~~</td>
+<td>~~Hidden dependency: <code>perl-DateTime-Format-IBeat</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-DateTime-Locale~~</td>
+<td>~~Hidden dependency: <code>perl-File-ShareDir-Install</code>, <code>perl-Test-File-ShareDir</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-Devel-CheckLib~~</td>
+<td>~~Hidden dependency: <code>perl-IO-CaptureOutput</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-JSON-XS~~</td>
+<td>~~Worked for me with above deps (gmk)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-MIME-Charset~~</td>
+<td>~~Worked for me with above deps (gmk)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-Module-Install-ReadmeFromPod~~</td>
+<td>~~Hidden dependency: <code>perl-Module-Install</code>, <code>perl-Module-Install-AuthorRequires</code>, <code>perl-Module-Install-AutoLicense</code>, <code>perl-Test-InDistDir</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-Params-ValidationCompiler~~</td>
+<td>~~Hidden dependency: <code>perl-Test2-Plugin-NoWarnings</code>, <code>perl-Test-Without-Module</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-Readonly~~</td>
+<td>~~Hidden dependency: <code>perl-Module-Build-Tiny</code>, <code>perl-ExtUtils-Config</code>, <code>perl-ExtUtils-Helpers</code>, <code>perl-ExtUtils-InstallPaths</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-Term-Size-Any~~</td>
+<td>~~Worked for me with above deps (gmk)~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-Unicode-EastAsianWidth~~</td>
+<td>~~Hidden dependency: <code>perl-Module-Package</code>, <code>perl-Module-Install-ManifestSkip</code>, <code>perl-Module-Manifest-Skip</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~perl-XML-Twig~~</td>
+<td>~~Hidden dependency: <code>perl-XML-XPathEngine</code>~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">perl-gettext</td>
+<td>Incorrect syntax for <code>Obsoletes</code> in spec file. Patch: https://github.com/N3WWN/rocky-debranding/tree/master/perl-gettext/ROCKY/CFG</td>
+</tr>
+<tr>
+<td style="text-align: left;">perl-DateTime-Locale</td>
+<td>Hidden dependency: <code>perl-Test-File-ShareDir</code> (added to list 101)</td>
+</tr>
+<tr>
+<td style="text-align: left;">perl-Module-Install-ReadmeFromPod</td>
+<td>Hidden dependency: <code>perl-Module-Install-AuthorRequires</code> and <code>perl-Test-InDistDir</code> (added to list 101)</td>
+</tr>
+<tr>
+<td style="text-align: left;">pytest</td>
+<td>Built by using <code>--define 'python3_pkgversion 38'</code>, Hidden dependency: <code>python-pluggy</code> &gt;= 0.12 (added to list 101 along with build note)</td>
+</tr>
+<tr>
+<td style="text-align: left;">rubygem-rspec-core</td>
+<td>Hidden dependency: <code>rubygem-thread_order</code> (Added to hidden dependency list 101). Needs to be built with <code>module_hotfixes</code> disabled so that it builds against <code>rubygems-2.7.6.2</code> (https://pkgs.dyn.su/rocky-8/artifacts/)</td>
+</tr>
+<tr>
+<td style="text-align: left;">rubygem-rspec-mocks</td>
+<td>Hidden dependency: <code>rubygem-thread_order</code> (Added to hidden dependency list 101). Needs to be built with <code>module_hotfixes</code> disabled so that it builds against <code>rubygems-2.7.6.2</code> (https://pkgs.dyn.su/rocky-8/artifacts/)</td>
+</tr>
+<tr>
+<td style="text-align: left;">rubygem-rspec-support</td>
+<td>Hidden dependency: <code>rubygem-thread_order</code> (Added to hidden dependency list 101). Needs to be built with <code>module_hotfixes</code> disabled so that it builds against <code>rubygems-2.7.6.2</code> (https://pkgs.dyn.su/rocky-8/artifacts/)</td>
+</tr>
+<tr>
+<td style="text-align: left;">testng</td>
+<td>Builds with <code>--without groovy</code> and <code>--without snakeyaml</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">xbean</td>
+<td>Built <code>--without equinox</code>, <code>--without spring</code> and <code>--without groovy</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">xmvn</td>
+<td>Built <code>--without gradle</code></td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<p><strong>External Dependencies</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Package</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">dom4j</td>
+<td>Wacky package.  It must be built using a <code>jaxen</code> package that is built with dom4j support, which is not present in CentOS.  We had to bootstrap the dom4j build using <code>jaxen</code> from Fedora 29, which is compiled with dom4j support.</td>
+</tr>
+<tr>
+<td style="text-align: left;">perl-*</td>
+<td>Be SURE to build against Perl-5.26 (default stream), NOT Perl-5.30 (latest version available).  Required disabling module_hotfixes=1 option to force default Perl.  Maybe fixed by MBS...?</td>
+</tr>
+<tr>
+<td style="text-align: left;">maven-*</td>
+<td>Requires presence of an /etc/maven.conf , fails if not found.  Added a blank one in mock: <code>config_opts['files']['/etc/java/maven.conf'] = " "</code> as a workaround</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<p><strong>Older SRPM Errors</strong>
+These failures were looked at, but are older versions of the packages, and likely not needed:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Package</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">device-mapper-multipath-0.8.3-3.el8</td>
+<td>Newest version of systemd gives extra information about version number - "239 (239-41.el8_3.1)" vs. the plain old "239".  So a script fails.  Will build against older versions of Systemd.  We have a newer version of this package that works, it may be Ok to skip.</td>
+</tr>
+<tr>
+<td style="text-align: left;">device-mapper-multipath-0.8.3-3.el8_2.3</td>
+<td>Newest version of systemd gives extra information about version number - "239 (239-41.el8_3.1)" vs. the plain old "239".  So a script fails.  Will build against older versions of Systemd.  We have a newer version of this package that works, it may be Ok to skip.</td>
+</tr>
+<tr>
+<td style="text-align: left;">samba-4.11.2-13.el8</td>
+<td>Requires python3-ldb version lower or equal to 2.0.999, however actual python3-ldb version is 2.1.3. We have a newer version of this package that works, it may be Ok to skip. (samba-4.12.3)</td>
+</tr>
+<tr>
+<td style="text-align: left;">sssd-2.2.3-20.el8</td>
+<td>ERROR: sssd -&gt; requires pam_wrapper rpm (https://git.centos.org/rpms/pam_wrapper.git) We have a newer version of this package that works, it may be Ok to skip.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bcc-0.11.0-2.el8</td>
+<td>Unable to find clang-libs even though the dependency that should satisfy this is installed.  Only works with clang 9 or lower, but newer bcc with clang 10 seems ok.  Probably fine to skip.</td>
+</tr>
+<tr>
+<td style="text-align: left;">tigervnc-1.9.0-15.el8_1</td>
+<td><code>xorg-server 1.20.7+</code> requires the impelementation of a ddxInputThreadInit function. A patch that fixes this is in the latest version at git.centos.org and works with <code>xorg-server 1.20.8-6</code>. This is what is currently in the repo. (https://git.centos.org/rpms/tigervnc/c/4a81f2fc8757bea7ff2c1d8b1fd881a2bed6803c?branch=c8) The version in vault.centos.org was built against <code>xorg-server 1.20.3-11</code>. Suggest skipping this package.</td>
+</tr>
+<tr>
+<td style="text-align: left;">sbd-1.4.1-3.el8</td>
+<td>Build error is being caused by a change in Pacemaker (https://bugzilla.redhat.com/show_bug.cgi?id=1850078). This has been fixed in newer versions. Suggest skipping.</td>
+</tr>
+<tr>
+<td style="text-align: left;">xorg-x11-drv-intel-2.99.917-38.20180618.el8</td>
+<td>Missing in spec file <code>BuildRequires: libXv-devel</code>. Added it to chroot install. CentOS Koji logs show that this hidden dependency was installed for their build (https://koji.mbox.centos.org/pkgs/packages/xorg-x11-drv-intel/2.99.917/38.20180618.el8/data/logs/i686/root.log)</td>
+</tr>
+<tr>
+<td style="text-align: left;">webkit2gtk3-2.24.4-2.el8_1</td>
+<td>Looks like a build error that is being caused by <code>libglvnd</code> being present. The original build used different subpackages which contained header files. These packages have been removed and appear to be in libglvnd. (See https://bugs.webkit.org/show_bug.cgi?id=204108) <code>webkit2gtk3-2.24.4-2.el8_1</code> &lt;--- This version was built against an older version of mesa and libglvnd. Newer versions have been rebased to <code>webkit2gtk3 2.28</code>. I would recommend skipping this package since there is a newer one present which works with the latest libraries.</td>
+</tr>
+<tr>
+<td style="text-align: left;">~~spirv-tools-2019.5-1.20200129.git97f1d48.el8~~</td>
+<td>~~The <code>spirv headers</code> have changed and this no longer builds against the latest version present. Suggest skipping since there are newer versions that build fine.~~</td>
+</tr>
+<tr>
+<td style="text-align: left;">spice-gtk-0.37-1.el8</td>
+<td>Missing <code>BuildRequires: libdrm-devel</code> in spec file. Is present in subsequent updates. Added <code>libdrm-devel</code> to chroot install and was built.</td>
+</tr>
+<tr>
+<td style="text-align: left;">vulkan-tools-1.2.131.1-1.el8</td>
+<td>Looks like a lot of newer vulkan headers and dependencies, like spirv, have been updated. Building against newer headers and libraries results in a build failure. Found a Debian post where someone was trying to rebuild the same version that we are trying to rebuild and the resolution was that newer versions have fixed the build issue. Suggest skipping since newer version is present.</td>
+</tr>
+<tr>
+<td style="text-align: left;">vulkan-validation-layers-1.2.13{1, 5}.*</td>
+<td>Same issue as vulkan-tools. Newer vulkan headers and dependencies being present results in a build failure with this older version.  Suggest skipping.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2025-12-19
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Rocky Enterprise Software Foundation
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.integrate", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  <script defer data-domain="wiki.rockylinux.org" data-api="https://img.resf.workers.dev/img/event" src="https://img.resf.workers.dev/js/script.js"></script>
+  
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+
+  </body>
+</html>
