@@ -9,7 +9,7 @@ This is a list of approved events where Rocky Linux will have a presence.
 |Date|Event|Location|Sponsor Level|Participation Type|Notes|
 |-|-|-|-|-|-|
 |February 1-2|[CentOS Connect](https://connect.centos.org/)|Brussels, Belgium|Sponsor|Annual Planning|Infrastructure Team|
-|February 3-4|[FOSDEM](https://archive.fosdem.org/2024/)|Brussels, Belgium|Attendee|Exhibitor Booth|Louis Abel, Krista Burdine, Pablo Greco, Neil Hanlon, Antoine LeMorvain, Sharif Nagy, Wale Soyinka|
+|February 3-4|[FOSDEM](https://archive.fosdem.org/2024/)|Brussels, Belgium|Attendee|Exhibitor Booth|Louis Abel, Krista Burdine, Pablo Greco, Neil Hanlon, Antoine Le Morvan, Sharif Nagy, Wale Soyinka|
 |March 14-17|[SCaLE 21x](https://www.socallinuxexpo.org/scale/21x/schedule)|Pasadena, CA, USA|Silver Sponsor|Exhibitor Booth, BOF|[Krista Burdine](https://www.youtube.com/watch?v=YqAoXOrCSHg), Wale Soyinka, Steven Spencer|
 |April 12-13|[Texas Linux Festival](https://2024.texaslinuxfest.org/)|Austin, TX, USA|Gold Sponsor|Exhibitor Booth|Speaker Team: [Krista Burdine](https://2024.texaslinuxfest.org/talks/deep-in-the-heart-of-rocky/) with Neil Hanlon and Chris Stackpole|
 |April 26-28|[LinuxFest Northwest](https://linuxfestnorthwest.org/)|Bellingham, WA, USA|Community Sponsor|Exhibitor Booth|Speaker: [Neil Hanlon](https://www.youtube.com/watch?v=iSDAK7-UKHg)|
