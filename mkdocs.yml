@@ -53,11 +53,12 @@ theme:
 
 # Plugins
 plugins:
+  - search
   - autolinks
   - awesome-nav
   - git-revision-date-localized
   - macros:
-      include_dir: docs/include
+      include_dir: "include"
   - redirects:
       redirect_maps:
         'team/release_engineering/packagekit.md': 'rocky/packagekit.md'
@@ -79,7 +80,6 @@ plugins:
         'team/testing/dev_guides/openqa_cli_post_examples/index.md': 'https://testing.rocky.page/documentation/dev_guides/openqa_cli_post_examples/'
         'team/testing/dev_guides/openqa_clone_job_examples/index.md': 'https://testing.rocky.page/documentation/dev_guides/openqa_clone_job_examples/'
         'team/testing/dev_guides/openqa_clone_custom_git_refspec_examples/index.md': 'https://testing.rocky.page/documentation/dev_guides/openqa_clone_custom_git_refspec_examples/'
-  - search
 
 # Extensions
 markdown_extensions:
@@ -91,8 +91,9 @@ markdown_extensions:
   - meta
   - pymdownx.details # this allows collapsible attributions
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+      emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
