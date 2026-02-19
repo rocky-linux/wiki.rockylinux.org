@@ -1,8 +1,7 @@
-mkdocs
+zensical
 mkdocs-autolinks-plugin
-mkdocs-awesome-pages-plugin
-mkdocs-git-revision-date-plugin
+mkdocs-awesome-nav
+mkdocs-git-revision-date-localized-plugin
 mkdocs-macros-plugin
-mkdocs-material
 mkdocs-redirects
 mkdocs-windmill
