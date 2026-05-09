@@ -51,6 +51,7 @@ There are extra repositories offered by Rocky Linux.
 |------------------|------------------|---------|---------|----------|---------|
 | Extras           | extras           | Yes     | Yes     | Yes      | Yes     |
 | Plus             | plus             | Yes     | Yes     | Yes      | No      |
+| Security         | security         | Yes     | Yes     | Yes      | No      |
 | RT (real time)   | rt               | Yes     | Yes     | Yes      | No      |
 | NFV              | nfv              | Yes     | Yes     | Yes      | No      |
 | SAP / SAP HANA   | sap / saphana    | No      | Yes     | Yes      | No      |
@@ -74,6 +75,12 @@ This repository contains packages that may fit into one of the following:
 Packages that fall under A and B will have a `.plus` added to their version tag. These are not tested nor available in the upstream product.
 
 Packages that fall under C and D are rare, but will occasionally happen from time to time.
+
+### Notes on: Security
+
+This repository allows the Rocky Linux project to provide urgent security updates in situations where a critical vulnerability exists, public exploitation is available, and upstream Enterprise Linux releases may not yet be available.
+
+The security repository is intended to provide hot-fixes as a temporary solution for urgent circumstances involving critical security exposure and immediate risk mitigation. Versioning of these packages is designed such that the official upstream packages will always update our hot-fixes. It is not a replacement for the normal Rocky Linux release process and should not be interpreted as a broader change in our commitment to upstream Enterprise Linux compatibility.
 
 ### Notes on: Devel
 
