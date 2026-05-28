@@ -48,7 +48,7 @@ For more detailed information on each version, click any of the tabs below.
     | Version | Release Kernel    | Release Date      | End of Life       | Supported                                     |
     |---------|-------------------|-------------------|-------------------|-----------------------------------------------|
     | 10.0    | 6.12.0-55.12.1    | June 11, 2025     | November 25, 2025 | <div style="background-color:red">NO</div>    |
-    | 10.1    | 6.12.0-124.8.1    | November 25, 2025 | May, 2026         | <div style="background-color:red">NO</div>    |
+    | 10.1    | 6.12.0-124.8.1    | November 25, 2025 | May 29, 2028      | <div style="background-color:red">NO</div>    |
     | 10.2    | 6.12.0-211.16.1   | May 29, 2026      | November 2026     | <div style="background-color:green">Yes</div> |
 
 See the [Timeline and Terminology](#timeline-and-terminology) and [Release Cadence](#release-cadence) sections for more information on how these dates are determined.
