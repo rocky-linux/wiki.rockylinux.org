@@ -19,8 +19,6 @@ documentation.
 
 [Release Engineering Team](release_engineering/index.md)
 
-[Testing Team](testing/index.md)
-
 [Design Team](design/index.md)
 
 [Community Team](community/index.md)

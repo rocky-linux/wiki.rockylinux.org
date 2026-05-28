@@ -3,7 +3,6 @@ nav:
   - ... | index.md
   - Infrastructure Team: infrastructure
   - Release Engineering Team: release_engineering
-  - Testing Team: testing
   - Design Team: design
   - Community Team: community
   - Documentation Team: documentation
