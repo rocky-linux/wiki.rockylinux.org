@@ -6,7 +6,7 @@ This page goes over the Rocky Linux Release Versions, their support, timelines, 
 
 ## Current Supported Releases
 
-Below is a table of Rocky Linux versions, with accompanying general release and (planned or are planned) end of life dates.
+Below is a table of Rocky Linux versions, with their general release and (planned) end of life dates.
 
 | Release         | Codename       | Release Date  | Active Support Ends  | End of Life          | Latest/Current Version   |
 |-----------------|----------------|---------------|----------------------|----------------------|--------------------------|
