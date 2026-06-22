@@ -60,7 +60,7 @@ There are cases where it may do more harm than good to deny or to not provide as
 
 * **If the question is related to software in EPEL**
 
-    * If a problem is reproducible or its an issue out of our control, it is recommended to go `#epel` or [EPEL's Matrix Channel](https://matrix.to/#/#epel:fedoraproject.org).
+    * If a problem is reproducible or outside our control, it is better to go `#epel` or [EPEL's Matrix Channel](https://matrix.to/#/#epel:fedoraproject.org).
 
 * **If the question is related to drivers from elrepo or rpmfusion**
 
