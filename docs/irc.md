@@ -258,7 +258,7 @@ You will be asked to run some commands by volunteers. Such as:
 * `dnf install rpaste -y ; rpaste --sysinfo`
 * `cat /etc/os-release ; uname -a ; rpm -V dnf rocky-release rocky-repos ; ls /etc/yum.repos.d/ ; dnf repolist all`
 
-The former produces a sysinfo output (the package is installed from extras). The second produces multi-line output that you can provide at https://rpa.st. Alternatively, you will be asked just to run `uname -a` which is typically sufficient enough.
+The former produces a sysinfo output (the package is installed from extras). The second produces multi-line output that you can provide at https://rpa.st. Alternatively, you will be asked just to run `uname -a` which is typically sufficient.
 
 When it's clear it's not a Rocky Linux system, the regulars of the channel will not continue to offer further assistance. They do not wish to suggest a course of action that can potentially break your system further. Most regulars cannot and don't know all the ways hosting providers may have altered the functions which a Rocky Linux system provides by default.
 
