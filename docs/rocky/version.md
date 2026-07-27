@@ -2,6 +2,10 @@
 title: Rocky Linux Release and Version Guide
 ---
 
+!!! info "This content is now moved."
+
+    The content published here is out of date. To consolidate public-facing documentation under one umbrella, it is now in [Documentation](https://docs.rockylinux.org/releases/).
+
 This page goes over the Rocky Linux Release Versions, their support, timelines, and how it affects our users.
 
 ## Current Supported Releases
@@ -78,9 +82,9 @@ For a new Rocky Linux release, the following should be true:
 * New major version is released with support of ten (10) years, starting at `.0`.
 * Release will have five (5) years of minor version updates or "active support"
 
-    * Each major version will come with two minor version releases a year: Every six (6) months
-    * Minor version releases will come with new features, software rebases, and sometimes brand new software
-    * Final minor version will be `.10`
+  * Each major version will come with two minor version releases a year: Every six (6) months
+  * Minor version releases will come with new features, software rebases, and sometimes brand new software
+  * Final minor version will be `.10`
 
 #### Minor Version Release
 
